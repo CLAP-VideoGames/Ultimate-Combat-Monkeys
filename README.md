@@ -1,4 +1,4 @@
-<h1 align="center"> <b>U.C.M - Ultimate Combat Monkey <br/> <font size=4"> By CLAP</font></b></h1>
+<h1 align="center"> <b>U.C.M. - Ultimate Combat Monkeys<br/> <font size=4"> By CLAP</font></b></h1>
 
 
 Game designed and developed for the subject of Proyectos 3. 
