@@ -4,7 +4,7 @@
 Game designed and developed for the subject of Proyectos 3. 
 Complutense University of Madrid.
 
-> Note: **Ultimate Combat Monkey** has been developed with our own engine, which can be found [here](https://github.com/CLAP-VideoGames/CLAPEngine).
+> Note: **Ultimate Combat Monkey** has been developed with our own engine, which can be found [here](https://github.com/CLAP-VideoGames/K_Engine).
 
 #
 <h2 align="center"> <ins> Documento de Diseño de Videojuego  </ins> </h2>
