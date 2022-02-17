@@ -44,7 +44,6 @@ Complutense University of Madrid.
     + [Escenarios](#esc)
     + [Personajes](#pers)
     + [Acciones de ataque](#acci)
-    + [Paquetes](#pack)
   - [Progresion del Juego](#progre)
     + [Estimación dificultad del juego](#esti)
   - [Referencias](#ref)
@@ -65,8 +64,8 @@ U.C.M es una divertida experiencia en la que el jugador controla un grupo de mie
 <br>
 
 <h3 id="partTip"><b> Relato breve y parcial de una partida típica </b></h3>El jugador controla un equipo de 4 monos, 3 subordinados y 1 capitán, que deberá eliminar a los monos del equipo oponente mediante el uso de un variado arsenal de armas.<br><br>
-El juego se basa en turnos, con cada equipo moviéndose en secuencia, que se determina al azar, a través de terreno bidimensional. Durante un solo turno, un equipo solo puede mover uno de sus monos (a menos que se utilice un elemento que permita al equipo seleccionar su enemigo), cuando todos los monos hayan completado su turno empezará una ronda nueva manteniendo el orden de turno. Los monos pueden caminar y saltar, así como (cuando las acciones de ataque apropiadas están disponibles) atacar a un mono enemigo. <br><br>
-Cada mono comienza la ronda con una cantidad específica de salud. Cuando se ataca con un arma, el mono atacado perderá salud dependiendo del poder del arma y la puntería. Un mono puede ser eliminado por el golpe después de tener su salud reducida a cero o por ser golpeado por el agua alrededor y debajo del nivel.<br><br>
+El juego se basa en turnos, con cada equipo moviéndose en secuencia, que se determina al azar, a través de terreno bidimensional. Durante un solo turno, un equipo solo puede mover uno de sus monos. Cuando todos los monos hayan completado su turno, empezará una ronda nueva manteniendo el orden de turno. Los monos pueden caminar y saltar, así como (cuando las acciones de ataque apropiadas están disponibles) atacar a un mono enemigo. <br><br>
+Cada mono comienza la ronda con una cantidad específica de salud. Cuando se ataca con un arma, el mono atacado perderá salud dependiendo del poder del arma y la puntería. Un mono puede ser eliminado por el golpe después de tener su salud reducida a cero o por caer al agua del nivel.<br><br>
 El juego incluye una gran variedad de ataques, incluyendo ataques cuerpo a cuerpo, proyectiles y explosivos, así como ataques aéreos. En una partida normal, todos los equipos empiezan con las mismas armas y una especial en una zona neutral del mapa a disposición del primer mono que la obtenga.<br><br>
 Una partida tradicional acaba al derrotar a todos los monos del equipo adversario matando a todos sus monos, o en su defecto, ser el último equipo con al menos un mono vivo. 
 
@@ -89,15 +88,12 @@ Menú Principal: Con botones para empezar una partida y salir del juego
 
   <br>
   
-  * <h5><b><u> Movimiento de los personajes</u></b></h5>Los personajes se mueven de forma continua a través del mapa. El jugador hará clic derecho encima de la posición a la que quiera mover al personaje y este se moverá hacia dicha posición, deteniéndose si hubiese obstáculos de por medio. Se moverán a una velocidad fija y podrán moverse tanto en el eje x como en el eje y (es decir saltar), solo saltarán si la distancia del recorrido es válida, es decir, si el personaje puede saltar 10 unidades, solo podrá realizar saltos de 10 o menos unidades, en caso contrario, se cancelará el movimiento.(Quizá esto podemos cambiarlo a escalar para que sea más consistente).
+  * <h5><b><u> Movimiento de los personajes</u></b></h5>Los personajes se mueven de forma continua a través del mapa. El jugador controlará al personaje de turno con las flechas de dirección horizontales a una velocidad fija. Podrán saltar con el espacio.
   
   <br>
 
-  * <h5><b><u> Ataques</u></b></h5>Cada personaje puede realizar una acción de ataque por turno, pudiendo ser cualquier arma de tu arsenal. Se especifica el tipo de arma y su funcionamiento de cada arma más abajo. Se puede conseguir munición para ciertos ataques recogiendo paquetes (los cuales caen de forma aleatoria en todo el escenario)(Los paquetes se pueden destruir?)
-  
-  <br>
+  * <h5><b><u> Ataques</u></b></h5>Cada personaje puede realizar una acción de ataque por turno, pudiendo ser cualquier arma de tu arsenal. Se especifica el tipo de arma y su funcionamiento de cada arma más abajo. 
 
-  * <h5><b><u> Pasivas</u></b></h5>Cada facultad tendrá un capitán que tendrá una pasiva única.(hay que diseñarlas si nos vemos con tiempo).
   
   <br>
     
@@ -112,17 +108,13 @@ Menú Principal: Con botones para empezar una partida y salir del juego
   * <h5><b><u> Muerte</u></b></h5>Un personaje muere cuando su vida llega a cero o cuando entra en contacto con el agua, una vez un personaje muere, es eliminado de la partida, y en caso de poseer el arma tercera convocatoria, la suelta en el lugar de muerte.
   
   <br>
-  
-  * <h5><b><u> Curas (Revisión de Nota)</u></b></h5>Serán objetos que aparezca en zonas concretas del escenario y servirá para recuperar X puntos de vida a los personajes.(Tenemos que decidir cuántas pueden aparecer a la vez). Si el personaje que recoge la cura, tiene su salud al máximo, la cura se consume, desapareciendo del suelo, evitando así que el jugador enemigo pueda beneficiarse de ésta.
 
-  <br>
-
-  * <h5><b><u> Destrucción del escenario</u></b></h5>Ciertas armas (hay que discutir cuales (Granada, Ataque Aéreo, Escopeta, Kamikaze)) destruyen partes del escenario (cualquier bloque es destruible), la destrucción se hará  de forma que se eliminarán los X cubos que haya en el radio de la explosión del arma concreta.
+  * <h5><b><u> Destrucción del escenario</u></b></h5>Ciertas armas (Granada, Ataque Aéreo, Escopeta, Kamikaze) destruyen partes del escenario (cualquier bloque es destruible), la destrucción se hará  de forma que se eliminarán los cubos que haya en el radio de la explosión del arma concreta.
 
 <br>
 
 + <h4 id="din"><b> Dinámicas</b></h4>
-  El objetivo del juego consiste en derrotar al equipo enemigo, cada equipo está formado por 3 miembros y un “capitán”. Se espera que los jugadores intenten controlar la zona central del mapa, en esta zona aparecerá un arma más poderosa que las demás. Se espera que los jugadores sean cautos a la hora de colocar a su capitán ya que es el miembro más fuerte del grupo(quizá deberíamos considerar que tenga los stats subidos). <br><br>Se estima que el jugador use la destrucción para crear atajos o hacer caer a los personajes enemigos al agua y así matarlo instantáneamente.
+  El objetivo del juego consiste en derrotar al equipo enemigo, cada equipo está formado por 3 miembros y un “capitán”. Se espera que los jugadores intenten controlar la zona central del mapa, en esta zona aparecerá un arma más poderosa que las demás. Se espera que los jugadores sean cautos a la hora de colocar a su capitán ya que es el miembro más fuerte del grupo. <br><br>Se estima que el jugador use la destrucción para crear atajos o hacer caer a los personajes enemigos al agua y así matarlo instantáneamente.
 
 <br>
 
@@ -153,36 +145,33 @@ Menú Principal: Con botones para empezar una partida y salir del juego
 
 + <h4 id="acci"><b>  Acciones de Ataque </b></h4>Cada personaje dispondrá de un arsenal de armas, que hace de inventario. 
  
+  <br>
+  <br>
  
-  * <h5><b> Granada </b></h5> Objeto que se lanza cuya trayectoria forma una parábola. Explota al pasar X segundos, generando un daño máximo de X en área, y destruyendo el mapa(si hay en el área de explosión). El número de granadas a usar depende de cuántas tenga cada personaje en su inventario. En principio, todos los monos al iniciar la partida tienen una unidad de este objeto.
+  * <h5><b> Granada </b></h5> Objeto que se lanza cuya trayectoria forma una parábola. Explota al pasar X segundos, generando un daño máximo de X en área, y destruyendo el mapa (si hay en el área de explosión). El número de granadas a usar depende de cuántas tenga cada personaje en su inventario. En principio, todos los monos al iniciar la partida tienen una unidad de este objeto.
   
   <br>
 
-  * <h5><b> Patada </b></h5>Acción que empuja a un personaje cualquiera, provocando X de daño. El número de usos de esta acción es ilimitado.
+  * <h5><b> Patada </b></h5> Ataque de rango cuerpo a cuerpo con daño mínimo X y empuje muy fuerte.
 
     <br>
+  <br>
 
-  * <h5><b> Escopeta </b></h5>Arma a distancia que dispará Y perdigones formando un cono como área de daño. Cada una infringe X de daño. El número de usos de este arma depende de la munición en su inventario. En principio, todos los monos al iniciar la partida tienen X cartuchos de escopeta.
+  * <h5><b> Escopeta </b></h5>Arma a distancia que dispara 3 perdigones en cono. Cada una inflige X daño. Munición infinita.
 
     <br>
+  <br>
 
-  * <h5><b> Ataque aéreo (Correo de Notas ucmnet) </b></h5>Dispositivo que permite seleccionar una zona del mapa, sobre la cual caerá un objeto, que al colisionar con algún objeto o personaje, explota infligiendo X de daño. El número de usos de este arma depende de cuántas tenga en el inventario. En principio, todos los monos al iniciar la partida tienen X cartuchos de escopeta.
+  * <h5><b> Ataque aéreo (Correo de Notas ucmnet) </b></h5> Señal de humo que lanza el personaje en una parábola. Tras unos segundos, un proyectil caerá desde arriba en dirección a la señal de humo. Al chocar con cualquier cosa dañará por X de daño de impacto y explotará dañando en un área por X daño y destruyendo terreno.
   
   <br>
 
-  * <h5><b> Kamikaze estático </b></h5>Acción que permite inmolar el personaje que se está manipulando actualmente. La inmolación provoca una explosión en el área provocando X de daño. Al principio de la partida esta acción se encuentra en el inventario, cuyo uso es de una vez, como es obvio.
+  * <h5><b> Kamikaze estático </b></h5>Acción que permite inmolar el personaje que se está manipulando actualmente. La inmolación provoca una explosión en el área provocando X de daño y destruyendo terreno. El personaje de turno morirá en el acto.
 
   <br>
 
-  * <h5><b> 3º convocatoria (Francotirador) </b></h5>Acción que permite disparar una sola vez, con un alcance total al tamaño del mapa e infringe X de daño. El uso de este arma depende de si el personaje la tiene o no en su inventario. No es acumulable y no se encuentra en el inventario al principio de la partida. <br>(MIRAR COMO FUNCIONA EL DISPARO, DESDE JUGADOR O DESDE MONO)
+  * <h5><b> 3º convocatoria (Francotirador) </b></h5>Acción que permite disparar una sola vez, con un alcance total al tamaño del mapa e inflige X de daño. No es acumulable y no se encuentra en el inventario al principio de la partida. Será un objeto que tendrá que recoger el personaje para poder usarlo.
 
-+ <h4 id="pack"><b>  Paquetes </b></h4>
-  Los paquetes aparecerán cada X (dos) turnos, aunque existe una probabilidad X, de que no salga en dicho momento. <br> Los siguientes objetos tienen la misma probabilidad de aparición:
-  
-    - Granada
-    - Escopeta
-    - Ataque Aéreo
-    - Curas (Revisión de Nota)
 
 <h2 id="progre"><b> Progresión del Juego</b></h2>
 La progresión del personaje es nula más allá de la obtención de armas a lo largo de la partida. A partir de cierto tiempo, cada turno subirá el nivel del agua hasta que solo quede un equipo superviviente. 
