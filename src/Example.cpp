@@ -1,5 +1,7 @@
 #include "Example.h"
 
+#include <engine_prj/Engine.h>
+
 #include <ecs_prj/EntityManager.h>
 #include <ecs_prj/Entity.h>
 
@@ -23,8 +25,8 @@ namespace K_Engine {
 		std::string nothingLayer = "Nothing";
 		std::string platformLayer = "Platform";
 
-		K_Engine::PhysicsManager::Init(20, { 0, -9.8, 0 });
-		int playerCollidesWith = K_Engine::PhysicsManager::GetInstance()->getLayerValue(platformLayer);
+		//int playerCollidesWith = eng->getPhysicsManager()->getLayerValue(platformLayer);
+		int playerCollidesWith =  K_Engine::PhysicsManager::GetInstance()->getLayerValue(platformLayer);
 		//Configurations Scope
 		K_Engine::Entity* player = entMan->addEntity();
 		K_Engine::Transform* t = player->addComponent<K_Engine::Transform>(); t->setDimensions(3.0f);
@@ -33,9 +35,10 @@ namespace K_Engine {
 			ColliderType boxType = ColliderType::CT_SPHERE;
 			BodyType bodyType = BodyType::BT_DYNAMIC;
 			float mass = 1.0f;
-			//RigidBody* r = player->addComponent<RigidBody>(boxType, bodyType, mass, physicsMan->getLayerValue(playerLayer), playerCollidesWith);
-			//r->setFriction(0.6f);
-			//r->setRestitution(1.2f);
+			K_Engine::RigidBody* r = player->addComponent<K_Engine::RigidBody>(boxType, bodyType, mass, 
+				K_Engine::PhysicsManager::GetInstance()->getLayerValue(playerLayer), playerCollidesWith);
+			r->setFriction(0.6f);
+			r->setRestitution(1.2f);
 			K_Engine::MeshRenderer* m = player->addComponent<K_Engine::MeshRenderer>();
 			m->setMesh("sphere.mesh");
 			m->setMaterial("K_Engine/PrototypeBlue");
@@ -92,19 +95,18 @@ namespace K_Engine {
 		}
 
 		{
-			/*Entity* audio = entMan->addEntity();
-			AudioSource* a = audio->addComponent<AudioSource>();
+			//Entity* audio = entMan->addEntity();
+			//AudioSource* a = audio->addComponent<AudioSource>();
 			//a->playSong("./assets/sounds/samba_UCM.ogg");
-			a->playSoundEffect("./assets/sounds/clap.wav", -1);
-			a->playSoundEffect("./assets/sounds/crash.wav", -1);
-			a->playSoundEffect("./assets/sounds/accordion.wav", -1);
-			a->setGeneralVolume(75);
-			a->stopOneSoundEffect("./assets/sounds/clap.wav");
-			a->playSoundEffect("./assets/sounds/clap.wav", -1);
-			a->pauseOneSoundEffect("./assets/sounds/clap.wav");
-			a->resumeOneSoundEffect("./assets/sounds/clap.wav");
-			a->resumeOneSoundEffect("./assets/sounds/accordion.wav");*/
-
+			//a->playSoundEffect("./assets/sounds/clap.wav", -1);
+			//a->playSoundEffect("./assets/sounds/crash.wav", -1);
+			//a->playSoundEffect("./assets/sounds/accordion.wav", -1);
+			//a->setGeneralVolume(75);
+			//a->stopOneSoundEffect("./assets/sounds/clap.wav");
+			//a->playSoundEffect("./assets/sounds/clap.wav", -1);
+			//a->pauseOneSoundEffect("./assets/sounds/clap.wav");
+			//a->resumeOneSoundEffect("./assets/sounds/clap.wav");
+			//a->resumeOneSoundEffect("./assets/sounds/accordion.wav");
 		}
 
 		entMan->start();
