@@ -138,6 +138,7 @@ namespace K_Engine {
 		{
 			Entity* light = entMan->addEntity();
 			Light* lComp = light->addComponent<Light>(LightType::SPOTLIGHT, true);
+			ExampleComponent* eComp = light->addComponent<ExampleComponent>(Vector3( 1, 0, 0 ));
 		}
 
 		entMan->start();

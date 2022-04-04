@@ -32,6 +32,7 @@
     <ClInclude Include="..\..\src\ExampleComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\GameComponentRegistry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

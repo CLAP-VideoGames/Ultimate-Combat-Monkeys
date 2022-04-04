@@ -18,6 +18,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\src\ExampleComponent.h" />
     <ClInclude Include="..\..\src\ExampleScene.h" />
+    <ClInclude Include="..\..\src\GameComponentRegistry.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
