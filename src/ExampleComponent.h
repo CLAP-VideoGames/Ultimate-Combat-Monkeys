@@ -8,6 +8,7 @@
 
 namespace K_Engine {
 	class Light;
+	class AudioSource;
 
 	class ExampleComponent : public Component
 	{
@@ -40,6 +41,7 @@ namespace K_Engine {
 
 		Vector3 diffuse;
 		Light* light;
+		AudioSource* auSrc;
 	};
 }
 #endif $safeitemname$_H

@@ -131,13 +131,13 @@ namespace K_Engine {
 			a->pauseOneSoundEffect("./assets/sounds/clap.wav");
 			a->resumeOneSoundEffect("./assets/sounds/clap.wav");
 			a->resumeOneSoundEffect("./assets/sounds/accordion.wav");*/
-
 		}
 
 		//LIGHT
 		{
 			Entity* light = entMan->addEntity();
 			Light* lComp = light->addComponent<Light>(LightType::SPOTLIGHT, true);
+			AudioSource* a = light->addComponent<AudioSource>();
 			ExampleComponent* eComp = light->addComponent<ExampleComponent>(Vector3( 1, 0, 0 ));
 		}
 
