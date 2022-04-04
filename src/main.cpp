@@ -1,6 +1,7 @@
 #include <Windows.h>
 
 #include <Example.h>
+#include <ExampleScene.h>
 
 extern "C" {
 	__declspec(dllexport) K_Engine::Scene* loadScene() {

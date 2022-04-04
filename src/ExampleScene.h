@@ -5,8 +5,6 @@
 #include <scene_prj/Scene.h>
 
 namespace K_Engine {
-	class Engine;
-
 	class ExampleScene : public Scene
 	{
 	public:
@@ -15,4 +13,4 @@ namespace K_Engine {
 		virtual void init();
 	};
 }
-#endif // AUDIOSOURCE_H
+#endif // EXAMPLESCENE_H

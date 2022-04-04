@@ -11,11 +11,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Example.cpp" />
+    <ClCompile Include="..\..\src\ExampleComponent.cpp" />
+    <ClCompile Include="..\..\src\ExampleScene.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Example.h" />
+    <ClInclude Include="..\..\src\ExampleComponent.h" />
+    <ClInclude Include="..\..\src\ExampleScene.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -18,12 +18,16 @@
     <ClCompile Include="..\..\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Example.cpp">
+    <ClCompile Include="..\..\src\ExampleScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Example.h">
+    <ClInclude Include="..\..\src\ExampleScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
