@@ -21,11 +21,15 @@
     <ClCompile Include="..\..\src\ExampleScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\ExampleComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\ExampleScene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\ExampleComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
       <Filter>Header Files</Filter>
