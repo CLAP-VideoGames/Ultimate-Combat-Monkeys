@@ -3,6 +3,7 @@
 #define GAMECOMPONENTREGISTRY_H
 
 #include <ExampleComponent.h>
+#include <Controller.h>
 
 #include <ecs_prj/ComponentManager.h>
 
@@ -12,6 +13,7 @@ namespace K_Engine {
 			ComponentManager* compMan = K_Engine::ComponentManager::GetInstance();
 
 			compMan->add<K_Engine::ExampleComponent>();
+			compMan->add<K_Engine::Controller>();
 		}
 	}
 }

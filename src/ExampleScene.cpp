@@ -17,6 +17,7 @@
 #include <components_prj/AudioSource.h>
 #include <components_prj/Light.h>
 #include <ExampleComponent.h>
+#include <Controller.h>
 
 #include <utils_prj/Vector3.h>
 
@@ -48,6 +49,8 @@ namespace K_Engine {
 			m->setMesh("sphere.mesh");
 			m->setMaterial("K_Engine/PrototypeBlue");
 			m->debug();
+			Controller* control = player->addComponent<Controller>(100);
+
 		}
 
 		//SPHERE CHILD
@@ -140,6 +143,8 @@ namespace K_Engine {
 			AudioSource* a = light->addComponent<AudioSource>();
 			ExampleComponent* eComp = light->addComponent<ExampleComponent>(Vector3( 1, 0, 0 ));
 		}
+
+		
 
 		entMan->start();
 	}
