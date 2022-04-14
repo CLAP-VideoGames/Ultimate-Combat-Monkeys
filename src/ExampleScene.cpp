@@ -49,7 +49,7 @@ namespace K_Engine {
 			m->setMesh("sphere.mesh");
 			m->setMaterial("K_Engine/PrototypeBlue");
 			m->debug();
-			Controller* control = player->addComponent<Controller>(100);
+			Controller* control = player->addComponent<Controller>(1);
 
 		}
 

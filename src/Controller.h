@@ -7,7 +7,7 @@
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
-	class Transform;
+	class RigidBody;
 
 	class Controller : public Component
 	{
@@ -39,7 +39,7 @@ namespace K_Engine {
 		static std::string name;
 		float distance;
 
-		Transform* trans;
+		RigidBody* rigby;
 	};
 }
 #endif $safeitemname$_H

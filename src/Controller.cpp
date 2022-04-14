@@ -5,7 +5,7 @@
 #include <render_prj/RenderManager.h>
 
 #include <components_prj/AudioSource.h>
-#include <components_prj/Transform.h>
+#include <components_prj/RigidBody.h>
 
 namespace K_Engine {
 	//Required
@@ -24,7 +24,7 @@ namespace K_Engine {
 
 	void Controller::start()
 	{
-		trans = entity->getComponent<Transform>();
+		rigby = entity->getComponent<RigidBody>();
 	}
 
 	void Controller::update(int frameTime)
@@ -32,27 +32,27 @@ namespace K_Engine {
 		//Jump?
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_SPACE))
 		{
-			trans->translate(0, distance, 0);
+			rigby->addForce({ 0, distance, 0 });
 		}
 		// Back?
-		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_w))
+		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_w))
 		{
-			trans->translate(0, 0, -distance);
+			rigby->addForce({ 0, 0, -distance });
 		}
 		// Left?
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_a))
 		{
-			trans->translate(-distance, 0, 0);
+			rigby->addForce({ -distance, 0, 0 });
 		}
 		// Forward?
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_s))
 		{
-			trans->translate(0, 0, distance);
+			rigby->addForce({ 0, 0, distance });
 		}
 		// Right?
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_d))
 		{
-			trans->translate(distance, 0, 0);
+			rigby->addForce({ distance, 0, 0 });
 		}
 
 	}
