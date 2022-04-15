@@ -29,28 +29,33 @@ namespace K_Engine {
 
 	void Controller::update(int frameTime)
 	{
-		//Jump?
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_SPACE))
+		//Jump
+		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_SPACE) ||
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A))
 		{
 			rigby->addForce({ 0, distance, 0 });
 		}
-		// Back?
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_w))
+		// Foward
+		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_w) ||
+			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTY) < 0)
 		{
 			rigby->addForce({ 0, 0, -distance });
 		}
-		// Left?
-		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_a))
+		// Left
+		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_a) ||
+			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0)
 		{
 			rigby->addForce({ -distance, 0, 0 });
 		}
-		// Forward?
-		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_s))
+		// Back
+		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_s) || 
+			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTY) > 0)
 		{
 			rigby->addForce({ 0, 0, distance });
 		}
-		// Right?
-		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_d))
+		// Right
+		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_d) ||
+			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0)
 		{
 			rigby->addForce({ distance, 0, 0 });
 		}
