@@ -18,6 +18,7 @@
 #include <components_prj/Light.h>
 #include <ExampleComponent.h>
 #include <Controller.h>
+#include <Health.h>
 
 #include <utils_prj/Vector3.h>
 
@@ -50,6 +51,7 @@ namespace K_Engine {
 			m->setMaterial("K_Engine/PrototypeBlue");
 			m->debug();
 			Controller* control = player->addComponent<Controller>(1);
+			Health* playerHealth = player->addComponent<Health>();
 
 		}
 

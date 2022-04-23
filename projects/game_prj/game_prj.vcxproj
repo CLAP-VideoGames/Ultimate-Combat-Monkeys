@@ -14,6 +14,7 @@
     <ClCompile Include="..\..\src\Controller.cpp" />
     <ClCompile Include="..\..\src\ExampleComponent.cpp" />
     <ClCompile Include="..\..\src\ExampleScene.cpp" />
+    <ClCompile Include="..\..\src\Health.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -21,6 +22,7 @@
     <ClInclude Include="..\..\src\ExampleComponent.h" />
     <ClInclude Include="..\..\src\ExampleScene.h" />
     <ClInclude Include="..\..\src\GameComponentRegistry.h" />
+    <ClInclude Include="..\..\src\Health.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
