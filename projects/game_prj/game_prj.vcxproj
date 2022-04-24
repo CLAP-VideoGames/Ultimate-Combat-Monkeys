@@ -16,6 +16,10 @@
     <ClCompile Include="..\..\src\ExampleScene.cpp" />
     <ClCompile Include="..\..\src\Health.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="Kick.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Controller.h" />
