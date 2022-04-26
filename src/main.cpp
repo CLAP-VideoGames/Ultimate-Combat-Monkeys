@@ -4,6 +4,8 @@
 #include <ExampleScene.h>
 
 extern "C" {
+	std::string nameName() { return "UCM"; }
+
 	__declspec(dllexport) void registerComponents() {
 		K_Engine::Registry::registerGameComponents();
 	}
