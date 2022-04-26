@@ -4,6 +4,9 @@
 #include <input_prj/InputManager.h>
 #include <render_prj/RenderManager.h>
 #include <components_prj/Text.h>
+#include <components_prj/Transform.h>
+#include <utils_prj/Vector3.h>
+
 
 namespace K_Engine {
 	//Required
@@ -32,10 +35,13 @@ namespace K_Engine {
 		alive = true;
 		textLife = new Text(entity, "L", std::to_string(MAX_LIFE));
 		life = MAX_LIFE;
+		
 	}
 
 	void Health::update(int frameTime)
 	{
+		//textLife->changeText(std::to_string(entity->getComponent<Transform>()->getPosition().x));
+		//textLife->update(frameTime);
 		if (life <= 0 && alive)
 		{
 			// "Kill the entity"

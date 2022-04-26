@@ -22,7 +22,7 @@ namespace K_Engine {
 
 		ExampleComponent();
 
-		~ExampleComponent();
+		virtual ~ExampleComponent();
 
 		//Required method for the component name
 		static std::string GetId();
@@ -31,6 +31,8 @@ namespace K_Engine {
 		/// It's called at the beginning of the execution.
 		/// </summary>
 		virtual void start();
+
+		//void Health::init(K_Map* information);
 
 		/// <summary>
 		/// It's called every frame of the game.

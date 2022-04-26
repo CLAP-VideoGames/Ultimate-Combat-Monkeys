@@ -20,7 +20,7 @@ namespace K_Engine {
 
 		Kick();
 
-		~Kick();
+		virtual ~Kick();
 
 		//Required method for the component name
 		static std::string GetId();

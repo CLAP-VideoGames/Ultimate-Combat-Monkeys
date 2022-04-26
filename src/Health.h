@@ -6,7 +6,7 @@
 
 namespace K_Engine {
 	class Text;
-
+	class Vector3;
 	class Health : public Component
 	{
 	public:
@@ -19,7 +19,7 @@ namespace K_Engine {
 		Health();
 		//Controller(Entity* e, Vector3 diff);
 
-		~Health();
+		virtual ~Health();
 
 		//Required method for the component name
 		static std::string GetId();
@@ -44,9 +44,9 @@ namespace K_Engine {
 	private:
 		//Required
 		static std::string name;
-		float life;
+		int life;
 		bool alive;
-		const float MAX_LIFE = 100;
+		const int MAX_LIFE = 100;
 		Text* textLife;
 	};
 }

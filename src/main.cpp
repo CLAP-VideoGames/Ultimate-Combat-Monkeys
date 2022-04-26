@@ -5,7 +5,7 @@
 #include <physics_prj/PhysicsManager.h>
 
 extern "C" {
-	__declspec(dllexport) std::string nameName() { return "UCM"; }
+	__declspec(dllexport) std::string gameName() { return "UCM"; }
 
 	__declspec(dllexport) void registerLayers() {
 		K_Engine::PhysicsManager::GetInstance()->addLayer("All");

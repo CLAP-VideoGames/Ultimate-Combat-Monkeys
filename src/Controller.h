@@ -21,7 +21,7 @@ namespace K_Engine {
 		Controller();
 		//Controller(Entity* e, Vector3 diff);
 
-		~Controller();
+		virtual ~Controller();
 
 		//Required method for the component name
 		static std::string GetId();

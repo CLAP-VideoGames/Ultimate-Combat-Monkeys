@@ -42,15 +42,15 @@ namespace K_Engine {
 			t->setPosition(0.5f, 8, 0);
 			ColliderType boxType = ColliderType::CT_SPHERE;
 			BodyType bodyType = BodyType::BT_DYNAMIC;
-			float mass = 1.0f;
+			float mass = 3.0f;
 			RigidBody* r = player->addComponent<RigidBody>(boxType, bodyType, mass, K_Engine::PhysicsManager::GetInstance()->getLayerID(playerLayer), playerCollidesWith);
 			r->setFriction(0.6f);
-			r->setRestitution(1.2f);
+			r->setRestitution(0.2f);
 			K_Engine::MeshRenderer* m = player->addComponent<K_Engine::MeshRenderer>();
 			m->setMesh("sphere.mesh");
 			m->setMaterial("K_Engine/PrototypeBlue");
 			m->debug();
-			Controller* control = player->addComponent<Controller>(1);
+			Controller* control = player->addComponent<Controller>(25);
 			Health* playerHealth = player->addComponent<Health>();
 
 		}
