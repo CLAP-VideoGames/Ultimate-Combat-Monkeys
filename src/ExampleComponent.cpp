@@ -15,12 +15,16 @@ namespace K_Engine {
 		return name;
 	}
 	
-	ExampleComponent::ExampleComponent(Entity* e) : Component("ExampleComponent", e) {
-		name = id;
+	ExampleComponent::ExampleComponent(Entity* e) : Component(e) {
 	}
 
-	ExampleComponent::ExampleComponent(Entity* e, Vector3 diff) : Component("ExampleComponent", e) {
+	ExampleComponent::ExampleComponent(Entity* e, Vector3 diff) : Component(e) {
 		diffuse = diff;
+	}
+
+	ExampleComponent::ExampleComponent() : Component()
+	{
+
 	}
 
 	ExampleComponent::~ExampleComponent() = default;

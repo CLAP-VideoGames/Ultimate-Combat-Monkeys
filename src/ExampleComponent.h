@@ -20,6 +20,8 @@ namespace K_Engine {
 		ExampleComponent(Entity* e);
 		ExampleComponent(Entity* e, Vector3 diff);
 
+		ExampleComponent();
+
 		~ExampleComponent();
 
 		//Required method for the component name

@@ -13,6 +13,8 @@ namespace K_Engine {
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
 		Health(Entity* e);
+
+		Health();
 		//Controller(Entity* e, Vector3 diff);
 
 		~Health();

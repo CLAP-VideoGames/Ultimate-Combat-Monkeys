@@ -3,11 +3,11 @@
 #define Kick_H
 
 #include <ecs_prj/Component.h>
+#include <utils_prj/Vector3.h>
 
 namespace K_Engine {
 
 	class RigidBody;
-	class Vector3;
 
 	class __declspec(dllexport) Kick : public Component 
 	{
@@ -17,6 +17,8 @@ namespace K_Engine {
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
 		Kick(Entity* e);
+
+		Kick();
 
 		~Kick();
 
@@ -33,10 +35,6 @@ namespace K_Engine {
 		/// </summary> 
 		virtual void update();
 
-		/// <summary>
-		/// Custom method for debugging.
-		/// </summary>
-		virtual void debug();
 
 	private:
 		//Required

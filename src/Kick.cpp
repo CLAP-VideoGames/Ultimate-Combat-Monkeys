@@ -8,8 +8,18 @@ namespace K_Engine {
 	//Required
 	std::string Kick::name = "Kick";
 
-	Kick::Kick(Entity* e) : Component("Kick", e) {
-		name = id;
+	Kick::Kick(Entity* e) : Component(e) {
+
+	}
+
+	Kick::Kick() : Component()
+	{
+
+	}
+
+	Kick::~Kick()
+	{
+
 	}
 
 

@@ -2,9 +2,15 @@
 
 #include <GameComponentRegistry.h>
 #include <ExampleScene.h>
+#include <physics_prj/PhysicsManager.h>
 
 extern "C" {
-	std::string nameName() { return "UCM"; }
+	__declspec(dllexport) std::string nameName() { return "UCM"; }
+
+	__declspec(dllexport) void registerLayers() {
+		K_Engine::PhysicsManager::GetInstance()->addLayer("All");
+		K_Engine::PhysicsManager::GetInstance()->addLayer("Default");
+	}
 
 	__declspec(dllexport) void registerComponents() {
 		K_Engine::Registry::registerGameComponents();

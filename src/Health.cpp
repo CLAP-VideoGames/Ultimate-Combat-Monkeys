@@ -13,8 +13,13 @@ namespace K_Engine {
 		return name;
 	}
 
-	Health::Health(Entity* e) : Component("HealthComponent", e) {
-		name = id;
+	Health::Health(Entity* e) : Component(e) {
+		
+	}
+
+	Health::Health() : Component()
+	{
+
 	}
 
 	Health::~Health() = default;

@@ -17,6 +17,8 @@ namespace K_Engine {
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
 		Controller(Entity* e, float dist);
+
+		Controller();
 		//Controller(Entity* e, Vector3 diff);
 
 		~Controller();
