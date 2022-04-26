@@ -5,6 +5,8 @@
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
+	class Text;
+
 	class Health : public Component
 	{
 	public:
@@ -32,13 +34,20 @@ namespace K_Engine {
 		/// </summary> 
 		virtual void update(int frameTime);
 
+		virtual void init(K_Map* information);
+
+		/// <summary>
+		/// Adds or substract life from the entity and updates the text with the new life
+		/// </summary>
 		void AddLife(int l);
 
 	private:
 		//Required
 		static std::string name;
 		float life;
+		bool alive;
 		const float MAX_LIFE = 100;
+		Text* textLife;
 	};
 }
 #endif $safeitemname$_H
