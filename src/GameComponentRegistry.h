@@ -5,6 +5,8 @@
 #include <ExampleComponent.h>
 #include <Controller.h>
 #include <Health.h>
+#include <WeaponStack.h>
+#include <Kick.h>
 
 #include <ecs_prj/ComponentManager.h>
 
@@ -16,6 +18,8 @@ namespace K_Engine {
 			compMan->add<K_Engine::ExampleComponent>();
 			compMan->add<K_Engine::Controller>();
 			compMan->add<K_Engine::Health>();
+			compMan->add<K_Engine::WeaponStack>();
+			compMan->add<K_Engine::Kick>();
 		}
 	}
 }

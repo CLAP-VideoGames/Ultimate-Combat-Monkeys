@@ -19,6 +19,8 @@
 #include <ExampleComponent.h>
 #include <Controller.h>
 #include <Health.h>
+//#include <WeaponStack.h>
+#include <Kick.h>
 
 #include <utils_prj/Vector3.h>
 
@@ -38,7 +40,7 @@ namespace K_Engine {
 		//SPHERE
 		K_Engine::Entity* player = entMan->addEntity();
 		{
-			K_Engine::Transform* t = player->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+			K_Engine::Transform* t = player->addComponent<K_Engine::Transform>(); t->setScale(0.5f);
 			t->setPosition(0.5f, 8, 0);
 			ColliderType boxType = ColliderType::CT_SPHERE;
 			BodyType bodyType = BodyType::BT_DYNAMIC;
@@ -47,11 +49,11 @@ namespace K_Engine {
 			r->setFriction(0.6f);
 			r->setRestitution(0.2f);
 			K_Engine::MeshRenderer* m = player->addComponent<K_Engine::MeshRenderer>();
-			m->setMesh("sphere.mesh");
-			m->setMaterial("K_Engine/PrototypeBlue");
+			m->setMesh("Dario.mesh");
 			m->debug();
 			Controller* control = player->addComponent<Controller>(25);
 			Health* playerHealth = player->addComponent<Health>();
+			Kick* playerKick = player->addComponent<Kick>();
 
 		}
 
@@ -141,12 +143,12 @@ namespace K_Engine {
 		//LIGHT
 		{
 			Entity* light = entMan->addEntity();
-			Light* lComp = light->addComponent<Light>(LightType::SPOTLIGHT, true);
+			Light* lComp = light->addComponent<Light>(LightType::DIRECTIONAL, true);
 			AudioSource* a = light->addComponent<AudioSource>();
-			ExampleComponent* eComp = light->addComponent<ExampleComponent>(Vector3( 1, 0, 0 ));
+			ExampleComponent* eComp = light->addComponent<ExampleComponent>(Vector3(1, 0, 0));
 		}
 
-		
+
 
 		entMan->start();
 	}

@@ -17,6 +17,7 @@
     <ClCompile Include="..\..\src\Health.cpp" />
     <ClCompile Include="..\..\src\Kick.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\WeaponStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Controller.h" />
@@ -25,6 +26,7 @@
     <ClInclude Include="..\..\src\GameComponentRegistry.h" />
     <ClInclude Include="..\..\src\Health.h" />
     <ClInclude Include="..\..\src\Kick.h" />
+    <ClInclude Include="..\..\src\WeaponStack.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
