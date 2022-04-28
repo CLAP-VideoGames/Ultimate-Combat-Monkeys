@@ -32,41 +32,40 @@ namespace K_Engine {
 	void Controller::start()
 	{
 		rigby = entity->getComponent<RigidBody>();
-		rigby->setRotConstraints({0,1,0});
+		rigby->setRotConstraints({0,0,0});
 		anim = entity->getComponent<Animator>();
 	}
 
 	void Controller::update(int frameTime)
 	{
 		//Jump
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_SPACE) ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A) && rigby->getVelocity().y == 0)
+		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_SPACE) ||
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y == 0)
 		{
 			rigby->addForce({ 0, distance*50, 0 });
-			anim->playAnim("Walking");
+			anim->playAnim("Death");
 		}
-		// Foward
 		
 		// Left
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_a) ||
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0)
 		{
 			rigby->addForce({ -distance, 0, 0 });
-			entity->getComponent<Transform>()->rotate(0, 90, 0);
+			//entity->getComponent<Transform>()->rotate(0, 90, 0);
 		}
-		// Back
 		// Right
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_d) ||
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0)
 		{
 			rigby->addForce({ distance, 0, 0 });
-			entity->getComponent<Transform>()->rotate(0, -90, 0);
+			//entity->getComponent<Transform>()->rotate(0, -90, 0);
 		}
 
-		if (rigby->getVelocity().x > 0 || rigby->getVelocity().x < 0 /*&& anim->getAnimBool()*/)
+		if (rigby->getVelocity().x > 0.25 || rigby->getVelocity().x < -0.25 /*&& anim->getAnimBool()*/)
 		{
 			anim->playAnim("Walking");
 		}
+
 
 	}
 }

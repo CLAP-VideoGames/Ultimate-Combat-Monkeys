@@ -47,7 +47,7 @@ namespace K_Engine {
 		int life;
 		bool alive;
 		const int MAX_LIFE = 100;
-		Text* textLife;
+		//Text* textLife;
 	};
 }
 #endif $safeitemname$_H

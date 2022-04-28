@@ -21,7 +21,7 @@ namespace K_Engine {
 
 	Health::Health() : Component()
 	{
-		textLife = nullptr;
+		//textLife = nullptr;
 	}
 
 	Health::~Health() = default;
@@ -34,7 +34,7 @@ namespace K_Engine {
 	{
 		alive = true;
 		//Entity* e, std::string overlayName, std::string fontName, int fontSize, std::string text, Vector3 textColor
-		textLife = new Text(entity, "L", "MyFont", 60, std::to_string(MAX_LIFE), {0,0,0});
+		//textLife = new Text(entity, "L", "MyFont", 60, std::to_string(MAX_LIFE), {0,0,0});
 		life = MAX_LIFE;
 		
 	}
@@ -54,6 +54,6 @@ namespace K_Engine {
 	void Health::AddLife(int l)
 	{
 		life += l;
-		textLife->changeText(std::to_string(life));
+		//textLife->changeText(std::to_string(life));
 	}
 }
