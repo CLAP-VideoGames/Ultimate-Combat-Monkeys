@@ -5,9 +5,9 @@
 #include <render_prj/RenderManager.h>
 
 #include <components_prj/Transform.h>
+#include <components_prj/Animator.h>
 #include <utils_prj/K_Map.h>
 #include <Kick.h>
-
 
 
 namespace K_Engine {
@@ -35,22 +35,25 @@ namespace K_Engine {
 	void WeaponStack::start()
 	{
 		kComponent = entity->getComponent<Kick>(); 
+		anim = entity->getComponent<Animator>();
 	}
 
 	void WeaponStack::update(int frameTime)
 	{
 		// Kick
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_z) ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A))
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_X))
 		{
 			// Do the kick
-			// Call animator to do animation
+			anim->playAnim("Kick"); // Change animation to Kick
+			// Play kick sound effect
 		}
 		// Bomb
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_x) ||
-			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0)
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_Y))
 		{
-			// Call animator to do animation
+			anim->playAnim("Kick"); // Change Animation to Throw bomb
+			// Play throw sound effect
 		}
 
 	}

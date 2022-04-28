@@ -6,6 +6,9 @@
 
 #include <components_prj/AudioSource.h>
 #include <components_prj/RigidBody.h>
+#include <components_prj/Animator.h>
+#include <components_prj/Transform.h>
+
 
 namespace K_Engine {
 	//Required
@@ -29,16 +32,18 @@ namespace K_Engine {
 	void Controller::start()
 	{
 		rigby = entity->getComponent<RigidBody>();
-		rigby->setRotConstraints({0,0,0});
+		rigby->setRotConstraints({0,1,0});
+		anim = entity->getComponent<Animator>();
 	}
 
 	void Controller::update(int frameTime)
 	{
 		//Jump
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_SPACE) ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A))
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A) && rigby->getVelocity().y == 0)
 		{
 			rigby->addForce({ 0, distance*50, 0 });
+			anim->playAnim("Walking");
 		}
 		// Foward
 		
@@ -47,6 +52,7 @@ namespace K_Engine {
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0)
 		{
 			rigby->addForce({ -distance, 0, 0 });
+			entity->getComponent<Transform>()->rotate(0, 90, 0);
 		}
 		// Back
 		// Right
@@ -54,6 +60,12 @@ namespace K_Engine {
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0)
 		{
 			rigby->addForce({ distance, 0, 0 });
+			entity->getComponent<Transform>()->rotate(0, -90, 0);
+		}
+
+		if (rigby->getVelocity().x > 0 || rigby->getVelocity().x < 0 /*&& anim->getAnimBool()*/)
+		{
+			anim->playAnim("Walking");
 		}
 
 	}

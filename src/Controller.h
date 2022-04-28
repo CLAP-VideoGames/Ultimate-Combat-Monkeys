@@ -8,7 +8,7 @@
 
 namespace K_Engine {
 	class RigidBody;
-
+	class Animator;
 	class Controller : public Component
 	{
 	public:
@@ -40,7 +40,7 @@ namespace K_Engine {
 		//Required
 		static std::string name;
 		float distance;
-
+		Animator* anim;
 		RigidBody* rigby;
 	};
 }

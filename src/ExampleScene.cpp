@@ -16,10 +16,12 @@
 #include <components_prj/RigidBody.h>
 #include <components_prj/AudioSource.h>
 #include <components_prj/Light.h>
+#include <components_prj/Animator.h>
+
 #include <ExampleComponent.h>
 #include <Controller.h>
 #include <Health.h>
-//#include <WeaponStack.h>
+#include <WeaponStack.h>
 #include <Kick.h>
 
 #include <utils_prj/Vector3.h>
@@ -54,7 +56,8 @@ namespace K_Engine {
 			Controller* control = player->addComponent<Controller>(25);
 			Health* playerHealth = player->addComponent<Health>();
 			Kick* playerKick = player->addComponent<Kick>();
-
+			Animator* anim = player->addComponent<Animator>();
+			WeaponStack* weaponPlayer = player->addComponent<WeaponStack>();
 		}
 
 		//SPHERE CHILD

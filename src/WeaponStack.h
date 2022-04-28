@@ -5,6 +5,7 @@
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
+	class Animator;
 	class Kick;
 	class WeaponStack : public Component
 	{
@@ -39,6 +40,7 @@ namespace K_Engine {
 		//Required
 		static std::string name;
 		Kick* kComponent;
+		Animator* anim;
 	};
 }
 #endif $safeitemname$_H

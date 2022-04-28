@@ -33,7 +33,8 @@ namespace K_Engine {
 	void Health::start()
 	{
 		alive = true;
-		textLife = new Text(entity, "L", std::to_string(MAX_LIFE));
+		//Entity* e, std::string overlayName, std::string fontName, int fontSize, std::string text, Vector3 textColor
+		textLife = new Text(entity, "L", "MyFont", 60, std::to_string(MAX_LIFE), {0,0,0});
 		life = MAX_LIFE;
 		
 	}
