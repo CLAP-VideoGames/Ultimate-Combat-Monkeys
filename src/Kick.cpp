@@ -4,6 +4,10 @@
 #include <input_prj/InputManager.h>
 #include <components_prj/RigidBody.h>
 #include <ecs_prj/EntityManager.h>
+#include <components_prj/Transform.h>
+#include <physics_prj/PhysicsManager.h>
+#include <physics_prj/CollisionLayers.h>
+#include <log_prj/LogManager.h>
 
 namespace K_Engine {
 	//Required
@@ -30,9 +34,19 @@ namespace K_Engine {
 
 	void Kick::start()
 	{
-		rB = entity->getComponent<RigidBody>();
-		newRb = Vector3(10, 10, 10);
-		entMan = entity->getMan();
+		/*entMan = entity->getMan();
+		K_Engine::Entity* kickChild = entMan->addEntity();
+		{
+			K_Engine::Transform* t = kickChild->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+			ColliderType boxType = ColliderType::CT_SPHERE;
+			BodyType bodyType = BodyType::BT_DYNAMIC;
+			float mass = 1.0f;
+			K_Engine::LogManager::GetInstance()->printLog(K_Engine::LogType::WARNING, "mierdas");
+			RigidBody* r = kickChild->addComponent<RigidBody>(boxType, bodyType, mass, K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"), K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+			r->setFriction(0.6f);
+			r->setRestitution(0.2f);
+		}
+		entity->addChild(kickChild);*/
 	}
 
 	// LA idea ahora mismo es hacer la patada con o con un collider que esté todo el rato attacheada al player
@@ -48,7 +62,7 @@ namespace K_Engine {
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
 		{
 			
-			rB->setDimensions(newRb);
+			//rB->setDimensions(newRb);
 
 		}
 

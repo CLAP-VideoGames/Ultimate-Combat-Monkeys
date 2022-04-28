@@ -41,11 +41,10 @@ namespace K_Engine {
 		//Required
 		static std::string name;
 
-		RigidBody* rB;
-
 		Vector3 newRb;
 
 		EntityManager* entMan;
 	};
 }
+
 #endif Kick_H
