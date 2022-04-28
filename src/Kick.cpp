@@ -3,6 +3,7 @@
 #include <utils_prj/Vector3.h>
 #include <input_prj/InputManager.h>
 #include <components_prj/RigidBody.h>
+#include <ecs_prj/EntityManager.h>
 
 namespace K_Engine {
 	//Required
@@ -31,7 +32,7 @@ namespace K_Engine {
 	{
 		rB = entity->getComponent<RigidBody>();
 		newRb = Vector3(10, 10, 10);
-
+		entMan = entity->getMan();
 	}
 
 	// LA idea ahora mismo es hacer la patada con o con un collider que esté todo el rato attacheada al player
@@ -46,6 +47,7 @@ namespace K_Engine {
 		if (InputManager::GetInstance()->getLeftMouseButtonPressed() ||
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
 		{
+			
 			rB->setDimensions(newRb);
 
 		}

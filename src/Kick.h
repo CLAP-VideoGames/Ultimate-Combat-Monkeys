@@ -8,6 +8,7 @@
 namespace K_Engine {
 
 	class RigidBody;
+	class EntityManager;
 
 	class __declspec(dllexport) Kick : public Component 
 	{
@@ -43,6 +44,8 @@ namespace K_Engine {
 		RigidBody* rB;
 
 		Vector3 newRb;
+
+		EntityManager* entMan;
 	};
 }
 #endif Kick_H
