@@ -4,7 +4,7 @@ title Game_Engine_Build
 
 :: Release compiling boolean
 set RELEASE_GAME=false
-
+set GAME_WORKING_DIR=.\
 :: Directory variables
 set ENGINE_SOL_DIR=%GAME_WORKING_DIR%\engine\K_Engine.sln
 set ENGINE_SOURCE_FILE=%GAME_WORKING_DIR%\engine\src\engine_prj\Engine.cpp
