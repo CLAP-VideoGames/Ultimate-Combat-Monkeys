@@ -69,7 +69,7 @@ namespace K_Engine {
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
 		{
 
-			rB->setDimensions(newRb);
+			//rB->setDimensions(newRb);
 
 		}
 
