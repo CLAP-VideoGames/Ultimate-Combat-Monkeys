@@ -45,7 +45,6 @@ namespace K_Engine {
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_m)) light->changeType(LightType::SPOTLIGHT);
 
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_i)) light->changeDiffuse(Vector3(0, 1, 0));
-		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_k)) light->restoreDiffuse();
 
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_h)) auSrc->playSoundEffect("./assets/sounds/accordion.wav", -1);
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_y)) auSrc->stopOneSoundEffect("./assets/sounds/accordion.wav");;
