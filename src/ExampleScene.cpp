@@ -39,8 +39,9 @@ namespace K_Engine {
 
 		int playerCollidesWith = K_Engine::PhysicsManager::GetInstance()->getLayerID(platformLayer);
 
-		//SPHERE
+		//Dario chapas, es como dario, pero mete chapas
 		K_Engine::Entity* player = entMan->addEntity();
+		Animator* anim = player->addComponent<Animator>();
 		{
 			K_Engine::Transform* t = player->addComponent<K_Engine::Transform>(); t->setScale(0.5f);
 			t->setPosition(0.5f, 8, 0);
@@ -56,8 +57,8 @@ namespace K_Engine {
 			Controller* control = player->addComponent<Controller>(25);
 			Health* playerHealth = player->addComponent<Health>();
 			Kick* playerKick = player->addComponent<Kick>();
-			Animator* anim = player->addComponent<Animator>();
 			WeaponStack* weaponPlayer = player->addComponent<WeaponStack>();
+
 		}
 
 		//SPHERE CHILD
@@ -154,5 +155,7 @@ namespace K_Engine {
 		}
 
 		entMan->start();
+
+		anim->playAnim("Idle");
 	}
 }

@@ -9,6 +9,7 @@
 #include <physics_prj/CollisionLayers.h>
 #include <log_prj/LogManager.h>
 
+
 namespace K_Engine {
 	//Required
 	std::string Kick::name = "Kick";
@@ -34,26 +35,32 @@ namespace K_Engine {
 
 	void Kick::start()
 	{
-		/*entMan = entity->getMan();
-		K_Engine::Entity* kickChild = entMan->addEntity();
-		{
-			K_Engine::Transform* t = kickChild->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
-			ColliderType boxType = ColliderType::CT_SPHERE;
-			BodyType bodyType = BodyType::BT_DYNAMIC;
-			float mass = 1.0f;
-			K_Engine::LogManager::GetInstance()->printLog(K_Engine::LogType::WARNING, "mierdas");
-			RigidBody* r = kickChild->addComponent<RigidBody>(boxType, bodyType, mass, K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"), K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
-			r->setFriction(0.6f);
-			r->setRestitution(0.2f);
-		}
-		entity->addChild(kickChild);*/
+		entMan = entity->getMan();
+		//K_Engine::Entity* kickChild = entMan->addEntity();
+		//{
+		//	K_Engine::Transform* t = kickChild->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+		//	ColliderType boxType = ColliderType::CT_SPHERE;
+		//	BodyType bodyType = BodyType::BT_DYNAMIC;
+		//	float mass = 1.0f;
+
+		//	RigidBody* r = kickChild->addComponent<RigidBody>(boxType, bodyType, mass,
+		//		K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
+		//		K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+
+		//	r->setFriction(0.6f);
+		//	r->setRestitution(0.2f);
+		//}
+		//entity->addChild(kickChild);
+
+		//K_Engine::LogManager::GetInstance()->printLog(K_Engine::
+		//	LogType::WARNING, "\n""mierdas""\n");
 	}
 
-	// LA idea ahora mismo es hacer la patada con o con un collider que esté todo el rato attacheada al player
+	// LA idea ahora mismo es hacer la patada con o con un collider que estï¿½ todo el rato attacheada al player
 	// o con un cambio de dimension de rigidbody que necesitaria cambiarse y volver a su estado original
-	// cuando se pulse el botón (lo que está programado)
+	// cuando se pulse el botï¿½n (lo que estï¿½ programado)
 
-	// Lo ideal creemos que es crear un collider/trigger en el momento de pulsar el botón y luego eliminarlo
+	// Lo ideal creemos que es crear un collider/trigger en el momento de pulsar el botï¿½n y luego eliminarlo
 	// al cabo de poco tiempo, pero aun no hemos desarrollado esa idea
 
 	void Kick::update()
@@ -61,8 +68,8 @@ namespace K_Engine {
 		if (InputManager::GetInstance()->getLeftMouseButtonPressed() ||
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
 		{
-			
-			//rB->setDimensions(newRb);
+
+			rB->setDimensions(newRb);
 
 		}
 
