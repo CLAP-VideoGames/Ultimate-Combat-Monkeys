@@ -13,7 +13,7 @@ set EXE_DIR=.\engine\exe\
 :: Compiling of game dll and movement to their folders 
 :: (this should be moved to the main build eventually)
 msbuild %GAME_SOL_DIR% /t:game_prj /p:platform=x64 /p:configuration=Release
-msbuild %GAME_SOL_DIR% /t:game_prj /p:platform=x64 /p:configuration=Debug
+if %RELEASE_ENGINE% == false msbuild %GAME_SOL_DIR% /t:game_prj /p:platform=x64 /p:configuration=Debug
 
 copy .\build\game.dll %EXE_DIR% 1>nul
 copy .\build\game_d.dll %EXE_DIR% 1>nul
