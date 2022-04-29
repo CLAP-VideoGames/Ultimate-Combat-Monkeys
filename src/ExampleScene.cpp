@@ -30,8 +30,6 @@ namespace K_Engine {
 
 	void ExampleScene::init()
 	{
-		entMan = new K_Engine::EntityManager(); // Entity Manager
-
 		// example scene (pending of development)
 		std::string playerLayer = "Player";
 		std::string nothingLayer = "Nothing";

@@ -3,7 +3,7 @@
 title Game_Engine_Build
 
 :: Release compiling boolean
-set RELEASE_GAME=false
+set RELEASE_ENGINE=false
 set DEVELOPMENT=false
 
 :: Directory variables
