@@ -148,7 +148,7 @@ namespace K_Engine {
 			K_Engine::Transform* t = light->addComponent<K_Engine::Transform>();
 			t->setPosition(0, 20, 20);
 			Light* lComp = light->addComponent<Light>(LightType::DIRECTIONAL, true, new Vector3(1, 1, 1), new Vector3(0, 0, 0));
-			AudioSource* a = light->addComponent<AudioSource>();
+			//AudioSource* a = light->addComponent<AudioSource>();
 			ExampleComponent* eComp = light->addComponent<ExampleComponent>(Vector3(1, 0, 0));
 		}
 
