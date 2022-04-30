@@ -34,7 +34,7 @@ namespace K_Engine {
 		/// <summary>
 		/// It's called every frame of the game.
 		/// </summary> 
-		virtual void update();
+		virtual void update(int frameTime);
 
 
 	private:
@@ -44,6 +44,8 @@ namespace K_Engine {
 		Vector3 newRb;
 
 		EntityManager* entMan;
+
+		bool debug = true;
 	};
 }
 
