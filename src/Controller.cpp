@@ -39,31 +39,35 @@ namespace K_Engine {
 	void Controller::update(int frameTime)
 	{
 		//Jump
-		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_SPACE) ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y == 0)
+		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) /*&& rigby->getVelocity().y == 0*/)
 		{
+			anim->playAnim("Jumping", false);
 			rigby->addForce({ 0, distance*50, 0 });
-			anim->playAnim("Death");
 		}
 		
 		// Left
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_a) ||
+		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0)
 		{
 			rigby->addForce({ -distance, 0, 0 });
-			//entity->getComponent<Transform>()->rotate(0, 90, 0);
 		}
 		// Right
-		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_d) ||
+		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0)
 		{
 			rigby->addForce({ distance, 0, 0 });
-			//entity->getComponent<Transform>()->rotate(0, -90, 0);
 		}
 
-		if (rigby->getVelocity().x > 0.25 || rigby->getVelocity().x < -0.25 /*&& anim->getAnimBool()*/)
+		// If anim not Walking, check if it's moving
+		if (anim->getCurrAnimName() != "Walking" && (rigby->getVelocity().x > 0.25 || rigby->getVelocity().x < -0.25))
 		{
-			anim->playAnim("Walking");
+			anim->playAnim("Walking", true);
+			
+		}
+		else if (anim->getCurrAnimName() != "Idle" && rigby->getVelocity().y == 0 && (rigby->getVelocity().x < 0.25 || rigby->getVelocity().x > -0.25)) // If not in the middle of a jump
+		{
+			anim->playAnim("Idle", true);
 		}
 
 

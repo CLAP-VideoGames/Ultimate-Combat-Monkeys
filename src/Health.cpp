@@ -5,6 +5,7 @@
 #include <render_prj/RenderManager.h>
 #include <components_prj/Text.h>
 #include <components_prj/Transform.h>
+#include <components_prj/Animator.h>
 #include <utils_prj/Vector3.h>
 
 
@@ -36,7 +37,8 @@ namespace K_Engine {
 		//Entity* e, std::string overlayName, std::string fontName, int fontSize, std::string text, Vector3 textColor
 		//textLife = new Text(entity, "L", "MyFont", 60, std::to_string(MAX_LIFE), {0,0,0});
 		life = MAX_LIFE;
-		
+		timer = 100;
+		anim = entity->getComponent<Animator>();
 	}
 
 	void Health::update(int frameTime)
@@ -45,8 +47,18 @@ namespace K_Engine {
 		//textLife->update(frameTime);
 		if (life <= 0 && alive)
 		{
-			// "Kill the entity"
+			// Start death animation
 			alive = false;
+			anim->playAnim("Death");
+		}
+		else if (!alive && timer >= 0)
+		{
+			// Give enough time for the death animation
+			timer--;
+		}
+		else if (timer <= 0 && !alive)
+		{
+			// "Kill the entity"
 			entity->setActive(false);
 		}
 	}
@@ -54,6 +66,11 @@ namespace K_Engine {
 	void Health::AddLife(int l)
 	{
 		life += l;
-		//textLife->changeText(std::to_string(life));
+	}
+
+	// Get life to show in the interface
+	int Health::getCurrentLife()
+	{
+		return life; 
 	}
 }
