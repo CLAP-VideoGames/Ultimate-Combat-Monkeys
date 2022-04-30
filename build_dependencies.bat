@@ -4,7 +4,6 @@ title Game_Engine_Dependencies
 
 :: Directory variables
 set GAME_WORKING_DIR=%cd%
-set BUILD_DIR=%GAME_WORKING_DIR%\build\
 set ENGINE_DIR=%GAME_WORKING_DIR%\engine\
 
 :: Build all engine related stuff

@@ -7,6 +7,7 @@ set RELEASE_ENGINE=false
 set DEVELOPMENT=false
 
 :: Directory variables
+set BUILD_DIR=%cd%\game
 set ENGINE_SOL_DIR=%cd%\engine\K_Engine.sln
 
 :: Change DEVELOPMENT macro

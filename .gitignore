@@ -354,7 +354,6 @@ MigrationBackup/
 [Bb]uild/
 [Tt]emp/
 [Ll]ib/
-dependencies/cegui/src/dependencies/
 
 # New ignored files required for the project
 *.exe

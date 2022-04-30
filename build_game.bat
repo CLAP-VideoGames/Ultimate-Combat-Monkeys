@@ -6,7 +6,7 @@ title Game_Build
 set RELEASE_GAME=false
 
 :: Directory variables
-set BUILD_DIR=.\build
+set BUILD_DIR=%cd%\game
 set GAME_SOL_DIR=.\UCM.sln
 set EXE_DIR=.\engine\exe\
 
@@ -22,8 +22,8 @@ echo Game built
 :: Move game.dll to exe folder
 echo Copying game files engine...
 
-copy .\build\game.dll %EXE_DIR% 1>nul
-copy .\build\game_d.dll %EXE_DIR% 1>nul
+copy %BUILD_DIR%\game.dll %EXE_DIR% 1>nul
+copy %BUILD_DIR%\game_d.dll %EXE_DIR% 1>nul
 
 :: Delete excess files build folder
 del /s %BUILD_DIR%\*.lib 1>nul
