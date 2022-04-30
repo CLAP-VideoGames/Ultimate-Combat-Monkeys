@@ -46,7 +46,10 @@ namespace K_Engine {
 			ColliderType boxType = ColliderType::CT_SPHERE;
 			BodyType bodyType = BodyType::BT_DYNAMIC;
 			float mass = 3.0f;
-			RigidBody* r = player->addComponent<RigidBody>(boxType, bodyType, mass, K_Engine::PhysicsManager::GetInstance()->getLayerID(playerLayer), playerCollidesWith);
+
+			RigidBody* r = player->addComponent<RigidBody>(boxType, bodyType, mass,
+				K_Engine::PhysicsManager::GetInstance()->getLayerID(playerLayer), playerCollidesWith);
+
 			r->setFriction(0.6f);
 			r->setRestitution(0.2f);
 			K_Engine::MeshRenderer* m = player->addComponent<K_Engine::MeshRenderer>();

@@ -83,10 +83,27 @@ namespace K_Engine {
 		//}
 
 
-		if (InputManager::GetInstance()->getLeftMouseButtonPressed() ||
+		if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
 		{
+			entMan = entity->getMan();
+			K_Engine::Entity* granado = entMan->addEntity(true);
+			{
+				MeshRenderer* m = granado->addComponent<MeshRenderer>();
+				m->setMesh("sphere.mesh");
 
+				K_Engine::Transform* t = granado->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+				ColliderType boxType = ColliderType::CT_SPHERE;
+				BodyType bodyType = BodyType::BT_DYNAMIC;
+				float mass = 1.0f;
+
+				RigidBody* r = granado->addComponent<RigidBody>(boxType, bodyType, mass,
+					K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
+					K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+
+				r->setFriction(0.6f);
+				r->setRestitution(0.2f);
+			}
 			//rB->setDimensions(newRb);
 
 		}
