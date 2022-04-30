@@ -41,18 +41,18 @@ namespace K_Engine {
 	void WeaponStack::update(int frameTime)
 	{
 		// Kick
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_z) ||
+		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_Z) ||
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_X))
 		{
 			// Do the kick
-			anim->playAnim("Kick"); // Change animation to Kick
+			//anim->playAnim("Kick", false); // Change animation to Kick
 			// Play kick sound effect
 		}
 		// Bomb
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Keycode::KEY_x) ||
+		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_X) ||
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_Y))
 		{
-			anim->playAnim("Kick"); // Change Animation to Throw bomb
+			//anim->playAnim("Kick", false); // Change Animation to Throw bomb
 			// Play throw sound effect
 		}
 

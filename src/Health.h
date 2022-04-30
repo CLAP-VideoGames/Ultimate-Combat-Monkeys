@@ -7,6 +7,7 @@
 namespace K_Engine {
 	class Text;
 	class Vector3;
+	class Animator;
 	class Health : public Component
 	{
 	public:
@@ -41,13 +42,16 @@ namespace K_Engine {
 		/// </summary>
 		void AddLife(int l);
 
+		int getCurrentLife();
+
 	private:
 		//Required
 		static std::string name;
-		int life;
+		int life, timer;
 		bool alive;
 		const int MAX_LIFE = 100;
 		//Text* textLife;
+		Animator* anim;
 	};
 }
 #endif $safeitemname$_H
