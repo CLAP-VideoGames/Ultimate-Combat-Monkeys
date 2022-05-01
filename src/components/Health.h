@@ -47,7 +47,7 @@ namespace K_Engine {
 	private:
 		//Required
 		static std::string name;
-		int life, timer;
+		int life;
 		bool alive;
 		const int MAX_LIFE = 100;
 		//Text* textLife;

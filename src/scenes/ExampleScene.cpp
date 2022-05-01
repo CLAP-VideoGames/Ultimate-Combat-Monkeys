@@ -51,8 +51,8 @@ namespace K_Engine {
 		K_Engine::Entity* player = entMan->addEntity();
 		Animator* anim = player->addComponent<Animator>();
 		{
-			K_Engine::Transform* t = player->addComponent<K_Engine::Transform>(); t->setScale(0.5f);
-			t->setPosition(0.5f, 8, 0);
+			K_Engine::Transform* t = player->addComponent<K_Engine::Transform>(); t->setScale(1.5f);
+			t->setPosition(0, 20, 0);
 			ColliderType boxType = ColliderType::CT_SPHERE;
 			BodyType bodyType = BodyType::BT_DYNAMIC;
 			float mass = 3.0f;
@@ -60,12 +60,12 @@ namespace K_Engine {
 			RigidBody* r = player->addComponent<RigidBody>(boxType, bodyType, mass,
 				K_Engine::PhysicsManager::GetInstance()->getLayerID(playerLayer), playerCollidesWith);
 
-			r->setFriction(0.6f);
+			r->setFriction(1);
 			r->setRestitution(0.2f);
 			K_Engine::MeshRenderer* m = player->addComponent<K_Engine::MeshRenderer>();
 			m->setMesh("Dario.mesh");
 			m->debug();
-			Controller* control = player->addComponent<Controller>(25);
+			Controller* control = player->addComponent<Controller>(120);
 			Health* playerHealth = player->addComponent<Health>();
 			Kick* playerKick = player->addComponent<Kick>();
 			WeaponStack* weaponPlayer = player->addComponent<WeaponStack>();

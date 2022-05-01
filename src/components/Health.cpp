@@ -37,7 +37,6 @@ namespace K_Engine {
 		//Entity* e, std::string overlayName, std::string fontName, int fontSize, std::string text, Vector3 textColor
 		//textLife = new Text(entity, "L", "MyFont", 60, std::to_string(MAX_LIFE), {0,0,0});
 		life = MAX_LIFE;
-		timer = 100;
 		anim = entity->getComponent<Animator>();
 	}
 
@@ -51,12 +50,7 @@ namespace K_Engine {
 			alive = false;
 			anim->playAnim("Death");
 		}
-		else if (!alive && timer >= 0)
-		{
-			// Give enough time for the death animation
-			timer--;
-		}
-		else if (timer <= 0 && !alive)
+		else if (!alive && anim->animHasEnded())
 		{
 			// "Kill the entity"
 			entity->setActive(false);

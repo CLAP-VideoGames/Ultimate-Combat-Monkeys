@@ -8,7 +8,7 @@
 #include <components_prj/RigidBody.h>
 #include <components_prj/Animator.h>
 #include <components_prj/Transform.h>
-
+#include <iostream>
 
 namespace K_Engine {
 	//Required
@@ -37,43 +37,52 @@ namespace K_Engine {
 	}
 
 	void Controller::onEnable() {
-		rigby->disableDeactivation();
 	}
 
 	void Controller::update(int frameTime)
 	{
+		
+		
+		// If not moving in ground
+		if (anim->getCurrAnimName() != "Idle" && (rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1) && (anim->getCurrAnimName() != "Walking" && rigby->getVelocity().y > -0.1 || rigby->getVelocity().y < 0.1))
+		{
+			anim->playAnim("Idle", true);
+		}
+
 		//Jump
 		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) /*&& rigby->getVelocity().y == 0*/)
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
 		{
+			std::cout <<anim->getCurrAnimName() << "\n";
 			anim->playAnim("Jumping", false);
-			rigby->addForce({ 0, distance*50, 0 });
+			std::cout << anim->getCurrAnimName() << "\n";
+			rigby->addForce({ 0, distance*30, 0 });
+			
 		}
 		
 		// Left
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0)
 		{
+			// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
+			if (anim->getCurrAnimName() != "Walking" && anim->getCurrAnimName() != "Jumping" || (anim->getCurrAnimName() == "Jumping" && anim->animHasEnded()))
+			{
+				anim->playAnim("Walking", true);
+			}
+
 			rigby->addForce({ -distance, 0, 0 });
 		}
 		// Right
 		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0)
 		{
+			// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
+			if ((anim->getCurrAnimName() != "Walking" && anim->getCurrAnimName() != "Jumping") || (anim->getCurrAnimName() == "Jumping" && anim->animHasEnded()))
+			{
+				anim->playAnim("Walking", true);
+			}
 			rigby->addForce({ distance, 0, 0 });
 		}
 
-		// If anim not Walking, check if it's moving
-		if (anim->getCurrAnimName() != "Walking" && (rigby->getVelocity().x > 0.25 || rigby->getVelocity().x < -0.25))
-		{
-			anim->playAnim("Walking", true);
-			
-		}
-		else if (anim->getCurrAnimName() != "Idle" && rigby->getVelocity().y == 0 && (rigby->getVelocity().x < 0.25 || rigby->getVelocity().x > -0.25)) // If not in the middle of a jump
-		{
-			anim->playAnim("Idle", true);
-		}
-
-		rigby->disableDeactivation();
 	}
 }
