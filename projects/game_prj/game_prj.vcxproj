@@ -13,6 +13,8 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\components\CameraMovement.cpp" />
     <ClCompile Include="..\..\src\components\Controller.cpp" />
+    <ClCompile Include="..\..\src\components\DestroyOnCollision.cpp" />
+    <ClCompile Include="..\..\src\components\Destructible.cpp" />
     <ClCompile Include="..\..\src\components\ExampleComponent.cpp" />
     <ClCompile Include="..\..\src\components\Health.cpp" />
     <ClCompile Include="..\..\src\components\Kick.cpp" />
@@ -26,6 +28,8 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="..\..\src\components\Controller.h" />
+    <ClInclude Include="..\..\src\components\DestroyOnCollision.h" />
+    <ClInclude Include="..\..\src\components\Destructible.h" />
     <ClInclude Include="..\..\src\components\ExampleComponent.h" />
     <ClInclude Include="..\..\src\components\Health.h" />
     <ClInclude Include="..\..\src\components\Kick.h" />
