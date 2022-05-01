@@ -36,13 +36,12 @@ namespace K_Engine {
 		/// </summary> 
 		virtual void update(int frameTime);
 
+		virtual void onCollisionEnter(Entity* collision);
+
 
 	private:
 		//Required
 		static std::string name;
-
-		EntityManager* entMan;
-		Entity* grnd;
 
 		bool debug = true;
 	};

@@ -57,6 +57,9 @@
     <ClCompile Include="..\..\src\components\Destructible.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\components\Grenade.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\GameComponentRegistry.h">
@@ -87,6 +90,9 @@
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\components\Destructible.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\components\Grenade.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>

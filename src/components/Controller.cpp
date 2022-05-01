@@ -2,12 +2,18 @@
 
 #include <ecs_prj/Entity.h>
 #include <input_prj/InputManager.h>
+#include <ecs_prj/EntityManager.h>
 #include <render_prj/RenderManager.h>
+#include <physics_prj/CollisionLayers.h>
+#include <physics_prj/PhysicsManager.h>
 
 #include <components_prj/AudioSource.h>
 #include <components_prj/RigidBody.h>
 #include <components_prj/Animator.h>
 #include <components_prj/Transform.h>
+#include <components_prj/Transform.h>
+#include <components_prj/MeshRenderer.h>
+#include <components/Grenade.h>
 #include <iostream>
 
 namespace K_Engine {
@@ -34,6 +40,8 @@ namespace K_Engine {
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({0,0,0});
 		anim = entity->getComponent<Animator>();
+
+		entMan = entity->getMan();
 	}
 
 	void Controller::onEnable() {
@@ -82,6 +90,32 @@ namespace K_Engine {
 				anim->playAnim("Walking", true);
 			}
 			rigby->addForce({ distance, 0, 0 });
+		}
+
+		if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
+		{
+			Entity* grnd = entMan->addEntity(true);
+			{
+				MeshRenderer* m = grnd->addComponent<MeshRenderer>();
+				m->setMesh("sphere.mesh");
+
+				K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+				ColliderType boxType = ColliderType::CT_SPHERE;
+				BodyType bodyType = BodyType::BT_DYNAMIC;
+				float mass = 1.0f;
+
+
+				RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
+					K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
+					K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+
+				r->setFriction(0.6f);
+				r->setRestitution(0.2f);
+				r->addForce(K_Engine::Vector3(100, 100, 0));
+
+				//grnd->addComponent<K_Engine::Grenade>();
+			}
 		}
 
 	}

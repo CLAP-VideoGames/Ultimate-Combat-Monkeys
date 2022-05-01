@@ -1,15 +1,18 @@
 #include "Kick.h"
+
 #include <ecs_prj/Entity.h>
+#include <ecs_prj/EntityManager.h>
 #include <utils_prj/Vector3.h>
 #include <input_prj/InputManager.h>
-#include <components_prj/RigidBody.h>
-#include <ecs_prj/EntityManager.h>
-#include <components_prj/Transform.h>
 #include <physics_prj/PhysicsManager.h>
 #include <physics_prj/CollisionLayers.h>
 #include <log_prj/LogManager.h>
-#include <iostream>
+
+
+#include <components_prj/RigidBody.h>
+#include <components_prj/Transform.h>
 #include <components_prj/MeshRenderer.h>
+#include <iostream>
 
 
 namespace K_Engine {

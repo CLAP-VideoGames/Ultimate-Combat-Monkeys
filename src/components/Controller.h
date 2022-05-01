@@ -9,6 +9,7 @@
 namespace K_Engine {
 	class RigidBody;
 	class Animator;
+	class EntityManager;
 	class Controller : public Component
 	{
 	public:
@@ -45,6 +46,7 @@ namespace K_Engine {
 		float distance;
 		Animator* anim;
 		RigidBody* rigby;
+		EntityManager* entMan;
 	};
 }
 #endif CONTROLLER_H
