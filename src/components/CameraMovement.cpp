@@ -6,7 +6,7 @@
 #include <input_prj/K_Engine_Keys.h>
 
 #include <iostream>
-
+#include <cmath>
 
 namespace K_Engine {
 	//Required
@@ -28,6 +28,7 @@ namespace K_Engine {
 
 	void CameraMovement::awake() {
 		
+		printf("hola");
 	}
 
 	void CameraMovement::start() {
@@ -36,13 +37,12 @@ namespace K_Engine {
 	}
 
 	void CameraMovement::update(int frameTime) {
-		/*if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE))) {
-
-		}*/
-
-		float mouseZoom = inputMan->mouseScroll();
-		std::cout << mouseZoom << std::endl;
+		int mouseZoom = 0;
+		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_T))) {
+			mouseZoom -= 2;
+		}else if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_Y))) {
+			mouseZoom += 2;
+		}
 		cam->translateCamera(0, 0, mouseZoom);
-
 	}
 }

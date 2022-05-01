@@ -164,6 +164,8 @@ namespace K_Engine {
 			ExampleComponent* eComp = light->addComponent<ExampleComponent>(Vector3(1, 0, 0));
 		}
 
+		entMan->awake();
+		entMan->onEnable();
 		entMan->start();
 
 		anim->playAnim("Idle");
