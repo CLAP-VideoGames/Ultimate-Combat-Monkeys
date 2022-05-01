@@ -10,6 +10,7 @@
 #include <physics_prj/CollisionLayers.h>
 #include <script_prj/ScriptManager.h>
 
+#include <render_prj/Camera.h>
 #include <render_prj/RenderManager.h>
 
 #include <components_prj/Transform.h>
@@ -41,6 +42,8 @@ namespace K_Engine {
 
 		int playerCollidesWith = K_Engine::PhysicsManager::GetInstance()->getLayerID(platformLayer);
 
+		Camera* cam = RenderManager::GetInstance()->getCamera();
+		cam->setCameraPos(0, 60, 400);
 
 
 		//Dario chapas, es como dario, pero mete chapas
@@ -65,7 +68,6 @@ namespace K_Engine {
 			Health* playerHealth = player->addComponent<Health>();
 			Kick* playerKick = player->addComponent<Kick>();
 			WeaponStack* weaponPlayer = player->addComponent<WeaponStack>();
-
 		}
 
 		//SPHERE CHILD
