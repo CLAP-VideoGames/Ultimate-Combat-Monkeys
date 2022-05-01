@@ -5,6 +5,8 @@
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
+	class Camera;
+	class InputManager;
 	class CameraMovement : public Component 
 	{
 	public:
@@ -21,6 +23,8 @@ namespace K_Engine {
 		//Required method for the component name
 		static std::string GetId();
 
+		virtual void awake();
+
 		/// <summary>
 		/// It's called at the beginning of the execution.
 		/// </summary>
@@ -31,14 +35,11 @@ namespace K_Engine {
 		/// </summary> 
 		virtual void update(int frameTime);
 
-		/// <summary>
-		/// Custom method for debugging.
-		/// </summary>
-		virtual void debug();
-
 	private:
 		//Required
 		static std::string name;
+		InputManager* inputMan;
+		Camera* cam;
 	};
 }
 #endif CameraMovement_H

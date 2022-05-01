@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\components\CameraMovement.cpp" />
     <ClCompile Include="..\..\src\components\Controller.cpp" />
     <ClCompile Include="..\..\src\components\ExampleComponent.cpp" />
     <ClCompile Include="..\..\src\components\Health.cpp" />

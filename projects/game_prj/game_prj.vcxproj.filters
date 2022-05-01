@@ -48,6 +48,9 @@
     <ClCompile Include="..\..\src\scenes\ExampleScene.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\components\CameraMovement.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\GameComponentRegistry.h">
@@ -70,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\scenes\ExampleScene.h">
       <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\components\CameraMovement.h">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
