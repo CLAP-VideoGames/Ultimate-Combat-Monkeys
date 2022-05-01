@@ -31,6 +31,9 @@ namespace K_Engine {
 		/// </summary>
 		virtual void start();
 
+		//Enable of everyComponent
+		virtual void onEnable();
+
 		/// <summary>
 		/// It's called every frame of the game.
 		/// </summary> 

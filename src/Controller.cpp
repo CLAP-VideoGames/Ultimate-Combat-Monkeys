@@ -36,6 +36,10 @@ namespace K_Engine {
 		anim = entity->getComponent<Animator>();
 	}
 
+	void Controller::onEnable() {
+		rigby->disableDeactivation();
+	}
+
 	void Controller::update(int frameTime)
 	{
 		//Jump
@@ -70,6 +74,6 @@ namespace K_Engine {
 			anim->playAnim("Idle", true);
 		}
 
-
+		rigby->disableDeactivation();
 	}
 }
