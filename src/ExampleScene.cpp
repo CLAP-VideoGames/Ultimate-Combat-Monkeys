@@ -8,6 +8,7 @@
 // SOON TO BE DELETED
 #include <physics_prj/PhysicsManager.h>
 #include <physics_prj/CollisionLayers.h>
+#include <script_prj/ScriptManager.h>
 
 #include <render_prj/RenderManager.h>
 
@@ -30,12 +31,17 @@ namespace K_Engine {
 
 	void ExampleScene::init()
 	{
+
+		loadScene(name);
+
 		// example scene (pending of development)
 		std::string playerLayer = "Player";
 		std::string nothingLayer = "Nothing";
 		std::string platformLayer = "Platform";
 
 		int playerCollidesWith = K_Engine::PhysicsManager::GetInstance()->getLayerID(platformLayer);
+
+
 
 		//Dario chapas, es como dario, pero mete chapas
 		K_Engine::Entity* player = entMan->addEntity();
