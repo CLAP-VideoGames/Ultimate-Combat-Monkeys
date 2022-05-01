@@ -35,8 +35,10 @@ namespace K_Engine {
 
 	void DestroyOnCollision::onCollisionEnter(Entity* collision)
 	{
-		if (collision->hasComponent<K_Engine::Destructible>())
+		if (collision->hasComponent<K_Engine::Destructible>()) {
 			collision->destroy();
+			entity->destroy();
+		}
 	}
 
 }
