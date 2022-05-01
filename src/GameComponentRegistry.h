@@ -2,11 +2,12 @@
 #ifndef GAMECOMPONENTREGISTRY_H
 #define GAMECOMPONENTREGISTRY_H
 
-#include <ExampleComponent.h>
-#include <Controller.h>
-#include <Health.h>
-#include <WeaponStack.h>
-#include <Kick.h>
+#include <components/ExampleComponent.h>
+#include <components/Controller.h>
+#include <components/Health.h>
+#include <components/WeaponStack.h>
+#include <components/Kick.h>
+#include <components/CameraMovement.h>
 
 #include <ecs_prj/ComponentManager.h>
 
@@ -20,6 +21,7 @@ namespace K_Engine {
 			compMan->add<K_Engine::Health>();
 			compMan->add<K_Engine::WeaponStack>();
 			compMan->add<K_Engine::Kick>();
+			compMan->add<K_Engine::CameraMovement>();
 		}
 	}
 }

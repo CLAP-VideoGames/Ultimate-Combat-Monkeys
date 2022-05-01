@@ -4,7 +4,7 @@
 #include <input_prj/InputManager.h>
 
 #include <GameComponentRegistry.h>
-#include <ExampleScene.h>
+#include <scenes/ExampleScene.h>
 
 extern "C" {
 	__declspec(dllexport) std::string gameName() { return "UCM"; }

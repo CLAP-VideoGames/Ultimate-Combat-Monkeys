@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -11,22 +11,26 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Controller.cpp" />
-    <ClCompile Include="..\..\src\ExampleComponent.cpp" />
-    <ClCompile Include="..\..\src\ExampleScene.cpp" />
-    <ClCompile Include="..\..\src\Health.cpp" />
-    <ClCompile Include="..\..\src\Kick.cpp" />
+    <ClCompile Include="..\..\src\components\Controller.cpp" />
+    <ClCompile Include="..\..\src\components\ExampleComponent.cpp" />
+    <ClCompile Include="..\..\src\components\Health.cpp" />
+    <ClCompile Include="..\..\src\components\Kick.cpp" />
+    <ClCompile Include="..\..\src\components\WeaponStack.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
-    <ClCompile Include="..\..\src\WeaponStack.cpp" />
+    <ClCompile Include="..\..\src\scenes\ExampleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Controller.h" />
-    <ClInclude Include="..\..\src\ExampleComponent.h" />
-    <ClInclude Include="..\..\src\ExampleScene.h" />
+    <ClInclude Include="..\..\src\components\CameraMovement.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="..\..\src\components\Controller.h" />
+    <ClInclude Include="..\..\src\components\ExampleComponent.h" />
+    <ClInclude Include="..\..\src\components\Health.h" />
+    <ClInclude Include="..\..\src\components\Kick.h" />
+    <ClInclude Include="..\..\src\components\WeaponStack.h" />
     <ClInclude Include="..\..\src\GameComponentRegistry.h" />
-    <ClInclude Include="..\..\src\Health.h" />
-    <ClInclude Include="..\..\src\Kick.h" />
-    <ClInclude Include="..\..\src\WeaponStack.h" />
+    <ClInclude Include="..\..\src\scenes\ExampleScene.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

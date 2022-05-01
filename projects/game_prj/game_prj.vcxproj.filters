@@ -30,22 +30,22 @@
     <ClCompile Include="..\..\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Controller.cpp">
+    <ClCompile Include="..\..\src\components\Controller.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\ExampleComponent.cpp">
+    <ClCompile Include="..\..\src\components\ExampleComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Health.cpp">
+    <ClCompile Include="..\..\src\components\Health.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Kick.cpp">
+    <ClCompile Include="..\..\src\components\Kick.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\WeaponStack.cpp">
+    <ClCompile Include="..\..\src\components\WeaponStack.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\ExampleScene.cpp">
+    <ClCompile Include="..\..\src\scenes\ExampleScene.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,22 +53,22 @@
     <ClInclude Include="..\..\src\GameComponentRegistry.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\WeaponStack.h">
+    <ClInclude Include="..\..\src\components\Controller.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Kick.h">
+    <ClInclude Include="..\..\src\components\ExampleComponent.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Health.h">
+    <ClInclude Include="..\..\src\components\Health.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\ExampleComponent.h">
+    <ClInclude Include="..\..\src\components\Kick.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Controller.h">
+    <ClInclude Include="..\..\src\components\WeaponStack.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\ExampleScene.h">
+    <ClInclude Include="..\..\src\scenes\ExampleScene.h">
       <Filter>Header Files\Scenes</Filter>
     </ClInclude>
   </ItemGroup>

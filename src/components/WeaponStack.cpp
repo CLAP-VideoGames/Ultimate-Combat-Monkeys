@@ -7,7 +7,7 @@
 #include <components_prj/Transform.h>
 #include <components_prj/Animator.h>
 #include <utils_prj/K_Map.h>
-#include <Kick.h>
+#include <components/Kick.h>
 
 
 namespace K_Engine {

@@ -20,19 +20,18 @@
 #include <components_prj/Light.h>
 #include <components_prj/Animator.h>
 
-#include <ExampleComponent.h>
-#include <Controller.h>
-#include <Health.h>
-#include <WeaponStack.h>
-#include <Kick.h>
+#include <components/ExampleComponent.h>
+#include <components/Controller.h>
+#include <components/Health.h>
+#include <components/WeaponStack.h>
+#include <components/Kick.h>
+#include <components/CameraMovement.h>
 
 #include <utils_prj/Vector3.h>
 
 namespace K_Engine {
 
-	void ExampleScene::init()
-	{
-
+	void ExampleScene::init() {
 		loadScene(name);
 
 		// example scene (pending of development)
@@ -45,6 +44,8 @@ namespace K_Engine {
 		Camera* cam = RenderManager::GetInstance()->getCamera();
 		cam->setCameraPos(0, 60, 400);
 
+		K_Engine::Entity* cameraManager = entMan->addEntity();
+		cameraManager->addComponent<CameraMovement>();
 
 		//Dario chapas, es como dario, pero mete chapas
 		K_Engine::Entity* player = entMan->addEntity();
