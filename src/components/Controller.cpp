@@ -97,10 +97,11 @@ namespace K_Engine {
 		{
 			Entity* grnd = entMan->addEntity(true);
 			{
+				K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+
 				MeshRenderer* m = grnd->addComponent<MeshRenderer>();
 				m->setMesh("sphere.mesh");
 
-				K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
 				ColliderType boxType = ColliderType::CT_SPHERE;
 				BodyType bodyType = BodyType::BT_DYNAMIC;
 				float mass = 1.0f;
