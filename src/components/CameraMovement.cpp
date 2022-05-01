@@ -4,6 +4,7 @@
 #include <render_prj/RenderManager.h>
 #include <input_prj/InputManager.h>
 #include <input_prj/K_Engine_Keys.h>
+#include <utils_prj/Math.h>
 
 #include <iostream>
 #include <cmath>
@@ -16,8 +17,9 @@ namespace K_Engine {
 		return name;
 	}
 
-	CameraMovement::CameraMovement(Entity* e) : Component(e) {
-		
+	CameraMovement::CameraMovement(Entity* e, float percentage) : Component(e) {
+		percentage_ = percentage;
+		isDown = false;
 	}
 
 	CameraMovement::CameraMovement() : Component() {
@@ -27,22 +29,44 @@ namespace K_Engine {
 	CameraMovement::~CameraMovement() = default;
 
 	void CameraMovement::awake() {
-		
-		printf("hola");
 	}
 
 	void CameraMovement::start() {
 		cam = RenderManager::GetInstance()->getCamera();
 		inputMan = InputManager::GetInstance();
+		quantityZoom = cam->getCameraPosition()[2];
+		quantityMovementX = cam->getCameraPosition()[0];
+		quantityMovementY = cam->getCameraPosition()[1];
 	}
 
 	void CameraMovement::update(int frameTime) {
-		int mouseZoom = 0;
-		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_T))) {
-			mouseZoom -= 2;
-		}else if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_Y))) {
-			mouseZoom += 2;
+		if ((inputMan->isKeyDown(K_Engine_Scancode::SCANCODE_T))) {
+			quantityZoom -= 2;
+		}else if ((inputMan->isKeyDown(K_Engine_Scancode::SCANCODE_Y))) {
+			quantityZoom += 2;
 		}
-		cam->translateCamera(0, 0, mouseZoom);
+
+		if (inputMan->getMouseButtonState(K_Engine_MouseButton::MIDDLE) && inputMan->getMouseButtonHeld()) {
+			if (!isDown) {
+				initial_ = std::pair<int, int> (inputMan->getMousePos().first, inputMan->getMousePos().second);
+			}
+			isDown = true;
+		}
+
+
+		if (!inputMan->getMouseButtonHeld()) {
+			if (isDown) {
+				final_ = std::pair<int, int>(inputMan->getMousePos().first, inputMan->getMousePos().second);
+				quantityMovementX = cam->getCameraPosition()[0] + initial_.first - final_.first;
+				quantityMovementY = cam->getCameraPosition()[1] +  final_.second - initial_.second;
+			}
+			isDown = false;
+		}
+
+		float depth = Math::lerpPrecise(cam->getCameraPosition()[2] , quantityZoom, percentage_);
+		float horizontal = Math::lerpPrecise(cam->getCameraPosition()[0] , quantityMovementX, percentage_);
+		float vertical = Math::lerpPrecise(cam->getCameraPosition()[1] , quantityMovementY, percentage_);
+
+		cam->setCameraPos(horizontal, vertical, depth);
 	}
 }

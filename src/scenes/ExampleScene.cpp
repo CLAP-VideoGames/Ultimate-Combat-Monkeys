@@ -45,7 +45,7 @@ namespace K_Engine {
 		cam->setCameraPos(0, 60, 400);
 
 		K_Engine::Entity* cameraManager = entMan->addEntity();
-		cameraManager->addComponent<CameraMovement>();
+		cameraManager->addComponent<CameraMovement>(0.08);
 
 		//Dario chapas, es como dario, pero mete chapas
 		K_Engine::Entity* player = entMan->addEntity();
@@ -165,7 +165,7 @@ namespace K_Engine {
 		}
 
 		entMan->awake();
-		entMan->onEnable();
+		//entMan->onEnable();
 		entMan->start();
 
 		anim->playAnim("Idle");

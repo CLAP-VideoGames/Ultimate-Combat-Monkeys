@@ -14,7 +14,7 @@ namespace K_Engine {
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		CameraMovement(Entity* e);
+		CameraMovement(Entity* e, float percentage);
 
 		CameraMovement();
 
@@ -39,7 +39,13 @@ namespace K_Engine {
 		//Required
 		static std::string name;
 		InputManager* inputMan;
+		float quantityZoom, percentage_;
+		float quantityMovementY, quantityMovementX;
 		Camera* cam;
+
+		bool isDown = true;
+
+		std::pair<int, int> initial_, final_;
 	};
 }
 #endif CameraMovement_H
