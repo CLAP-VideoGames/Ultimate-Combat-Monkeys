@@ -14,6 +14,7 @@
 #include <components_prj/Transform.h>
 #include <components_prj/MeshRenderer.h>
 #include <components/Grenade.h>
+#include <components/Health.h>
 #include <iostream>
 
 namespace K_Engine {
@@ -41,8 +42,9 @@ namespace K_Engine {
 		rigby->setRotConstraints({ 0,0,0 });
 		anim = entity->getComponent<Animator>();
 		trans = entity->getComponent<Transform>();
+		life = entity->getComponent<Health>();
 		entMan = entity->getMan();
-
+		jump = false;
 		distance = rigby->getMass() * 10;
 	}
 
@@ -51,52 +53,75 @@ namespace K_Engine {
 
 	void Controller::update(int frameTime)
 	{
-
-
-		// If not moving in ground
-		if (anim->getCurrAnimName() != "Idle" && rigby && (rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1) && (anim->getCurrAnimName() != "Walking" && rigby->getVelocity().y > -0.1 || rigby->getVelocity().y < 0.1))
+		if (life->getCurrentLife() > 0)
 		{
-			anim->playAnim("Idle", true);
-		}
-
-		//Jump
-		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
-			anim->playAnim("Jump", false);
-			rigby->addForceImpulse	({ 0, distance * 4, 0 });
-		}
-
-		// Left
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0){
-			// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-			if (anim->getCurrAnimName() != "Walking"){
-				anim->playAnim("Walking", true);
-				trans->setRotation(0, 270, 0);
-			}
-			if(rigby)
-				rigby->addForceImpulse({ -distance, 0, 0 });
-		}
-
-		// Right
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
-			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
-			// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-			if (anim->getCurrAnimName() != "Walking")
+			// If not moving in ground
+			if ((rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1 &&
+				(!jump && anim->getCurrAnimName() != "Granade" & anim->getCurrAnimName() != "Kick")) || // If not moving in ground (and not about to jump)
+				((anim->getCurrAnimName() != "Idle" && anim->getCurrAnimName() != "Walking") && anim->animHasEnded()) // Jump, Granade or kick animation didn't finished
+				&& anim->getCurrAnimName() != "Idle") // Avoid calling Idle multiple times
 			{
-				anim->playAnim("Walking", true);
-				trans->setRotation(0, 90, 0);
+				//std::cout << rigby->getVelocity().x << "\n";
+
+				anim->playAnim("Idle", true);
 			}
-			if (rigby)
-				rigby->addForceImpulse({ distance, 0, 0 });
-		}
 
-		if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
-		{
-			lanzarGranada();
-		}
+			// Simple timer for jump
+			if (jump)
+			{
+				std::cout << timer << "\n";
+				timer--;
+				if (timer == 0)
+				{
+					rigby->addForceImpulse({ 0, distance * 5, 0 });
+				}
+				else if (timer <= 0 && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
+				{
+					timer = 80;
+					jump = false;
+				}
+			}
 
+			//Jump
+			if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
+				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A))
+				&& rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1
+				&& !jump) {
+				anim->playAnim("Jump", false);
+				jump = true;
+			}
+
+			// Left
+			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
+				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
+				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
+				if (anim->getCurrAnimName() != "Walking" && !jump) {
+					anim->playAnim("Walking", true);
+					trans->setRotation(0, 270, 0);
+				}
+				if (rigby && rigby->getVelocity().x > -limitSpeed)
+					rigby->addForceImpulse({ -distance, 0, 0 });
+			}
+
+			// Right
+			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
+				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
+				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
+				if (anim->getCurrAnimName() != "Walking" && !jump)
+				{
+					anim->playAnim("Walking", true);
+					trans->setRotation(0, 90, 0);
+				}
+				if (rigby && rigby->getVelocity().x < limitSpeed)
+					rigby->addForceImpulse({ distance, 0, 0 });
+			}
+
+			if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
+				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
+			{
+				lanzarGranada();
+			}
+		}
 	}
 
 	void Controller::lanzarGranada()
@@ -126,6 +151,6 @@ namespace K_Engine {
 		r->addForce(K_Engine::Vector3(-5000, 500, 0));
 
 		//grnd->addComponent<K_Engine::Grenade>();
-
+		anim->playAnim("Granade", false);
 	}
 }
