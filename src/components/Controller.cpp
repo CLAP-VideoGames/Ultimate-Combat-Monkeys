@@ -133,14 +133,14 @@ namespace K_Engine {
 
 				Entity* grnd = entMan->addEntity(true);
 
-				K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+				K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(1.0f);
 				Transform* thisTransform = entity->getComponent<Transform>();
 				Vector3 thisPosition = thisTransform->getPosition();
 
 				t->setPosition(thisPosition.x, thisPosition.y + heightCreation, thisPosition.z);
 
 				MeshRenderer* m = grnd->addComponent<MeshRenderer>();
-				m->setMesh("sphere.mesh");
+				m->setMesh("Granade.mesh");
 
 				ColliderType boxType = ColliderType::CT_SPHERE;
 				BodyType bodyType = BodyType::BT_DYNAMIC;
@@ -156,7 +156,7 @@ namespace K_Engine {
 
 				r->setFriction(0.2f);
 				r->setRestitution(0.2f);
-				r->addForce(K_Engine::Vector3(-5000, 500, 0));
+				r->addForce(K_Engine::Vector3(-5000, 1000, 0));
 
 				grenadeThorwn = true;
 
