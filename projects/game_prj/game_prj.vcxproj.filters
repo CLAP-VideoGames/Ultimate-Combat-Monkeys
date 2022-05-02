@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Managers">
       <UniqueIdentifier>{775c5e04-f8c8-47a3-bf99-e8628daa4f9d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Objects">
+      <UniqueIdentifier>{76703e43-0c98-42d9-9309-7115afebea72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{b781a8e9-6df2-4e19-8a39-e7c8c9bc8824}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp">
@@ -65,6 +71,15 @@
     </ClCompile>
     <ClCompile Include="..\..\src\components\Grenade.cpp">
       <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\objects\Player.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\components\PlayerInfo.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\managers\TurnSystem.cpp">
+      <Filter>Source Files\Managers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -103,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Managers\TurnSystem.h">
       <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\objects\Player.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\components\PlayerInfo.h">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

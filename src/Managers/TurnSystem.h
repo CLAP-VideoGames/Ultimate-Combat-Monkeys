@@ -4,14 +4,21 @@
 #define TurnSystem_H
 
 namespace K_Engine {
+	class Player;
+
+	struct Turn {
+		int team;
+		int player;
+	};
+
 	class TurnSystem {
 	public:
-		TurnSystem(bool firstStarts);
+		TurnSystem(Player* p1, Player* p2, bool firstStarts, int countDownTime);
 		~TurnSystem();
 
 		void start();
 
-		void update();
+		void update(int deltaTime);
 
 		//Timer Management
 		void resetCountdown();
@@ -19,25 +26,27 @@ namespace K_Engine {
 		void stopCountdown();
 
 		//Turnos
-		void startTurn();
 		void endTurn();
 
 	private:
 		//Equipos de player
-		//..vector<Player>...team1
-		//..vector<Player>...team2
-		bool firstTeamTurn;
-		int playerTurn;
+		Player* player1;
+		Player* player2;
+		bool firstTeamStarts;
+		Turn turn;
+		int player1Turn, player2Turn, round;
 
 		//Timers
 		float countDown;
 		float startTime;
+		bool timeStop;
 
 		//Cambio de equipos y player
 		void switchTeam();
-		void changePlayer();
+		void nextPlayer();
+		void lostFocusOnPlayer();
 		void setFocusOnPlayer();
-
+		void checkNextPlayer(Player* p);
 	};
 }
 #endif TurnSystem_H
