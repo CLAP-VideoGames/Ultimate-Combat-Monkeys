@@ -3,6 +3,7 @@
 #include <ecs_prj/Entity.h>
 #include <components_prj/RigidBody.h>
 #include <components/Destructible.h>
+#include <components/Health.h>
 #include <utils_prj/Vector3.h>
 #include <iostream>
 
@@ -35,11 +36,14 @@ namespace K_Engine {
 
 	void DestroyOnCollision::onCollisionEnter(Entity* collision)
 	{
-		if (collision->hasComponent<DestroyOnCollision>()) {
-			std::cout << "Me destruyo yo sola ty\n";
+		if (collision->hasComponent<Health>()) {
+			collision->getComponent<Health>()->AddLife(-20);
+			collision->getComponent<RigidBody>()->addForce(Vector3(0, 100, 0));
 		}
-		collision->destroy();
-
+		else {
+			collision->destroy();
+		}
+		
 		entity->destroy();
 
 		//if (collision->hasComponent<K_Engine::Destructible>()) {

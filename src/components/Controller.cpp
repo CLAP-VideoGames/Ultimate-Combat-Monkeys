@@ -151,8 +151,8 @@ namespace K_Engine {
 					K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
 					K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
 
-				//grnd->addComponent<Grenade>();
-				grnd->addComponent<DestroyOnCollision>();
+				grnd->addComponent<Grenade>(10.0f);
+				//grnd->addComponent<DestroyOnCollision>();
 
 				r->setFriction(0.2f);
 				r->setRestitution(0.2f);

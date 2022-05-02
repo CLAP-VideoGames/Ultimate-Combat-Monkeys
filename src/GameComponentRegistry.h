@@ -11,6 +11,7 @@
 #include <components/DestroyOnCollision.h>
 #include <components/Destructible.h>
 #include <components/PlayerInfo.h>
+#include <components/Grenade.h>
 
 #include <ecs_prj/ComponentManager.h>
 
@@ -28,6 +29,7 @@ namespace K_Engine {
 			compMan->add<K_Engine::DestroyOnCollision>();
 			compMan->add<K_Engine::Destructible>();
 			compMan->add<K_Engine::PlayerInfo>();
+			compMan->add<K_Engine::Grenade>();
 		}
 	}
 }

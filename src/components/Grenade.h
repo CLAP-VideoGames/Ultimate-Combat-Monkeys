@@ -17,7 +17,7 @@ namespace K_Engine {
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		Grenade(Entity* e);
+		Grenade(Entity* e, float re);
 
 		Grenade();
 
@@ -42,6 +42,10 @@ namespace K_Engine {
 	private:
 		//Required
 		static std::string name;
+
+		EntityManager* entMan;
+
+		float radioExplosion;
 
 		bool debug = true;
 	};
