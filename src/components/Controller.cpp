@@ -83,12 +83,12 @@ namespace K_Engine {
 				}
 			}
 
-		//Jump
-		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
-			anim->playAnim("Jump", false);
-			rigby->addForceImpulse({ 0, distance * 4, 0 });
-		}
+			//Jump
+			if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
+				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
+				anim->playAnim("Jump", false);
+				rigby->addForceImpulse({ 0, distance * 4, 0 });
+			}
 			//Jump
 			if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
 				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A))
@@ -98,92 +98,93 @@ namespace K_Engine {
 				jump = true;
 			}
 
-		// Left
-		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
-			// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-			if (anim->getCurrAnimName() != "Walking") {
-				anim->playAnim("Walking", true);
-				trans->setRotation(0, 270, 0);
 			// Left
 			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
 				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
 				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walking" && !jump) {
+				if (anim->getCurrAnimName() != "Walking") {
 					anim->playAnim("Walking", true);
 					trans->setRotation(0, 270, 0);
+					// Left
+					if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
+						InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
+						// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
+						if (anim->getCurrAnimName() != "Walking" && !jump) {
+							anim->playAnim("Walking", true);
+							trans->setRotation(0, 270, 0);
+						}
+						if (rigby && rigby->getVelocity().x > -limitSpeed)
+							rigby->addForceImpulse({ -distance, 0, 0 });
+					}
+					if (rigby)
+						rigby->addForceImpulse({ -distance, 0, 0 });
 				}
-				if (rigby && rigby->getVelocity().x > -limitSpeed)
-					rigby->addForceImpulse({ -distance, 0, 0 });
-			}
-			if (rigby)
-				rigby->addForceImpulse({ -distance, 0, 0 });
-		}
 
-			// Right
-			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
-				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
-				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walking" && !jump)
-				{
-					anim->playAnim("Walking", true);
-					trans->setRotation(0, 90, 0);
+				// Right
+				if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
+					InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
+					// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
+					if (anim->getCurrAnimName() != "Walking" && !jump)
+					{
+						anim->playAnim("Walking", true);
+						trans->setRotation(0, 90, 0);
+					}
+					if (rigby && rigby->getVelocity().x < limitSpeed)
+						rigby->addForceImpulse({ distance, 0, 0 });
 				}
-				if (rigby && rigby->getVelocity().x < limitSpeed)
-					rigby->addForceImpulse({ distance, 0, 0 });
+
+				if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
+					InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
+				{
+					throwGrenade();
+				}
 			}
 
 			if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
 				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
 			{
-				lanzarGranada();
+				throwGrenade();
 			}
+
 		}
 
-		if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
+	}
+		void Controller::throwGrenade()
 		{
-			throwGrenade();
+			if (!grenadeThorwn) {
+
+				Entity* grnd = entMan->addEntity(true);
+
+				K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+				Transform* thisTransform = entity->getComponent<Transform>();
+				Vector3 thisPosition = thisTransform->getPosition();
+
+				t->setPosition(thisPosition.x, thisPosition.y + heightCreation, thisPosition.z);
+
+				MeshRenderer* m = grnd->addComponent<MeshRenderer>();
+				m->setMesh("sphere.mesh");
+
+				ColliderType boxType = ColliderType::CT_SPHERE;
+				BodyType bodyType = BodyType::BT_DYNAMIC;
+				float mass = 1.0f;
+
+
+				RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
+					K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
+					K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+
+				//grnd->addComponent<Grenade>();
+				grnd->addComponent<DestroyOnCollision>();
+
+				r->setFriction(0.2f);
+				r->setRestitution(0.2f);
+				r->addForce(K_Engine::Vector3(-5000, 500, 0));
+
+				grenadeThorwn = true;
+
+			}
+
+			//grnd->addComponent<K_Engine::Grenade>();
+			anim->playAnim("Granade", false);
 		}
-
-	}
-
-	void Controller::throwGrenade()
-	{
-		if (!grenadeThorwn) {
-
-			Entity* grnd = entMan->addEntity(true);
-
-			K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
-			Transform* thisTransform = entity->getComponent<Transform>();
-			Vector3 thisPosition = thisTransform->getPosition();
-
-			t->setPosition(thisPosition.x, thisPosition.y + heightCreation, thisPosition.z);
-
-			MeshRenderer* m = grnd->addComponent<MeshRenderer>();
-			m->setMesh("sphere.mesh");
-
-			ColliderType boxType = ColliderType::CT_SPHERE;
-			BodyType bodyType = BodyType::BT_DYNAMIC;
-			float mass = 1.0f;
-
-
-			RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
-				K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
-				K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
-
-			//grnd->addComponent<Grenade>();
-			grnd->addComponent<DestroyOnCollision>();
-
-			r->setFriction(0.2f);
-			r->setRestitution(0.2f);
-			r->addForce(K_Engine::Vector3(-5000, 500, 0));
-
-			grenadeThorwn = true;
-
-		}
-
-		//grnd->addComponent<K_Engine::Grenade>();
-		anim->playAnim("Granade", false);
-	}
 }
