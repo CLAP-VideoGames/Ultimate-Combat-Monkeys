@@ -38,21 +38,17 @@ namespace K_Engine {
 	void Controller::start()
 	{
 		rigby = entity->getComponent<RigidBody>();
-		rigby->setRotConstraints({0,0,0});
 		anim = entity->getComponent<Animator>();
-
+		trans = entity->getComponent<Transform>();
 		entMan = entity->getMan();
 	}
 
 	void Controller::onEnable() {
 	}
 
-	void Controller::update(int frameTime)
-	{
-		
-		
+	void Controller::update(int frameTime) {
 		// If not moving in ground
-		if (anim->getCurrAnimName() != "Idle" && (rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1) && (anim->getCurrAnimName() != "Walking" && rigby->getVelocity().y > -0.1 || rigby->getVelocity().y < 0.1))
+		if (anim->getCurrAnimName() != "Idle" && rigby && (rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1) && (anim->getCurrAnimName() != "Walking" && rigby->getVelocity().y > -0.1 || rigby->getVelocity().y < 0.1))
 		{
 			anim->playAnim("Idle", true);
 		}
@@ -64,37 +60,38 @@ namespace K_Engine {
 			std::cout <<anim->getCurrAnimName() << "\n";
 			anim->playAnim("Jumping", false);
 			std::cout << anim->getCurrAnimName() << "\n";
-			rigby->addForce({ 0, distance*30, 0 });
+			if (rigby)
+				rigby->addForceImpulse({ 0, distance*30, 0 });
 			
 		}
 		
 		// Left
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0)
-		{
+			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0){
 			// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-			if (anim->getCurrAnimName() != "Walking" && anim->getCurrAnimName() != "Jumping" || (anim->getCurrAnimName() == "Jumping" && anim->animHasEnded()))
-			{
+			if (anim->getCurrAnimName() != "Walking"){
 				anim->playAnim("Walking", true);
+				trans->setRotation(0, 270, 0);
 			}
-
-			rigby->addForce({ -distance, 0, 0 });
+			if(rigby)
+				rigby->addForceImpulse({ -distance, 0, 0 });
 		}
+
 		// Right
-		else if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
-			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0)
-		{
+		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
+			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
 			// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-			if ((anim->getCurrAnimName() != "Walking" && anim->getCurrAnimName() != "Jumping") || (anim->getCurrAnimName() == "Jumping" && anim->animHasEnded()))
+			if (anim->getCurrAnimName() != "Walking")
 			{
 				anim->playAnim("Walking", true);
+				trans->setRotation(0, 90, 0);
 			}
-			rigby->addForce({ distance, 0, 0 });
+			if (rigby)
+				rigby->addForceImpulse({ distance, 0, 0 });
 		}
 
 		if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
-		{
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK)) {
 			Entity* grnd = entMan->addEntity(true);
 			{
 				MeshRenderer* m = grnd->addComponent<MeshRenderer>();

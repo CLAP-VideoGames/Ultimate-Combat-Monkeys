@@ -10,6 +10,7 @@ namespace K_Engine {
 	class RigidBody;
 	class Animator;
 	class EntityManager;
+	class Transform;
 	class Controller : public Component
 	{
 	public:
@@ -47,6 +48,7 @@ namespace K_Engine {
 		Animator* anim;
 		RigidBody* rigby;
 		EntityManager* entMan;
+		Transform* trans;
 	};
 }
 #endif CONTROLLER_H
