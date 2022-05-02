@@ -18,7 +18,7 @@ namespace K_Engine {
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		Controller(Entity* e, float dist);
+		Controller(Entity* e);
 
 		Controller();
 		//Controller(Entity* e, Vector3 diff);

@@ -70,7 +70,7 @@ namespace K_Engine {
 			r->setPosConstraints({ 1, 1, 0 });
 			r->setRotConstraints({ 0, 0, 0 });
 
-			Controller* control = monkey->addComponent<Controller>(120);
+			Controller* control = monkey->addComponent<Controller>();
 			Health* playerHealth = monkey->addComponent<Health>();
 			Kick* playerKick = monkey->addComponent<Kick>();
 			WeaponStack* weaponPlayer = monkey->addComponent<WeaponStack>();

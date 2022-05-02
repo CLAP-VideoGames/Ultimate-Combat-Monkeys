@@ -24,8 +24,8 @@ namespace K_Engine {
 		return name;
 	}
 
-	Controller::Controller(Entity* e, float dist) : Component(e) {
-		distance = dist;
+	Controller::Controller(Entity* e) : Component(e) {
+		
 	}
 
 	Controller::Controller() : Component()
@@ -42,6 +42,8 @@ namespace K_Engine {
 		anim = entity->getComponent<Animator>();
 		trans = entity->getComponent<Transform>();
 		entMan = entity->getMan();
+
+		distance = rigby->getMass() * 10;
 	}
 
 	void Controller::onEnable() {
@@ -59,13 +61,9 @@ namespace K_Engine {
 
 		//Jump
 		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
-		{
-			std::cout << anim->getCurrAnimName() << "\n";
-			anim->playAnim("Jumping", false);
-			std::cout << anim->getCurrAnimName() << "\n";
-			rigby->addForce({ 0, distance * 30, 0 });
-
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
+			anim->playAnim("Jump", false);
+			rigby->addForceImpulse	({ 0, distance * 4, 0 });
 		}
 
 		// Left
