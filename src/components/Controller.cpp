@@ -14,6 +14,7 @@
 #include <components_prj/Transform.h>
 #include <components_prj/MeshRenderer.h>
 #include <components/Grenade.h>
+#include <components/DestroyOnCollision.h>
 #include <iostream>
 
 namespace K_Engine {
@@ -25,7 +26,7 @@ namespace K_Engine {
 	}
 
 	Controller::Controller(Entity* e) : Component(e) {
-		
+
 	}
 
 	Controller::Controller() : Component()
@@ -63,18 +64,18 @@ namespace K_Engine {
 		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
 			anim->playAnim("Jump", false);
-			rigby->addForceImpulse	({ 0, distance * 4, 0 });
+			rigby->addForceImpulse({ 0, distance * 4, 0 });
 		}
 
 		// Left
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0){
+			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
 			// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-			if (anim->getCurrAnimName() != "Walking"){
+			if (anim->getCurrAnimName() != "Walking") {
 				anim->playAnim("Walking", true);
 				trans->setRotation(0, 270, 0);
 			}
-			if(rigby)
+			if (rigby)
 				rigby->addForceImpulse({ -distance, 0, 0 });
 		}
 
@@ -94,38 +95,45 @@ namespace K_Engine {
 		if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
 		{
-			lanzarGranada();
+			throwGrenade();
 		}
 
 	}
 
-	void Controller::lanzarGranada()
+	void Controller::throwGrenade()
 	{
-		Entity* grnd = entMan->addEntity(true);
+		if (!grenadeThorwn) {
 
-		K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
-		Transform* thisTransform = entity->getComponent<Transform>();
-		Vector3 thisPosition = thisTransform->getPosition();
+			Entity* grnd = entMan->addEntity(true);
 
-		t->setPosition(thisPosition.x, thisPosition.y + heightCreation, thisPosition.z);
+			K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+			Transform* thisTransform = entity->getComponent<Transform>();
+			Vector3 thisPosition = thisTransform->getPosition();
 
-		MeshRenderer* m = grnd->addComponent<MeshRenderer>();
-		m->setMesh("sphere.mesh");
+			t->setPosition(thisPosition.x, thisPosition.y + heightCreation, thisPosition.z);
 
-		ColliderType boxType = ColliderType::CT_SPHERE;
-		BodyType bodyType = BodyType::BT_DYNAMIC;
-		float mass = 1.0f;
+			MeshRenderer* m = grnd->addComponent<MeshRenderer>();
+			m->setMesh("sphere.mesh");
+
+			ColliderType boxType = ColliderType::CT_SPHERE;
+			BodyType bodyType = BodyType::BT_DYNAMIC;
+			float mass = 1.0f;
 
 
-		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+			RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
+				K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
+				K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
 
-		r->setFriction(0.2f);
-		r->setRestitution(0.2f);
-		r->addForce(K_Engine::Vector3(-5000, 500, 0));
+			//grnd->addComponent<Grenade>();
+			grnd->addComponent<DestroyOnCollision>();
 
-		//grnd->addComponent<K_Engine::Grenade>();
+			r->setFriction(0.2f);
+			r->setRestitution(0.2f);
+			r->addForce(K_Engine::Vector3(-5000, 500, 0));
+
+			grenadeThorwn = true;
+
+		}
 
 	}
 }

@@ -4,7 +4,7 @@
 #include <components_prj/RigidBody.h>
 #include <components/Destructible.h>
 #include <utils_prj/Vector3.h>
-
+#include <iostream>
 
 namespace K_Engine {
 	//Required
@@ -35,10 +35,12 @@ namespace K_Engine {
 
 	void DestroyOnCollision::onCollisionEnter(Entity* collision)
 	{
-		if (collision->hasComponent<K_Engine::Destructible>()) {
-			collision->destroy();
-			entity->destroy();
-		}
+		std::cout << "Me choco como mis bolar contra la barbilla de tu puta madre" << "\n";
+		//entity->destroy();
+
+		//if (collision->hasComponent<K_Engine::Destructible>()) {
+		//	collision->destroy();
+		//}
 	}
 
 }

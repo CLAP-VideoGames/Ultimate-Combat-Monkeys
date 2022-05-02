@@ -44,7 +44,7 @@ namespace K_Engine {
 
 	private:
 
-		void lanzarGranada();
+		void throwGrenade();
 
 		//Required
 		static std::string name;
@@ -56,6 +56,8 @@ namespace K_Engine {
 		RigidBody* rigby;
 		EntityManager* entMan;
 		Transform* trans;
+
+		bool grenadeThorwn = false;
 	};
 }
 #endif CONTROLLER_H
