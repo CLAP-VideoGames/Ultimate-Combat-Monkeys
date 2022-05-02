@@ -38,6 +38,7 @@ namespace K_Engine {
 	void Controller::start()
 	{
 		rigby = entity->getComponent<RigidBody>();
+		rigby->setRotConstraints({ 0,0,0 });
 		anim = entity->getComponent<Animator>();
 		trans = entity->getComponent<Transform>();
 		entMan = entity->getMan();
@@ -46,7 +47,10 @@ namespace K_Engine {
 	void Controller::onEnable() {
 	}
 
-	void Controller::update(int frameTime) {
+	void Controller::update(int frameTime)
+	{
+
+
 		// If not moving in ground
 		if (anim->getCurrAnimName() != "Idle" && rigby && (rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1) && (anim->getCurrAnimName() != "Walking" && rigby->getVelocity().y > -0.1 || rigby->getVelocity().y < 0.1))
 		{
@@ -57,14 +61,13 @@ namespace K_Engine {
 		if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
 			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
 		{
-			std::cout <<anim->getCurrAnimName() << "\n";
+			std::cout << anim->getCurrAnimName() << "\n";
 			anim->playAnim("Jumping", false);
 			std::cout << anim->getCurrAnimName() << "\n";
-			if (rigby)
-				rigby->addForceImpulse({ 0, distance*30, 0 });
-			
+			rigby->addForce({ 0, distance * 30, 0 });
+
 		}
-		
+
 		// Left
 		if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
 			InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0){
@@ -91,29 +94,40 @@ namespace K_Engine {
 		}
 
 		if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK)) {
-			Entity* grnd = entMan->addEntity(true);
-			{
-				MeshRenderer* m = grnd->addComponent<MeshRenderer>();
-				m->setMesh("sphere.mesh");
-
-				K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
-				ColliderType boxType = ColliderType::CT_SPHERE;
-				BodyType bodyType = BodyType::BT_DYNAMIC;
-				float mass = 1.0f;
-
-
-				RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
-					K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
-					K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
-
-				r->setFriction(0.6f);
-				r->setRestitution(0.2f);
-				r->addForce(K_Engine::Vector3(100, 100, 0));
-
-				//grnd->addComponent<K_Engine::Grenade>();
-			}
+			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
+		{
+			lanzarGranada();
 		}
+
+	}
+
+	void Controller::lanzarGranada()
+	{
+		Entity* grnd = entMan->addEntity(true);
+
+		K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+		Transform* thisTransform = entity->getComponent<Transform>();
+		Vector3 thisPosition = thisTransform->getPosition();
+
+		t->setPosition(thisPosition.x, thisPosition.y + heightCreation, thisPosition.z);
+
+		MeshRenderer* m = grnd->addComponent<MeshRenderer>();
+		m->setMesh("sphere.mesh");
+
+		ColliderType boxType = ColliderType::CT_SPHERE;
+		BodyType bodyType = BodyType::BT_DYNAMIC;
+		float mass = 1.0f;
+
+
+		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+
+		r->setFriction(0.2f);
+		r->setRestitution(0.2f);
+		r->addForce(K_Engine::Vector3(-5000, 500, 0));
+
+		//grnd->addComponent<K_Engine::Grenade>();
 
 	}
 }

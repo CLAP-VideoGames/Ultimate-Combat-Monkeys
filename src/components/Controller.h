@@ -41,10 +41,17 @@ namespace K_Engine {
 		/// </summary> 
 		virtual void update(int frameTime);
 
+
 	private:
+
+		void lanzarGranada();
+
 		//Required
 		static std::string name;
 		float distance;
+
+		float heightCreation = 10;
+
 		Animator* anim;
 		RigidBody* rigby;
 		EntityManager* entMan;
