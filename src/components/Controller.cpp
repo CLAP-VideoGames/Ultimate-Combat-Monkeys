@@ -74,21 +74,16 @@ namespace K_Engine {
 				timer--;
 				if (timer == 0)
 				{
-					rigby->addForceImpulse({ 0, distance * 5, 0 });
+					std::cout << "Saludaciones" << "\n";
+					rigby->addForceImpulse({ 0, distance * 4, 0 });
 				}
 				else if (timer <= 0 && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
 				{
-					timer = 80;
+					timer = 40;
 					jump = false;
 				}
 			}
 
-			//Jump
-			if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
-				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A)) && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
-				anim->playAnim("Jump", false);
-				rigby->addForceImpulse({ 0, distance * 4, 0 });
-			}
 			//Jump
 			if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
 				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A))
@@ -102,42 +97,25 @@ namespace K_Engine {
 			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
 				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
 				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walking") {
+				if (anim->getCurrAnimName() != "Walking" && !jump) {
 					anim->playAnim("Walking", true);
 					trans->setRotation(0, 270, 0);
-					// Left
-					if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-						InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
-						// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-						if (anim->getCurrAnimName() != "Walking" && !jump) {
-							anim->playAnim("Walking", true);
-							trans->setRotation(0, 270, 0);
-						}
-						if (rigby && rigby->getVelocity().x > -limitSpeed)
-							rigby->addForceImpulse({ -distance, 0, 0 });
-					}
-					if (rigby)
-						rigby->addForceImpulse({ -distance, 0, 0 });
 				}
+				if (rigby && rigby->getVelocity().x > -limitSpeed)
+					rigby->addForceImpulse({ -distance, 0, 0 });
+			}
 
-				// Right
-				if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
-					InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
-					// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-					if (anim->getCurrAnimName() != "Walking" && !jump)
-					{
-						anim->playAnim("Walking", true);
-						trans->setRotation(0, 90, 0);
-					}
-					if (rigby && rigby->getVelocity().x < limitSpeed)
-						rigby->addForceImpulse({ distance, 0, 0 });
-				}
-
-				if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
-					InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
+			// Right
+			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
+				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
+				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
+				if (anim->getCurrAnimName() != "Walking" && !jump)
 				{
-					throwGrenade();
+					anim->playAnim("Walking", true);
+					trans->setRotation(0, 90, 0);
 				}
+				if (rigby && rigby->getVelocity().x < limitSpeed)
+					rigby->addForceImpulse({ distance, 0, 0 });
 			}
 
 			if (InputManager::GetInstance()->getRightMouseButtonPressed() ||

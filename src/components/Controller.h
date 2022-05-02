@@ -52,10 +52,10 @@ namespace K_Engine {
 		static std::string name;
 		float distance;
 
-		int timer = 80;
+		int timer = 40;
 
 		float heightCreation = 10;
-		float limitSpeed = 60;
+		float limitSpeed = 50;
 
 		bool jump;
 		Animator* anim;

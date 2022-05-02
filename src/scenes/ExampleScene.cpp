@@ -40,6 +40,7 @@ namespace K_Engine {
 		std::string platformLayer = "Platform";
 
 		int playerCollidesWith = K_Engine::PhysicsManager::GetInstance()->getLayerID(platformLayer);
+		// K_Engine::PhysicsManager::GetInstance()->setGravity({ 0,-30,0 });
 
 		Camera* cam = RenderManager::GetInstance()->getCamera();
 		cam->setCameraPos(0, 60, 100);
@@ -65,7 +66,7 @@ namespace K_Engine {
 			K_Engine::RigidBody* r = monkey->addComponent<K_Engine::RigidBody>(ColliderType::CT_BOX, BodyType::BT_DYNAMIC, 50, 1, 1);
 			r->setDimensions({ 2, 5, 2 });
 			r->setOffset({ 0, 3, 0 });
-			r->setFriction(0.8f);
+			r->setFriction(10.0f);
 
 			r->setPosConstraints({ 1, 1, 0 });
 			r->setRotConstraints({ 0, 0, 0 });
