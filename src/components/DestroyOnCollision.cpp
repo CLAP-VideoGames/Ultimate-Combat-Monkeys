@@ -35,7 +35,12 @@ namespace K_Engine {
 
 	void DestroyOnCollision::onCollisionEnter(Entity* collision)
 	{
-		entity->setActive(false);
+		if (collision->hasComponent<DestroyOnCollision>()) {
+			std::cout << "Me destruyo yo sola ty\n";
+		}
+		collision->destroy();
+
+		entity->destroy();
 
 		//if (collision->hasComponent<K_Engine::Destructible>()) {
 		//	collision->destroy();
