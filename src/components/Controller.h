@@ -11,6 +11,8 @@ namespace K_Engine {
 	class Animator;
 	class EntityManager;
 	class Transform;
+	class Health;
+
 	class Controller : public Component
 	{
 	public:
@@ -50,14 +52,20 @@ namespace K_Engine {
 		static std::string name;
 		float distance;
 
-		float heightCreation = 10;
+		int timer = 80;
 
+		float heightCreation = 10;
+		float limitSpeed = 60;
+
+		bool jump;
 		Animator* anim;
 		RigidBody* rigby;
 		EntityManager* entMan;
 		Transform* trans;
 
 		bool grenadeThorwn = false;
+		Health* life;
+
 	};
 }
 #endif CONTROLLER_H
