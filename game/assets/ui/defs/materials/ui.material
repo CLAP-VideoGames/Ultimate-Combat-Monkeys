@@ -161,3 +161,29 @@ material UCM/GameMenuButtonPressed {
 		}
 	}
 }
+
+material UCM/SliderBackground {
+	technique {
+		pass {
+			depth_check off
+			scene_blend alpha_blend
+			texture_unit {
+				texture barra.png
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material UCM/SliderButton {
+	technique {
+		pass {
+			depth_check off
+			scene_blend alpha_blend
+			texture_unit {
+				texture slider.png
+				colour_op modulate
+			}
+		}
+	}
+}
