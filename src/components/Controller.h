@@ -63,7 +63,6 @@ namespace K_Engine {
 		EntityManager* entMan;
 		Transform* trans;
 
-		bool grenadeThorwn = false;
 		Health* life;
 
 	};
