@@ -122,12 +122,12 @@ menu = {
 
 function changeScene()
     local sceneMan = SceneManager.getSceneMan();
-    sceneMan:changeScene("map");
+    sceneMan:changeScene("testZone");
 end
 
 function goToOptions()
     local sceneMan = SceneManager.getSceneMan();
-    sceneMan:changeScene("options");
+    sceneMan:changeScene("pause");
 end
 
 function exitGame()
