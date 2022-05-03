@@ -21,7 +21,7 @@ pause = {
             scale = "1.0, 1.0, 1.0",
         },
         Enabled = "true",
-        Text = {
+        Image = {
             overlayName = "ImageBackgroundPause",
             imageName = "UCM/GameMenuBackground",
             width = "1.0",
@@ -154,7 +154,7 @@ pause = {
             scale = "1.0, 1.0, 1.0",
         },
         Enabled = "true",
-        Text = {
+        Image = {
             overlayName = "ImagePause",
             imageName = "UCM/PauseImage",
             width = "0.5",
@@ -172,12 +172,31 @@ pause = {
             overlayName = "FocusElementPause",
             imageName = "SelectorFoco"
         }
+    },
+    audio1 = {
+        AudioSource = {
+            path = "./assets/sounds/samba_UCM.ogg",
+            type = "1",
+            volume = "1",
+            loopable = "true",
+            playOnStart = "true"
+        }
+    },
+    audio2 = {
+        AudioSource = {
+            path = "./assets/sounds/clap.wav",
+            type = "0",
+            volume = "1",
+            channel = "0",
+            loopable = "true",
+            playOnStart = "true"
+        }
     }
 }
 
 function popScenePause()
     local sceneMan = SceneManager.getSceneMan();
-    sceneMan:popScene("testMenu");
+    sceneMan:popScene("menu");
 end
 
 function setMasterVolume(volume)
@@ -195,4 +214,5 @@ function setEffectsVolume(volume)
     audioMan:setSFXVolume(volume);
 end
 
-pause_entities = {"backgroundImage", "masterVolumeText", "masterVolume", "musicVolumeText", "musicVolume", "effectsVolumeText", "effectsVolume", "mainMenuButton", "pauseImage", "focusPause"}
+pause_entities = {"backgroundImage", "masterVolumeText", "masterVolume", "musicVolumeText", "musicVolume", "effectsVolumeText",
+                  "effectsVolume", "mainMenuButton", "pauseImage", "focusPause", "audio1", "audio2"}
