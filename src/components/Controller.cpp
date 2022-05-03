@@ -56,9 +56,10 @@ namespace K_Engine {
 	{
 		if (life->getCurrentLife() > 0)
 		{
+			// -------------------------------- ANIMATIONS --------------------------------
 			// If not moving in ground
 			if ((rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1 &&
-				(!jump && anim->getCurrAnimName() != "Granade" & anim->getCurrAnimName() != "Kick")) || // If not moving in ground (and not about to jump)
+				(anim->getCurrAnimName() != "Jump" && anim->getCurrAnimName() != "Granade" & anim->getCurrAnimName() != "Kick")) || // If not moving in ground (and not about to do an action)
 				((anim->getCurrAnimName() != "Idle" && anim->getCurrAnimName() != "Walking") && anim->animHasEnded()) // Jump, Granade or kick animation didn't finished
 				&& anim->getCurrAnimName() != "Idle") // Avoid calling Idle multiple times
 			{
@@ -70,26 +71,42 @@ namespace K_Engine {
 			// Simple timer for jump
 			if (jump)
 			{
-				std::cout << timer << "\n";
-				timer--;
-				if (timer == 0)
+				std::cout << timerJump << "\n";
+				timerJump--;
+				if (timerJump == 0)
 				{
-					std::cout << "Saludaciones" << "\n";
 					rigby->addForceImpulse({ 0, distance * 4, 0 });
 				}
-				else if (timer <= 0 && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
+				else if (timerJump <= 0 && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
 				{
-					timer = 40;
+					timerJump = 40;
 					jump = false;
 				}
 			}
+
+			// Simple timer for grenade
+			if (grenade)
+			{
+				timerGrenade--;
+				if (timerGrenade == 0)
+				{
+					throwGrenade();
+					timerGrenade = 50;
+					grenade = false;
+				}
+			}
+			// -------------------------------- END ANIMATIONS --------------------------------
 
 			//Jump
 			if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
 				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A))
 				&& rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1
-				&& !jump) {
-				anim->playAnim("Jump", false);
+				&& !jump)
+			{
+				if (!grenade) // No jump animation, but still jumps
+				{
+					anim->playAnim("Jump", false);
+				}
 				jump = true;
 			}
 
@@ -97,7 +114,8 @@ namespace K_Engine {
 			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
 				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
 				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walking" && !jump) {
+				if (anim->getCurrAnimName() != "Walking" && (!jump && !grenade)) {
+
 					anim->playAnim("Walking", true);
 					trans->setRotation(0, 270, 0);
 				}
@@ -109,7 +127,7 @@ namespace K_Engine {
 			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
 				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
 				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walking" && !jump)
+				if (anim->getCurrAnimName() != "Walking" && (!jump && !grenade))
 				{
 					anim->playAnim("Walking", true);
 					trans->setRotation(0, 90, 0);
@@ -118,10 +136,11 @@ namespace K_Engine {
 					rigby->addForceImpulse({ distance, 0, 0 });
 			}
 
-			if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
-				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
+			if ((InputManager::GetInstance()->getRightMouseButtonPressed() ||
+				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK)) && !grenade && !jump)
 			{
-				throwGrenade();
+				anim->playAnim("Granade", false);
+				grenade = true;
 			}
 
 		}

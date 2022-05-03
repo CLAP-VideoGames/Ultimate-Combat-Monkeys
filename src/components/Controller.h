@@ -52,12 +52,14 @@ namespace K_Engine {
 		static std::string name;
 		float distance;
 
-		int timer = 40;
+		int timerJump = 40;
+		int timerGrenade = 50;
 
 		float heightCreation = 10;
 		float limitSpeed = 50;
 
 		bool jump;
+		bool grenade;
 		Animator* anim;
 		RigidBody* rigby;
 		EntityManager* entMan;
