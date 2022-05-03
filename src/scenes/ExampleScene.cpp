@@ -41,14 +41,6 @@ namespace K_Engine {
 		gM->addComponent<GameManager>();
 		gM->addComponent<TurnSystem>(false, 2);
 
-		K_Engine::Entity* oil = entMan->addEntity(); 
-		Animator* oilAnim_ = oil->addComponent<Animator>();
-		{
-			oil->addComponent<FryingOil>();
-			K_Engine::MeshRenderer* m = oil->addComponent<K_Engine::MeshRenderer>();
-			m->setMesh("Ocean.mesh");
-			m->debug();
-		}
 
 		loadScene(name);
 
@@ -90,7 +82,7 @@ namespace K_Engine {
 			r->setPosConstraints({ 1, 1, 0 });
 			r->setRotConstraints({ 0, 0, 0 });
 
-			Controller* control = monkey->addComponent<Controller>("Pedro");
+			Controller* control = monkey->addComponent<Controller>();
 			Health* playerHealth = monkey->addComponent<Health>("Pedro");
 			WeaponStack* weaponPlayer = monkey->addComponent<WeaponStack>();
 		}
