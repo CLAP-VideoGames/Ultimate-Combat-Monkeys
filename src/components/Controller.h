@@ -22,7 +22,7 @@ namespace K_Engine {
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		Controller(Entity* e);
+		Controller(Entity* e, std::string m_name);
 
 		Controller();
 		//Controller(Entity* e, Vector3 diff);
@@ -52,10 +52,13 @@ namespace K_Engine {
 
 		//Required
 		static std::string name;
+		std::string mesh_name;
+
+
 		float distance;
 
-		int timerJump = 40;
-		int timerGrenade = 50;
+		int timerJump = 50;
+		int timerGrenade = 60;
 
 		float heightCreation = 10;
 		float limitSpeed = 50;

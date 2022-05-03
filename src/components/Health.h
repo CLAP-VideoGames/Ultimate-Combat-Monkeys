@@ -15,7 +15,7 @@ namespace K_Engine {
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		Health(Entity* e);
+		Health(Entity* e, std::string m_name);
 
 		Health();
 		//Controller(Entity* e, Vector3 diff);
@@ -50,7 +50,7 @@ namespace K_Engine {
 		int life;
 		bool alive;
 		const int MAX_LIFE = 100;
-		//Text* textLife;
+		std::string mesh_name;
 		Animator* anim;
 	};
 }

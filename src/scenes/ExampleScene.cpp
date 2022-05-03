@@ -46,7 +46,7 @@ namespace K_Engine {
 		std::string platformLayer = "Platform";
 
 		int playerCollidesWith = K_Engine::PhysicsManager::GetInstance()->getLayerID(platformLayer);
-		// K_Engine::PhysicsManager::GetInstance()->setGravity({ 0,-30,0 });
+		K_Engine::PhysicsManager::GetInstance()->setGravity({ 0,-150,0 });
 
 		Camera* cam = RenderManager::GetInstance()->getCamera();
 		cam->setCameraPos(0, 60, 100);
@@ -78,8 +78,8 @@ namespace K_Engine {
 			r->setPosConstraints({ 1, 1, 0 });
 			r->setRotConstraints({ 0, 0, 0 });
 
-			Controller* control = monkey->addComponent<Controller>();
-			Health* playerHealth = monkey->addComponent<Health>();
+			Controller* control = monkey->addComponent<Controller>("Pedro");
+			Health* playerHealth = monkey->addComponent<Health>("Pedro");
 			Kick* playerKick = monkey->addComponent<Kick>();
 			WeaponStack* weaponPlayer = monkey->addComponent<WeaponStack>();
 		}

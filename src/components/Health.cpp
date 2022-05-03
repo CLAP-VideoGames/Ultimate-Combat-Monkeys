@@ -17,7 +17,8 @@ namespace K_Engine {
 		return name;
 	}
 
-	Health::Health(Entity* e) : Component(e) {
+	Health::Health(Entity* e, std::string m_name) : Component(e) {
+		mesh_name = "_" + m_name;
 	}
 
 	Health::Health() : Component()
@@ -48,7 +49,7 @@ namespace K_Engine {
 		{
 			// Start death animation
 			alive = false;
-			anim->playAnim("Death");
+			anim->playAnim("Death" + mesh_name, false);
 		}
 		else if (!alive && anim->animHasEnded())
 		{

@@ -27,8 +27,8 @@ namespace K_Engine {
 		return name;
 	}
 
-	Controller::Controller(Entity* e) : Component(e) {
-
+	Controller::Controller(Entity* e, std::string m_name) : Component(e) {
+		mesh_name = "_" + m_name;
 	}
 
 	Controller::Controller() : Component()
@@ -63,27 +63,27 @@ namespace K_Engine {
 			// -------------------------------- ANIMATIONS --------------------------------
 			// If not moving in ground
 			if ((rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1 &&
-				(anim->getCurrAnimName() != "Jump" && anim->getCurrAnimName() != "Granade" & anim->getCurrAnimName() != "Kick")) || // If not moving in ground (and not about to do an action)
-				((anim->getCurrAnimName() != "Idle" && anim->getCurrAnimName() != "Walking") && anim->animHasEnded()) // Jump, Granade or kick animation didn't finished
-				&& anim->getCurrAnimName() != "Idle") // Avoid calling Idle multiple times
+				(anim->getCurrAnimName() != "Jump" + mesh_name && anim->getCurrAnimName() != "Granade" + mesh_name & anim->getCurrAnimName() != "Kick" + mesh_name)) || // If not moving in ground (and not about to do an action)
+				((anim->getCurrAnimName() != "Idle" + mesh_name && anim->getCurrAnimName() != "Walk" + mesh_name) && anim->animHasEnded()) // Jump, Granade or kick animation didn't finished
+				&& anim->getCurrAnimName() != "Idle" + mesh_name) // Avoid calling Idle multiple times
 			{
-				//std::cout << rigby->getVelocity().x << "\n";
+				//std::cout << "Walking" + mesh_name << "\n";
 
-				anim->playAnim("Idle", true);
+				anim->playAnim("Idle" + mesh_name, true);
 			}
 
 			// Simple timer for jump
 			if (jump)
 			{
-				std::cout << timerJump << "\n";
+				//std::cout << timerJump << "\n";
 				timerJump--;
 				if (timerJump == 0)
 				{
-					rigby->addForceImpulse({ 0, distance * 4, 0 });
+					rigby->addForceImpulse({ 0, distance * 6, 0 });
 				}
 				else if (timerJump <= 0 && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
 				{
-					timerJump = 40;
+					timerJump = 50;
 					jump = false;
 				}
 			}
@@ -109,7 +109,7 @@ namespace K_Engine {
 			{
 				if (!grenade) // No jump animation, but still jumps
 				{
-					anim->playAnim("Jump", false);
+					anim->playAnim("Jump" + mesh_name, false);
 				}
 				jump = true;
 			}
@@ -118,10 +118,10 @@ namespace K_Engine {
 			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
 				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
 				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walking" && (!jump && !grenade)) {
+				if (anim->getCurrAnimName() != "Walk" + mesh_name && (!jump && !grenade)) {
 
-					anim->playAnim("Walking", true);
-					trans->setRotation(0, 270, 0);
+					anim->playAnim("Walk" + mesh_name, true);
+					trans->setRotation(0, 180, 0);
 				}
 				if (rigby && rigby->getVelocity().x > -limitSpeed)
 					rigby->addForceImpulse({ -distance, 0, 0 });
@@ -131,10 +131,10 @@ namespace K_Engine {
 			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
 				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
 				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walking" && (!jump && !grenade))
+				if (anim->getCurrAnimName() != "Walk" + mesh_name && (!jump && !grenade))
 				{
-					anim->playAnim("Walking", true);
-					trans->setRotation(0, 90, 0);
+					anim->playAnim("Walk" + mesh_name, true);
+					trans->setRotation(0, 0, 0);
 				}
 				if (rigby && rigby->getVelocity().x < limitSpeed)
 					rigby->addForceImpulse({ distance, 0, 0 });
@@ -143,8 +143,9 @@ namespace K_Engine {
 			if ((InputManager::GetInstance()->getRightMouseButtonPressed() ||
 				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK)) && !grenade && !jump)
 			{
-				anim->playAnim("Granade", false);
+				anim->playAnim("Granade" + mesh_name, false);
 				grenade = true;
+				//life->AddLife(-200);
 			}
 
 		}
@@ -178,6 +179,5 @@ namespace K_Engine {
 		r->setRestitution(0.2f);
 		r->addForce(K_Engine::Vector3(-5000, 1000, 0));
 
-		anim->playAnim("Granade", false);
 	}
 }
