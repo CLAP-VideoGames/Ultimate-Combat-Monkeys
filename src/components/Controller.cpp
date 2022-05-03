@@ -79,7 +79,7 @@ namespace K_Engine {
 				timerJump--;
 				if (timerJump == 0)
 				{
-					rigby->addForceImpulse({ 0, distance * 6, 0 });
+					rigby->addForceImpulse({ 0, distance * 7, 0 });
 				}
 				else if (timerJump <= 0 && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
 				{
@@ -107,10 +107,7 @@ namespace K_Engine {
 				&& rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1
 				&& !jump)
 			{
-				if (!grenade) // No jump animation, but still jumps
-				{
-					anim->playAnim("Jump" + mesh_name, false);
-				}
+				anim->playAnim("Jump" + mesh_name, false);
 				jump = true;
 			}
 
@@ -141,11 +138,10 @@ namespace K_Engine {
 			}
 
 			if ((InputManager::GetInstance()->getRightMouseButtonPressed() ||
-				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK)) && !grenade && !jump)
+				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK)) && !grenade)
 			{
 				anim->playAnim("Granade" + mesh_name, false);
 				grenade = true;
-				//life->AddLife(-200);
 			}
 
 		}
