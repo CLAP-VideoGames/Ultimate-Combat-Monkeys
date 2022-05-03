@@ -50,7 +50,7 @@ namespace K_Engine {
 		life = entity->getComponent<Health>();
 		entMan = entity->getMan();
 		jump = false;
-		distance = rigby->getMass() * 10;
+		distance = rigby->getMass() * distanceMultiplier;
 	}
 
 	void Controller::onEnable() {
@@ -60,12 +60,16 @@ namespace K_Engine {
 	{
 		if (life->getCurrentLife() > 0)
 		{
-
+			//Wow
 			// -------------------------------- ANIMATIONS --------------------------------
 			// If not moving in ground
 			if ((rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1 &&
-				(anim->getCurrAnimName() != "Jump" + mesh_name && anim->getCurrAnimName() != "Granade" + mesh_name & anim->getCurrAnimName() != "Kick" + mesh_name)) || // If not moving in ground (and not about to do an action)
-				((anim->getCurrAnimName() != "Idle" + mesh_name && anim->getCurrAnimName() != "Walk" + mesh_name) && anim->animHasEnded()) // Jump, Granade or kick animation didn't finished
+				(anim->getCurrAnimName() != "Jump" + mesh_name &&
+					anim->getCurrAnimName() != "Granade" + mesh_name && 
+					anim->getCurrAnimName() != "Kick" + mesh_name)) || // If not moving in ground (and not about to do an action)
+				((anim->getCurrAnimName() != "Idle" + mesh_name &&
+					anim->getCurrAnimName() != "Walk" + mesh_name) &&
+					anim->animHasEnded()) // Jump, Granade or kick animation didn't finished
 				&& anim->getCurrAnimName() != "Idle" + mesh_name) // Avoid calling Idle multiple times
 			{
 				//std::cout << "Walking" + mesh_name << "\n";
@@ -80,7 +84,7 @@ namespace K_Engine {
 				timerJump--;
 				if (timerJump == 0)
 				{
-					rigby->addForceImpulse({ 0, distance * 7, 0 });
+					rigby->addForceImpulse({ 0, jumpForce, 0 });
 				}
 				else if (timerJump <= 0 && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
 				{

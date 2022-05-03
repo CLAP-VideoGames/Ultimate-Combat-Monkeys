@@ -54,12 +54,15 @@ namespace K_Engine {
 		static std::string name;
 		std::string mesh_name;
 
-
+		//Horizontal movement
 		float distance;
+		float distanceMultiplier = 50;
+		//VerticalMovement
+		float jumpForce = 5000;
 
 		int timerJump = 50;
 		int timerGrenade = 60;
-
+		//HeightCreation for the grenade
 		float heightCreation = 25;
 		float limitSpeed = 50;
 
