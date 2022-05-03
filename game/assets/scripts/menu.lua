@@ -16,7 +16,7 @@ menu = {
     gameSceneButton = {
         Enabled = "true",
         Transform = {
-            position = "0.35, 0.3, 1",
+            position = "0.375, 0.3, 1",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -25,7 +25,7 @@ menu = {
             imageName = "UCM/GameMenuButton",
             hoverImageName = "UCM/GameMenuButtonHover",
             pressedImageName = "UCM/GameMenuButtonPressed",
-            width = "0.3",
+            width = "0.25",
             height = "0.175",
             onClick = "changeScene"
         }
@@ -33,7 +33,7 @@ menu = {
     optionsButton = {
         Enabled = "true",
         Transform = {
-            position = "0.35, 0.525, 2",
+            position = "0.375, 0.525, 2",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -42,7 +42,7 @@ menu = {
             imageName = "UCM/GameMenuButton",
             hoverImageName = "UCM/GameMenuButtonHover",
             pressedImageName = "UCM/GameMenuButtonPressed",
-            width = "0.3",
+            width = "0.25",
             height = "0.175",
             onClick = "goToOptions"
         }
@@ -50,7 +50,7 @@ menu = {
     exitButton = {
         Enabled = "true",
         Transform = {
-            position = "0.35, 0.75, 3",
+            position = "0.375, 0.75, 3",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -59,7 +59,7 @@ menu = {
             imageName = "UCM/GameMenuButton",
             hoverImageName = "UCM/GameMenuButtonHover",
             pressedImageName = "UCM/GameMenuButtonPressed",
-            width = "0.3",
+            width = "0.25",
             height = "0.175",
             onClick = "exitGame"
         }
@@ -67,17 +67,17 @@ menu = {
     gameSceneButtonText = {
         Enabled = "true",
         Transform = {
-            position = "0.5, 0.305, 4",
+            position = "0.5, 0.345, 4",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
         Text = {
             overlayName = "GameSceneButtonText",
             x = "0.35",
-            y = "0.3",
+            y = "0.35",
             width = "0.3",
-            height = "0.175",
-            text = "PLAY",
+            height = "0.1",
+            text = "play",
             fontName = "UCM/MenuFont",
             textColor = "0.0, 0.0, 0.0"
         }
@@ -85,17 +85,17 @@ menu = {
     optionsButtonText = {
         Enabled = "true",
         Transform = {
-            position = "0.5, 0.53, 5",
+            position = "0.5, 0.575, 5",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
         Text = {
             overlayName = "ExitButtonText",
             x = "0.35",
-            y = "0.525",
+            y = "0.575",
             width = "0.3",
-            height = "0.175",
-            text = "OPTIONS",
+            height = "0.08",
+            text = "options",
             fontName = "UCM/MenuFont",
             textColor = "0.0, 0.0, 0.0"
         }
@@ -103,7 +103,7 @@ menu = {
     exitButtonText = {
         Enabled = "true",
         Transform = {
-            position = "0.5, 0.755, 6",
+            position = "0.5, 0.795, 6",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -112,8 +112,8 @@ menu = {
             x = "0.35",
             y = "0.75",
             width = "0.3",
-            height = "0.175",
-            text = "EXIT",
+            height = "0.1",
+            text = "exit",
             fontName = "UCM/MenuFont",
             textColor = "0.0, 0.0, 0.0"
         }
@@ -127,7 +127,7 @@ end
 
 function goToOptions()
     local sceneMan = SceneManager.getSceneMan();
-    sceneMan:changeScene("pause");
+    sceneMan:changeScene("options");
 end
 
 function exitGame()

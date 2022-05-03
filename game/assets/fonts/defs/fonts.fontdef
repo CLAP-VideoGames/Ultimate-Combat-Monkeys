@@ -9,7 +9,7 @@ font MyFont
 font UCM/MenuFont
 {
     type         truetype
-    source       neucha.otf
-    size         30
-    resolution   96
+    source       Monkeyboy.ttf
+    size         20
+    resolution   144
 }
