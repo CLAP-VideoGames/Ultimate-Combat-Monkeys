@@ -22,8 +22,8 @@ echo Game built
 :: Move game.dll to exe folder
 echo Copying game files engine...
 
-copy %BUILD_DIR%\game.dll %EXE_DIR% 1>nul
-copy %BUILD_DIR%\game_d.dll %EXE_DIR% 1>nul
+copy "%BUILD_DIR%\game.dll" "%EXE_DIR%" 1>nul
+copy "%BUILD_DIR%\game_d.dll" "%EXE_DIR%" 1>nul
 
 :: Rename .exe file
 ren %BUILD_DIR%\engine.exe UCM.exe 1>nul
