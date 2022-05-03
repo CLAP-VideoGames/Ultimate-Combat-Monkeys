@@ -72,7 +72,7 @@ namespace K_Engine {
 
 			K_Engine::RigidBody* r = monkey->addComponent<K_Engine::RigidBody>(ColliderType::CT_BOX, BodyType::BT_DYNAMIC, 50, 1, 1);
 			r->setDimensions({ 2, 5, 2 });
-			r->setOffset({ 0, 3, 0 });
+			r->setOffset({ 0, 2, 0 });
 			r->setFriction(10.0f);
 
 			r->setPosConstraints({ 1, 1, 0 });

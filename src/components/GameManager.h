@@ -5,6 +5,7 @@
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
+	class Camera;
 	class Player;
 	class TurnSystem;
 
@@ -41,6 +42,8 @@ namespace K_Engine {
 		virtual void update(int frameTime);
 
 		void RegisterMonkey(int team_, int order_, Entity* ent);
+
+		Camera* getCamera();
 
 	private:
 		//Required

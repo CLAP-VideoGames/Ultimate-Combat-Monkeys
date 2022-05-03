@@ -3,9 +3,12 @@
 #include <objects/Player.h>
 #include <components/PlayerInfo.h>
 #include <components/Controller.h>
+#include <components/GameManager.h>
 
 #include <ecs_prj/Entity.h>
 #include <utils_prj/K_Map.h>
+#include <render_prj/Camera.h>
+#include <components_prj/Transform.h>
 
 #include <iostream>
 
@@ -40,6 +43,9 @@ namespace K_Engine {
 
 	void TurnSystem::start()
 	{
+		gMInstance = GameManager::GetInstance();
+		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha << "\n";
+
 		int team = (firstTeamStarts) ? 0 : 1;
 		player1Turn = player2Turn = 0;
 		turn = Turn({ team, 0});
@@ -84,6 +90,7 @@ namespace K_Engine {
 
 	void TurnSystem::endTurn()
 	{
+		lostFocusOnPlayer();
 		Player* p;
 		turn.team = (turn.team + 1) % 2;
 		p = (!turn.team) ? player1 : player2;	//Si es falso = 0 -> primer equipo
@@ -98,6 +105,7 @@ namespace K_Engine {
 		if (turn.player == p->getOrder()[0] && turn.team == firstTeamStarts)
 			round++;
 
+		setFocusOnPlayer();
 		resetCountdown();
 	}
 
@@ -123,6 +131,9 @@ namespace K_Engine {
 
 		if (e != nullptr) {
 			e->getComponent<Controller>()->enable = true;
+			//Posicion de la camara
+			Vector3 pos = e->getComponent<Transform>()->getPosition();
+			gMInstance->getCamera()->lookAt(pos.x, pos.y, pos.z);
 		}
 
 	}

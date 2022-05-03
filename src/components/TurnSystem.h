@@ -7,6 +7,7 @@
 
 namespace K_Engine {
 	class Player;
+	class GameManager;
 
 	struct Turn {
 		int team;
@@ -41,6 +42,7 @@ namespace K_Engine {
 	private:
 		//Required
 		static std::string name;
+		GameManager* gMInstance;
 
 		//Equipos de player
 		Player* player1;
