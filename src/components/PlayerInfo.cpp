@@ -28,8 +28,8 @@ namespace K_Engine {
 
 	void PlayerInfo::init(K_Map* information)
 	{
-		team = information->valueToNumber("team");
-		order = information->valueToNumber("order");
+		team = information->valueToNumber("Team");
+		order = information->valueToNumber("Order");
 	}
 
 	void PlayerInfo::start()

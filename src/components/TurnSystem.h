@@ -43,6 +43,7 @@ namespace K_Engine {
 		//Required
 		static std::string name;
 		GameManager* gMInstance;
+		float startingZAxis;
 
 		//Equipos de player
 		Player* player1;
