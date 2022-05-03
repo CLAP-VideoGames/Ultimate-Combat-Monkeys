@@ -16,6 +16,7 @@
 #include <components/Grenade.h>
 #include <components/DestroyOnCollision.h>
 #include <components/Health.h>
+#include <components/GameManager.h>
 #include <iostream>
 
 namespace K_Engine {
@@ -37,8 +38,13 @@ namespace K_Engine {
 
 	Controller::~Controller() = default;
 
-	void Controller::start()
-	{
+	void Controller::start() {
+
+		gMInstance = GameManager::GetInstance();
+		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha  << "\n";
+
+		gMInstance->RegisterMonkey(0, 0, entity);
+
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({ 0,0,0 });
 		anim = entity->getComponent<Animator>();

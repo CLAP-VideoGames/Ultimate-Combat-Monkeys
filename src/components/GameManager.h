@@ -1,54 +1,53 @@
 #pragma once
-#ifndef CameraMovement_H
-#define CameraMovement_H
+#ifndef GameManager_H
+#define GameManager_H
 
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
-	class Camera;
-	class InputManager;
-	class GameManager;
-	class CameraMovement : public Component 
+	class TurnSystem;
+
+	class GameManager : public Component 
 	{
 	public:
 		/// <summary>
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		CameraMovement(Entity* e, float percentage);
+		GameManager(Entity* e);
 
-		CameraMovement();
+		GameManager();
 
-		~CameraMovement();
+		~GameManager();
 
 		//Required method for the component name
 		static std::string GetId();
 
-		virtual void awake();
+		static GameManager* GetInstance();
 
 		/// <summary>
 		/// It's called at the beginning of the execution.
 		/// </summary>
 		virtual void start();
 
+		virtual void awake();
+
+		virtual void init(K_Map* information);
+
 		/// <summary>
 		/// It's called every frame of the game.
 		/// </summary> 
 		virtual void update(int frameTime);
 
+		void RegisterMonkey(int team_, int order_, Entity* ent);
+
 	private:
 		//Required
 		static std::string name;
-		InputManager* inputMan;
-		float quantityZoom, percentage_;
-		float quantityMovementY, quantityMovementX;
-		Camera* cam;
 
-		bool isDown = true;
+		static GameManager* instance;
 
-		std::pair<int, int> initial_, final_;
-
-		GameManager* gMInstance;
+		TurnSystem* turnSys_;
 	};
 }
-#endif CameraMovement_H
+#endif GameManager_H

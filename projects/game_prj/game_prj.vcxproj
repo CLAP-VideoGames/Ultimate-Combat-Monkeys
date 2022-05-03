@@ -16,6 +16,10 @@
     <ClCompile Include="..\..\src\components\DestroyOnCollision.cpp" />
     <ClCompile Include="..\..\src\components\Destructible.cpp" />
     <ClCompile Include="..\..\src\components\ExampleComponent.cpp" />
+    <ClCompile Include="..\..\src\components\GameManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="..\..\src\components\Grenade.cpp" />
     <ClCompile Include="..\..\src\components\Health.cpp" />
     <ClCompile Include="..\..\src\components\Kick.cpp" />
@@ -35,13 +39,17 @@
     <ClInclude Include="..\..\src\components\DestroyOnCollision.h" />
     <ClInclude Include="..\..\src\components\Destructible.h" />
     <ClInclude Include="..\..\src\components\ExampleComponent.h" />
+    <ClInclude Include="..\..\src\components\GameManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="..\..\src\components\Grenade.h" />
     <ClInclude Include="..\..\src\components\Health.h" />
     <ClInclude Include="..\..\src\components\Kick.h" />
     <ClInclude Include="..\..\src\components\PlayerInfo.h" />
+    <ClInclude Include="..\..\src\components\TurnSystem.h" />
     <ClInclude Include="..\..\src\components\WeaponStack.h" />
     <ClInclude Include="..\..\src\GameComponentRegistry.h" />
-    <ClInclude Include="..\..\src\Managers\TurnSystem.h" />
     <ClInclude Include="..\..\src\objects\Player.h" />
     <ClInclude Include="..\..\src\scenes\ExampleScene.h" />
   </ItemGroup>

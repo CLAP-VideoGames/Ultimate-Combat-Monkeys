@@ -6,6 +6,8 @@
 #include <input_prj/K_Engine_Keys.h>
 #include <utils_prj/Math.h>
 
+#include "GameManager.h"
+
 #include <iostream>
 #include <cmath>
 
@@ -29,6 +31,7 @@ namespace K_Engine {
 	CameraMovement::~CameraMovement() = default;
 
 	void CameraMovement::awake() {
+	
 	}
 
 	void CameraMovement::start() {

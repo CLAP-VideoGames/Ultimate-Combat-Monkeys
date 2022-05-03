@@ -12,6 +12,8 @@ namespace K_Engine {
 	class EntityManager;
 	class Transform;
 	class Health;
+	class GameManager;
+
 
 	class Controller : public Component
 	{
@@ -67,6 +69,7 @@ namespace K_Engine {
 
 		Health* life;
 
+		GameManager* gMInstance;
 	};
 }
 #endif CONTROLLER_H

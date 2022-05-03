@@ -26,12 +26,18 @@
 #include <components/WeaponStack.h>
 #include <components/Kick.h>
 #include <components/CameraMovement.h>
+#include <components/GameManager.h>
+#include <components/TurnSystem.h>
 
 #include <utils_prj/Vector3.h>
 
 namespace K_Engine {
 
 	void ExampleScene::init() {
+		K_Engine::Entity* gM = entMan->addEntity();
+		gM->addComponent<GameManager>();
+		gM->addComponent<TurnSystem>(false, 2);
+		
 		loadScene(name);
 
 		// example scene (pending of development)
@@ -44,6 +50,7 @@ namespace K_Engine {
 
 		Camera* cam = RenderManager::GetInstance()->getCamera();
 		cam->setCameraPos(0, 60, 100);
+
 
 		K_Engine::Entity* cameraManager = entMan->addEntity();
 		cameraManager->addComponent<CameraMovement>(0.08);
@@ -58,7 +65,7 @@ namespace K_Engine {
 			t->setPosition(0, 39, 0);
 
 
-			t->setRotation(0, 90, 0);
+			t->setRotation(0, 0, 0);
 			K_Engine::MeshRenderer* m = monkey->addComponent<K_Engine::MeshRenderer>();
 			m->setMesh("PedroPablo.mesh");
 			m->debug();

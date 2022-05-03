@@ -19,7 +19,7 @@ namespace K_Engine {
 		TurnSystem();
 		~TurnSystem();
 
-		virtual std::string GetId();
+		static std::string GetId();
 
 		virtual void init(K_Map* information);
 
@@ -31,6 +31,8 @@ namespace K_Engine {
 		void resetCountdown();
 		void resumeCountdown();
 		void stopCountdown();
+
+		void RegisterMonkey(int team, int order, Entity* ent);
 
 		//Turnos
 		void endTurn();

@@ -75,6 +75,9 @@
     <ClCompile Include="..\..\src\components\TurnSystem.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\components\GameManager.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\GameComponentRegistry.h">
@@ -116,7 +119,10 @@
     <ClInclude Include="..\..\src\components\PlayerInfo.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Managers\TurnSystem.h">
+    <ClInclude Include="..\..\src\components\TurnSystem.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\components\GameManager.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>

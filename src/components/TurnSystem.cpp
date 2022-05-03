@@ -5,6 +5,8 @@
 #include <ecs_prj/Entity.h>
 #include <components/Controller.h>
 
+#include <iostream>
+
 namespace K_Engine {
 	//Required
 	std::string TurnSystem::name = "TurnSystem";
@@ -44,12 +46,12 @@ namespace K_Engine {
 
 	void TurnSystem::update(int deltaTime)
 	{
-		if (!timeStop) {
+		/*if (!timeStop) {
 			countDown -= deltaTime / 1000.0f;
 
 			if (countDown <= 0.0f)
 				endTurn();
-		}
+		}*/
 	}
 
 	void TurnSystem::resetCountdown()
@@ -65,6 +67,11 @@ namespace K_Engine {
 	void TurnSystem::stopCountdown()
 	{
 		timeStop = true;
+	}
+
+	void TurnSystem::RegisterMonkey(int team, int order, Entity* ent){
+		printf("Se ha registrado el Mono del equipo %d cuyo orden de posición es %d\n", team, order);
+		std::cout << "La entidad existe: " << std::boolalpha << (ent != nullptr) << std::boolalpha  << "\n\n";
 	}
 
 	void TurnSystem::endTurn()

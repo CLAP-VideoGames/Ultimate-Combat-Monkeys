@@ -13,6 +13,7 @@
 #include <components/PlayerInfo.h>
 #include <components/Grenade.h>
 #include <components/TurnSystem.h>
+#include <components/GameManager.h>
 
 #include <ecs_prj/ComponentManager.h>
 
@@ -32,6 +33,7 @@ namespace K_Engine {
 			compMan->add<K_Engine::PlayerInfo>();
 			compMan->add<K_Engine::Grenade>();
 			compMan->add<K_Engine::TurnSystem>();
+			compMan->add<K_Engine::GameManager>();
 		}
 	}
 }
