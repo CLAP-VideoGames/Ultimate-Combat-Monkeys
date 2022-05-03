@@ -5,7 +5,7 @@
 
 namespace K_Engine {
 	//Required
-	std::string PlayerInfo::name = "PlayerInfoComponent";
+	std::string PlayerInfo::name = "PlayerInfo";
 
 	std::string PlayerInfo::GetId() {
 		return name;

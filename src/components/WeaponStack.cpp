@@ -12,7 +12,7 @@
 
 namespace K_Engine {
 	//Required
-	std::string WeaponStack::name = "WeaponStackComponent";
+	std::string WeaponStack::name = "WeaponStack";
 
 	std::string WeaponStack::GetId() {
 		return name;

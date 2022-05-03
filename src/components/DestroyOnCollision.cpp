@@ -9,7 +9,7 @@
 
 namespace K_Engine {
 	//Required
-	std::string DestroyOnCollision::name = "DestroyOnCollisionComponent";
+	std::string DestroyOnCollision::name = "DestroyOnCollision";
 
 	std::string DestroyOnCollision::GetId() {
 		return name;

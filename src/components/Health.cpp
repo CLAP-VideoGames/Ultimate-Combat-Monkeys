@@ -11,7 +11,7 @@
 
 namespace K_Engine {
 	//Required
-	std::string Health::name = "HealthComponent";
+	std::string Health::name = "Health";
 
 	std::string Health::GetId() {
 		return name;

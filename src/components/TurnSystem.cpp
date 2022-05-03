@@ -6,15 +6,30 @@
 #include <components/Controller.h>
 
 namespace K_Engine {
-	TurnSystem::TurnSystem(Player* p1, Player* p2, bool firstStarts, int countDownTime):
-		player1(p1), player2(p2), firstTeamStarts(firstStarts), startTime(countDownTime)
+	//Required
+	std::string TurnSystem::name = "TurnSystem";
+
+	std::string TurnSystem::GetId() {
+		return name;
+	}
+
+	TurnSystem::TurnSystem() : Component() {};
+
+	TurnSystem::TurnSystem(Entity* e, bool firstStarts, int countDownTime): Component(e),
+		firstTeamStarts(firstStarts), startTime(countDownTime)
 	{
+		player1 = new Player(0);
+		player2 = new Player(1);
 	}
 
 	TurnSystem::~TurnSystem()
 	{
 		delete player1;
 		delete player2;
+	}
+
+	void TurnSystem::init(K_Map* information)
+	{
 	}
 
 	void TurnSystem::start()

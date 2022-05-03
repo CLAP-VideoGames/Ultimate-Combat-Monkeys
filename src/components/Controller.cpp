@@ -20,7 +20,7 @@
 
 namespace K_Engine {
 	//Required
-	std::string Controller::name = "ControllerComponent";
+	std::string Controller::name = "Controller";
 
 	std::string Controller::GetId() {
 		return name;

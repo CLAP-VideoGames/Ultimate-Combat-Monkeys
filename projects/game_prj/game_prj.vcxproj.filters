@@ -25,12 +25,6 @@
     <Filter Include="Source Files\Scenes">
       <UniqueIdentifier>{e5787573-ec38-4dde-883d-7a070c9930f6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Managers">
-      <UniqueIdentifier>{f42de142-cc6f-46e8-a12e-c90659f1d88b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Managers">
-      <UniqueIdentifier>{775c5e04-f8c8-47a3-bf99-e8628daa4f9d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Objects">
       <UniqueIdentifier>{76703e43-0c98-42d9-9309-7115afebea72}</UniqueIdentifier>
     </Filter>
@@ -78,8 +72,8 @@
     <ClCompile Include="..\..\src\components\PlayerInfo.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\managers\TurnSystem.cpp">
-      <Filter>Source Files\Managers</Filter>
+    <ClCompile Include="..\..\src\components\TurnSystem.cpp">
+      <Filter>Source Files\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -116,13 +110,13 @@
     <ClInclude Include="..\..\src\components\Grenade.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Managers\TurnSystem.h">
-      <Filter>Header Files\Managers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\objects\Player.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\components\PlayerInfo.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Managers\TurnSystem.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>

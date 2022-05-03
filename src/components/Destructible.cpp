@@ -5,7 +5,7 @@
 
 namespace K_Engine {
 	//Required
-	std::string Destructible::name = "DestructibleComponent";
+	std::string Destructible::name = "Destructible";
 
 	std::string Destructible::GetId() {
 		return name;

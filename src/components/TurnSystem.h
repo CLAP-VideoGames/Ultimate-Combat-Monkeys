@@ -3,6 +3,8 @@
 #ifndef TurnSystem_H
 #define TurnSystem_H
 
+#include <ecs_prj/Component.h>
+
 namespace K_Engine {
 	class Player;
 
@@ -11,14 +13,19 @@ namespace K_Engine {
 		int player;
 	};
 
-	class TurnSystem {
+	class TurnSystem: public Component {
 	public:
-		TurnSystem(Player* p1, Player* p2, bool firstStarts, int countDownTime);
+		TurnSystem(Entity* e, bool firstStarts, int countDownTime);
+		TurnSystem();
 		~TurnSystem();
 
-		void start();
+		virtual std::string GetId();
 
-		void update(int deltaTime);
+		virtual void init(K_Map* information);
+
+		virtual void start();
+
+		virtual void update(int deltaTime);
 
 		//Timer Management
 		void resetCountdown();
@@ -29,6 +36,9 @@ namespace K_Engine {
 		void endTurn();
 
 	private:
+		//Required
+		static std::string name;
+
 		//Equipos de player
 		Player* player1;
 		Player* player2;
@@ -42,7 +52,6 @@ namespace K_Engine {
 		bool timeStop;
 
 		//Cambio de equipos y player
-		void switchTeam();
 		void nextPlayer();
 		void lostFocusOnPlayer();
 		void setFocusOnPlayer();
