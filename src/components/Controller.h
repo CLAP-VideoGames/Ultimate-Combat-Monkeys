@@ -22,7 +22,7 @@ namespace K_Engine {
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		Controller(Entity* e);
+		Controller(Entity* e, std::string m_name);
 
 		Controller();
 		//Controller(Entity* e, Vector3 diff);
@@ -49,16 +49,26 @@ namespace K_Engine {
 	private:
 
 		void throwGrenade();
+		void throwKick();
 
 		//Required
 		static std::string name;
+		std::string mesh_name;
+
+		//Horizontal movement
 		float distance;
+		float distanceMultiplier = 50;
+		//VerticalMovement
+		float jumpForce = 5000;
 
-		int timerJump = 40;
-		int timerGrenade = 50;
-
-		float heightCreation = 10;
+		int timerJump = 50;
+		int timerGrenade = 60;
+		//HeightCreation for the grenade
+		float heightCreation = 25;
 		float limitSpeed = 50;
+
+		float grenadeForce = 9000;
+		float grenadeVerticalForce = 800;
 
 		bool jump;
 		bool grenade;

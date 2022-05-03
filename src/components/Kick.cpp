@@ -9,6 +9,7 @@
 #include <log_prj/LogManager.h>
 
 
+#include <components/Health.h>
 #include <components_prj/RigidBody.h>
 #include <components_prj/Transform.h>
 #include <components_prj/MeshRenderer.h>
@@ -40,59 +41,23 @@ namespace K_Engine {
 
 	void Kick::start()
 	{
-		entMan = entity->getMan();
-		K_Engine::Entity* kickChild = entMan->addEntity(true);
-		{
-			MeshRenderer* m = kickChild->addComponent<MeshRenderer>();
-			m->setMesh("sphere.mesh");
 
-			K_Engine::Transform* t = kickChild->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
-			ColliderType boxType = ColliderType::CT_SPHERE;
-			BodyType bodyType = BodyType::BT_DYNAMIC;
-			float mass = 1.0f;
-
-			RigidBody* r = kickChild->addComponent<RigidBody>(boxType, bodyType, mass,
-				K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
-				K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
-
-			r->setFriction(0.6f);
-			r->setRestitution(0.2f);
-		}
-		entity->addChild(kickChild);
-
-		//K_Engine::LogManager::GetInstance()->printLog(K_Engine::
-		//	LogType::WARNING, "\n""mierdas""\n");
 	}
 
-	// LA idea ahora mismo es hacer la patada con o con un collider que est� todo el rato attacheada al player
-	// o con un cambio de dimension de rigidbody que necesitaria cambiarse y volver a su estado original
-	// cuando se pulse el bot�n (lo que est� programado)
-
-	// Lo ideal creemos que es crear un collider/trigger en el momento de pulsar el bot�n y luego eliminarlo
-	// al cabo de poco tiempo, pero aun no hemos desarrollado esa idea
+	void Kick::onCollisionEnter(Entity* collision) {
+		if (collision->hasComponent<Health>()) {
+			collision->getComponent<RigidBody>()->addForceImpulse({ 500,0,0 });
+			collision->getComponent<Health>()->AddLife(-1);
+		}
+		
+	}
 
 	void Kick::update(int frameTime)
 	{
-		//if (debug) {
-		//	K_Engine::Entity* kickChild = entMan->addEntity(true);
-		//	Transform* t = kickChild->addComponent<Transform>();
-		//	t->setPosition(0, 0, 0);
-
-		//	MeshRenderer* m = kickChild->addComponent<MeshRenderer>();
-		//	m->setMesh("sphere.mesh");
-
-
-		//	debug = false;
-		//}
-
-
-		if (InputManager::GetInstance()->getRightMouseButtonPressed() ||
-			InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK))
-		{
-
-
+		if (kickdeath <= 0) {
+			entity->destroy();
 		}
-
+		else kickdeath -= frameTime;
 	}
 
 

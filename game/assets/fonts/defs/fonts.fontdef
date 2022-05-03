@@ -1,0 +1,15 @@
+font MyFont
+{
+    type         truetype
+    source       batang.ttf
+    size         26
+    resolution   72
+}
+
+font UCM/MenuFont
+{
+    type         truetype
+    source       neucha.otf
+    size         30
+    resolution   96
+}

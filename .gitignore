@@ -359,3 +359,5 @@ MigrationBackup/
 *.exe
 *.dll
 *.lib
+
+engine/exe/assets/

@@ -2,8 +2,13 @@
 
 #include <objects/Player.h>
 #include <components/PlayerInfo.h>
-#include <ecs_prj/Entity.h>
 #include <components/Controller.h>
+#include <components/GameManager.h>
+
+#include <ecs_prj/Entity.h>
+#include <utils_prj/K_Map.h>
+#include <render_prj/Camera.h>
+#include <components_prj/Transform.h>
 
 #include <iostream>
 
@@ -18,7 +23,7 @@ namespace K_Engine {
 	TurnSystem::TurnSystem() : Component() {};
 
 	TurnSystem::TurnSystem(Entity* e, bool firstStarts, int countDownTime): Component(e),
-		firstTeamStarts(firstStarts), startTime(countDownTime)
+		firstTeamStarts(firstStarts), timeLimit(countDownTime)
 	{
 		player1 = new Player(0);
 		player2 = new Player(1);
@@ -32,31 +37,36 @@ namespace K_Engine {
 
 	void TurnSystem::init(K_Map* information)
 	{
+		firstTeamStarts = information->valueToBool("firsTeamStarts");
+		timeLimit = information->valueToNumber("timeLimit");
 	}
 
 	void TurnSystem::start()
 	{
+		gMInstance = GameManager::GetInstance();
+		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha << "\n";
+
 		int team = (firstTeamStarts) ? 0 : 1;
 		player1Turn = player2Turn = 0;
 		turn = Turn({ team, 0});
-		countDown = startTime;
-		timeStop = false;
+		countDown = timeLimit;
+		timeStop = true;
 		round = 0;
 	}
 
 	void TurnSystem::update(int deltaTime)
 	{
-		/*if (!timeStop) {
+		if (!timeStop) {
 			countDown -= deltaTime / 1000.0f;
 
 			if (countDown <= 0.0f)
 				endTurn();
-		}*/
+		}
 	}
 
 	void TurnSystem::resetCountdown()
 	{
-		countDown = startTime;
+		countDown = timeLimit;
 	}
 
 	void TurnSystem::resumeCountdown()
@@ -72,10 +82,15 @@ namespace K_Engine {
 	void TurnSystem::RegisterMonkey(int team, int order, Entity* ent){
 		printf("Se ha registrado el Mono del equipo %d cuyo orden de posición es %d\n", team, order);
 		std::cout << "La entidad existe: " << std::boolalpha << (ent != nullptr) << std::boolalpha  << "\n\n";
+		if (team == 0)
+			player1->addToTeam(ent, order);
+		else
+			player2->addToTeam(ent, order);
 	}
 
 	void TurnSystem::endTurn()
 	{
+		lostFocusOnPlayer();
 		Player* p;
 		turn.team = (turn.team + 1) % 2;
 		p = (!turn.team) ? player1 : player2;	//Si es falso = 0 -> primer equipo
@@ -90,7 +105,13 @@ namespace K_Engine {
 		if (turn.player == p->getOrder()[0] && turn.team == firstTeamStarts)
 			round++;
 
+		setFocusOnPlayer();
 		resetCountdown();
+	}
+
+	int TurnSystem::getRound()
+	{
+		return round;
 	}
 
 	void TurnSystem::nextPlayer()
@@ -110,6 +131,9 @@ namespace K_Engine {
 
 		if (e != nullptr) {
 			e->getComponent<Controller>()->enable = true;
+			//Posicion de la camara
+			Vector3 pos = e->getComponent<Transform>()->getPosition();
+			gMInstance->getCamera()->lookAt(pos.x, pos.y, pos.z);
 		}
 
 	}

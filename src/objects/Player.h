@@ -26,7 +26,7 @@ namespace K_Engine {
 		/// 
 		/// </summary>
 		/// <param name="e"></param>
-		void addToTeam(Entity* e);
+		void addToTeam(Entity* e, int order);
 		/// <summary>
 		/// Echa y destruye la entidad del vector en la posicion n
 		/// </summary>

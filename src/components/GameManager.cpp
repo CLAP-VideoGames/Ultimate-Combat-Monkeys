@@ -1,6 +1,12 @@
 #include "GameManager.h"
+
+#include <components/TurnSystem.h>
+#include <objects/Player.h>
+
 #include <ecs_prj/Entity.h>
-#include "TurnSystem.h"
+#include <render_prj/Camera.h>
+#include <render_prj/RenderManager.h>
+
 #include <iostream>
 
 namespace K_Engine {
@@ -38,12 +44,11 @@ namespace K_Engine {
 	void GameManager::init(K_Map* information) {
 		if (instance == nullptr) {
 			instance = this;
-			turnSys_ = entity->getComponent<TurnSystem>();
 		}
 	}
 
 	void GameManager::start() {
-		
+		turnSys_ = entity->getComponent<TurnSystem>();
 	}
 
 	void GameManager::update(int frameTime) {
@@ -54,5 +59,10 @@ namespace K_Engine {
 		if (turnSys_)
 			turnSys_->RegisterMonkey(team_, order_, ent);
 		else std::cout << "FALSE\n\n";
+	}
+
+	Camera* GameManager::getCamera()
+	{
+		return RenderManager::GetInstance()->getCamera();
 	}
 }
