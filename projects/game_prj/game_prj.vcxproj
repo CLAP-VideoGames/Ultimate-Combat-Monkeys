@@ -16,6 +16,10 @@
     <ClCompile Include="..\..\src\components\DestroyOnCollision.cpp" />
     <ClCompile Include="..\..\src\components\Destructible.cpp" />
     <ClCompile Include="..\..\src\components\ExampleComponent.cpp" />
+    <ClCompile Include="..\..\src\components\FryingOil.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="..\..\src\components\GameManager.cpp">
       <SubType>
       </SubType>
@@ -39,6 +43,10 @@
     <ClInclude Include="..\..\src\components\DestroyOnCollision.h" />
     <ClInclude Include="..\..\src\components\Destructible.h" />
     <ClInclude Include="..\..\src\components\ExampleComponent.h" />
+    <ClInclude Include="..\..\src\components\FryingOil.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="..\..\src\components\GameManager.h">
       <SubType>
       </SubType>

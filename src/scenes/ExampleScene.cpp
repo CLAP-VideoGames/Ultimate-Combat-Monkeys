@@ -27,9 +27,11 @@
 #include <components/Kick.h>
 #include <components/CameraMovement.h>
 #include <components/GameManager.h>
+#include <components/FryingOil.h>
 #include <components/TurnSystem.h>
 
 #include <utils_prj/Vector3.h>
+#include <iostream>
 
 namespace K_Engine {
 
@@ -37,7 +39,16 @@ namespace K_Engine {
 		K_Engine::Entity* gM = entMan->addEntity();
 		gM->addComponent<GameManager>();
 		gM->addComponent<TurnSystem>(false, 2);
-		
+
+		K_Engine::Entity* oil = entMan->addEntity(); 
+		Animator* oilAnim_ = oil->addComponent<Animator>();
+		{
+			oil->addComponent<FryingOil>();
+			K_Engine::MeshRenderer* m = oil->addComponent<K_Engine::MeshRenderer>();
+			m->setMesh("Ocean.mesh");
+			m->debug();
+		}
+
 		loadScene(name);
 
 		// example scene (pending of development)
@@ -49,7 +60,7 @@ namespace K_Engine {
 		// K_Engine::PhysicsManager::GetInstance()->setGravity({ 0,-30,0 });
 
 		Camera* cam = RenderManager::GetInstance()->getCamera();
-		cam->setCameraPos(0, 60, 100);
+		cam->setCameraPos(0, 60, 300);
 
 
 		K_Engine::Entity* cameraManager = entMan->addEntity();
@@ -182,6 +193,8 @@ namespace K_Engine {
 		entMan->onEnable();
 		entMan->start();
 
+		std::cout << "hola\n";
 		anim->playAnim("Idle");
+		oilAnim_->playAnim("Wave");
 	}
 }

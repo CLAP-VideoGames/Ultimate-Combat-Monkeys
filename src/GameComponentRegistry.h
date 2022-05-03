@@ -14,6 +14,7 @@
 #include <components/Grenade.h>
 #include <components/TurnSystem.h>
 #include <components/GameManager.h>
+#include <components/FryingOil.h>
 
 #include <ecs_prj/ComponentManager.h>
 
@@ -34,6 +35,7 @@ namespace K_Engine {
 			compMan->add<K_Engine::Grenade>();
 			compMan->add<K_Engine::TurnSystem>();
 			compMan->add<K_Engine::GameManager>();
+			compMan->add<K_Engine::FryingOil>();
 		}
 	}
 }
