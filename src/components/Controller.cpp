@@ -47,7 +47,7 @@ namespace K_Engine {
 	void Controller::start() {
 
 		gMInstance = GameManager::GetInstance();
-		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha  << "\n";
+		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha << "\n";
 
 		mesh_name = "_" + entity->getComponent<MeshRenderer>()->getMeshName();
 		if (mesh_name == "_Generic_")
@@ -70,103 +70,67 @@ namespace K_Engine {
 	{
 		if (life->getCurrentLife() > 0)
 		{
-			//Wow
-			// -------------------------------- ANIMATIONS --------------------------------
-			// If not moving in ground
-			if ((rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1 &&
-				(anim->getCurrAnimName() != "Jump" + mesh_name &&
-					anim->getCurrAnimName() != "Granade" + mesh_name && 
-					anim->getCurrAnimName() != "Kick" + mesh_name)) || // If not moving in ground (and not about to do an action)
-				((anim->getCurrAnimName() != "Idle" + mesh_name &&
-					anim->getCurrAnimName() != "Walk" + mesh_name) &&
-					anim->animHasEnded()) // Jump, Granade or kick animation didn't finished
-				&& anim->getCurrAnimName() != "Idle" + mesh_name) // Avoid calling Idle multiple times
-			{
-				//std::cout << "Walking" + mesh_name << "\n";
+			//Default action = Nothing
+			Action currentAction = Nothing;
+			InputManager* input = InputManager::GetInstance();
 
-				anim->playAnim("Idle" + mesh_name, true);
-			}
+			//Registering what action the user wants to do
+			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) currentAction = Jump;
+			else if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
+				input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) currentAction = Moving;
+			else if (input->getRightMouseButtonPressed()) currentAction = Granading;
+			else if (input->getLeftMouseButtonPressed()) currentAction = Kicking;
 
-			// Simple timer for jump
-			if (jump)
+			//Doing something based in the user input
+			switch (currentAction)
 			{
-				//std::cout << timerJump << "\n";
-				timerJump--;
-				if (timerJump == 0)
-				{
+			case K_Engine::Controller::Moving:
+
+				//Left
+				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A))
+					if (rigby->getVelocity().x > -limitSpeed) {
+						trans->setRotation(0, 180, 0);
+						rigby->addForceImpulse({ -distance, 0, 0 });
+					}
+
+				//Right
+				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D))
+					if (rigby->getVelocity().x < limitSpeed) {
+						trans->setRotation(0, 0, 0);
+						rigby->addForceImpulse({ distance, 0, 0 });
+					}
+
+				break;
+			case K_Engine::Controller::Jump:
+
+				//Checking it is in a certain interval
+				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
+					anim->playAnim("Jump" + mesh_name, false);
 					rigby->addForceImpulse({ 0, jumpForce, 0 });
 				}
-				else if (timerJump <= 0 && rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1)
-				{
-					timerJump = 50;
-					jump = false;
-				}
-			}
 
-			// Simple timer for grenade
-			if (grenade)
-			{
-				timerGrenade--;
-				if (timerGrenade == 0)
-				{
-					throwGrenade();
-					timerGrenade = 50;
-					grenade = false;
-				}
-			}
-			// -------------------------------- END ANIMATIONS --------------------------------
+				break;
+			case K_Engine::Controller::Kicking:
 
-			//Jump
-			if ((InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
-				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_A))
-				&& rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1
-				&& !jump)
-			{
-				anim->playAnim("Jump" + mesh_name, false);
-				jump = true;
-			}
-
-			// Left
-			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) < 0) {
-				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walk" + mesh_name && (!jump && !grenade)) {
-
-					anim->playAnim("Walk" + mesh_name, true);
-					trans->setRotation(0, 180, 0);
-				}
-				if (rigby && rigby->getVelocity().x > -limitSpeed)
-					rigby->addForceImpulse({ -distance, 0, 0 });
-			}
-
-			// Right
-			if (InputManager::GetInstance()->isKeyDown(K_Engine_Scancode::SCANCODE_D) ||
-				InputManager::GetInstance()->controllerAxisValue(K_Engine_GameControllerAxis::CONTROLLER_AXIS_LEFTX) > 0) {
-				// If anim is not walking and it's not jumping (or it's jumping but anim has already finished)
-				if (anim->getCurrAnimName() != "Walk" + mesh_name && (!jump && !grenade))
-				{
-					anim->playAnim("Walk" + mesh_name, true);
-					trans->setRotation(0, 0, 0);
-				}
-				if (rigby && rigby->getVelocity().x < limitSpeed)
-					rigby->addForceImpulse({ distance, 0, 0 });
-			}
-
-			if ((InputManager::GetInstance()->getRightMouseButtonPressed() ||
-				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_RIGHTSTICK)) && !grenade)
-			{
-				anim->playAnim("Granade" + mesh_name, false);
-				grenade = true;
-			}
-
-			if (InputManager::GetInstance()->getLeftMouseButtonPressed() ||
-				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_X)) {
 				anim->playAnim("Kick" + mesh_name, false);
 				throwKick();
+
+				break;
+			case K_Engine::Controller::Granading:
+
+				anim->playAnim("Granade" + mesh_name, false);
+				throwGrenade();
+
+				break;
+			case K_Engine::Controller::Nothing:
+
+				anim->playAnim("Idle" + mesh_name);
+
+				break;
+			default:
+				break;
 			}
-
 		}
-
 	}
 
 	void Controller::throwGrenade()
@@ -179,7 +143,7 @@ namespace K_Engine {
 		Vector3 thisPosition = thisTransform->getPosition();
 
 		//Positition of the monkey
-		t->setPosition(thisPosition.x, thisPosition.y + heightCreation, thisPosition.z);
+		t->setPosition(thisPosition.x, thisPosition.y + grenadeHeightCreation, thisPosition.z);
 
 		//Mesh
 		MeshRenderer* m = grnd->addComponent<MeshRenderer>();
@@ -223,7 +187,7 @@ namespace K_Engine {
 		Transform* thisTransform = entity->getComponent<Transform>();
 		Vector3 thisPosition = thisTransform->getPosition();
 
-		t->setPosition(thisPosition.x + 5, thisPosition.y + heightCreation, thisPosition.z);
+		t->setPosition(thisPosition.x + 5, thisPosition.y + kickHeightCreation, thisPosition.z);
 
 
 		ColliderType boxType = ColliderType::CT_BOX;
