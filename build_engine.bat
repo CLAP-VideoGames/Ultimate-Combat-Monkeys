@@ -8,6 +8,7 @@ set DEVELOPMENT=false
 
 :: Directory variables
 set BUILD_DIR=%cd%\game
+set ENGINE_DIR=%cd%\engine
 set ENGINE_SOL_DIR=%cd%\engine\K_Engine.sln
 
 :: Change DEVELOPMENT macro
@@ -18,8 +19,8 @@ if %DEVELOPMENT% == false powershell -Command "(gc %ENGINE_SOURCE_FILE%) -replac
 :: (this should be moved to the main build eventually)
 echo Building engine...
 
-msbuild %ENGINE_SOL_DIR% /t:engine_prj /p:platform=x64 /p:configuration=Release
 if %RELEASE_ENGINE% == false msbuild %ENGINE_SOL_DIR% /t:engine_prj /p:platform=x64 /p:configuration=Debug
+msbuild %ENGINE_SOL_DIR% /t:engine_prj /p:platform=x64 /p:configuration=Release
 
 echo Engine build
 
@@ -27,8 +28,8 @@ echo Engine build
 :: (Eventually we will move only the release ones)
 echo Copying engine files to game build folder...
 
-copy %ENGINE_DIR%\exe\*.exe %BUILD_DIR% 1>nul
-copy %ENGINE_DIR%\exe\*.dll %BUILD_DIR% 1>nul
-copy %ENGINE_DIR%\exe\*.cfg %BUILD_DIR% 1>nul
+copy "%ENGINE_DIR%\exe\*.exe" "%BUILD_DIR%" 1>nul
+copy "%ENGINE_DIR%\exe\*.dll" "%BUILD_DIR%" 1>nul
+copy "%ENGINE_DIR%\exe\*.cfg" "%BUILD_DIR%" 1>nul
 
 echo Engine files copied

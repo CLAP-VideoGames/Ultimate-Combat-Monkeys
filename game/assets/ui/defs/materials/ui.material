@@ -33,7 +33,7 @@ material DefaultProgressBar {
 			depth_check off
 			scene_blend alpha_blend
 			texture_unit {
-				texture PgBm.png
+				texture progressbarprogress.png
 				colour_op modulate
 			}
 		}
@@ -130,7 +130,7 @@ material UCM/GameMenuButton {
 			depth_check off
 			scene_blend alpha_blend
 			texture_unit {
-				texture boton.png
+				texture button.png
 				colour_op modulate
 			}
 		}
@@ -143,7 +143,7 @@ material UCM/GameMenuButtonHover {
 			depth_check off
 			scene_blend alpha_blend
 			texture_unit {
-				texture boton.png
+				texture button.png
 				colour_op_ex add_signed src_texture src_manual 0.3 0.3 0.3
 			}
 		}
@@ -156,7 +156,7 @@ material UCM/GameMenuButtonPressed {
 			depth_check off
 			scene_blend alpha_blend
 			texture_unit {
-				texture boton.png
+				texture button.png
 				colour_op_ex add_signed src_texture src_manual 0.0 0.0 0.0
 			}
 		}
@@ -169,7 +169,7 @@ material UCM/SliderBackground {
 			depth_check off
 			scene_blend alpha_blend
 			texture_unit {
-				texture barra.png
+				texture progressbarBG.png
 				colour_op modulate
 			}
 		}
@@ -182,7 +182,7 @@ material UCM/SliderButton {
 			depth_check off
 			scene_blend alpha_blend
 			texture_unit {
-				texture slider.png
+				texture slider_1.png
 				colour_op modulate
 			}
 		}

@@ -6,6 +6,7 @@
 #include <render_prj/RenderManager.h>
 #include <physics_prj/CollisionLayers.h>
 #include <physics_prj/PhysicsManager.h>
+#include <utils_prj/K_Map.h>
 
 #include <components_prj/AudioSource.h>
 #include <components_prj/RigidBody.h>
@@ -28,8 +29,7 @@ namespace K_Engine {
 		return name;
 	}
 
-	Controller::Controller(Entity* e, std::string m_name) : Component(e) {
-		mesh_name = "_" + m_name;
+	Controller::Controller(Entity* e, bool enableStart) : Component(e), EnableOnStart(enableStart) {
 	}
 
 	Controller::Controller() : Component()
@@ -39,10 +39,19 @@ namespace K_Engine {
 
 	Controller::~Controller() = default;
 
+	void Controller::init(K_Map* information)
+	{
+		EnableOnStart = information->valueToBool("enableOnStart");
+	}
+
 	void Controller::start() {
 
 		gMInstance = GameManager::GetInstance();
 		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha  << "\n";
+
+		mesh_name = "_" + entity->getComponent<MeshRenderer>()->getMeshName();
+		if (mesh_name == "_Generic_")
+			mesh_name = "_Generic";
 
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({ 0,0,0 });

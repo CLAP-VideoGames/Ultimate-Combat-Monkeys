@@ -14,21 +14,27 @@ set EXE_DIR=.\engine\exe\
 :: (this should be moved to the main build eventually)
 echo Building game...
 
-msbuild %GAME_SOL_DIR% /t:game_prj /p:platform=x64 /p:configuration=Release
 if %RELEASE_GAME% == false msbuild %GAME_SOL_DIR% /t:game_prj /p:platform=x64 /p:configuration=Debug
+msbuild %GAME_SOL_DIR% /t:game_prj /p:platform=x64 /p:configuration=Release
 
 echo Game built
 
 :: Move game.dll to exe folder
 echo Copying game files engine...
 
-copy %BUILD_DIR%\game.dll %EXE_DIR% 1>nul
-copy %BUILD_DIR%\game_d.dll %EXE_DIR% 1>nul
+copy "%BUILD_DIR%\game.dll" "%EXE_DIR%" 1>nul
+copy "%BUILD_DIR%\game_d.dll" "%EXE_DIR%" 1>nul
+
+:: Rename .exe file
+ren %BUILD_DIR%\engine.exe UCM.exe 1>nul
+ren %BUILD_DIR%\engine_d.exe UCM_d.exe 1>nul
 
 :: Delete excess files build folder
-del /s %BUILD_DIR%\*.lib 1>nul
-del /s %BUILD_DIR%\*.exp 1>nul
-del /s %BUILD_DIR%\*.pdb 1>nul
+del /s "%BUILD_DIR%\*.lib" 1>nul
+del /s "%BUILD_DIR%\*.exp" 1>nul
+del /s "%BUILD_DIR%\*.pdb" 1>nul
+del "%BUILD_DIR%\engine.exe" 1>nul
+del "%BUILD_DIR%\engine_d.exe" 1>nul
 
 :: Delete excess files exe folder
 @REM del /s %EXE_DIR%\*.lib 1>nul

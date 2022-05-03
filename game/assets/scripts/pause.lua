@@ -30,7 +30,7 @@ pause = {
     },
     masterVolumeText = {
         Transform = {
-            position = "0.25, 0.1, 10",
+            position = "0.5, 0.125, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -40,15 +40,15 @@ pause = {
             x = "0.25",
             y = "0.1",
             width = "0.1",
-            height = "0.1",
-            text = "Master Volume",
-            fontName = "MyFont",
-            textColor = "0.0, 0.0, 0.0"
+            height = "0.06",
+            text = "master volume",
+            fontName = "UCM/MenuFont",
+            textColor = "0.96078, 0.3764705, 0.08627"
         }
     },
     masterVolume = {
         Transform = {
-            position = "0.1, 0.2, 10",
+            position = "0.3, 0.2, 10",
             rotation = " 0 ,0 ,0 ",
             scale = "1.0, 1.0, 1.0",
         },
@@ -64,7 +64,7 @@ pause = {
     },
     musicVolumeText = {
         Transform = {
-            position = "0.25, 0.3, 10",
+            position = "0.5, 0.35, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -74,15 +74,15 @@ pause = {
             x = "0.25",
             y = "0.3",
             width = "0.3",
-            height = "0.1",
-            text = "Music Volume",
-            fontName = "MyFont",
-            textColor = "0.0, 0.0, 0.0"
+            height = "0.06",
+            text = "music volume",
+            fontName = "UCM/MenuFont",
+            textColor = "0.96078, 0.3764705, 0.08627"
         }
     },
     musicVolume = {
         Transform = {
-            position = "0.1, 0.4, 10",
+            position = "0.3, 0.425, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -98,7 +98,7 @@ pause = {
     },
     effectsVolumeText = {
         Transform = {
-            position = "0.25, 0.5, 10",
+            position = "0.5, 0.575, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -108,15 +108,15 @@ pause = {
             x = "0.25",
             y = "0.5",
             width = "0.3",
-            height = "0.1",
-            text = "Effects Volume",
-            fontName = "MyFont",
-            textColor = "0.0, 0.0, 0.0"
+            height = "0.06",
+            text = "effects volume",
+            fontName = "UCM/MenuFont",
+            textColor = "0.96078, 0.3764705, 0.08627"
         }
     },
     effectsVolume = {
         Transform = {
-            position = "0.1, 0.6, 10",
+            position = "0.3, 0.65, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -132,7 +132,7 @@ pause = {
     },
     mainMenuButton = {
         Transform = {
-            position = "0.1, 0.8, 10",
+            position = "0.35, 0.775, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -147,18 +147,22 @@ pause = {
             onClick = "popScenePause"
         }
     },
-    pauseImage = {
+    mainMenuText2 = {
         Transform = {
-            position = "0.5, 0.3, 1",
+            position = "0.5, 0.845, 11",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
         Enabled = "true",
-        Image = {
-            overlayName = "ImagePause",
-            imageName = "UCM/PauseImage",
-            width = "0.5",
-            height = "0.4"
+        Text = {
+            overlayName = "MainMenuText2",
+            x = "0.25",
+            y = "0.5",
+            width = "0.3",
+            height = "0.06",
+            text = "main menu",
+            fontName = "UCM/MenuFont",
+            textColor = "0.0, 0.0, 0.0"
         }
     },
     focusPause = {
@@ -215,4 +219,4 @@ function setEffectsVolume(volume)
 end
 
 pause_entities = {"backgroundImage", "masterVolumeText", "masterVolume", "musicVolumeText", "musicVolume", "effectsVolumeText",
-                  "effectsVolume", "mainMenuButton", "pauseImage", "focusPause", "audio1", "audio2"}
+                  "effectsVolume", "mainMenuButton", "mainMenuText2", "focusPause", "audio1", "audio2"}

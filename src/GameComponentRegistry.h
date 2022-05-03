@@ -7,6 +7,7 @@
 #include <components/Health.h>
 #include <components/WeaponStack.h>
 #include <components/Kick.h>
+#include <components/Aeroplane.h>
 #include <components/CameraMovement.h>
 #include <components/DestroyOnCollision.h>
 #include <components/Destructible.h>
@@ -28,6 +29,7 @@ namespace K_Engine {
 			compMan->add<K_Engine::Health>();
 			compMan->add<K_Engine::WeaponStack>();
 			compMan->add<K_Engine::Kick>();
+			compMan->add<K_Engine::Aeroplane>();
 			compMan->add<K_Engine::CameraMovement>();
 			compMan->add<K_Engine::DestroyOnCollision>();
 			compMan->add<K_Engine::Destructible>();
