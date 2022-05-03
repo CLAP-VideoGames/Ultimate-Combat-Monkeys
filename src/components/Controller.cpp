@@ -43,8 +43,6 @@ namespace K_Engine {
 		gMInstance = GameManager::GetInstance();
 		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha  << "\n";
 
-		gMInstance->RegisterMonkey(0, 0, entity);
-
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({ 0,0,0 });
 		anim = entity->getComponent<Animator>();

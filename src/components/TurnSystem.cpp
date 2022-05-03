@@ -2,8 +2,10 @@
 
 #include <objects/Player.h>
 #include <components/PlayerInfo.h>
-#include <ecs_prj/Entity.h>
 #include <components/Controller.h>
+
+#include <ecs_prj/Entity.h>
+#include <utils_prj/K_Map.h>
 
 #include <iostream>
 
@@ -18,7 +20,7 @@ namespace K_Engine {
 	TurnSystem::TurnSystem() : Component() {};
 
 	TurnSystem::TurnSystem(Entity* e, bool firstStarts, int countDownTime): Component(e),
-		firstTeamStarts(firstStarts), startTime(countDownTime)
+		firstTeamStarts(firstStarts), timeLimit(countDownTime)
 	{
 		player1 = new Player(0);
 		player2 = new Player(1);
@@ -32,6 +34,8 @@ namespace K_Engine {
 
 	void TurnSystem::init(K_Map* information)
 	{
+		firstTeamStarts = information->valueToBool("firsTeamStarts");
+		timeLimit = information->valueToNumber("timeLimit");
 	}
 
 	void TurnSystem::start()
@@ -39,24 +43,24 @@ namespace K_Engine {
 		int team = (firstTeamStarts) ? 0 : 1;
 		player1Turn = player2Turn = 0;
 		turn = Turn({ team, 0});
-		countDown = startTime;
-		timeStop = false;
+		countDown = timeLimit;
+		timeStop = true;
 		round = 0;
 	}
 
 	void TurnSystem::update(int deltaTime)
 	{
-		/*if (!timeStop) {
+		if (!timeStop) {
 			countDown -= deltaTime / 1000.0f;
 
 			if (countDown <= 0.0f)
 				endTurn();
-		}*/
+		}
 	}
 
 	void TurnSystem::resetCountdown()
 	{
-		countDown = startTime;
+		countDown = timeLimit;
 	}
 
 	void TurnSystem::resumeCountdown()
@@ -72,6 +76,10 @@ namespace K_Engine {
 	void TurnSystem::RegisterMonkey(int team, int order, Entity* ent){
 		printf("Se ha registrado el Mono del equipo %d cuyo orden de posición es %d\n", team, order);
 		std::cout << "La entidad existe: " << std::boolalpha << (ent != nullptr) << std::boolalpha  << "\n\n";
+		if (team == 0)
+			player1->addToTeam(ent, order);
+		else
+			player2->addToTeam(ent, order);
 	}
 
 	void TurnSystem::endTurn()
@@ -91,6 +99,11 @@ namespace K_Engine {
 			round++;
 
 		resetCountdown();
+	}
+
+	int TurnSystem::getRound()
+	{
+		return round;
 	}
 
 	void TurnSystem::nextPlayer()

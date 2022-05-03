@@ -1,6 +1,9 @@
 #include "GameManager.h"
+
+#include <components/TurnSystem.h>
 #include <ecs_prj/Entity.h>
-#include "TurnSystem.h"
+#include <objects/Player.h>
+
 #include <iostream>
 
 namespace K_Engine {
@@ -38,12 +41,11 @@ namespace K_Engine {
 	void GameManager::init(K_Map* information) {
 		if (instance == nullptr) {
 			instance = this;
-			turnSys_ = entity->getComponent<TurnSystem>();
 		}
 	}
 
 	void GameManager::start() {
-		
+		turnSys_ = entity->getComponent<TurnSystem>();
 	}
 
 	void GameManager::update(int frameTime) {

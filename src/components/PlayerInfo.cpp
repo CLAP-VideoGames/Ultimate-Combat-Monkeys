@@ -2,6 +2,11 @@
 
 #include <ecs_prj/Entity.h>
 
+#include <components/GameManager.h>
+#include <utils_prj/K_Map.h>
+
+#include <iostream>
+
 
 namespace K_Engine {
 	//Required
@@ -23,6 +28,16 @@ namespace K_Engine {
 
 	void PlayerInfo::init(K_Map* information)
 	{
+		team = information->valueToNumber("team");
+		order = information->valueToNumber("order");
+	}
+
+	void PlayerInfo::start()
+	{
+		gMInstance = GameManager::GetInstance();
+		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha << "\n";
+
+		gMInstance->RegisterMonkey(team, order, entity);
 	}
 
 	int PlayerInfo::getTeam()

@@ -15,7 +15,7 @@ namespace K_Engine {
 
 	class TurnSystem: public Component {
 	public:
-		TurnSystem(Entity* e, bool firstStarts, int countDownTime);
+		TurnSystem(Entity* e, bool firstStarts = true, int countDownTime = 40.0f);
 		TurnSystem();
 		~TurnSystem();
 
@@ -36,6 +36,7 @@ namespace K_Engine {
 
 		//Turnos
 		void endTurn();
+		int getRound();
 
 	private:
 		//Required
@@ -50,7 +51,7 @@ namespace K_Engine {
 
 		//Timers
 		float countDown;
-		float startTime;
+		float timeLimit;
 		bool timeStop;
 
 		//Cambio de equipos y player

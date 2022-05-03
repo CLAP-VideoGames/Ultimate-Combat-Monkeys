@@ -57,10 +57,9 @@ namespace K_Engine {
 		return order;
 	}
 
-	void Player::addToTeam(Entity* e)
+	void Player::addToTeam(Entity* e, int order)
 	{
-		e->addComponent<PlayerInfo>(team, players.size());
-		players.push_back(e);
+		players.insert(players.begin() + order, e);
 	}
 
 

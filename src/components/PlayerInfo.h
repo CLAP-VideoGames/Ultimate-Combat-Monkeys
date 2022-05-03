@@ -6,6 +6,7 @@
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
+	class GameManager;
 	class PlayerInfo : public Component {
 	public:
 		/// <summary>
@@ -23,6 +24,7 @@ namespace K_Engine {
 		static std::string GetId();
 
 		virtual void init(K_Map* information);
+		virtual void start();
 
 		//TeamInfo
 		int getTeam();
@@ -32,6 +34,8 @@ namespace K_Engine {
 		//Required
 		static std::string name;
 		int team, order;
+
+		GameManager* gMInstance;
 	};
 }
 

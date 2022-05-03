@@ -5,6 +5,7 @@
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
+	class Player;
 	class TurnSystem;
 
 	class GameManager : public Component 
