@@ -110,6 +110,18 @@ material SelectorFoco {
 	}
 }
 
+material UCM/GameMenuBackground {
+	technique {
+		pass {
+			depth_check off
+			scene_blend alpha_blend
+			texture_unit {
+				texture background.jpg
+			}
+		}
+	}
+}
+
 material UCM/GameMenuButton {
 	technique {
 		pass {
