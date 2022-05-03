@@ -1,8 +1,11 @@
 #include "GameManager.h"
 
 #include <components/TurnSystem.h>
-#include <ecs_prj/Entity.h>
 #include <objects/Player.h>
+
+#include <ecs_prj/Entity.h>
+#include <render_prj/Camera.h>
+#include <render_prj/RenderManager.h>
 
 #include <iostream>
 
@@ -56,5 +59,10 @@ namespace K_Engine {
 		if (turnSys_)
 			turnSys_->RegisterMonkey(team_, order_, ent);
 		else std::cout << "FALSE\n\n";
+	}
+
+	Camera* GameManager::getCamera()
+	{
+		return RenderManager::GetInstance()->getCamera();
 	}
 }

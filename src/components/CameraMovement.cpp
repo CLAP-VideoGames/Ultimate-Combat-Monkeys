@@ -31,7 +31,7 @@ namespace K_Engine {
 	CameraMovement::~CameraMovement() = default;
 
 	void CameraMovement::awake() {
-	
+		
 	}
 
 	void CameraMovement::start() {
