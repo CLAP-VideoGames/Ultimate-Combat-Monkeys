@@ -14,6 +14,7 @@
 #include <components_prj/Transform.h>
 #include <components_prj/MeshRenderer.h>
 #include <components/Grenade.h>
+#include <components/Kick.h>
 #include <components/DestroyOnCollision.h>
 #include <components/Health.h>
 #include <components/GameManager.h>
@@ -149,6 +150,12 @@ namespace K_Engine {
 				grenade = true;
 			}
 
+			if (InputManager::GetInstance()->getLeftMouseButtonPressed() ||
+				InputManager::GetInstance()->controllerButtonPressed(K_Engine_GameControllerButton::CONTROLLER_BUTTON_X)) {
+				anim->playAnim("Kick" + mesh_name, false);
+				throwKick();
+			}
+
 		}
 
 	}
@@ -198,5 +205,30 @@ namespace K_Engine {
 		r->setRestitution(0.2f);
 		r->addForce(K_Engine::Vector3(grenadeForce * direction, grenadeVerticalForce, 0));
 
+	}
+
+	void Controller::throwKick() {
+		Entity* kick = entMan->addEntity(true);
+
+		K_Engine::Transform* t = kick->addComponent<K_Engine::Transform>(); t->setScale(1.0f);
+		Transform* thisTransform = entity->getComponent<Transform>();
+		Vector3 thisPosition = thisTransform->getPosition();
+
+		t->setPosition(thisPosition.x + 5, thisPosition.y + heightCreation, thisPosition.z);
+
+
+		ColliderType boxType = ColliderType::CT_BOX;
+		BodyType bodyType = BodyType::BT_DYNAMIC;
+		float mass = 0.0f;
+
+
+		RigidBody* r = kick->addComponent<RigidBody>(boxType, bodyType, mass,
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+
+		kick->addComponent<Kick>();
+
+		r->setDimensions(10.0f);
+		r->setTrigger(true);
 	}
 }

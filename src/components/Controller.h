@@ -49,6 +49,7 @@ namespace K_Engine {
 	private:
 
 		void throwGrenade();
+		void throwKick();
 
 		//Required
 		static std::string name;

@@ -36,6 +36,7 @@ namespace K_Engine {
 		/// </summary> 
 		virtual void update(int frameTime);
 
+		virtual void onCollisionEnter(Entity* collision);
 
 	private:
 		//Required
@@ -46,6 +47,8 @@ namespace K_Engine {
 		EntityManager* entMan;
 
 		bool debug = true;
+
+		int kickdeath = 100;
 	};
 }
 

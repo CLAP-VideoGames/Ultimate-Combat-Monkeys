@@ -80,7 +80,6 @@ namespace K_Engine {
 
 			Controller* control = monkey->addComponent<Controller>("Pedro");
 			Health* playerHealth = monkey->addComponent<Health>("Pedro");
-			Kick* playerKick = monkey->addComponent<Kick>();
 			WeaponStack* weaponPlayer = monkey->addComponent<WeaponStack>();
 		}
 
