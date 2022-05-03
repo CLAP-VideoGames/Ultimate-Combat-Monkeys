@@ -46,12 +46,16 @@ namespace K_Engine {
 		gMInstance = GameManager::GetInstance();
 		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha << "\n";
 
+		startingZAxis = gMInstance->getCamera()->getCameraPosition()[2];
+
 		int team = (firstTeamStarts) ? 0 : 1;
 		player1Turn = player2Turn = 0;
 		turn = Turn({ team, 0});
 		countDown = timeLimit;
 		timeStop = true;
 		round = 0;
+
+		setFocusOnPlayer();
 	}
 
 	void TurnSystem::update(int deltaTime)
@@ -133,7 +137,7 @@ namespace K_Engine {
 			e->getComponent<Controller>()->enable = true;
 			//Posicion de la camara
 			Vector3 pos = e->getComponent<Transform>()->getPosition();
-			gMInstance->getCamera()->lookAt(pos.x, pos.y, pos.z);
+			gMInstance->getCamera()->setCameraPos(pos.x, pos.y, startingZAxis);
 		}
 
 	}

@@ -13,7 +13,7 @@ namespace K_Engine {
 	class Transform;
 	class Health;
 	class GameManager;
-
+	class K_Map;
 
 	class Controller : public Component
 	{
@@ -22,12 +22,14 @@ namespace K_Engine {
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		Controller(Entity* e, std::string m_name);
+		Controller(Entity* e, bool enableStart = true);
 
 		Controller();
 		//Controller(Entity* e, Vector3 diff);
 
 		virtual ~Controller();
+
+		virtual void init(K_Map* information);
 
 		//Required method for the component name
 		static std::string GetId();
@@ -54,6 +56,7 @@ namespace K_Engine {
 		//Required
 		static std::string name;
 		std::string mesh_name;
+		bool EnableOnStart;
 
 		//Horizontal movement
 		float distance;
