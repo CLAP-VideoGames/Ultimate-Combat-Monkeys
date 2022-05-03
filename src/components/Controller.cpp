@@ -60,6 +60,7 @@ namespace K_Engine {
 	{
 		if (life->getCurrentLife() > 0)
 		{
+
 			// -------------------------------- ANIMATIONS --------------------------------
 			// If not moving in ground
 			if ((rigby->getVelocity().x < 0.1 && rigby->getVelocity().x > -0.1 &&
@@ -151,33 +152,51 @@ namespace K_Engine {
 		}
 
 	}
+
 	void Controller::throwGrenade()
-	{
+	{	//Creation of entity
 		Entity* grnd = entMan->addEntity(true);
 
+		//Transform Componnet
 		K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(1.0f);
 		Transform* thisTransform = entity->getComponent<Transform>();
 		Vector3 thisPosition = thisTransform->getPosition();
 
+		//Positition of the monkey
 		t->setPosition(thisPosition.x, thisPosition.y + heightCreation, thisPosition.z);
 
+		//Mesh
 		MeshRenderer* m = grnd->addComponent<MeshRenderer>();
 		m->setMesh("Granade.mesh");
 
+		//RigidBody Parameters
 		ColliderType boxType = ColliderType::CT_SPHERE;
 		BodyType bodyType = BodyType::BT_DYNAMIC;
 		float mass = 1.0f;
 
-
+		//RigidBody
 		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
 
+		//Grenade Component
 		grnd->addComponent<Grenade>(10.0f);
+
+		//Monkeys transform
+		Transform* origin = entity->getComponent<Transform>();
+
+		//Direction that the monkey is looking at
+		float direction = origin->getRotation().y;
+
+		//If the monkey is looking left, we dont want force to be 0
+		if (direction >= 0) direction = 1;
+		else direction = -1;
+
+		std::cout << "Dirección chingona:" << direction << "\n";
 
 		r->setFriction(0.2f);
 		r->setRestitution(0.2f);
-		r->addForce(K_Engine::Vector3(-5000, 1000, 0));
+		r->addForce(K_Engine::Vector3(grenadeForce * direction, grenadeVerticalForce, 0));
 
 	}
 }

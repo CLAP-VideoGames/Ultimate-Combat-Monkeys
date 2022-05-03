@@ -60,8 +60,11 @@ namespace K_Engine {
 		int timerJump = 50;
 		int timerGrenade = 60;
 
-		float heightCreation = 10;
+		float heightCreation = 25;
 		float limitSpeed = 50;
+
+		float grenadeForce = 9000;
+		float grenadeVerticalForce = 800;
 
 		bool jump;
 		bool grenade;
