@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\components\Aeroplane.cpp" />
     <ClCompile Include="..\..\src\components\CameraMovement.cpp" />
     <ClCompile Include="..\..\src\components\Controller.cpp" />
     <ClCompile Include="..\..\src\components\DestroyOnCollision.cpp" />
@@ -31,6 +32,7 @@
     <ClCompile Include="..\..\src\scenes\ExampleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\components\Aeroplane.h" />
     <ClInclude Include="..\..\src\components\CameraMovement.h">
       <SubType>
       </SubType>
