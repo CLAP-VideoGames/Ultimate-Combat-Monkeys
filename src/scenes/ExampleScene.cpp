@@ -87,15 +87,6 @@ namespace K_Engine {
 			WeaponStack* weaponPlayer = monkey->addComponent<WeaponStack>();
 		}
 
-		K_Engine::Entity* plane = entMan->addEntity();
-		Transform* t = plane->addComponent<Transform>();
-		t->setPosition(0, 45, 0);
-		t->setScale(1.5f);
-		t->setRotation(0, 0, 0);
-		MeshRenderer* me = plane->addComponent<MeshRenderer>();
-		me->setMesh("PedroPablo.mesh");
-		//plane->addComponent<Aeroplane>();
-
 
 		////SPHERE CHILD
 		//K_Engine::Entity* playerChild = entMan->addEntity();
