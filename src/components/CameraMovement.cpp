@@ -49,7 +49,7 @@ namespace K_Engine {
 			quantityZoom += 2;
 		}
 
-		if (inputMan->getMouseButtonState(K_Engine_MouseButton::MIDDLE) && inputMan->getMouseButtonHeld()) {
+		if (inputMan->getMouseButtonState(K_Engine_MouseButton::MIDDLE) && inputMan->getMouseButtonHeld(K_Engine_MouseButton::RIGHT)) {
 			if (!isDown) {
 				initial_ = std::pair<int, int> (inputMan->getMousePos().first, inputMan->getMousePos().second);
 			}
@@ -57,7 +57,7 @@ namespace K_Engine {
 		}
 
 
-		if (!inputMan->getMouseButtonHeld()) {
+		if (!inputMan->getMouseButtonHeld(K_Engine_MouseButton::RIGHT)) {
 			if (isDown) {
 				final_ = std::pair<int, int>(inputMan->getMousePos().first, inputMan->getMousePos().second);
 				quantityMovementX = cam->getCameraPosition()[0] + initial_.first - final_.first;
