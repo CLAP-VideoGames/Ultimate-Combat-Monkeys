@@ -25,9 +25,13 @@ extern "C" {
 			K_Engine::InputManager::GetInstance()->isKeyDown(K_Engine::SCANCODE_ESCAPE)));
 	}
 	
-	__declspec(dllexport) K_Engine::Scene* startUpScene() {
+	__declspec(dllexport) K_Engine::Scene* startScene() {
 		auto scene = new K_Engine::ExampleScene("testZone");
 		scene->init();
 		return scene;
+	}
+
+	__declspec(dllexport) std::string startUpScene() {
+		return "menu";
 	}
 }
