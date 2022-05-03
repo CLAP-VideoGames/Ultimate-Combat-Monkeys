@@ -19,6 +19,7 @@
 #include <components_prj/AudioSource.h>
 #include <components_prj/Light.h>
 #include <components_prj/Animator.h>
+#include <components/Aeroplane.h>
 
 #include <components/ExampleComponent.h>
 #include <components/Controller.h>
@@ -82,6 +83,16 @@ namespace K_Engine {
 			Health* playerHealth = monkey->addComponent<Health>("Pedro");
 			WeaponStack* weaponPlayer = monkey->addComponent<WeaponStack>();
 		}
+
+		K_Engine::Entity* plane = entMan->addEntity();
+		Transform* t = plane->addComponent<Transform>();
+		t->setPosition(0, 45, 0);
+		t->setScale(1.5f);
+		t->setRotation(0, 0, 0);
+		MeshRenderer* me = plane->addComponent<MeshRenderer>();
+		me->setMesh("PedroPablo.mesh");
+		//plane->addComponent<Aeroplane>();
+
 
 		////SPHERE CHILD
 		//K_Engine::Entity* playerChild = entMan->addEntity();
@@ -181,6 +192,6 @@ namespace K_Engine {
 		entMan->onEnable();
 		entMan->start();
 
-		anim->playAnim("Idle");
+		//anim->playAnim("Idle");
 	}
 }
