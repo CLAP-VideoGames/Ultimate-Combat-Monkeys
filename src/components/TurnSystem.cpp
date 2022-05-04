@@ -59,6 +59,7 @@ namespace K_Engine {
 	void TurnSystem::update(int deltaTime)
 	{
 		if (firsTurn) {
+			std::cout << "INICIA RONDA: " << round << "\n";
 			setFocusOnPlayer();
 			firsTurn = false;
 		}
@@ -96,8 +97,6 @@ namespace K_Engine {
 
 	void TurnSystem::endTurn()
 	{
-		std::cout << "Termina turno de " << turn.player << " del equipo " << turn.team << "\n";
-		std::cout << "INICIA RONDA: " << round <<"\n";
 		lostFocusOnPlayer();
 		Player* p;
 		turn.team = (turn.team + 1) % 2;
@@ -110,16 +109,12 @@ namespace K_Engine {
 		checkNextPlayer(p);
 
 		//Avanza una ronda si ha llegado al primer player del equipo que empezo
-		if (turn.player == p->getOrder()[0] && turn.team == firstTeamStarts)
+		if (turn.player == p->getOrder()[0] && turn.team == teamStarting) {
+			std::cout << "INICIA RONDA: " << round << "\n";
 			round++;
+		}
 
 		setFocusOnPlayer();
-
-		for(int i = 0; i <player1->getTeamSize(); ++i)
-			std::cout << (player1->getTeamPlayer(i)->getComponent<Controller>()->enable == true) << "\n";
-
-		for (int i = 0; i < player2->getTeamSize(); ++i)
-			std::cout << (player2->getTeamPlayer(i)->getComponent<Controller>()->enable == true) << "\n";
 
 		resetCountdown();
 	}
