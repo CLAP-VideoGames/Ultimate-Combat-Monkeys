@@ -1,4 +1,4 @@
-1wins = {
+twoWins = {
     backgroundImage = {
         Transform = {
             position = "0.0, 0.0, 1",
@@ -6,7 +6,7 @@
             scale = "1.0, 1.0, 1.0",
         },
         Enabled = "true",
-        Text = {
+        Image = {
             overlayName = "ImageBackgroundPause",
             imageName = "UCM/GameMenuBackground",
             width = "1.0",
@@ -37,4 +37,4 @@ function popScenePause()
     sceneMan:popScene("menu");
 end
 
-1wins_entities = {"backgroundImage", "mainMenuButton"}
+twoWins_entities = {"backgroundImage", "mainMenuButton"}

@@ -1,4 +1,4 @@
-2wins = {
+oneWins = {
     backgroundImage = {
         Transform = {
             position = "0.0, 0.0, 1",
@@ -6,14 +6,14 @@
             scale = "1.0, 1.0, 1.0",
         },
         Enabled = "true",
-        Text = {
+        Image = {
             overlayName = "ImageBackgroundPause",
             imageName = "UCM/GameMenuBackground",
             width = "1.0",
             height = "1.0"
         }
     },
-    mainMenuButton = {
+    mainMenuButton4 = {
         Transform = {
             position = "0.3, 0.8, 10",
             rotation = "0, 0, 0",
@@ -21,7 +21,7 @@
         },
         Enabled = "true",
         Button = {
-            overlayName = "MainMenuReturn",
+            overlayName = "MainMenuReturn4",
             imageName = "UCM/GameMenuButton",
             hoverImageName = "UCM/GameMenuButtonHover",
             pressedImageName = "UCM/GameMenuButtonPressed",
@@ -37,4 +37,4 @@ function popScenePause()
     sceneMan:popScene("menu");
 end
 
-2wins_entities = {"backgroundImage", "mainMenuButton"}
+oneWins_entities = {"backgroundImage", "mainMenuButton4"}
