@@ -4,6 +4,8 @@
 #include <ecs_prj/EntityManager.h>
 #include <components/PlayerInfo.h>
 
+#include <iostream>
+
 namespace K_Engine {
 	Player::Player(int team_)
 	{
@@ -37,9 +39,11 @@ namespace K_Engine {
 	Entity* Player::getTeamPlayer(int o)
 	{
 		int i = 0;
-		while (i < players.size() && o != players[i]->getComponent<PlayerInfo>()->getOrder())++i;
+		while (i < players.size() && o != players[i]->getComponent<PlayerInfo>()->getOrder())i++;
 		if (i < players.size())
 			return players[i];
+		else
+			std::cout << "jugador no encontrado";
 	}
 
 	int Player::getTeamSize()
@@ -59,6 +63,7 @@ namespace K_Engine {
 
 	void Player::addToTeam(Entity* e, int order)
 	{
+		std::cout << players.size();
 		if (order >= players.size())
 			players.resize(order + 1);
 

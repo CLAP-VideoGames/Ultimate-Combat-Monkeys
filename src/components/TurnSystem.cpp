@@ -22,7 +22,7 @@ namespace K_Engine {
 
 	TurnSystem::TurnSystem() : Component() {};
 
-	TurnSystem::TurnSystem(Entity* e, bool firstStarts, int countDownTime): Component(e),
+	TurnSystem::TurnSystem(Entity* e, bool firstStarts, float countDownTime): Component(e),
 		firstTeamStarts(firstStarts), timeLimit(countDownTime)
 	{
 		player1 = new Player(0);
@@ -48,20 +48,23 @@ namespace K_Engine {
 		startingZAxis = gMInstance->getCamera()->getCameraPosition()[2];
 
 
-		int team = (firstTeamStarts) ? 0 : 1;
+		teamStarting = (firstTeamStarts) ? 0 : 1;
 		player1Turn = player2Turn = 0;
-		turn = Turn({ team, 0});
+		turn = Turn({ teamStarting, 0});
 		countDown = timeLimit;
-		timeStop = true;
+		timeStop = false;
 		round = 0;
-
-		setFocusOnPlayer();
 	}
 
 	void TurnSystem::update(int deltaTime)
 	{
+		if (firsTurn) {
+			setFocusOnPlayer();
+			firsTurn = false;
+		}
+		
 		if (!timeStop) {
-			countDown -= deltaTime / 1000.0f;
+			countDown -= (float)(deltaTime / 1000.0f);
 
 			if (countDown <= 0.0f)
 				endTurn();
@@ -89,18 +92,19 @@ namespace K_Engine {
 		else
 			player2->addToTeam(ent, order);
 
-		printf("Se ha registrado el Mono del equipo %d cuyo orden de posición es %d\n", team, order);
 	}
 
 	void TurnSystem::endTurn()
 	{
+		std::cout << "Termina turno de " << turn.player << " del equipo " << turn.team << "\n";
+		std::cout << "INICIA RONDA: " << round <<"\n";
 		lostFocusOnPlayer();
 		Player* p;
 		turn.team = (turn.team + 1) % 2;
 		p = (!turn.team) ? player1 : player2;	//Si es falso = 0 -> primer equipo
 
-		//Siguiente jugador del equipo que corresponda
-		if (turn.team == firstTeamStarts)
+		////Siguiente jugador del equipo que corresponda
+		if (turn.team == teamStarting)
 			nextPlayer();
 		//Comprobación del siguiente jugador
 		checkNextPlayer(p);
@@ -110,6 +114,13 @@ namespace K_Engine {
 			round++;
 
 		setFocusOnPlayer();
+
+		for(int i = 0; i <player1->getTeamSize(); ++i)
+			std::cout << (player1->getTeamPlayer(i)->getComponent<Controller>()->enable == true) << "\n";
+
+		for (int i = 0; i < player2->getTeamSize(); ++i)
+			std::cout << (player2->getTeamPlayer(i)->getComponent<Controller>()->enable == true) << "\n";
+
 		resetCountdown();
 	}
 
@@ -127,7 +138,7 @@ namespace K_Engine {
 	void TurnSystem::setFocusOnPlayer()
 	{
 		//Activamos el controller del player
-		Entity* e;
+		Entity* e = nullptr;
 		if (turn.team == 0)
 			e = player1->getTeamPlayer(turn.player);
 		else
@@ -138,6 +149,7 @@ namespace K_Engine {
 			//Posicion de la camara
 			Vector3 pos = e->getComponent<Transform>()->getPosition();
 			gMInstance->getCamera()->setCameraPos(pos.x, pos.y, startingZAxis);
+			gMInstance->getCamera()->lookAt(pos.x, pos.y, pos.z);
 		}
 
 	}
@@ -145,7 +157,7 @@ namespace K_Engine {
 	void TurnSystem::lostFocusOnPlayer()
 	{
 		//Desactivamos el controller del player
-		Entity* e;
+		Entity* e = nullptr;
 		if (turn.team == 0)
 			e = player1->getTeamPlayer(turn.player);
 		else

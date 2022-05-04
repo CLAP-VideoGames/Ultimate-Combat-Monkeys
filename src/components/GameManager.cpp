@@ -48,7 +48,6 @@ namespace K_Engine {
 	}
 
 	void GameManager::start() {
-		turnSys_ = entity->getComponent<TurnSystem>();
 	}
 
 	void GameManager::update(int frameTime) {

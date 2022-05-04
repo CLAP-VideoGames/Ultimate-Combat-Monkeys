@@ -16,7 +16,7 @@ namespace K_Engine {
 
 	class TurnSystem: public Component {
 	public:
-		TurnSystem(Entity* e, bool firstStarts = true, int countDownTime = 40.0f);
+		TurnSystem(Entity* e, bool firstStarts = true, float countDownTime = 10.0f);
 		TurnSystem();
 		~TurnSystem();
 
@@ -44,13 +44,14 @@ namespace K_Engine {
 		static std::string name;
 		GameManager* gMInstance;
 		float startingZAxis;
+		bool firsTurn = true;
 
 		//Equipos de player
 		Player* player1;
 		Player* player2;
 		bool firstTeamStarts;
 		Turn turn;
-		int player1Turn, player2Turn, round;
+		int teamStarting, player1Turn, player2Turn, round;
 
 		//Timers
 		float countDown;

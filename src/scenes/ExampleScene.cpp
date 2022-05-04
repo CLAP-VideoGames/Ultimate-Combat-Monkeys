@@ -39,7 +39,7 @@ namespace K_Engine {
 	void ExampleScene::init() {
 		K_Engine::Entity* gM = entMan->addEntity();
 		gM->addComponent<GameManager>();
-		gM->addComponent<TurnSystem>(false, 2);
+		gM->addComponent<TurnSystem>();
 
 
 		loadScene(name);

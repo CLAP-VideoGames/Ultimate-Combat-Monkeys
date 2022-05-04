@@ -36,6 +36,8 @@ namespace K_Engine {
 		//Required method for the component name
 		static std::string GetId();
 
+		virtual void awake();
+
 		/// <summary>
 		/// It's called at the beginning of the execution.
 		/// </summary>
@@ -58,7 +60,7 @@ namespace K_Engine {
 		//Required
 		static std::string name;
 		std::string mesh_name;
-		bool EnableOnStart;
+		bool enableOnStart;
 
 		//Horizontal movement
 		float distance;

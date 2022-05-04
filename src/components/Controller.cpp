@@ -30,7 +30,12 @@ namespace K_Engine {
 		return name;
 	}
 
-	Controller::Controller(Entity* e, bool enableStart) : Component(e), EnableOnStart(enableStart) {
+	void Controller::awake()
+	{
+		enable = enableOnStart;
+	}
+
+	Controller::Controller(Entity* e, bool enableStart) : Component(e), enableOnStart(enableStart) {
 	}
 
 	Controller::Controller() : Component()
@@ -42,14 +47,12 @@ namespace K_Engine {
 
 	void Controller::init(K_Map* information)
 	{
-		EnableOnStart = information->valueToBool("EnableOnStart");
+		enableOnStart = information->valueToBool("EnableOnStart");
 	}
 
 	void Controller::start() {
 
 		gMInstance = GameManager::GetInstance();
-		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha << "\n";
-
 		mesh_name = "_" + entity->getComponent<MeshRenderer>()->getMeshName();
 		if (mesh_name == "_Generic_")
 			mesh_name = "_Generic";
@@ -62,6 +65,9 @@ namespace K_Engine {
 		entMan = entity->getMan();
 		jump = false;
 		distance = rigby->getMass() * distanceMultiplier;
+
+		anim->playAnim("Idle" + mesh_name);
+
 	}
 
 	void Controller::onEnable() {
@@ -69,69 +75,69 @@ namespace K_Engine {
 
 	void Controller::update(int frameTime)
 	{
-			//if (life->getCurrentLife() > 0)
-			//{
-			//	//Default action = Nothing
-			//	Action currentAction = Nothing;
-			//	InputManager* input = InputManager::GetInstance();
+			if (life->getCurrentLife() > 0)
+			{
+				//Default action = Nothing
+				Action currentAction = Nothing;
+				InputManager* input = InputManager::GetInstance();
 
-			//	//Registering what action the user wants to do
-			//	if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) currentAction = Jump;
-			//	else if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-			//		input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) currentAction = Moving;
-			//	else if (input->getRightMouseButtonPressed()) currentAction = Granading;
-			//	else if (input->getLeftMouseButtonPressed()) currentAction = Kicking;
+				//Registering what action the user wants to do
+				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) currentAction = Jump;
+				else if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
+					input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) currentAction = Moving;
+				else if (input->getRightMouseButtonPressed()) currentAction = Granading;
+				else if (input->getLeftMouseButtonPressed()) currentAction = Kicking;
 
-			//	//Doing something based in the user input
-			//	switch (currentAction)
-			//	{
-			//	case K_Engine::Controller::Moving:
+				//Doing something based in the user input
+				switch (currentAction)
+				{
+				case K_Engine::Controller::Moving:
 
-			//		//Left
-			//		if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A))
-			//			if (rigby->getVelocity().x > -limitSpeed) {
-			//				trans->setRotation(0, 180, 0);
-			//				rigby->addForceImpulse({ -distance, 0, 0 });
-			//			}
+					//Left
+					if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A))
+						if (rigby->getVelocity().x > -limitSpeed) {
+							trans->setRotation(0, 180, 0);
+							rigby->addForceImpulse({ -distance, 0, 0 });
+						}
 
-			//		//Right
-			//		if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D))
-			//			if (rigby->getVelocity().x < limitSpeed) {
-			//				trans->setRotation(0, 0, 0);
-			//				rigby->addForceImpulse({ distance, 0, 0 });
-			//			}
+					//Right
+					if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D))
+						if (rigby->getVelocity().x < limitSpeed) {
+							trans->setRotation(0, 0, 0);
+							rigby->addForceImpulse({ distance, 0, 0 });
+						}
 
-			//		break;
-			//	case K_Engine::Controller::Jump:
+					break;
+				case K_Engine::Controller::Jump:
 
-			//		//Checking it is in a certain interval
-			//		if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
-			//			anim->playAnim("Jump" + mesh_name, false);
-			//			rigby->addForceImpulse({ 0, jumpForce, 0 });
-			//		}
+					//Checking it is in a certain interval
+					if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
+						anim->playAnim("Jump" + mesh_name, false);
+						rigby->addForceImpulse({ 0, jumpForce, 0 });
+					}
 
-			//		break;
-			//	case K_Engine::Controller::Kicking:
+					break;
+				case K_Engine::Controller::Kicking:
 
-			//		anim->playAnim("Kick" + mesh_name, false);
-			//		throwKick();
+					anim->playAnim("Kick" + mesh_name, false);
+					throwKick();
 
-			//		break;
-			//	case K_Engine::Controller::Granading:
+					break;
+				case K_Engine::Controller::Granading:
 
-			//		anim->playAnim("Granade" + mesh_name, false);
-			//		throwGrenade();
+					anim->playAnim("Granade" + mesh_name, false);
+					throwGrenade();
 
-			//		break;
-			//	case K_Engine::Controller::Nothing:
+					break;
+				case K_Engine::Controller::Nothing:
 
-			//		anim->playAnim("Idle" + mesh_name);
+					anim->playAnim("Idle" + mesh_name);
 
-			//		break;
-			//	default:
-			//		break;
-			//	}
-			//}
+					break;
+				default:
+					break;
+				}
+			}
 	}
 
 	void Controller::throwGrenade()

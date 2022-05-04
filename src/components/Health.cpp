@@ -1,12 +1,15 @@
 #include "Health.h"
 
 #include <ecs_prj/Entity.h>
+#include <components_prj/MeshRenderer.h>
 #include <input_prj/InputManager.h>
 #include <render_prj/RenderManager.h>
 #include <components_prj/Text.h>
 #include <components_prj/Transform.h>
 #include <components_prj/Animator.h>
 #include <utils_prj/Vector3.h>
+
+#include <iostream>
 
 
 namespace K_Engine {
@@ -18,7 +21,6 @@ namespace K_Engine {
 	}
 
 	Health::Health(Entity* e, std::string m_name) : Component(e) {
-		mesh_name = "_" + m_name;
 	}
 
 	Health::Health() : Component()
@@ -34,6 +36,7 @@ namespace K_Engine {
 
 	void Health::start()
 	{
+		mesh_name = "_" + entity->getComponent<MeshRenderer>()->getMeshName();;
 		alive = true;
 		//Entity* e, std::string overlayName, std::string fontName, int fontSize, std::string text, Vector3 textColor
 		//textLife = new Text(entity, "L", "MyFont", 60, std::to_string(MAX_LIFE), {0,0,0});
