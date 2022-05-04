@@ -27018,9 +27018,9 @@ Map_Level_0 = {
             scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         RigidBody = {
-            Type = "Static" ,
+            Type = "Dynamic" ,
             Collider = "Box" ,
-            Mass = "0.0" ,
+            Mass = "1.0" ,
             Dimensions = "20.1,  10.,  17.7",
              friction = "0.5",
              restitution = "0.8",
@@ -27045,8 +27045,8 @@ Map_Level_0 = {
              Order = "0"
         },
         Animator = {
-            defaultAnim = "Idle_Pedro",
-             startsEnabled = "true"
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         MeshRenderer = {
             MeshFile = "Pedro.mesh",
@@ -27073,9 +27073,9 @@ Map_Level_0 = {
              Order = "0"
         },
         RigidBody = {
-            Type = "Static" ,
+            Type = "Dynamic" ,
             Collider = "Box" ,
-            Mass = "0.0" ,
+            Mass = "1.0" ,
             Dimensions = "20.1,  1,  21",
             friction = "0.5",
              restitution = "0.8",
@@ -27086,8 +27086,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            defaultAnim = "Idle_Dario",
-             startsEnabled = "true"
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         MeshRenderer = {
             MeshFile = "Dario.mesh",
@@ -27114,9 +27114,9 @@ Map_Level_0 = {
              Order = "2"
         },
         RigidBody = {
-            Type = "Static" ,
+            Type = "Dynamic" ,
             Collider = "Box" ,
-            Mass = "0.0" ,
+            Mass = "1.0" ,
             Dimensions = "20,  10.,  18",
             friction = "0.5",
              restitution = "0.8",
@@ -27127,8 +27127,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            defaultAnim = "Idle_Generic",
-             startsEnabled = "true"
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -27155,9 +27155,9 @@ Map_Level_0 = {
              Order = "1"
         },
         RigidBody = {
-            Type = "Static" ,
+            Type = "Dynamic" ,
             Collider = "Box" ,
-            Mass = "0.0" ,
+            Mass = "1.0" ,
             Dimensions = "20,  10.,  18",
             friction = "0.5",
              restitution = "0.8",
@@ -27168,8 +27168,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            defaultAnim = "Idle_Generic",
-             startsEnabled = "true"
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -27196,9 +27196,9 @@ Map_Level_0 = {
              Order = "3"
         },
         RigidBody = {
-            Type = "Static" ,
+            Type = "Dynamic" ,
             Collider = "Box" ,
-            Mass = "0.0" ,
+            Mass = "1.0" ,
             Dimensions = "20,  10.,  18",
             friction = "0.5",
             restitution = "0.8",
@@ -27209,8 +27209,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            defaultAnim = "Idle_Generic",
-             startsEnabled = "true"
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -27237,9 +27237,9 @@ Map_Level_0 = {
              Order = "1"
         },
         RigidBody = {
-            Type = "Static" ,
+            Type = "Dynamic" ,
             Collider = "Box" ,
-            Mass = "0.0" ,
+            Mass = "1.0" ,
             Dimensions = "20,  10.,  18",
             friction = "0.5",
              restitution = "0.8",
@@ -27250,8 +27250,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            defaultAnim = "Idle_Generic",
-             startsEnabled = "true"
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -27278,9 +27278,9 @@ Map_Level_0 = {
              Order = "2"
         },
         RigidBody = {
-            Type = "Static" ,
+            Type = "Dynamic" ,
             Collider = "Box" ,
-            Mass = "0.0" ,
+            Mass = "1.0" ,
             Dimensions = "20,  10.,  18",
             friction = "0.5",
              restitution = "0.8",
@@ -27291,8 +27291,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            defaultAnim = "Idle_Generic",
-             startsEnabled = "true"
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -27319,9 +27319,9 @@ Map_Level_0 = {
              Order = "3"
         },
         RigidBody = {
-            Type = "Static" ,
+            Type = "Dynamic" ,
             Collider = "Box" ,
-            Mass = "0.0" ,
+            Mass = "1.0" ,
             Dimensions = "20,  10.,  18",
             friction = "0.5",
              restitution = "0.8",
@@ -27332,8 +27332,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            defaultAnim = "Idle_Generic",
-             startsEnabled = "true"
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
