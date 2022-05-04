@@ -27030,7 +27030,7 @@ Map_Level_0 = {
              isTrigger = "false" ,
             isEnabled = "true"
         },
-        Enabled = "true",
+        Enabled = "false",
         WeaponStack = {
             
         },
@@ -27044,11 +27044,9 @@ Map_Level_0 = {
             Team = "0",
              Order = "0"
         },
-        Kick = {
-            
-        },
         Animator = {
-            
+            defaultAnim = "Idle_Pedro",
+             startsEnabled = "true"
         },
         MeshRenderer = {
             MeshFile = "Pedro.mesh",
@@ -27074,9 +27072,6 @@ Map_Level_0 = {
             Team = "1",
              Order = "0"
         },
-        Kick = {
-            
-        },
         RigidBody = {
             Type = "Static" ,
             Collider = "Box" ,
@@ -27091,7 +27086,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            
+            defaultAnim = "Idle_Dario",
+             startsEnabled = "true"
         },
         MeshRenderer = {
             MeshFile = "Dario.mesh",
@@ -27117,9 +27113,6 @@ Map_Level_0 = {
             Team = "0",
              Order = "2"
         },
-        Kick = {
-            
-        },
         RigidBody = {
             Type = "Static" ,
             Collider = "Box" ,
@@ -27134,7 +27127,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            
+            defaultAnim = "Idle_Generic",
+             startsEnabled = "true"
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -27160,9 +27154,6 @@ Map_Level_0 = {
             Team = "1",
              Order = "1"
         },
-        Kick = {
-            
-        },
         RigidBody = {
             Type = "Static" ,
             Collider = "Box" ,
@@ -27177,7 +27168,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            
+            defaultAnim = "Idle_Generic",
+             startsEnabled = "true"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -27203,9 +27195,6 @@ Map_Level_0 = {
             Team = "0",
              Order = "3"
         },
-        Kick = {
-            
-        },
         RigidBody = {
             Type = "Static" ,
             Collider = "Box" ,
@@ -27220,7 +27209,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            
+            defaultAnim = "Idle_Generic",
+             startsEnabled = "true"
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -27246,9 +27236,6 @@ Map_Level_0 = {
             Team = "0",
              Order = "1"
         },
-        Kick = {
-            
-        },
         RigidBody = {
             Type = "Static" ,
             Collider = "Box" ,
@@ -27263,7 +27250,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            
+            defaultAnim = "Idle_Generic",
+             startsEnabled = "true"
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -27289,9 +27277,6 @@ Map_Level_0 = {
             Team = "1",
              Order = "2"
         },
-        Kick = {
-            
-        },
         RigidBody = {
             Type = "Static" ,
             Collider = "Box" ,
@@ -27306,7 +27291,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            
+            defaultAnim = "Idle_Generic",
+             startsEnabled = "true"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -27332,9 +27318,6 @@ Map_Level_0 = {
             Team = "1",
              Order = "3"
         },
-        Kick = {
-            
-        },
         RigidBody = {
             Type = "Static" ,
             Collider = "Box" ,
@@ -27349,7 +27332,8 @@ Map_Level_0 = {
             isEnabled = "true"
         },
         Animator = {
-            
+            defaultAnim = "Idle_Generic",
+             startsEnabled = "true"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -27362,7 +27346,8 @@ Map_Level_0 = {
             scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         Animator = {
-            
+            defaultAnim = "Wave",
+             startsEnabled = "true"
         },
         FryingOil = {
             
