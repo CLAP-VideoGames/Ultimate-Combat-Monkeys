@@ -715,7 +715,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -737,7 +741,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -759,7 +767,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -781,7 +793,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -803,7 +819,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -825,7 +845,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -847,7 +871,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -869,7 +897,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -891,7 +923,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -913,7 +949,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -935,7 +975,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -957,7 +1001,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -979,7 +1027,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1001,7 +1053,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1023,7 +1079,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1045,7 +1105,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1067,7 +1131,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1089,7 +1157,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1111,7 +1183,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1133,7 +1209,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1155,7 +1235,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1177,7 +1261,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1199,7 +1287,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1221,7 +1313,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1243,7 +1339,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1265,7 +1365,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1287,7 +1391,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1309,7 +1417,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1331,7 +1443,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1353,7 +1469,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1375,7 +1495,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1397,7 +1521,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1419,7 +1547,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1441,7 +1573,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1463,7 +1599,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1485,7 +1625,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1507,7 +1651,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1529,7 +1677,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1551,7 +1703,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1573,7 +1729,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1595,7 +1755,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1617,7 +1781,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1639,7 +1807,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1661,7 +1833,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1683,7 +1859,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1705,7 +1885,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1727,7 +1911,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1749,7 +1937,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1771,7 +1963,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1793,7 +1989,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1815,7 +2015,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1837,7 +2041,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1859,7 +2067,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1881,7 +2093,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1903,7 +2119,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1925,7 +2145,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1947,7 +2171,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1969,7 +2197,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -1991,7 +2223,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2013,7 +2249,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2035,7 +2275,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2057,7 +2301,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2079,7 +2327,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2101,7 +2353,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2123,7 +2379,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2145,7 +2405,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2167,7 +2431,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2189,7 +2457,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2211,7 +2483,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2233,7 +2509,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2255,7 +2535,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2277,7 +2561,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2299,7 +2587,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2321,7 +2613,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2343,7 +2639,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2365,7 +2665,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2387,7 +2691,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2409,7 +2717,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2431,7 +2743,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2453,7 +2769,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2475,7 +2795,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2497,7 +2821,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2519,7 +2847,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2541,7 +2873,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2563,7 +2899,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2585,7 +2925,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2607,7 +2951,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2629,7 +2977,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2651,7 +3003,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2673,7 +3029,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2695,7 +3055,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2717,7 +3081,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2739,7 +3107,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2761,7 +3133,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2783,7 +3159,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2805,7 +3185,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2827,7 +3211,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2849,7 +3237,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2871,7 +3263,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2893,7 +3289,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2915,7 +3315,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2937,7 +3341,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2959,7 +3367,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -2981,7 +3393,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3003,7 +3419,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3025,7 +3445,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3047,7 +3471,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3069,7 +3497,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3091,7 +3523,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3113,7 +3549,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3135,7 +3575,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3157,7 +3601,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3179,7 +3627,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3201,7 +3653,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3223,7 +3679,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3245,7 +3705,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3267,7 +3731,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3289,7 +3757,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3311,7 +3783,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3333,7 +3809,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3355,7 +3835,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3377,7 +3861,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3399,7 +3887,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3421,7 +3913,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3443,7 +3939,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3465,7 +3965,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3487,7 +3991,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3509,7 +4017,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3531,7 +4043,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3553,7 +4069,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3575,7 +4095,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3597,7 +4121,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3619,7 +4147,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3641,7 +4173,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3663,7 +4199,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3685,7 +4225,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3707,7 +4251,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3729,7 +4277,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3751,7 +4303,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3773,7 +4329,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3795,7 +4355,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3817,7 +4381,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3839,7 +4407,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3861,7 +4433,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3883,7 +4459,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3905,7 +4485,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3927,7 +4511,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3949,7 +4537,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3971,7 +4563,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -3993,7 +4589,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4015,7 +4615,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4037,7 +4641,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4059,7 +4667,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4081,7 +4693,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4103,7 +4719,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4125,7 +4745,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4147,7 +4771,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4169,7 +4797,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4191,7 +4823,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4213,7 +4849,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4235,7 +4875,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4257,7 +4901,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4279,7 +4927,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4301,7 +4953,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4323,7 +4979,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4345,7 +5005,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4367,7 +5031,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4389,7 +5057,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4411,7 +5083,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4433,7 +5109,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4455,7 +5135,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4477,7 +5161,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4499,7 +5187,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4521,7 +5213,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4543,7 +5239,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4565,7 +5265,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4587,7 +5291,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4609,7 +5317,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4631,7 +5343,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4653,7 +5369,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4675,7 +5395,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4697,7 +5421,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4719,7 +5447,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4741,7 +5473,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4763,7 +5499,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4785,7 +5525,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4807,7 +5551,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4829,7 +5577,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4851,7 +5603,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4873,7 +5629,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4895,7 +5655,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4917,7 +5681,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4939,7 +5707,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4961,7 +5733,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -4983,7 +5759,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5005,7 +5785,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5027,7 +5811,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5049,7 +5837,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5071,7 +5863,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5093,7 +5889,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5115,7 +5915,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5137,7 +5941,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5159,7 +5967,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5181,7 +5993,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5203,7 +6019,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5225,7 +6045,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5247,7 +6071,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5269,7 +6097,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5291,7 +6123,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5313,7 +6149,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5335,7 +6175,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5357,7 +6201,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5379,7 +6227,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5401,7 +6253,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5423,7 +6279,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5445,7 +6305,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5467,7 +6331,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5489,7 +6357,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5511,7 +6383,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5533,7 +6409,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5555,7 +6435,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5577,7 +6461,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5599,7 +6487,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5621,7 +6513,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5643,7 +6539,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5665,7 +6565,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5687,7 +6591,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5709,7 +6617,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5731,7 +6643,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5753,7 +6669,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5775,7 +6695,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5797,7 +6721,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5819,7 +6747,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5841,7 +6773,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5863,7 +6799,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5885,7 +6825,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5907,7 +6851,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5929,7 +6877,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5951,7 +6903,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5973,7 +6929,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -5995,7 +6955,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6017,7 +6981,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6039,7 +7007,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6061,7 +7033,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6083,7 +7059,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6105,7 +7085,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6127,7 +7111,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6149,7 +7137,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6171,7 +7163,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6193,7 +7189,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6215,7 +7215,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6237,7 +7241,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6259,7 +7267,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6281,7 +7293,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6303,7 +7319,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6325,7 +7345,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6347,7 +7371,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6369,7 +7397,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6391,7 +7423,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6413,7 +7449,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6435,7 +7475,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6457,7 +7501,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6479,7 +7527,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6501,7 +7553,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6523,7 +7579,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6545,7 +7605,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6567,7 +7631,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6589,7 +7657,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6611,7 +7683,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6633,7 +7709,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6655,7 +7735,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6677,7 +7761,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6699,7 +7787,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6721,7 +7813,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6743,7 +7839,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6765,7 +7865,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6787,7 +7891,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6809,7 +7917,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6831,7 +7943,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6853,7 +7969,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6875,7 +7995,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6897,7 +8021,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6919,7 +8047,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6941,7 +8073,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6963,7 +8099,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -6985,7 +8125,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7007,7 +8151,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7029,7 +8177,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7051,7 +8203,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7073,7 +8229,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7095,7 +8255,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7117,7 +8281,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7139,7 +8307,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7161,7 +8333,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7183,7 +8359,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7205,7 +8385,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7227,7 +8411,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7249,7 +8437,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7271,7 +8463,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7293,7 +8489,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7315,7 +8515,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7337,7 +8541,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7359,7 +8567,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7381,7 +8593,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7403,7 +8619,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7425,7 +8645,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7447,7 +8671,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7469,7 +8697,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7491,7 +8723,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7513,7 +8749,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7535,7 +8775,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7557,7 +8801,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7579,7 +8827,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7601,7 +8853,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7623,7 +8879,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7645,7 +8905,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7667,7 +8931,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7689,7 +8957,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7711,7 +8983,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7733,7 +9009,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7755,7 +9035,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7777,7 +9061,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7799,7 +9087,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7821,7 +9113,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7843,7 +9139,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7865,7 +9165,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7887,7 +9191,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7909,7 +9217,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7931,7 +9243,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7953,7 +9269,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7975,7 +9295,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -7997,7 +9321,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8019,7 +9347,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8041,7 +9373,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8063,7 +9399,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8085,7 +9425,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8107,7 +9451,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8129,7 +9477,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8151,7 +9503,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8173,7 +9529,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8195,7 +9555,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8217,7 +9581,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8239,7 +9607,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8261,7 +9633,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8283,7 +9659,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8305,7 +9685,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8327,7 +9711,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8349,7 +9737,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8371,7 +9763,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8393,7 +9789,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8415,7 +9815,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8437,7 +9841,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8459,7 +9867,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8481,7 +9893,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8503,7 +9919,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8525,7 +9945,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8547,7 +9971,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8569,7 +9997,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8591,7 +10023,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8613,7 +10049,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8635,7 +10075,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8657,7 +10101,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8679,7 +10127,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8701,7 +10153,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8723,7 +10179,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8745,7 +10205,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8767,7 +10231,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8789,7 +10257,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8811,7 +10283,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8833,7 +10309,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8855,7 +10335,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8877,7 +10361,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8899,7 +10387,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8921,7 +10413,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8943,7 +10439,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8965,7 +10465,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -8987,7 +10491,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9009,7 +10517,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9031,7 +10543,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9053,7 +10569,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9075,7 +10595,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9097,7 +10621,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9119,7 +10647,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9141,7 +10673,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9163,7 +10699,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9185,7 +10725,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9207,7 +10751,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9229,7 +10777,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9251,7 +10803,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9273,7 +10829,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9295,7 +10855,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9317,7 +10881,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9339,7 +10907,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9361,7 +10933,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9383,7 +10959,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9405,7 +10985,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9427,7 +11011,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9449,7 +11037,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9471,7 +11063,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9493,7 +11089,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9515,7 +11115,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9537,7 +11141,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9559,7 +11167,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9581,7 +11193,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9603,7 +11219,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9625,7 +11245,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9647,7 +11271,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9669,7 +11297,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9691,7 +11323,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9713,7 +11349,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9735,7 +11375,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9757,7 +11401,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9779,7 +11427,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9801,7 +11453,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9823,7 +11479,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9845,7 +11505,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9867,7 +11531,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9889,7 +11557,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9911,7 +11583,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9933,7 +11609,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9955,7 +11635,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9977,7 +11661,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -9999,7 +11687,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10021,7 +11713,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10043,7 +11739,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10065,7 +11765,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10087,7 +11791,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10109,7 +11817,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10131,7 +11843,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10153,7 +11869,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10175,7 +11895,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10197,7 +11921,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10219,7 +11947,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10241,7 +11973,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10263,7 +11999,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10285,7 +12025,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10307,7 +12051,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10329,7 +12077,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10351,7 +12103,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10373,7 +12129,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10395,7 +12155,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10417,7 +12181,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10439,7 +12207,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10461,7 +12233,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10483,7 +12259,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10505,7 +12285,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10527,7 +12311,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10549,7 +12337,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10571,7 +12363,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10593,7 +12389,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10615,7 +12415,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10637,7 +12441,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10659,7 +12467,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10681,7 +12493,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10703,7 +12519,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10725,7 +12545,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10747,7 +12571,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10769,7 +12597,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10791,7 +12623,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10813,7 +12649,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10835,7 +12675,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10857,7 +12701,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10879,7 +12727,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10901,7 +12753,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10923,7 +12779,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10945,7 +12805,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10967,7 +12831,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -10989,7 +12857,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11011,7 +12883,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11033,7 +12909,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11055,7 +12935,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11077,7 +12961,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11099,7 +12987,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11121,7 +13013,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11143,7 +13039,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11165,7 +13065,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11187,7 +13091,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11209,7 +13117,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11231,7 +13143,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11253,7 +13169,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11275,7 +13195,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11297,7 +13221,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11319,7 +13247,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11341,7 +13273,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11363,7 +13299,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11385,7 +13325,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11407,7 +13351,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11429,7 +13377,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11451,7 +13403,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11473,7 +13429,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11495,7 +13455,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11517,7 +13481,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11539,7 +13507,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11561,7 +13533,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11583,7 +13559,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11605,7 +13585,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11627,7 +13611,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11649,7 +13637,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11671,7 +13663,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11693,7 +13689,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11715,7 +13715,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11737,7 +13741,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11759,7 +13767,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11781,7 +13793,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11803,7 +13819,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11825,7 +13845,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11847,7 +13871,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11869,7 +13897,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11891,7 +13923,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11913,7 +13949,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11935,7 +13975,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11957,7 +14001,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -11979,7 +14027,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12001,7 +14053,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12023,7 +14079,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12045,7 +14105,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12067,7 +14131,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12089,7 +14157,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12111,7 +14183,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12133,7 +14209,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12155,7 +14235,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12177,7 +14261,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12199,7 +14287,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12221,7 +14313,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12243,7 +14339,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12265,7 +14365,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12287,7 +14391,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12309,7 +14417,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12331,7 +14443,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12353,7 +14469,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12375,7 +14495,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12397,7 +14521,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12419,7 +14547,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12441,7 +14573,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12463,7 +14599,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12485,7 +14625,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12507,7 +14651,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12529,7 +14677,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12551,7 +14703,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12573,7 +14729,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12595,7 +14755,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12617,7 +14781,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12639,7 +14807,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12661,7 +14833,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12683,7 +14859,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12705,7 +14885,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12727,7 +14911,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12749,7 +14937,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12771,7 +14963,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12793,7 +14989,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12815,7 +15015,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12837,7 +15041,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12859,7 +15067,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12881,7 +15093,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12903,7 +15119,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12925,7 +15145,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12947,7 +15171,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12969,7 +15197,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -12991,7 +15223,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13013,7 +15249,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13035,7 +15275,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13057,7 +15301,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13079,7 +15327,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13101,7 +15353,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13123,7 +15379,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13145,7 +15405,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13167,7 +15431,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13189,7 +15457,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13211,7 +15483,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13233,7 +15509,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13255,7 +15535,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13277,7 +15561,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13299,7 +15587,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13321,7 +15613,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13343,7 +15639,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13365,7 +15665,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13387,7 +15691,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13409,7 +15717,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13431,7 +15743,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13453,7 +15769,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13475,7 +15795,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13497,7 +15821,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13519,7 +15847,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13541,7 +15873,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13563,7 +15899,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13585,7 +15925,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13607,7 +15951,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13629,7 +15977,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13651,7 +16003,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13673,7 +16029,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13695,7 +16055,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13717,7 +16081,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13739,7 +16107,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13761,7 +16133,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13783,7 +16159,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13805,7 +16185,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13827,7 +16211,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13849,7 +16237,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13871,7 +16263,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13893,7 +16289,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13915,7 +16315,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13937,7 +16341,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13959,7 +16367,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -13981,7 +16393,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14003,7 +16419,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14025,7 +16445,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14047,7 +16471,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14069,7 +16497,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14091,7 +16523,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14113,7 +16549,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14135,7 +16575,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14157,7 +16601,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14179,7 +16627,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14201,7 +16653,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14223,7 +16679,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14245,7 +16705,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14267,7 +16731,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14289,7 +16757,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14311,7 +16783,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14333,7 +16809,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14355,7 +16835,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14377,7 +16861,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14399,7 +16887,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14421,7 +16913,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14443,7 +16939,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14465,7 +16965,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14487,7 +16991,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14509,7 +17017,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14531,7 +17043,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14553,7 +17069,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14575,7 +17095,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14597,7 +17121,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14619,7 +17147,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14641,7 +17173,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14663,7 +17199,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14685,7 +17225,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14707,7 +17251,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14729,7 +17277,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14751,7 +17303,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14773,7 +17329,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14795,7 +17355,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14817,7 +17381,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14839,7 +17407,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14861,7 +17433,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14883,7 +17459,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14905,7 +17485,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14927,7 +17511,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14949,7 +17537,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14971,7 +17563,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -14993,7 +17589,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15015,7 +17615,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15037,7 +17641,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15059,7 +17667,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15081,7 +17693,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15103,7 +17719,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15125,7 +17745,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15147,7 +17771,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15169,7 +17797,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15191,7 +17823,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15213,7 +17849,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15235,7 +17875,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15257,7 +17901,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15279,7 +17927,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15301,7 +17953,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15323,7 +17979,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15345,7 +18005,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15367,7 +18031,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15389,7 +18057,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15411,7 +18083,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15433,7 +18109,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15455,7 +18135,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15477,7 +18161,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15499,7 +18187,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15521,7 +18213,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15543,7 +18239,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15565,7 +18265,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15587,7 +18291,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15609,7 +18317,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15631,7 +18343,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15653,7 +18369,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15675,7 +18395,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15697,7 +18421,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15719,7 +18447,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15741,7 +18473,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15763,7 +18499,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15785,7 +18525,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15807,7 +18551,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15829,7 +18577,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15851,7 +18603,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15873,7 +18629,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15895,7 +18655,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15917,7 +18681,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15939,7 +18707,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15961,7 +18733,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -15983,7 +18759,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16005,7 +18785,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16027,7 +18811,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16049,7 +18837,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16071,7 +18863,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16093,7 +18889,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16115,7 +18915,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16137,7 +18941,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16159,7 +18967,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16181,7 +18993,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16203,7 +19019,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16225,7 +19045,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16247,7 +19071,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16269,7 +19097,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16291,7 +19123,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16313,7 +19149,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16335,7 +19175,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16357,7 +19201,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16379,7 +19227,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -16401,7 +19253,11 @@ Map_Level_0 = {
             Mass = "0.0" ,
             Dimensions = "10,  10,  10",
             isTrigger = "false" ,
-            isEnabled = "true"
+            friction = "0.5",
+             restitution "0.8",
+            group = "Suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
         },
         Destructible = {
             
@@ -24166,8 +27022,12 @@ Map_Level_0 = {
             Collider = "Box" ,
             Mass = "0.0" ,
             Dimensions = "20.1,  10.,  17.7",
-            Offset = "0, 9, 0" ,
-            isTrigger = "false" ,
+             friction = "0.5",
+             restitution "0.8",
+            group = "Monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0" ,
+             isTrigger = "false" ,
             isEnabled = "true"
         },
         Enabled = "true",
@@ -24188,6 +27048,9 @@ Map_Level_0 = {
              Order = "0"
         },
         Kick = {
+            
+        },
+        Animator = {
             
         },
         MeshRenderer = {
@@ -24225,9 +27088,16 @@ Map_Level_0 = {
             Collider = "Box" ,
             Mass = "0.0" ,
             Dimensions = "20.1,  1,  21",
-            Offset = "0, 10.5, 0" ,
+            friction = "0.5",
+             restitution "0.8",
+            group = "Monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 10.5, 0" ,
             isTrigger = "false" ,
             isEnabled = "true"
+        },
+        Animator = {
+            
         },
         MeshRenderer = {
             MeshFile = "Dario.mesh",
@@ -24264,9 +27134,16 @@ Map_Level_0 = {
             Collider = "Box" ,
             Mass = "0.0" ,
             Dimensions = "20,  10.,  18",
-            Offset = "0, 9, 0" ,
+            friction = "0.5",
+             restitution "0.8",
+            group = "Monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0" ,
             isTrigger = "false" ,
             isEnabled = "true"
+        },
+        Animator = {
+            
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -24303,9 +27180,16 @@ Map_Level_0 = {
             Collider = "Box" ,
             Mass = "0.0" ,
             Dimensions = "20,  10.,  18",
-            Offset = "0, 9, 0",
+            friction = "0.5",
+             restitution "0.8",
+            group = "Monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
             isTrigger = "false" ,
             isEnabled = "true"
+        },
+        Animator = {
+            
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -24342,9 +27226,16 @@ Map_Level_0 = {
             Collider = "Box" ,
             Mass = "0.0" ,
             Dimensions = "20,  10.,  18",
-            Offset = "0, 9, 0",
+            friction = "0.5",
+             restitution "0.8",
+            group = "Monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
             isTrigger = "false" ,
             isEnabled = "true"
+        },
+        Animator = {
+            
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -24381,9 +27272,16 @@ Map_Level_0 = {
             Collider = "Box" ,
             Mass = "0.0" ,
             Dimensions = "20,  10.,  18",
-            Offset = "0, 9, 0",
+            friction = "0.5",
+             restitution "0.8",
+            group = "Monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
             isTrigger = "false" ,
             isEnabled = "true"
+        },
+        Animator = {
+            
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
@@ -24420,9 +27318,16 @@ Map_Level_0 = {
             Collider = "Box" ,
             Mass = "0.0" ,
             Dimensions = "20,  10.,  18",
-            Offset = "0, 9, 0",
+            friction = "0.5",
+             restitution "0.8",
+            group = "Monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
             isTrigger = "false" ,
             isEnabled = "true"
+        },
+        Animator = {
+            
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -24459,9 +27364,16 @@ Map_Level_0 = {
             Collider = "Box" ,
             Mass = "0.0" ,
             Dimensions = "20,  10.,  18",
-            Offset = "0, 9, 0",
+            friction = "0.5",
+             restitution "0.8",
+            group = "Monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
             isTrigger = "false" ,
             isEnabled = "true"
+        },
+        Animator = {
+            
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -24472,6 +27384,12 @@ Map_Level_0 = {
             position = " 0.000000 ,0.000000 ,-0.000000 ",
             rotation = " 0 ,0 ,0 ",
             scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Animator = {
+            
+        },
+        FryingOil = {
+            
         },
         MeshRenderer = {
             MeshFile = "Oil.mesh",
