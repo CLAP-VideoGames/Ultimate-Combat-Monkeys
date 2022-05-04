@@ -46,7 +46,7 @@ namespace K_Engine {
 		void RegisterCamera(Entity* e);
 		void RegisterOil(FryingOil* e);
 
-		void eraseFromTeam(Entity* e);
+		void killPlayer(Entity* e);
 		void endRound();
 
 		Camera* getRenderCamera();

@@ -9,6 +9,8 @@
 #include <components_prj/Animator.h>
 #include <utils_prj/Vector3.h>
 
+#include <components/GameManager.h>
+
 #include <iostream>
 
 
@@ -36,6 +38,7 @@ namespace K_Engine {
 
 	void Health::start()
 	{
+		gMInstance = GameManager::GetInstance();
 		mesh_name = "_" + entity->getComponent<MeshRenderer>()->getMeshName();;
 		alive = true;
 		//Entity* e, std::string overlayName, std::string fontName, int fontSize, std::string text, Vector3 textColor
@@ -57,7 +60,7 @@ namespace K_Engine {
 		else if (!alive && anim->animHasEnded())
 		{
 			// "Kill the entity"
-			entity->setActive(false);
+			gMInstance->killPlayer(entity);
 		}
 	}
 

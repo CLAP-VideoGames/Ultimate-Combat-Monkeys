@@ -126,6 +126,17 @@ namespace K_Engine {
 		return round;
 	}
 
+	void TurnSystem::killPlayer(Entity* e)
+	{
+		int t = e->getComponent<PlayerInfo>()->getTeam();
+		int o = e->getComponent<PlayerInfo>()->getOrder();
+		if (t == 0)
+			player1->eraseFromTeam(o);
+		else
+			player2->eraseFromTeam(o);
+
+	}
+
 	void TurnSystem::nextPlayer()
 	{
 		player1Turn = (player1Turn + 1) % player1->getTeamSize();

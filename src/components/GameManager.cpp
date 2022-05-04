@@ -70,7 +70,7 @@ namespace K_Engine {
 		oil = e;
 	}
 
-	void GameManager::eraseFromTeam(Entity* e)
+	void GameManager::killPlayer(Entity* e)
 	{
 		
 	}

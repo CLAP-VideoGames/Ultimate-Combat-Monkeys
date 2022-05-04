@@ -8,6 +8,8 @@ namespace K_Engine {
 	class Text;
 	class Vector3;
 	class Animator;
+	class GameManager;
+
 	class Health : public Component
 	{
 	public:
@@ -52,6 +54,8 @@ namespace K_Engine {
 		const int MAX_LIFE = 100;
 		std::string mesh_name;
 		Animator* anim;
+
+		GameManager* gMInstance;
 	};
 }
 #endif $safeitemname$_H
