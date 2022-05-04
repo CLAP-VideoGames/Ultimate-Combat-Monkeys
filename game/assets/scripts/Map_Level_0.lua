@@ -19653,6 +19653,19 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Oil.mesh",
+        },
+        RigidBody = {
+            Type = "Static" ,
+            Collider = "Box" ,
+            Mass = "1.0" ,
+            Dimensions = "200,  870.,  25",
+            friction = "0.8",
+             restitution = "0.0",
+            group = "oil",
+              mask = "monos",
+            offsetCenter = "0, -435, 0",
+            isTrigger = "true" ,
+            isEnabled = "true"
         }
     },
 }

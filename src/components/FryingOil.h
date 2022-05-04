@@ -5,6 +5,7 @@
 #include <ecs_prj/Component.h>
 
 namespace K_Engine {
+	class Transform;
 	class FryingOil : public Component 
 	{
 	public:
@@ -30,11 +31,18 @@ namespace K_Engine {
 		/// It's called every frame of the game.
 		/// </summary> 
 		virtual void update(int frameTime);
+		virtual void onCollisionEnter(Entity* collision);
+
+		void Rise(int round);
 
 
 	private:
 		//Required
 		static std::string name;
+
+		float risingSun = 10.0f;
+
+		Transform* tr;
 	};
 }
 #endif FryingOil_H

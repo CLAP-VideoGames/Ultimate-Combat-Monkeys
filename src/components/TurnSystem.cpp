@@ -113,6 +113,7 @@ namespace K_Engine {
 		if (turn.player == p->getOrder()[0] && turn.team == teamStarting) {
 			std::cout << "INICIA RONDA: " << round << "\n";
 			round++;
+			GameManager::GetInstance()->endRound();
 		}
 
 		setFocusOnPlayer();

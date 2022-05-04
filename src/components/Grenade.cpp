@@ -71,7 +71,7 @@ namespace K_Engine {
 		BodyType bodyType = BodyType::BT_DYNAMIC;
 		float mass = 1.0f;
 
-		explosion->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/nuke_explosion.wav", 20, 3, false, true);
+		//explosion->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/nuke_explosion.wav", 20, 3, false, true);
 
 		RigidBody* r = explosion->addComponent<RigidBody>(boxType, bodyType, mass,
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),

@@ -1,6 +1,7 @@
 #include "GameManager.h"
 
 #include <components/TurnSystem.h>
+#include <components/FryingOil.h>
 #include <objects/Player.h>
 
 #include <ecs_prj/Entity.h>
@@ -62,6 +63,21 @@ namespace K_Engine {
 	void GameManager::RegisterCamera(Entity* e)
 	{
 		camera = e;
+	}
+
+	void GameManager::RegisterOil(FryingOil* e)
+	{
+		oil = e;
+	}
+
+	void GameManager::eraseFromTeam(Entity* e)
+	{
+		
+	}
+
+	void GameManager::endRound()
+	{
+		oil->Rise(turnSys_->getRound());
 	}
 
 	Camera* GameManager::getRenderCamera()

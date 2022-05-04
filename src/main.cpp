@@ -17,6 +17,7 @@ extern "C" {
 		K_Engine::PhysicsManager::GetInstance()->addLayer("monos");
 		K_Engine::PhysicsManager::GetInstance()->addLayer("armas");
 		K_Engine::PhysicsManager::GetInstance()->addLayer("explosion");
+		K_Engine::PhysicsManager::GetInstance()->addLayer("oil");
 	}
 
 	__declspec(dllexport) void registerComponents() {
