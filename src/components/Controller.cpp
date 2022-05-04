@@ -87,63 +87,79 @@ namespace K_Engine {
 		if (life->getCurrentLife() > 0)
 		{
 			//Default action = Nothing
-			Action currentAction = Nothing;
 			InputManager* input = InputManager::GetInstance();
 
-			//Registering what action the user wants to do
-			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
-				input->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-				input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) currentAction = Moving;
-			else if (input->getRightMouseButtonPressed()) currentAction = Granading;
-			else if (input->getLeftMouseButtonPressed()) currentAction = Kicking;
+			bool actionProcessed = false;
 
-			//Doing something based in the user input
-			switch (currentAction)
-			{
-			case K_Engine::Controller::Moving:
+			//Left
+			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A)) {
+				actionProcessed = true;
+				if (rigby->getVelocity().x > -limitSpeed) {
 
-				//Left
-				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A))
-					if (rigby->getVelocity().x > -limitSpeed) {
-						trans->setRotation(0, 180, 0);
-						rigby->addForceImpulse({ -distance, 0, 0 });
+					trans->setRotation(0, 180, 0);
+					rigby->addForce({ -distance * 100, 0, 0 });
+					if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
+						anim->playAnim("Walk" + mesh_name);
 					}
 
+					lastState = Action::Moving;
+				}
+			}
+			else {
 				//Right
-				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D))
+				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) {
+					actionProcessed = true;
 					if (rigby->getVelocity().x < limitSpeed) {
 						trans->setRotation(0, 0, 0);
-						rigby->addForceImpulse({ distance, 0, 0 });
-					}
-
-				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) {
-					//Checking it is in a certain interval
-					if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
-						anim->playAnim("Jump" + mesh_name, false);
-						rigby->addForceImpulse({ 0, jumpForce, 0 });
+						rigby->addForce({ distance * 100, 0, 0 });
+						if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
+							anim->playAnim("Walk" + mesh_name);
+						}
+						lastState = Action::Moving;
 					}
 				}
+			}
 
-				break;
-			case K_Engine::Controller::Kicking:
 
+			//Jump
+			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) {
+				actionProcessed = true;
+				lastState = Jumping;
+				//Checking it is in a certain interval
+				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
+					anim->playAnim("Jump" + mesh_name, false);
+					rigby->addForceImpulse({ 0, jumpForce, 0 });
+				}
+			}
+
+			//Kick
+			if (input->getLeftMouseButtonPressed()) {
+				actionProcessed = true;
+				lastState = Kicking;
 				anim->playAnim("Kick" + mesh_name, false);
 				throwKick();
+			}
 
-				break;
-			case K_Engine::Controller::Granading:
-
+			//Granade
+			if (input->getRightMouseButtonPressed()) {
+				actionProcessed = true;
+				lastState = Granading;
 				anim->playAnim("Granade" + mesh_name, false);
 				throwGrenade();
+			}
 
-				break;
-			case K_Engine::Controller::Nothing:
+			if (!actionProcessed) {
+				if (lastState != Action::Nothing) {
+					if (((anim->getCurrAnimName() != "Kick" + mesh_name && anim->getCurrAnimName() != "Granade" + mesh_name) || anim->animHasEnded())) {
+						std::cout << rigby->getVelocity().x << ", " << rigby->getVelocity().y << ", " << rigby->getVelocity().z << "\n";
+						if (rigby->getVelocity().getMagnitude() < 0.005 && rigby->getVelocity().getMagnitude() > -0.005) {
+							lastState = Nothing;
+							anim->playAnim("Idle" + mesh_name);
+						}
 
-				anim->playAnim("Idle" + mesh_name);
+					}
 
-				break;
-			default:
-				break;
+				}
 			}
 		}
 	}
@@ -183,7 +199,7 @@ namespace K_Engine {
 		//Monkeys transform
 		Transform* origin = entity->getComponent<Transform>();
 
-		//grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_throw.wav", 20, 1, false, false);
+		grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_throw.wav", 20, 1, false, false);
 
 		//Direction that the monkey is looking at
 		float direction = origin->getRotation().y;
@@ -191,8 +207,6 @@ namespace K_Engine {
 		//If the monkey is looking left, we dont want force to be 0
 		if (direction >= 0) direction = 1;
 		else direction = -1;
-
-		std::cout << "Dirección chingona:" << direction << "\n";
 
 		r->setFriction(0.2f);
 		r->setRestitution(0.2f);
@@ -224,7 +238,7 @@ namespace K_Engine {
 		r->setTrigger(true);
 
 		kick->addComponent<Kick>();
-		//kick->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_kick.wav", 20, 2, false, true);
+		kick->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_kick.wav", 20, 2, false, true);
 
 	}
 }

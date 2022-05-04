@@ -49,8 +49,8 @@ namespace K_Engine {
 		std::string nothingLayer = "Nothing";
 		std::string platformLayer = "Platform";
 
-		int playerCollidesWith = K_Engine::PhysicsManager::GetInstance()->getLayerID(platformLayer);
-		K_Engine::PhysicsManager::GetInstance()->setGravity({ 0,-150,0 });
+		/*int playerCollidesWith = K_Engine::PhysicsManager::GetInstance()->getLayerID(platformLayer);*/
+		K_Engine::PhysicsManager::GetInstance()->setGravity({ 0,-450,0 });
 
 		Camera* cam = RenderManager::GetInstance()->getCamera();
 		cam->setCameraPos(0, 60, 300);
