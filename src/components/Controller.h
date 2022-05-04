@@ -17,6 +17,8 @@ namespace K_Engine {
 
 	class Controller : public Component
 	{
+		enum Action{Moving, Jump, Kicking, Granading, Nothing};
+
 	public:
 		/// <summary>
 		/// Required to be initialized properly in the Component Manager
@@ -64,14 +66,13 @@ namespace K_Engine {
 		//VerticalMovement
 		float jumpForce = 5000;
 
-		int timerJump = 50;
-		int timerGrenade = 60;
 		//HeightCreation for the grenade
-		float heightCreation = 25;
+		float grenadeHeightCreation = 15;
+		float kickHeightCreation = 10;
 		float limitSpeed = 50;
 
 		float grenadeForce = 9000;
-		float grenadeVerticalForce = 800;
+		float grenadeVerticalForce = 2000;
 
 		bool jump;
 		bool grenade;

@@ -2,6 +2,7 @@
 
 #include <ecs_prj/Entity.h>
 #include <components_prj/Transform.h>
+#include <utils_prj/Math.h>
 
 #include <iostream>
 
@@ -27,18 +28,14 @@ namespace K_Engine {
 
 	void Aeroplane::start() {
 		tr = entity->getComponent<Transform>();
-		nextPos = { (double)(rand() % 200 - 100),(double)(rand() % 200 - 100),0 };
+		nextPos = { 10, 50,0 };
 	}
 
 	void Aeroplane::update(int frameTime) {
 		if (tr != nullptr) {
-			//movement to next point
-			int modX = 1;
-			int modY = 1;
-			if (tr->getPosition().x > nextPos.x) modX = -1;
-			if (tr->getPosition().y > nextPos.y) modY = -1;
-			tr->translate(tr->getPosition().x + modX, tr->getPosition().y + modY, nextPos.z);
-
+			float horizontal = Math::lerpPrecise(tr->getPosition().x, nextPos.x, 0.5);
+			float vertical = Math::lerpPrecise(tr->getPosition().y, nextPos.y, 0.5);
+			tr->setPosition(horizontal, vertical, 0);
 			// check if already at point
 			if (nextPos.x == tr->getPosition().x && nextPos.y == tr->getPosition().y) {
 				nextPos = { (double)(rand() % 200 - 100),(double)(rand() % 200 - 100),0 };

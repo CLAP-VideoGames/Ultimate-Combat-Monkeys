@@ -26,7 +26,7 @@ extern "C" {
 	}
 	
 	__declspec(dllexport) K_Engine::Scene* startScene() {
-		auto scene = new K_Engine::ExampleScene("testZone");
+		auto scene = new K_Engine::ExampleScene("Map_Level_0");
 		scene->init();
 		return scene;
 	}

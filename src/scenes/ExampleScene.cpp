@@ -59,43 +59,42 @@ namespace K_Engine {
 		K_Engine::Entity* cameraManager = entMan->addEntity();
 		cameraManager->addComponent<CameraMovement>(0.08);
 
-		//PedroPablo
-		K_Engine::Entity* monkey = entMan->addEntity();
-		Animator* anim = monkey->addComponent<Animator>();
-		{
-			K_Engine::Transform* t = monkey->addComponent<K_Engine::Transform>();
-			float scale = 1.5f;
-			t->setScale(scale);
-			t->setPosition(0, 39, 0);
+		////PedroPablo
+		//K_Engine::Entity* monkey = entMan->addEntity();
+		//Animator* anim = monkey->addComponent<Animator>();
+		//{
+		//	K_Engine::Transform* t = monkey->addComponent<K_Engine::Transform>();
+		//	float scale = 1.5f;
+		//	t->setScale(scale);
+		//	t->setPosition(0, 39, 0);
 
 
-			t->setRotation(0, 0, 0);
-			K_Engine::MeshRenderer* m = monkey->addComponent<K_Engine::MeshRenderer>();
-			m->setMesh("PedroPablo.mesh");
-			m->debug();
+		//	t->setRotation(0, 0, 0);
+		//	K_Engine::MeshRenderer* m = monkey->addComponent<K_Engine::MeshRenderer>();
+		//	m->setMesh("PedroPablo.mesh");
+		//	m->debug();
 
-			K_Engine::RigidBody* r = monkey->addComponent<K_Engine::RigidBody>(ColliderType::CT_BOX, BodyType::BT_DYNAMIC, 50, 1, 1);
-			r->setDimensions({ 2, 5, 2 });
-			r->setOffset({ 0, 2, 0 });
-			r->setFriction(10.0f);
+		//	K_Engine::RigidBody* r = monkey->addComponent<K_Engine::RigidBody>(ColliderType::CT_BOX, BodyType::BT_DYNAMIC, 50, 1, 1);
+		//	r->setDimensions({ 2, 5, 2 });
+		//	r->setOffset({ 0, 2, 0 });
+		//	r->setFriction(10.0f);
 
-			r->setPosConstraints({ 1, 1, 0 });
-			r->setRotConstraints({ 0, 0, 0 });
+		//	r->setPosConstraints({ 1, 1, 0 });
+		//	r->setRotConstraints({ 0, 0, 0 });
 
-			Controller* control = monkey->addComponent<Controller>();
-			Health* playerHealth = monkey->addComponent<Health>("Pedro");
-			WeaponStack* weaponPlayer = monkey->addComponent<WeaponStack>();
-		}
+		//	Controller* control = monkey->addComponent<Controller>();
+		//	Health* playerHealth = monkey->addComponent<Health>("Pedro");
+		//	WeaponStack* weaponPlayer = monkey->addComponent<WeaponStack>();
+		//}
 
-		K_Engine::Entity* plane = entMan->addEntity();
-		Transform* t = plane->addComponent<Transform>();
-		t->setPosition(0, 45, 0);
-		t->setScale(1.5f);
-		t->setRotation(0, 0, 0);
-		MeshRenderer* me = plane->addComponent<MeshRenderer>();
-		me->setMesh("PedroPablo.mesh");
+		//K_Engine::Entity* plane = entMan->addEntity();
+		//Transform* t = plane->addComponent<Transform>();
+		//t->setPosition(0, 45, 0);
+		//t->setScale(1.5f);
+		//t->setRotation(0, 0, 0);
+		//MeshRenderer* me = plane->addComponent<MeshRenderer>();
+		//me->setMesh("PedroPablo.mesh");
 		//plane->addComponent<Aeroplane>();
-
 
 		////SPHERE CHILD
 		//K_Engine::Entity* playerChild = entMan->addEntity();
