@@ -44,9 +44,9 @@ namespace K_Engine {
 	void TurnSystem::start()
 	{
 		gMInstance = GameManager::GetInstance();
-		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha << "\n";
 
 		startingZAxis = gMInstance->getCamera()->getCameraPosition()[2];
+
 
 		int team = (firstTeamStarts) ? 0 : 1;
 		player1Turn = player2Turn = 0;
@@ -84,12 +84,12 @@ namespace K_Engine {
 	}
 
 	void TurnSystem::RegisterMonkey(int team, int order, Entity* ent){
-		printf("Se ha registrado el Mono del equipo %d cuyo orden de posición es %d\n", team, order);
-		std::cout << "La entidad existe: " << std::boolalpha << (ent != nullptr) << std::boolalpha  << "\n\n";
 		if (team == 0)
 			player1->addToTeam(ent, order);
 		else
 			player2->addToTeam(ent, order);
+
+		printf("Se ha registrado el Mono del equipo %d cuyo orden de posición es %d\n", team, order);
 	}
 
 	void TurnSystem::endTurn()

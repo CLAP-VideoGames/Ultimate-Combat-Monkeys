@@ -59,7 +59,10 @@ namespace K_Engine {
 
 	void Player::addToTeam(Entity* e, int order)
 	{
-		players.insert(players.begin() + order, e);
+		if (order >= players.size())
+			players.resize(order + 1);
+
+		players[order] = e;
 	}
 
 

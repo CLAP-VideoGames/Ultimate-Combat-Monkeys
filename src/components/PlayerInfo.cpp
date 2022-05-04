@@ -33,11 +33,9 @@ namespace K_Engine {
 	}
 
 	void PlayerInfo::start(){
-		std::cout << "cuidao que pillo el GameManager\n";
 		gMInstance = GameManager::GetInstance();
-		std::cout << "vale lo he pillao\n";
-		//gMInstance->RegisterMonkey(team, order, entity);
-		std::cout << "he registrao algo\n";
+
+		gMInstance->RegisterMonkey(team, order, entity);
 	}
 
 	int PlayerInfo::getTeam()
