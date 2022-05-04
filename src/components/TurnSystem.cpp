@@ -130,6 +130,10 @@ namespace K_Engine {
 	{
 		int t = e->getComponent<PlayerInfo>()->getTeam();
 		int o = e->getComponent<PlayerInfo>()->getOrder();
+
+		if (turn.team == t && turn.player == o)
+			endTurn();
+
 		if (t == 0)
 			player1->eraseFromTeam(o);
 		else
