@@ -61,6 +61,7 @@ namespace K_Engine {
 
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({ 0,0,0 });
+		rigby->setPosConstraints({ 1,1,0 });
 		anim = entity->getComponent<Animator>();
 		trans = entity->getComponent<Transform>();
 		life = entity->getComponent<Health>();
@@ -90,8 +91,8 @@ namespace K_Engine {
 			InputManager* input = InputManager::GetInstance();
 
 			//Registering what action the user wants to do
-			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) currentAction = Jump;
-			else if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
+			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE) ||
+				input->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
 				input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) currentAction = Moving;
 			else if (input->getRightMouseButtonPressed()) currentAction = Granading;
 			else if (input->getLeftMouseButtonPressed()) currentAction = Kicking;
@@ -115,13 +116,12 @@ namespace K_Engine {
 						rigby->addForceImpulse({ distance, 0, 0 });
 					}
 
-				break;
-			case K_Engine::Controller::Jump:
-
-				//Checking it is in a certain interval
-				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
-					anim->playAnim("Jump" + mesh_name, false);
-					rigby->addForceImpulse({ 0, jumpForce, 0 });
+				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) {
+					//Checking it is in a certain interval
+					if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
+						anim->playAnim("Jump" + mesh_name, false);
+						rigby->addForceImpulse({ 0, jumpForce, 0 });
+					}
 				}
 
 				break;
@@ -171,8 +171,11 @@ namespace K_Engine {
 
 		//RigidBody
 		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo"));
+
+		std::cout << "Grupo granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("armas") << "\n";
+		std::cout << "Mask granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") << "\n";
 
 		//Grenade Component
 		grnd->addComponent<Grenade>(10.0f);
@@ -193,6 +196,7 @@ namespace K_Engine {
 
 		r->setFriction(0.2f);
 		r->setRestitution(0.2f);
+		r->setTrigger(true);
 		r->addForce(K_Engine::Vector3(grenadeForce * direction, grenadeVerticalForce, 0));
 
 	}
@@ -213,13 +217,14 @@ namespace K_Engine {
 
 
 		RigidBody* r = kick->addComponent<RigidBody>(boxType, bodyType, mass,
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("monos"));
+
+		r->setDimensions(10.0f);
+		r->setTrigger(true);
 
 		kick->addComponent<Kick>();
 		kick->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_kick.wav", 20, 2, false, true);
 
-		r->setDimensions(10.0f);
-		r->setTrigger(true);
 	}
 }

@@ -18,7 +18,7 @@ namespace K_Engine {
 
 	class Controller : public Component
 	{
-		enum Action{Moving, Jump, Kicking, Granading, Nothing};
+		enum Action{Moving, Kicking, Granading, Nothing};
 
 	public:
 		/// <summary>
@@ -67,7 +67,7 @@ namespace K_Engine {
 		float distance;
 		float distanceMultiplier = 50;
 		//VerticalMovement
-		float jumpForce = 5000;
+		float jumpForce = 100;
 
 		//HeightCreation for the grenade
 		float grenadeHeightCreation = 15;

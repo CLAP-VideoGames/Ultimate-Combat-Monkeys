@@ -56,9 +56,9 @@ namespace K_Engine {
 	{
 		Vector3 pos;
 		pos = entity->getComponent<Transform>()->getPosition();
-		Entity* grnd = entMan->addEntity(true);
+		Entity* explosion = entMan->addEntity(true);
 
-		K_Engine::Transform* t = grnd->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
+		K_Engine::Transform* t = explosion->addComponent<K_Engine::Transform>(); t->setScale(3.0f);
 		Transform* thisTransform = entity->getComponent<Transform>();
 		Vector3 thisPosition = thisTransform->getPosition();
 
@@ -71,16 +71,17 @@ namespace K_Engine {
 		BodyType bodyType = BodyType::BT_DYNAMIC;
 		float mass = 1.0f;
 
-		grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/nuke_explosion.wav", 20, 3, false, true);
+		explosion->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/nuke_explosion.wav", 20, 3, false, true);
 
-		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
+		RigidBody* r = explosion->addComponent<RigidBody>(boxType, bodyType, mass,
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") ||
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("monos"));
 
 		r->setTrigger(true);
 		r->setDimensions(radioExplosion);
 
-		grnd->addComponent<DestroyOnCollision>();
+		explosion->addComponent<DestroyOnCollision>();
 
 		entity->destroy();
 	}

@@ -29,7 +29,6 @@
     <ClCompile Include="..\..\src\components\Health.cpp" />
     <ClCompile Include="..\..\src\components\Kick.cpp" />
     <ClCompile Include="..\..\src\components\PlayerInfo.cpp" />
-    <ClCompile Include="..\..\src\components\Sound.cpp" />
     <ClCompile Include="..\..\src\components\SoundManager.cpp" />
     <ClCompile Include="..\..\src\components\TurnSystem.cpp" />
     <ClCompile Include="..\..\src\components\WeaponStack.cpp" />
@@ -59,7 +58,6 @@
     <ClInclude Include="..\..\src\components\Health.h" />
     <ClInclude Include="..\..\src\components\Kick.h" />
     <ClInclude Include="..\..\src\components\PlayerInfo.h" />
-    <ClInclude Include="..\..\src\components\Sound.h" />
     <ClInclude Include="..\..\src\components\SoundManager.h" />
     <ClInclude Include="..\..\src\components\TurnSystem.h" />
     <ClInclude Include="..\..\src\components\WeaponStack.h" />
