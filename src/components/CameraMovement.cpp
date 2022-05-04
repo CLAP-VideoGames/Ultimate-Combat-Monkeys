@@ -36,7 +36,8 @@ namespace K_Engine {
 
 	void CameraMovement::start() {
 		gMInstance = GameManager::GetInstance();
-		gMInstance->RegisterCamera(entity);
+		if(gMInstance != nullptr)
+			gMInstance->RegisterCamera(entity);
 
 		cam = RenderManager::GetInstance()->getCamera();
 		inputMan = InputManager::GetInstance();
