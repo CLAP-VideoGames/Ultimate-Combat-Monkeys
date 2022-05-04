@@ -32,12 +32,12 @@ namespace K_Engine {
 		order = information->valueToNumber("Order");
 	}
 
-	void PlayerInfo::start()
-	{
+	void PlayerInfo::start(){
+		std::cout << "cuidao que pillo el GameManager\n";
 		gMInstance = GameManager::GetInstance();
-		std::cout << "\nGM existe:" << std::boolalpha << (gMInstance != nullptr) << std::boolalpha << "\n";
-
-		gMInstance->RegisterMonkey(team, order, entity);
+		std::cout << "vale lo he pillao\n";
+		//gMInstance->RegisterMonkey(team, order, entity);
+		std::cout << "he registrao algo\n";
 	}
 
 	int PlayerInfo::getTeam()
