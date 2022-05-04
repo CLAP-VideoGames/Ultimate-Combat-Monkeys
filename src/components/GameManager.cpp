@@ -72,7 +72,9 @@ namespace K_Engine {
 
 	void GameManager::killPlayer(Entity* e)
 	{
-		
+		if (turnSys_)
+			turnSys_->killPlayer(e);
+		else std::cout << "FALSE\n\n";
 	}
 
 	void GameManager::endRound()
