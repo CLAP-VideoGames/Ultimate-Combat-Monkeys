@@ -36,6 +36,8 @@ namespace K_Engine {
 		/// </summary> 
 		virtual void update(int frameTime);
 
+		void setLerpPosition(float x, float y, float zoom = 0);
+
 	private:
 		//Required
 		static std::string name;

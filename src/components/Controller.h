@@ -13,6 +13,7 @@ namespace K_Engine {
 	class Transform;
 	class Health;
 	class GameManager;
+	class CameraMovement;
 	class K_Map;
 
 	class Controller : public Component

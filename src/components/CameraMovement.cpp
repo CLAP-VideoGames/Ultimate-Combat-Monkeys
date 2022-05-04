@@ -35,6 +35,9 @@ namespace K_Engine {
 	}
 
 	void CameraMovement::start() {
+		gMInstance = GameManager::GetInstance();
+		gMInstance->RegisterCamera(entity);
+
 		cam = RenderManager::GetInstance()->getCamera();
 		inputMan = InputManager::GetInstance();
 		quantityZoom = cam->getCameraPosition()[2];
@@ -71,5 +74,12 @@ namespace K_Engine {
 		float vertical = Math::lerpPrecise(cam->getCameraPosition()[1] , quantityMovementY, percentage_);
 
 		cam->setCameraPos(horizontal, vertical, depth);
+	}
+	void CameraMovement::setLerpPosition(float x, float y, float zoom)
+	{
+		quantityMovementX = x;
+		quantityMovementY = y;
+		if(zoom != 0)
+			quantityZoom = zoom;
 	}
 }

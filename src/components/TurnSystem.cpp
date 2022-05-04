@@ -4,6 +4,7 @@
 #include <components/PlayerInfo.h>
 #include <components/Controller.h>
 #include <components/GameManager.h>
+#include <components/CameraMovement.h>
 
 #include <ecs_prj/Entity.h>
 #include <utils_prj/K_Map.h>
@@ -45,8 +46,7 @@ namespace K_Engine {
 	{
 		gMInstance = GameManager::GetInstance();
 
-		startingZAxis = gMInstance->getCamera()->getCameraPosition()[2];
-
+		startingZAxis = gMInstance->getRenderCamera()->getCameraPosition()[2];
 
 		teamStarting = (firstTeamStarts) ? 0 : 1;
 		player1Turn = player2Turn = 0;
@@ -148,8 +148,7 @@ namespace K_Engine {
 			e->getComponent<Controller>()->enable = true;
 			//Posicion de la camara
 			Vector3 pos = e->getComponent<Transform>()->getPosition();
-			gMInstance->getCamera()->setCameraPos(pos.x, pos.y, startingZAxis);
-			gMInstance->getCamera()->lookAt(pos.x, pos.y, pos.z);
+			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y, startingZAxis/2);
 		}
 
 	}

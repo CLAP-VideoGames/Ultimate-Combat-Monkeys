@@ -51,7 +51,6 @@ namespace K_Engine {
 	}
 
 	void GameManager::update(int frameTime) {
-
 	}
 
 	void GameManager::RegisterMonkey(int team_, int order_, Entity* ent){
@@ -60,8 +59,17 @@ namespace K_Engine {
 		else std::cout << "FALSE\n\n";
 	}
 
-	Camera* GameManager::getCamera()
+	void GameManager::RegisterCamera(Entity* e)
+	{
+		camera = e;
+	}
+
+	Camera* GameManager::getRenderCamera()
 	{
 		return RenderManager::GetInstance()->getCamera();
+	}
+	Entity* GameManager::getCamera()
+	{
+		return camera;
 	}
 }

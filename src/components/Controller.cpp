@@ -9,6 +9,7 @@
 #include <physics_prj/PhysicsManager.h>
 #include <utils_prj/K_Map.h>
 
+#include <components/CameraMovement.h>
 #include <components_prj/AudioSource.h>
 #include <components_prj/RigidBody.h>
 #include <components_prj/Animator.h>
@@ -20,6 +21,7 @@
 #include <components/DestroyOnCollision.h>
 #include <components/Health.h>
 #include <components/GameManager.h>
+
 #include <iostream>
 
 namespace K_Engine {
@@ -75,69 +77,75 @@ namespace K_Engine {
 
 	void Controller::update(int frameTime)
 	{
-			if (life->getCurrentLife() > 0)
+		if (gMInstance->getCamera()->hasComponent<CameraMovement>()) {
+			Vector3 pos = trans->getPosition();
+			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y);
+		}
+
+
+		if (life->getCurrentLife() > 0)
+		{
+			//Default action = Nothing
+			Action currentAction = Nothing;
+			InputManager* input = InputManager::GetInstance();
+
+			//Registering what action the user wants to do
+			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) currentAction = Jump;
+			else if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
+				input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) currentAction = Moving;
+			else if (input->getRightMouseButtonPressed()) currentAction = Granading;
+			else if (input->getLeftMouseButtonPressed()) currentAction = Kicking;
+
+			//Doing something based in the user input
+			switch (currentAction)
 			{
-				//Default action = Nothing
-				Action currentAction = Nothing;
-				InputManager* input = InputManager::GetInstance();
+			case K_Engine::Controller::Moving:
 
-				//Registering what action the user wants to do
-				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) currentAction = Jump;
-				else if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A) ||
-					input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) currentAction = Moving;
-				else if (input->getRightMouseButtonPressed()) currentAction = Granading;
-				else if (input->getLeftMouseButtonPressed()) currentAction = Kicking;
-
-				//Doing something based in the user input
-				switch (currentAction)
-				{
-				case K_Engine::Controller::Moving:
-
-					//Left
-					if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A))
-						if (rigby->getVelocity().x > -limitSpeed) {
-							trans->setRotation(0, 180, 0);
-							rigby->addForceImpulse({ -distance, 0, 0 });
-						}
-
-					//Right
-					if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D))
-						if (rigby->getVelocity().x < limitSpeed) {
-							trans->setRotation(0, 0, 0);
-							rigby->addForceImpulse({ distance, 0, 0 });
-						}
-
-					break;
-				case K_Engine::Controller::Jump:
-
-					//Checking it is in a certain interval
-					if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
-						anim->playAnim("Jump" + mesh_name, false);
-						rigby->addForceImpulse({ 0, jumpForce, 0 });
+				//Left
+				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A))
+					if (rigby->getVelocity().x > -limitSpeed) {
+						trans->setRotation(0, 180, 0);
+						rigby->addForceImpulse({ -distance, 0, 0 });
 					}
 
-					break;
-				case K_Engine::Controller::Kicking:
+				//Right
+				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D))
+					if (rigby->getVelocity().x < limitSpeed) {
+						trans->setRotation(0, 0, 0);
+						rigby->addForceImpulse({ distance, 0, 0 });
+					}
 
-					anim->playAnim("Kick" + mesh_name, false);
-					throwKick();
+				break;
+			case K_Engine::Controller::Jump:
 
-					break;
-				case K_Engine::Controller::Granading:
-
-					anim->playAnim("Granade" + mesh_name, false);
-					throwGrenade();
-
-					break;
-				case K_Engine::Controller::Nothing:
-
-					anim->playAnim("Idle" + mesh_name);
-
-					break;
-				default:
-					break;
+				//Checking it is in a certain interval
+				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
+					anim->playAnim("Jump" + mesh_name, false);
+					rigby->addForceImpulse({ 0, jumpForce, 0 });
 				}
+
+				break;
+			case K_Engine::Controller::Kicking:
+
+				anim->playAnim("Kick" + mesh_name, false);
+				throwKick();
+
+				break;
+			case K_Engine::Controller::Granading:
+
+				anim->playAnim("Granade" + mesh_name, false);
+				throwGrenade();
+
+				break;
+			case K_Engine::Controller::Nothing:
+
+				anim->playAnim("Idle" + mesh_name);
+
+				break;
+			default:
+				break;
 			}
+		}
 	}
 
 	void Controller::throwGrenade()

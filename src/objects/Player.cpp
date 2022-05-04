@@ -14,8 +14,6 @@ namespace K_Engine {
 
 	Player::~Player()
 	{
-		for(auto e: players)
-			delete e;
 		players.clear();
 	}
 

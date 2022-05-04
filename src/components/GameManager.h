@@ -42,12 +42,15 @@ namespace K_Engine {
 		virtual void update(int frameTime);
 
 		void RegisterMonkey(int team_, int order_, Entity* ent);
+		void RegisterCamera(Entity* e);
 
-		Camera* getCamera();
+		Camera* getRenderCamera();
+		Entity* getCamera();
 
 	private:
 		//Required
 		static std::string name;
+		Entity* camera;
 
 		static GameManager* instance;
 
