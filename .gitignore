@@ -354,10 +354,10 @@ MigrationBackup/
 [Bb]uild/
 [Tt]emp/
 [Ll]ib/
+engine/exe/assets/
 
 # New ignored files required for the project
 *.exe
 *.dll
 *.lib
-
-engine/exe/assets/
+*.exp

@@ -13,6 +13,10 @@ extern "C" {
 	__declspec(dllexport) void registerLayers() {
 		K_Engine::PhysicsManager::GetInstance()->addLayer("All");
 		K_Engine::PhysicsManager::GetInstance()->addLayer("Default");
+		K_Engine::PhysicsManager::GetInstance()->addLayer("suelo");
+		K_Engine::PhysicsManager::GetInstance()->addLayer("monos");
+		K_Engine::PhysicsManager::GetInstance()->addLayer("armas");
+		K_Engine::PhysicsManager::GetInstance()->addLayer("explosion");
 	}
 
 	__declspec(dllexport) void registerComponents() {
