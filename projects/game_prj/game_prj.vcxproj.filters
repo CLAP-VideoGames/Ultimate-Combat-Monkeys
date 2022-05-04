@@ -87,6 +87,9 @@
     <ClCompile Include="..\..\src\components\SoundManager.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\components\Indicator.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\GameComponentRegistry.h">
@@ -141,6 +144,9 @@
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\components\SoundManager.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\components\Indicator.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>

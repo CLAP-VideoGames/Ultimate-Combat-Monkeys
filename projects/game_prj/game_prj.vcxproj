@@ -27,6 +27,7 @@
     </ClCompile>
     <ClCompile Include="..\..\src\components\Grenade.cpp" />
     <ClCompile Include="..\..\src\components\Health.cpp" />
+    <ClCompile Include="..\..\src\components\Indicator.cpp" />
     <ClCompile Include="..\..\src\components\Kick.cpp" />
     <ClCompile Include="..\..\src\components\PlayerInfo.cpp" />
     <ClCompile Include="..\..\src\components\SoundManager.cpp" />
@@ -56,6 +57,7 @@
     </ClInclude>
     <ClInclude Include="..\..\src\components\Grenade.h" />
     <ClInclude Include="..\..\src\components\Health.h" />
+    <ClInclude Include="..\..\src\components\Indicator.h" />
     <ClInclude Include="..\..\src\components\Kick.h" />
     <ClInclude Include="..\..\src\components\PlayerInfo.h" />
     <ClInclude Include="..\..\src\components\SoundManager.h" />

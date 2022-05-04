@@ -5,6 +5,7 @@
 #include <components/Controller.h>
 #include <components/GameManager.h>
 #include <components/CameraMovement.h>
+#include <components/Indicator.h>
 
 #include <ecs_prj/Entity.h>
 #include <utils_prj/K_Map.h>
@@ -144,6 +145,8 @@ namespace K_Engine {
 			//Posicion de la camara
 			Vector3 pos = e->getComponent<Transform>()->getPosition();
 			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y, startingZAxis/2);
+			Indicator* ind = e->addComponent<Indicator>();
+			ind->create(24);
 		}
 
 	}
@@ -159,6 +162,7 @@ namespace K_Engine {
 
 		if (e != nullptr) {
 			e->getComponent<Controller>()->enable = false;
+			e->removeComponent<Indicator>();
 		}
 	}
 

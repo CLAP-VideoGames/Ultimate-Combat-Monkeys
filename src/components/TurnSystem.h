@@ -9,6 +9,7 @@ namespace K_Engine {
 	class Player;
 	class GameManager;
 	class CameraMovement;
+	class Indicator;
 
 	struct Turn {
 		int team;
@@ -17,7 +18,7 @@ namespace K_Engine {
 
 	class TurnSystem: public Component {
 	public:
-		TurnSystem(Entity* e, bool firstStarts = true, float countDownTime = 8.0f);
+		TurnSystem(Entity* e, bool firstStarts = true, float countDownTime = 2.0f);
 		TurnSystem();
 		~TurnSystem();
 
