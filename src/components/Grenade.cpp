@@ -7,8 +7,9 @@
 #include <physics_prj/PhysicsManager.h>
 #include <physics_prj/CollisionLayers.h>
 #include <log_prj/LogManager.h>
+#include <sound_prj/AudioManager.h>
 
-
+#include <components_prj/AudioSource.h>
 #include <components_prj/RigidBody.h>
 #include <components_prj/Transform.h>
 #include <components_prj/MeshRenderer.h>
@@ -70,6 +71,7 @@ namespace K_Engine {
 		BodyType bodyType = BodyType::BT_DYNAMIC;
 		float mass = 1.0f;
 
+		grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/nuke_explosion.wav", 20, 3, false, true);
 
 		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("Player"),

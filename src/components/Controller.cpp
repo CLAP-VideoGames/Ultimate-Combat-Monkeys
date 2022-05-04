@@ -3,6 +3,7 @@
 #include <ecs_prj/Entity.h>
 #include <input_prj/InputManager.h>
 #include <ecs_prj/EntityManager.h>
+#include <sound_prj/AudioManager.h>
 #include <render_prj/RenderManager.h>
 #include <physics_prj/CollisionLayers.h>
 #include <physics_prj/PhysicsManager.h>
@@ -165,6 +166,8 @@ namespace K_Engine {
 		//Monkeys transform
 		Transform* origin = entity->getComponent<Transform>();
 
+		grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_throw.wav", 20, 1, false, false);
+
 		//Direction that the monkey is looking at
 		float direction = origin->getRotation().y;
 
@@ -200,6 +203,7 @@ namespace K_Engine {
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("Platform"));
 
 		kick->addComponent<Kick>();
+		kick->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_kick.wav", 20, 2, false, true);
 
 		r->setDimensions(10.0f);
 		r->setTrigger(true);
