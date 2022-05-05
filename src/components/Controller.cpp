@@ -179,7 +179,8 @@ namespace K_Engine {
 	}
 
 	void Controller::throwGrenade()
-	{	//Creation of entity
+	{	
+		
 		Entity* grnd = entMan->addEntity(true);
 
 		//Transform Componnet
@@ -204,8 +205,8 @@ namespace K_Engine {
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo"));
 
-		std::cout << "Grupo granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("armas") << "\n";
-		std::cout << "Mask granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") << "\n";
+		//std::cout << "Grupo granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("armas") << "\n";
+		//std::cout << "Mask granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") << "\n";
 
 		//Grenade Component
 		grnd->addComponent<Grenade>(10.0f);

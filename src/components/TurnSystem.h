@@ -18,7 +18,7 @@ namespace K_Engine {
 
 	class TurnSystem: public Component {
 	public:
-		TurnSystem(Entity* e, bool firstStarts = true, float countDownTime = 10.0f);
+		TurnSystem(Entity* e, bool firstStarts = true, float countDownTime = 20.0f);
 		TurnSystem();
 		~TurnSystem();
 

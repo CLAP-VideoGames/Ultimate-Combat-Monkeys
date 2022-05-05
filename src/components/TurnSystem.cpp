@@ -60,7 +60,7 @@ namespace K_Engine {
 	void TurnSystem::update(int deltaTime)
 	{
 		if (firsTurn) {
-			std::cout << "INICIA RONDA: " << round << "\n";
+			//std::cout << "INICIA RONDA: " << round << "\n";
 			setFocusOnPlayer();
 			firsTurn = false;
 		}
@@ -111,7 +111,7 @@ namespace K_Engine {
 
 		//Avanza una ronda si ha llegado al primer player del equipo que empezo
 		if (turn.player == p->getOrder()[0] && turn.team == teamStarting) {
-			std::cout << "INICIA RONDA: " << round << "\n";
+			//std::cout << "INICIA RONDA: " << round << "\n";
 			round++;
 			GameManager::GetInstance()->endRound();
 		}

@@ -61,7 +61,7 @@ namespace K_Engine {
 
 	void Player::addToTeam(Entity* e, int order)
 	{
-		std::cout << players.size();
+		//std::cout << players.size();
 		if (order >= players.size())
 			players.resize(order + 1);
 
