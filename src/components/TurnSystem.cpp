@@ -196,7 +196,7 @@ namespace K_Engine {
 			e->getComponent<Controller>()->enable = true;
 			//Posicion de la camara
 			Vector3 pos = e->getComponent<Transform>()->getPosition();
-			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y, startingZAxis/2);
+			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y, 150);
 			Indicator* ind = e->addComponent<Indicator>();
 			ind->create(24);
 			std::cout << "\n Entendi bro fino";

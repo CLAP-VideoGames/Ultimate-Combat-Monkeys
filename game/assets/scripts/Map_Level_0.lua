@@ -6,7 +6,7 @@ Map_Level_0 = {
         },
         TurnSystem = {
             firstTeamStarts = "true",
-            timeLimit = "10.0f"
+            timeLimit = "40.0f"
         },
         CameraMovement = {
             percentage = "0.08"
@@ -19697,7 +19697,7 @@ Map_Level_0 = {
     },
 }
 
-Map_Level_0_entities = {"Settings", "MainLight", "Coconut" ,"Coconut_1" ,"Coconut002" ,"Coconut003" ,"Coconut004" ,"Coconut005" ,"Coconut006" ,"Coconut007" ,"Coconut008" ,"Coconut009" ,"Coconut010" ,
+Map_Level_0_entities = {"Settings", "MainLight","Coconut" ,"Coconut_1" ,"Coconut002" ,"Coconut003" ,"Coconut004" ,"Coconut005" ,"Coconut006" ,"Coconut007" ,"Coconut008" ,"Coconut009" ,"Coconut010" ,
 "Coconut011" ,"Coconut012" ,"Coconut013" ,"Fence" ,"Fence001" ,"Fence002" ,"Fence003" ,"Fence004" ,"Fence005" ,"Rock_2" ,"Rock_3" ,
 "Rock_4" ,"Rock_2001" ,"Rock_2002" ,"Rock_2003" ,"Rock_2004" ,"Rock_2005" ,"Rock_2006" ,"Rock_2007" ,"Rock_2008" ,"Rock_2009" ,"Rock_2010" ,
 "Rock_2011" ,"Rock_3001" ,"Rock_3002" ,"Rock_3003" ,"Rock_3004" ,"Rock_3005" ,"Rock_3006" ,"Rock_3007" ,"Rock_3008" ,"Rock_4001" ,"Rock_4002" ,
