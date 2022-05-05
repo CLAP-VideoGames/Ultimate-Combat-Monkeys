@@ -13,3 +13,11 @@ font UCM/MenuFont
     size         20
     resolution   144
 }
+
+font UCM/Batang
+{
+    type         truetype
+    source       batang.ttf
+    size         20
+    resolution   144
+}
