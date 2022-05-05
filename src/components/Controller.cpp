@@ -213,7 +213,7 @@ namespace K_Engine {
 		//Monkeys transform
 		Transform* origin = entity->getComponent<Transform>();
 
-		grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_throw.wav", 20, 1, false, false);
+		grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_throw.wav", 20, 1, false, true);
 
 		//Direction that the monkey is looking at
 		float direction = origin->getRotation().y;

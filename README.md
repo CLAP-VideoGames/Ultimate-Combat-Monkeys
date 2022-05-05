@@ -97,7 +97,7 @@ Menú Principal: Con botones para empezar una partida y salir del juego
   
   <br>
     
-  * <h5><b><u> Agua</u></b></h5>El agua empezará la partida en la parte más baja de la pantalla e irá subiendo cada ronda que avance la partida a razón de X unidades por turno. Ésta se representará como el aceite de las patatas de la Facultad de Informática.
+  * <h5><b><u> Agua</u></b></h5>El agua empezará la partida en la parte más baja de la pantalla e irá subiendo cada ronda que avance la partida a razón de 1 unidad por turno. Ésta se representará como el aceite de las patatas de la Facultad de Informática.
   
   <br>
 
@@ -146,7 +146,7 @@ Menú Principal: Con botones para empezar una partida y salir del juego
   <br>
   <br>
  
-  * <h5><b> Granada </b></h5> Objeto que se lanza cuya trayectoria forma una parábola. Explota al contacto, generando un daño máximo de X en área, y destruyendo el mapa (si hay en el área de explosión). El número de granadas a usar depende de cuántas tenga cada personaje en su inventario. En principio, todos los monos al iniciar la partida tienen una unidad de este objeto.
+  * <h5><b> Granada </b></h5> Objeto que se lanza cuya trayectoria forma una parábola. Explota al contacto, generando un daño máximo de X en área, y destruyendo el mapa (si hay en el área de explosión). El número de granadas a usar depende de cuántas tenga cada personaje en su inventario. En principio, todos los monos al iniciar la partida tienen una unidad de este objeto. La granada también es capaz de hacer daño al equipo amigo.
   
   <br>
 
