@@ -5,6 +5,8 @@
 
 #include <ecs_prj/Component.h>
 
+#include <vector>
+
 namespace K_Engine {
 	class Player;
 	class GameManager;
@@ -59,6 +61,7 @@ namespace K_Engine {
 		bool firstTeamStarts;
 		Turn turn;
 		int teamStarting, player1Turn, player2Turn, round;
+		int initTeamSize;
 
 		//Timers
 		float countDown;
@@ -69,7 +72,7 @@ namespace K_Engine {
 		void nextPlayer();
 		void lostFocusOnPlayer();
 		void setFocusOnPlayer();
-		void checkNextPlayer(Player* p);
+		void searchMonkey(Player* p, std::vector<int>& vectorOrder);
 
 		void isEnded();
 

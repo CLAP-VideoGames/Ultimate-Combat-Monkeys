@@ -203,7 +203,8 @@ namespace K_Engine {
 		//RigidBody
 		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo"));
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo")|
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("oil"));
 
 		//std::cout << "Grupo granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("armas") << "\n";
 		//std::cout << "Mask granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") << "\n";

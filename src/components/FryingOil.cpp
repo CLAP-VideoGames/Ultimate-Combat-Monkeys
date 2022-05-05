@@ -31,7 +31,7 @@ namespace K_Engine {
 	}
 
 	void FryingOil::update(int frameTime) {
-		//rb->setVelocity({ 0.0f, risingSun, 0.0f });
+		//rb->setVelocity({ 0.0f, 0.0f, 0.0f });
 	}
 	void FryingOil::onCollisionEnter(Entity* collision)
 	{
@@ -41,8 +41,7 @@ namespace K_Engine {
 	}
 	void FryingOil::Rise(int round)
 	{
-		
 		tr->translate(0.0f, risingSun * round, 0.0f);
-
+		rb->translate({ 0.0f, risingSun * round, 0.0f});
 	}
 }
