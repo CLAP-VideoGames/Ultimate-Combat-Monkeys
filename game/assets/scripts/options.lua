@@ -130,6 +130,24 @@ options = {
             initialPosition = getSFXVolume()
         }
     },
+    fullScreenText = {
+        Transform = {
+            position = "0.75, 0.325, 11",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        Text = {
+            overlayName = "FullScreenText",
+            x = "0.25",
+            y = "0.5",
+            width = "0.3",
+            height = "0.05",
+            text = "full screen",
+            fontName = "UCM/MenuFont",
+            textColor = "0.0, 0.0, 0.0"
+        }
+    },
     fullScreenButton = {
         Transform = {
             position = "0.6, 0.25, 10",
@@ -147,20 +165,20 @@ options = {
             onClick = "fullScreen"
         }
     },
-    fullScreenText = {
+    mainMenuText = {
         Transform = {
-            position = "0.75, 0.325, 11",
+            position = "0.75, 0.575, 11",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
         Enabled = "true",
         Text = {
-            overlayName = "FullScreenText",
+            overlayName = "MainMenuText",
             x = "0.25",
             y = "0.5",
             width = "0.3",
-            height = "0.05",
-            text = "full screen",
+            height = "0.06",
+            text = "main menu",
             fontName = "UCM/MenuFont",
             textColor = "0.0, 0.0, 0.0"
         }
@@ -182,51 +200,11 @@ options = {
             onClick = "popScenePause"
         }
     },
-    mainMenuText2 = {
-        Transform = {
-            position = "0.75, 0.575, 11",
-            rotation = "0, 0, 0",
-            scale = "1.0, 1.0, 1.0",
-        },
-        Enabled = "true",
-        Text = {
-            overlayName = "MainMenuText2",
-            x = "0.25",
-            y = "0.5",
-            width = "0.3",
-            height = "0.06",
-            text = "main menu",
-            fontName = "UCM/MenuFont",
-            textColor = "0.0, 0.0, 0.0"
-        }
-    },
-    focusPause = {
-        Transform = {
-            position = "0, 0, 200",
-            rotation = "0, 0, 0",
-            scale = "1.0, 1.0, 1.0",
-        },
-        Enabled = "true",
-        Focus = {
-            overlayName = "FocusElementPause",
-            imageName = "SelectorFoco"
-        }
-    },
-    audio1 = {
+    pause_music = {
         AudioSource = {
-            path = "./assets/sounds/samba_UCM.ogg",
+            path = "./assets/sounds/pause_music.ogg",
             type = "1",
-            volume = "1",
-            loopable = "true",
-            playOnStart = "true"
-        }
-    },
-    audio2 = {
-        AudioSource = {
-            path = "./assets/sounds/clap.wav",
-            type = "0",
-            volume = "1",
-            channel = "0",
+            volume = "0.3",
             loopable = "true",
             playOnStart = "true"
         }
@@ -281,4 +259,4 @@ function goToScene()
 end
 
 options_entities = {"backgroundImage", "masterVolumeText", "masterVolume", "musicVolumeText", "musicVolume", "effectsVolumeText",
-                  "effectsVolume", "fullScreenButton", "fullScreenText", "mainMenuButton", "mainMenuText2", "focusPause", "audio1", "audio2", "debugButton"}
+                  "effectsVolume", "fullScreenText", "fullScreenButton", "mainMenuText", "mainMenuButton", "pause_music" }

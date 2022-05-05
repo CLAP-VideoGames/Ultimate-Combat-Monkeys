@@ -147,7 +147,7 @@ pause = {
             onClick = "popScenePause"
         }
     },
-    mainMenuText2 = {
+    mainMenuText = {
         Transform = {
             position = "0.5, 0.845, 11",
             rotation = "0, 0, 0",
@@ -155,7 +155,7 @@ pause = {
         },
         Enabled = "true",
         Text = {
-            overlayName = "MainMenuText2",
+            overlayName = "MainMenuText",
             x = "0.25",
             y = "0.5",
             width = "0.3",
@@ -165,37 +165,15 @@ pause = {
             textColor = "0.0, 0.0, 0.0"
         }
     },
-    focusPause = {
-        Transform = {
-            position = "0, 0, 200",
-            rotation = "0, 0, 0",
-            scale = "1.0, 1.0, 1.0",
-        },
-        Enabled = "true",
-        Focus = {
-            overlayName = "FocusElementPause",
-            imageName = "SelectorFoco"
-        }
-    },
-    audio1 = {
+    pause_music = {
         AudioSource = {
-            path = "./assets/sounds/samba_UCM.ogg",
+            path = "./assets/sounds/pause_music.ogg",
             type = "1",
-            volume = "1",
+            volume = "0.3",
             loopable = "true",
             playOnStart = "true"
         }
     },
-    audio2 = {
-        AudioSource = {
-            path = "./assets/sounds/clap.wav",
-            type = "0",
-            volume = "1",
-            channel = "0",
-            loopable = "true",
-            playOnStart = "true"
-        }
-    }
 }
 
 function popScenePause()
@@ -219,4 +197,4 @@ function setEffectsVolume(volume)
 end
 
 pause_entities = {"backgroundImage", "masterVolumeText", "masterVolume", "musicVolumeText", "musicVolume", "effectsVolumeText",
-                  "effectsVolume", "mainMenuButton", "mainMenuText2", "focusPause", "audio1", "audio2"}
+                    "effectsVolume", "mainMenuText", "mainMenuButton", "pause_music" }
