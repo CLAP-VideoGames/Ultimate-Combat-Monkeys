@@ -6,11 +6,14 @@
 #include <components/FryingOil.h>
 #include <objects/Player.h>
 #include <components/Controller.h>
+#include <components_prj/Text.h>
+#include <components_prj/ProgressBar.h>
 
 #include <ecs_prj/Entity.h>
 #include <render_prj/Camera.h>
 #include <render_prj/RenderManager.h>
 #include <scene_prj/SceneManager.h>
+
 
 #include <utils_prj/Vector3.h>
 
@@ -129,8 +132,25 @@ namespace K_Engine {
 	{
 		return RenderManager::GetInstance()->getCamera();
 	}
+
 	Entity* GameManager::getCamera()
 	{
 		return camera;
+	}
+
+	void GameManager::registerUIEntity(std::string type, Entity* e)
+	{
+		if (type == "text")timer = e;
+		else if (type == "bar")lifeBar = e;
+	}
+
+	void GameManager::setTime(float currentTime)
+	{
+		timer->getComponent<Text>()->changeText(std::to_string(currentTime));
+	}
+
+	void GameManager::setHealth(float currentHealth)
+	{
+		lifeBar->getComponent<ProgressBar>()->setProgress(currentHealth);
 	}
 }

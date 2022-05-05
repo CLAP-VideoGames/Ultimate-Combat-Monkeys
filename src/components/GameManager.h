@@ -58,6 +58,12 @@ namespace K_Engine {
 		Camera* getRenderCamera();
 		Entity* getCamera();
 
+		void registerUIEntity(std::string type, Entity* e);
+
+		void setTime(float currentTime);
+
+		void setHealth(float currentHealth);
+
 	private:
 		//Required
 		static std::string name;
@@ -68,6 +74,10 @@ namespace K_Engine {
 		TurnSystem* turnSys_ = nullptr;
 
 		FryingOil* oil;
+
+		//Entities for ui
+		Entity* timer;
+		Entity* lifeBar;
 	};
 }
 #endif GameManager_H
