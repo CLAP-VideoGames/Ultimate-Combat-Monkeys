@@ -162,7 +162,7 @@ namespace K_Engine {
 				}
 			}
 			if (lastSpeed == Vector3(0, 0, 0)) {
-				if (anim->getCurrAnimName() == "Jump" + mesh_name) {
+				if (anim->getCurrAnimName() == "Jump" + mesh_name || anim->getCurrAnimName() == "Kick" + mesh_name || anim->getCurrAnimName() == "Granade" + mesh_name) {
 					if (anim->animHasEnded())
 						anim->playAnim("Idle" + mesh_name);
 				}
