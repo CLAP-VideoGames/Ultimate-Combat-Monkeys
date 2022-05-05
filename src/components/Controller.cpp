@@ -62,14 +62,14 @@ namespace K_Engine {
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({ 0,0,0 });
 		rigby->setPosConstraints({ 1,1,0 });
-		anim = entity->getComponent<Animator>();
+		//anim = entity->getComponent<Animator>();
 		trans = entity->getComponent<Transform>();
 		life = entity->getComponent<Health>();
 		entMan = entity->getMan();
 		jump = false;
 		distance = rigby->getMass() * distanceMultiplier;
 
-		anim->playAnim("Idle" + mesh_name);
+		//anim->playAnim("Idle" + mesh_name);
 
 	}
 
@@ -99,7 +99,7 @@ namespace K_Engine {
 					trans->setRotation(0, 180, 0);
 					rigby->addForce({ -distance * 100, 0, 0 });
 					if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
-						anim->playAnim("Walk" + mesh_name);
+						//anim->playAnim("Walk" + mesh_name);
 					}
 
 					lastState = Action::Moving;
@@ -113,7 +113,7 @@ namespace K_Engine {
 						trans->setRotation(0, 0, 0);
 						rigby->addForce({ distance * 100, 0, 0 });
 						if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
-							anim->playAnim("Walk" + mesh_name);
+							//anim->playAnim("Walk" + mesh_name);
 						}
 						lastState = Action::Moving;
 					}
@@ -127,7 +127,7 @@ namespace K_Engine {
 				lastState = Jumping;
 				//Checking it is in a certain interval
 				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
-					anim->playAnim("Jump" + mesh_name, false);
+					//anim->playAnim("Jump" + mesh_name, false);
 					rigby->addForceImpulse({ 0, jumpForce, 0 });
 				}
 			}
@@ -136,7 +136,7 @@ namespace K_Engine {
 			if (input->getLeftMouseButtonPressed()) {
 				actionProcessed = true;
 				lastState = Kicking;
-				anim->playAnim("Kick" + mesh_name, false);
+				//anim->playAnim("Kick" + mesh_name, false);
 				throwKick();
 			}
 
@@ -144,20 +144,20 @@ namespace K_Engine {
 			if (input->getRightMouseButtonPressed()) {
 				actionProcessed = true;
 				lastState = Granading;
-				anim->playAnim("Granade" + mesh_name, false);
+				//anim->playAnim("Granade" + mesh_name, false);
 				throwGrenade();
 			}
 
 			if (!actionProcessed) {
 				if (lastState != Action::Nothing) {
-					if (((anim->getCurrAnimName() != "Kick" + mesh_name && anim->getCurrAnimName() != "Granade" + mesh_name) || anim->animHasEnded())) {
+					/*if (((anim->getCurrAnimName() != "Kick" + mesh_name && anim->getCurrAnimName() != "Granade" + mesh_name) || anim->animHasEnded())) {
 						std::cout << rigby->getVelocity().x << ", " << rigby->getVelocity().y << ", " << rigby->getVelocity().z << "\n";
 						if (rigby->getVelocity().getMagnitude() < 0.005 && rigby->getVelocity().getMagnitude() > -0.005) {
 							lastState = Nothing;
 							anim->playAnim("Idle" + mesh_name);
 						}
 
-					}
+					}*/
 
 				}
 			}
@@ -187,8 +187,8 @@ namespace K_Engine {
 
 		//RigidBody
 		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo"));
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo"),
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"));
 
 		std::cout << "Grupo granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("armas") << "\n";
 		std::cout << "Mask granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") << "\n";
@@ -212,7 +212,6 @@ namespace K_Engine {
 		r->setRestitution(0.2f);
 		r->setTrigger(true);
 		r->addForce(K_Engine::Vector3(grenadeForce * direction, grenadeVerticalForce, 0));
-
 	}
 
 	void Controller::throwKick() {
