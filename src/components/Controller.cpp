@@ -137,6 +137,7 @@ namespace K_Engine {
 				lastState = Kicking;
 				//anim->playAnim("Kick" + mesh_name, false);
 				throwKick();
+				gMInstance->endTurn();
 			}
 
 			//Granade
@@ -145,6 +146,7 @@ namespace K_Engine {
 				lastState = Granading;
 				//anim->playAnim("Granade" + mesh_name, false);
 				throwGrenade();
+				gMInstance->endTurn();
 			}
 
 			if (!actionProcessed) {

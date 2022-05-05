@@ -46,6 +46,8 @@ namespace K_Engine {
 		void RegisterCamera(Entity* e);
 		void RegisterOil(FryingOil* e);
 
+		//TurnSystem
+		void endTurn();
 		void killPlayer(Entity* e);
 		void endRound();
 

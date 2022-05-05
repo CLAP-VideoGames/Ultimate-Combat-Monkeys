@@ -70,6 +70,11 @@ namespace K_Engine {
 		oil = e;
 	}
 
+	void GameManager::endTurn()
+	{
+		turnSys_->endTurn();
+	}
+
 	void GameManager::killPlayer(Entity* e)
 	{
 		if (turnSys_)
