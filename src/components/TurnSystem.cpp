@@ -6,6 +6,7 @@
 #include <components/GameManager.h>
 #include <components/CameraMovement.h>
 #include <components/Indicator.h>
+#include <components/Health.h>
 
 #include <ecs_prj/Entity.h>
 #include <utils_prj/K_Map.h>
@@ -72,6 +73,8 @@ namespace K_Engine {
 
 			if (!timeStop) {
 				countDown -= (float)(deltaTime / 1000.0f);
+
+				gMInstance->setTime(countDown);
 
 				if (countDown <= 0.0f)
 					endTurn();
@@ -222,6 +225,7 @@ namespace K_Engine {
 			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y, 150);
 			Indicator* ind = e->addComponent<Indicator>();
 			ind->create(24);
+			gMInstance->setHealth(e->getComponent<Health>()->getCurrentLife());
 		}
 	}
 

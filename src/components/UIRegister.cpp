@@ -4,7 +4,7 @@
 
 namespace K_Engine {
 	//Required
-	std::string UIRegister::name = "Controller";
+	std::string UIRegister::name = "UIRegister";
 
 	K_Engine::UIRegister::UIRegister(Entity* e)
 	{

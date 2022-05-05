@@ -29,7 +29,7 @@ Map_Level_0 = {
 
     time = {
         Transform = {
-            position = "0.5, 0.1, 10",
+            position = "0.5, 0.05, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -37,35 +37,75 @@ Map_Level_0 = {
         Text = {
             overlayName = "time",
             x = "0.5",
-            y = "0.1",
+            y = "0.05",
             width = "0.3",
-            height = "0.1",
+            height = "0.07",
             text = "10",
             fontName = "UCM/Batang",
             textColor = "0.96078, 0.3764705, 0.08627"
+        },
+        UIRegister = {
+            type = "text"
         }
     },
 
     health = {
         Transform = {
-            position = "0.6, 0.0, 10",
+            position = "0.6, -0.03, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
         Enabled = "true",
         ProgressBar = {
             overlayName = "HealthProgress",
-            imageName = "UCM/SliderProgressBar",
+            imageName = "UCM/SliderProgressBarGreen",
             orgWidth = "0.4",
             orgHeight = "0.2",
             progress = "100",
             maxProgress = "100"
+        },
+        UIRegister = {
+            type = "bar"
+        }
+    },
+
+    backgroundHealth = {
+        Transform = {
+            position = "0.6, 0.00, 5",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        Image = {
+            overlayName = "Background",
+            imageName = "UCM/SliderBackground",
+            width = "0.4",
+            height = "0.15"
+        }
+    },
+
+    mainMenuTextGame = {
+        Enabled = "true",
+        Transform = {
+            position = "0.1, 0.03, 12",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Text = {
+            overlayName = "MainMenuTextGame",
+            x = "0.15",
+            y = "0.03",
+            width = "0.3",
+            height = "0.04",
+            text = "main menu",
+            fontName = "UCM/MenuFont",
+            textColor = "0.0, 0.0, 0.0"
         }
     },
 
     mainMenuButton = {
         Transform = {
-            position = "0.0, 0.1, 10",
+            position = "0.0, 0.0, 10",
             rotation = "0, 0, 0",
             scale = "1.0, 1.0, 1.0",
         },
@@ -75,8 +115,8 @@ Map_Level_0 = {
             imageName = "UCM/GameMenuButton",
             hoverImageName = "UCM/GameMenuButtonHover",
             pressedImageName = "UCM/GameMenuButtonPressed",
-            width = "0.3",
-            height = "0.2",
+            width = "0.2",
+            height = "0.1",
             onClick = "popSceneGame"
         }
     },
@@ -19757,7 +19797,7 @@ function popSceneGame()
     sceneMan:popScene("menu");
 end
 
-Map_Level_0_entities = {"Settings", "MainLight", "time", "health", "mainMenuButton", "Coconut" ,"Coconut_1" ,"Coconut002" ,"Coconut003" ,"Coconut004" ,"Coconut005" ,"Coconut006" ,"Coconut007" ,"Coconut008" ,"Coconut009" ,"Coconut010" ,
+Map_Level_0_entities = {"Settings", "MainLight", "time", "health", "backgroundHealth", "mainMenuTextGame", "mainMenuButton", "Coconut" ,"Coconut_1" ,"Coconut002" ,"Coconut003" ,"Coconut004" ,"Coconut005" ,"Coconut006" ,"Coconut007" ,"Coconut008" ,"Coconut009" ,"Coconut010" ,
 "Coconut011" ,"Coconut012" ,"Coconut013" ,"Fence" ,"Fence001" ,"Fence002" ,"Fence003" ,"Fence004" ,"Fence005" ,"Rock_2" ,"Rock_3" ,
 "Rock_4" ,"Rock_2001" ,"Rock_2002" ,"Rock_2003" ,"Rock_2004" ,"Rock_2005" ,"Rock_2006" ,"Rock_2007" ,"Rock_2008" ,"Rock_2009" ,"Rock_2010" ,
 "Rock_2011" ,"Rock_3001" ,"Rock_3002" ,"Rock_3003" ,"Rock_3004" ,"Rock_3005" ,"Rock_3006" ,"Rock_3007" ,"Rock_3008" ,"Rock_4001" ,"Rock_4002" ,

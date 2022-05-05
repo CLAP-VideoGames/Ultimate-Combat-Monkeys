@@ -60,7 +60,7 @@ namespace K_Engine {
 
 		void registerUIEntity(std::string type, Entity* e);
 
-		void setTime(float currentTime);
+		void setTime(int currentTime);
 
 		void setHealth(float currentHealth);
 

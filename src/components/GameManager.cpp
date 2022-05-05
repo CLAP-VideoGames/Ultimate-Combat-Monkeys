@@ -145,7 +145,7 @@ namespace K_Engine {
 		else if (type == "bar")lifeBar = e;
 	}
 
-	void GameManager::setTime(float currentTime)
+	void GameManager::setTime(int currentTime)
 	{
 		timer->getComponent<Text>()->changeText(std::to_string(currentTime));
 	}

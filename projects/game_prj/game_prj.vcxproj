@@ -31,6 +31,7 @@
     <ClCompile Include="..\..\src\components\Kick.cpp" />
     <ClCompile Include="..\..\src\components\PlayerInfo.cpp" />
     <ClCompile Include="..\..\src\components\TurnSystem.cpp" />
+    <ClCompile Include="..\..\src\components\UIRegister.cpp" />
     <ClCompile Include="..\..\src\components\WeaponStack.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\objects\Player.cpp" />
@@ -59,6 +60,7 @@
     <ClInclude Include="..\..\src\components\Kick.h" />
     <ClInclude Include="..\..\src\components\PlayerInfo.h" />
     <ClInclude Include="..\..\src\components\TurnSystem.h" />
+    <ClInclude Include="..\..\src\components\UIRegister.h" />
     <ClInclude Include="..\..\src\components\WeaponStack.h" />
     <ClInclude Include="..\..\src\GameComponentRegistry.h" />
     <ClInclude Include="..\..\src\objects\Player.h" />

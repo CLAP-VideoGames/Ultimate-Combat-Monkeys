@@ -17,6 +17,7 @@
 #include <components/GameManager.h>
 #include <components/FryingOil.h>
 #include <components/Indicator.h>
+#include <components/UIRegister.h>
 
 #include <ecs_prj/ComponentManager.h>
 
@@ -40,6 +41,7 @@ namespace K_Engine {
 			compMan->add<K_Engine::GameManager>();
 			compMan->add<K_Engine::FryingOil>();
 			compMan->add<K_Engine::Indicator>();
+			compMan->add<K_Engine::UIRegister>();
 		}
 	}
 }

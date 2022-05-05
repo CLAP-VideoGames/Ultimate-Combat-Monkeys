@@ -67,6 +67,8 @@ namespace K_Engine {
 	void Health::AddLife(int l)
 	{
 		life += l;
+
+		gMInstance->setHealth(life);
 	}
 
 	// Get life to show in the interface
