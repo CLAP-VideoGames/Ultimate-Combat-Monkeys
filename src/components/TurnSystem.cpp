@@ -12,6 +12,7 @@
 #include <render_prj/Camera.h>
 #include <components_prj/Transform.h>
 
+#include <algorithm>
 #include <iostream>
 
 namespace K_Engine {
@@ -117,11 +118,14 @@ namespace K_Engine {
 			turn.team = (turn.team + 1) % 2;
 			p = (!turn.team) ? player1 : player2;	//Si es falso = 0 -> primer equipo
 
-			////Siguiente jugador del equipo que corresponda
-			if (turn.team == teamStarting) {
+			//Siguiente jugador del equipo que corresponda
+			if ( turn.team == teamStarting) {
 				//Comprobación del siguiente jugador
 				nextPlayer();
+				turn.player = player1Turn;
 			}
+			else
+				turn.player = player2Turn;
 
 			//Avanza una ronda si ha llegado al primer player del equipo que empezo
 			if (turn.player == p->getOrder()[0] && turn.team == teamStarting) {
@@ -165,28 +169,40 @@ namespace K_Engine {
 	{
 		//Player1
 		std::vector<int>vectorOrder = player1->getOrder();
+		std::sort(vectorOrder.begin(), vectorOrder.end());
+		std::cout << "\nPlayer1Order: " << player1Turn << "\n";
+		for (auto o : vectorOrder)
+			std::cout << " " << o;
+
 		if (vectorOrder.size() > 1) {
+			std::cout << "\nPlayer1Turn: " << player1Turn << "\n";
 			player1Turn++;
-			if (player1Turn >= initTeamSize) player1Turn = 0;
+			if (player1Turn > vectorOrder[vectorOrder.size() - 1]) player1Turn = vectorOrder[0];
 			searchMonkey(player1, vectorOrder);
+			std::cout << "\nPlayer1Turn: " << player1Turn << "\n";
 		}
 		else {
 			player1Turn = vectorOrder[0];
 		}
-		turn.player = player1Turn;
 
 		//Player2
 		vectorOrder = player2->getOrder();
+		std::sort(vectorOrder.begin(), vectorOrder.end());
+
+		std::cout << "\nPlayer1Order: " << player1Turn << "\n";
+		for (auto o : vectorOrder)
+			std::cout << " " << o;
+
 		if (vectorOrder.size() > 1) {
+			std::cout << "\nPlayer2Turn: " << player2Turn << "\n";
 			player2Turn++;
-			if (player2Turn >= initTeamSize) player2Turn = 0;
+			if (player2Turn > vectorOrder[vectorOrder.size() - 1]) player2Turn = vectorOrder[0];
 			searchMonkey(player2, vectorOrder);
+			std::cout << "\nPlayer2Turn: " << player2Turn << "\n";
 		}
 		else {
 			player2Turn = vectorOrder[0];
 		}
-
-		turn.player = player2Turn;
 
 	}
 
@@ -223,11 +239,11 @@ namespace K_Engine {
 		else {
 			if (p == player1) {
 				player1Turn++;
-				if (player1Turn >= initTeamSize) player1Turn = 0;
+				if (player1Turn > vectorOrder[vectorOrder.size() - 1]) player1Turn = vectorOrder[0];
 			}
 			else {
 				player2Turn++;
-				if (player2Turn >= initTeamSize) player2Turn = 0;
+				if (player2Turn > vectorOrder[vectorOrder.size() - 1]) player2Turn = vectorOrder[0];
 			}
 
 			searchMonkey(p, vectorOrder);
