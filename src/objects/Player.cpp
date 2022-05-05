@@ -47,7 +47,7 @@ namespace K_Engine {
 				return players[i];
 		}
 		else {
-			std::cout << "jugador no encontrado";
+			std::cout << "jugador no encontrado\n";
 			return nullptr;
 		}
 	}

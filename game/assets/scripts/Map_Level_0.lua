@@ -19495,7 +19495,7 @@ Map_Level_0 = {
         },
         PlayerInfo = {
             Team = "1",
-             Order = "1"
+             Order = "2"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -19536,7 +19536,7 @@ Map_Level_0 = {
         },
         PlayerInfo = {
             Team = "1",
-             Order = "2"
+             Order = "3"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -19544,7 +19544,7 @@ Map_Level_0 = {
     },
     Armature003 = {
         Transform = {
-            position = " 64.009254 ,52.118889 ,0.000007 ",
+            position = " 113.182671 ,110.748940 ,0.000015 ",
             rotation = " 0 ,0 ,0 ",
             scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
@@ -19577,7 +19577,7 @@ Map_Level_0 = {
         },
         PlayerInfo = {
             Team = "1",
-             Order = "3"
+             Order = "1"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -19665,47 +19665,6 @@ Map_Level_0 = {
             MeshFile = "Generic.mesh",
         }
     },
-    Armature006 = {
-        Transform = {
-            position = " 113.182671 ,110.748940 ,0.000015 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
-        Animator = {
-            defaultAnim = "None",
-             startsEnabled = "false"
-        },
-        WeaponStack = {
-            
-        },
-        Enabled = "true",
-        Controller = {
-            EnableOnStart = "false"
-        },
-        RigidBody = {
-            Type = "Dynamic" ,
-            Collider = "Box" ,
-            Mass = "1.0" ,
-            Dimensions = "8,  16,  8",
-            friction = "0.8",
-             restitution = "0.0",
-            group = "monos",
-              mask = " suelo, armas, explosion, oil",
-            offsetCenter = "0, 8, 0",
-            isTrigger = "false" ,
-            isEnabled = "true"
-        },
-        Health = {
-            
-        },
-        PlayerInfo = {
-            Team = "1",
-             Order = "2"
-        },
-        MeshRenderer = {
-            MeshFile = "Generic_.mesh",
-        }
-    },
     OilArmature = {
         Transform = {
             position = " 0.000000 ,0.000000 ,-200.000000 ",
@@ -19713,7 +19672,7 @@ Map_Level_0 = {
             scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         RigidBody = {
-            Type = "Dynamic" ,
+            Type = "Static" ,
             Collider = "Box" ,
             Mass = "1.0" ,
             Dimensions = "1000,  870,  1000",
@@ -19809,5 +19768,5 @@ Map_Level_0_entities = {"Settings", "MainLight", "Coconut" ,"Coconut_1" ,"Coconu
 "Cube1311" ,"Cube1348" ,"Cube1349" ,"Cube1350" ,"Cube1354" ,"Cube1355" ,"Cube1356" ,"Cube1357" ,"Cube1358" ,"Cube1359" ,"Cube1360" ,
 "Cube1361" ,"Cube1362" ,"Cube1398" ,"Cube1399" ,"Cube1405" ,"Cube1406" ,"Cube1407" ,"Cube1408" ,"Cube1409" ,"Cube1410" ,"Cube1411" ,
 "Cube1412" ,"Cube1413" ,"Cube1448" ,"Cube1449" ,"Cube1461" ,"Cube1462" ,"Cube1463" ,"Cube1499" ,"MapBack" ,"PedroArmature" ,"Cube1018" ,
-"Cube1795" ,"Cube1799" ,"ArmatureDario001" ,"Armature" ,"Armature001" ,"Armature002" ,"Armature003" ,"Armature004" ,"Armature005" ,"Armature006" ,"OilArmature" }
+"Cube1795" ,"Cube1799" ,"ArmatureDario001" ,"Armature" ,"Armature001" ,"Armature002" ,"Armature003" ,"Armature004" ,"Armature005" ,"OilArmature" }
 
