@@ -1,5 +1,7 @@
 #include "GameManager.h"
 
+#include <physics_prj/PhysicsManager.h>
+
 #include <components/TurnSystem.h>
 #include <components/FryingOil.h>
 #include <objects/Player.h>
@@ -8,6 +10,8 @@
 #include <ecs_prj/Entity.h>
 #include <render_prj/Camera.h>
 #include <render_prj/RenderManager.h>
+
+#include <utils_prj/Vector3.h>
 
 #include <iostream>
 
@@ -50,6 +54,13 @@ namespace K_Engine {
 	}
 
 	void GameManager::start() {
+		PhysicsManager::GetInstance()->setGravity(Vector3(0, -450, 0));
+
+		turnSys_ = entity->getComponent<TurnSystem>();
+
+		Camera* cam = RenderManager::GetInstance()->getCamera();
+		cam->setCameraPos(0, 60, 90);
+		cam->setBackgroundColor(0.5568, 0.886274, 1.0, 1);
 	}
 
 	void GameManager::update(int frameTime) {

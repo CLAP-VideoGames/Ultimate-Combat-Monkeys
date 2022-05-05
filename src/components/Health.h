@@ -49,8 +49,8 @@ namespace K_Engine {
 	private:
 		//Required
 		static std::string name;
-		int life;
-		bool alive;
+		int life = 100;
+		bool alive = true;
 		const int MAX_LIFE = 100;
 		std::string mesh_name;
 		Animator* anim;

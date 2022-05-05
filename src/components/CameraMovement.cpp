@@ -5,6 +5,7 @@
 #include <input_prj/InputManager.h>
 #include <input_prj/K_Engine_Keys.h>
 #include <utils_prj/Math.h>
+#include <utils_prj/K_Map.h>
 
 #include "GameManager.h"
 
@@ -32,6 +33,12 @@ namespace K_Engine {
 
 	void CameraMovement::awake() {
 		
+	}
+
+	void CameraMovement::init(K_Map* information)
+	{
+		percentage_ = information->valueToNumber("percentage");
+		isDown = false;
 	}
 
 	void CameraMovement::start() {

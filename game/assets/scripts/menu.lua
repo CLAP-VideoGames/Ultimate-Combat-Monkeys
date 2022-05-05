@@ -122,7 +122,7 @@ menu = {
 
 function changeScene()
     local sceneMan = SceneManager.getSceneMan();
-    sceneMan:changeScene("testZone");
+    sceneMan:changeScene("Map_Level_0");
 end
 
 function goToOptions()

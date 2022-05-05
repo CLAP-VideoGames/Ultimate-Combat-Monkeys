@@ -39,8 +39,11 @@ namespace K_Engine {
 
 	void TurnSystem::init(K_Map* information)
 	{
-		firstTeamStarts = information->valueToBool("firsTeamStarts");
+		firstTeamStarts = information->valueToBool("firstTeamStarts");
 		timeLimit = information->valueToNumber("timeLimit");
+
+		player1 = new Player(0);
+		player2 = new Player(1);
 	}
 
 	void TurnSystem::start()

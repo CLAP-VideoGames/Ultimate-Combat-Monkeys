@@ -63,7 +63,7 @@ namespace K_Engine {
 
 		static GameManager* instance;
 
-		TurnSystem* turnSys_;
+		TurnSystem* turnSys_ = nullptr;
 
 		FryingOil* oil;
 	};
