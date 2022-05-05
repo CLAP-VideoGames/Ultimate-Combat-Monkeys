@@ -10,6 +10,7 @@
 #include <ecs_prj/Entity.h>
 #include <render_prj/Camera.h>
 #include <render_prj/RenderManager.h>
+#include <scene_prj/SceneManager.h>
 
 #include <utils_prj/Vector3.h>
 
@@ -114,6 +115,14 @@ namespace K_Engine {
 		if (turnSys_)
 			turnSys_->stopCountdown();
 		else std::cout << "FALSE\n\n";
+	}
+
+	void GameManager::gameHasEnded(int teamWin)
+	{
+		if(teamWin == 0)
+			SceneManager::GetInstance()->pushSceneStr("twoWins");
+		else
+			SceneManager::GetInstance()->pushSceneStr("twoWins");
 	}
 
 	Camera* GameManager::getRenderCamera()

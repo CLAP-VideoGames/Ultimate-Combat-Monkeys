@@ -53,7 +53,7 @@ namespace K_Engine {
 				collision->getComponent<RigidBody>()->addForceImpulse({ 500,0,0 });
 			else
 				collision->getComponent<RigidBody>()->addForceImpulse({ -500,0,0 });
-			collision->getComponent<Health>()->AddLife(-1);
+			collision->getComponent<Health>()->AddLife(-10);
 		}
 	}
 

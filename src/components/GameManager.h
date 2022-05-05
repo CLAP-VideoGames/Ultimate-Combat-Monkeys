@@ -9,6 +9,7 @@ namespace K_Engine {
 	class Player;
 	class TurnSystem;
 	class FryingOil;
+	class SceneManager;
 
 	class GameManager : public Component 
 	{
@@ -52,6 +53,7 @@ namespace K_Engine {
 		void endRound();
 		void endTurnByWeapon();
 		void stopTurnTimer(Entity* e);
+		void gameHasEnded(int teamWin);
 
 		Camera* getRenderCamera();
 		Entity* getCamera();

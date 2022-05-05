@@ -62,7 +62,7 @@ namespace K_Engine {
 
 	void TurnSystem::update(int deltaTime)
 	{
-		if (!end) {
+		if (!hasEnded()) {
 			if (firsTurn) {
 				std::cout << "INICIA RONDA: " << round << "\n";
 				setFocusOnPlayer();
@@ -76,6 +76,12 @@ namespace K_Engine {
 					endTurn();
 			}
 
+		}
+		else {
+			if(player1->getTeamSize() == 0)
+				gMInstance->gameHasEnded(0);
+			else
+				gMInstance->gameHasEnded(1);
 		}
 	}
 
@@ -153,34 +159,41 @@ namespace K_Engine {
 		else
 			player2->eraseFromTeam(e);
 
+		isEnded();
 		std::cout << "Acuestate, Mono: "<<turn.player<<" del equipo "<< turn.team<< "\n" ;
-		if(turn.team == t && turn.player == o)endTurn();
+		if(turn.team == t && turn.player == o && !hasEnded())
+			endTurn();
 	}
 
 	void TurnSystem::nextPlayer()
 	{
 		//Player1
 		std::cout << "\nAyuda1 " << player1Turn << "\n";
-			while (player1->getTeamPlayer(player1Turn) == nullptr) {
-				player1Turn = (player1->getTeamPlayer(player1Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
-			}
-
+		if (player1->getTeamPlayer(player1Turn) != nullptr)
 			player1Turn = (player1->getTeamPlayer(player1Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
+		while (player1->getTeamPlayer(player1Turn) == nullptr) {
+			player1Turn = (player1Turn + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
+			if (player1->getTeamPlayer(player1Turn) != nullptr)
+			player1Turn = (player1->getTeamPlayer(player1Turn)->getComponent<PlayerInfo>()->getOrder());
+		}
 
-			turn.player = player1Turn;
+
+		turn.player = player1Turn;
 		std::cout << "Ayudame1 " << player1Turn << "\n\n";
-		
+
 		//Player2
 		std::cout << "\nAyuda2 " << player2Turn << "\n";
-			while (player2->getTeamPlayer(player2Turn) == nullptr) {
-				player2Turn = (player2->getTeamPlayer(player2Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player2->getOrder()[player2->getTeamSize() - 1] + 1);
-			}
-
+		if (player2->getTeamPlayer(player2Turn) != nullptr)
 			player2Turn = (player2->getTeamPlayer(player2Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player2->getOrder()[player2->getTeamSize() - 1] + 1);
+		while (player2->getTeamPlayer(player2Turn) == nullptr) {
+			player2Turn = (player2Turn + 1) % (player2->getOrder()[player2->getTeamSize() - 1] + 1);
+			if (player2->getTeamPlayer(player1Turn) != nullptr)
+			player2Turn = (player2->getTeamPlayer(player2Turn)->getComponent<PlayerInfo>()->getOrder());
+		}
 
-			turn.player = player2Turn;
+		turn.player = player2Turn;
 		std::cout << "Ayudame2 " << player2Turn << "\n\n";
-		
+
 	}
 
 	void TurnSystem::setFocusOnPlayer()
@@ -244,7 +257,7 @@ namespace K_Engine {
 
 	void TurnSystem::isEnded()
 	{
-		if (player1->getTeamSize() <= 0 || player2->getTeamSize())
+		if (player1->getTeamSize() <= 0 || player2->getTeamSize() <= 0)
 			end = true;
 	}
 
