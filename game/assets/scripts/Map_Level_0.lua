@@ -19304,6 +19304,39 @@ Map_Level_0 = {
             MeshFile = "MapBack.mesh",
         }
     },
+    Cube1018 = {
+        Transform = {
+            position = " -218.026398 ,147.960739 ,-29.147245 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Enabled = "true",
+        MeshRenderer = {
+            MeshFile = "cubeMapFront_Up.mesh",
+        }
+    },
+    Cube1795 = {
+        Transform = {
+            position = " -227.158463 ,137.994156 ,-29.147245 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Enabled = "true",
+        MeshRenderer = {
+            MeshFile = "cubeMapBack_Up.mesh",
+        }
+    },
+    Cube1799 = {
+        Transform = {
+            position = " -208.926392 ,137.960739 ,-29.147245 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Enabled = "true",
+        MeshRenderer = {
+            MeshFile = "cubeMapFront_Middle.mesh",
+        }
+    },
     PedroArmature = {
         Transform = {
             position = " -154.532349 ,180.557999 ,0.000024 ",
@@ -19343,39 +19376,10 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Pedro.mesh",
-        }
-    },
-    Cube1018 = {
-        Transform = {
-            position = " -218.026398 ,147.960739 ,-29.147245 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
-        Enabled = "true",
-        MeshRenderer = {
-            MeshFile = "cubeMapFront_Up.mesh",
-        }
-    },
-    Cube1795 = {
-        Transform = {
-            position = " -227.158463 ,137.994156 ,-29.147245 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
-        Enabled = "true",
-        MeshRenderer = {
-            MeshFile = "cubeMapBack_Up.mesh",
-        }
-    },
-    Cube1799 = {
-        Transform = {
-            position = " -208.926392 ,137.960739 ,-29.147245 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
-        Enabled = "true",
-        MeshRenderer = {
-            MeshFile = "cubeMapFront_Middle.mesh",
+        Animator = {
+            defaultAnim = "Jump_Pedro",
+            startsEnabled = "true"
         }
     },
     ArmatureDario001 = {
@@ -19417,6 +19421,10 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Dario.mesh",
+        },
+        Animator = {
+            defaultAnim = "Jump_Dario",
+            startsEnabled = "true"
         }
     },
     Armature = {
@@ -19458,6 +19466,10 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
+        },
+        Animator = {
+            defaultAnim = "Jump_Generic",
+            startsEnabled = "true"
         }
     },
     Armature001 = {
@@ -19499,6 +19511,10 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
+        },
+        Animator = {
+            defaultAnim = "Jump_Generic",
+            startsEnabled = "true"
         }
     },
     Armature002 = {
@@ -19540,6 +19556,10 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
+        },
+        Animator = {
+            defaultAnim = "Jump_Generic",
+            startsEnabled = "true"
         }
     },
     Armature003 = {
@@ -19581,6 +19601,10 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
+        },
+        Animator = {
+            defaultAnim = "Jump_Generic",
+            startsEnabled = "true"
         }
     },
     Armature004 = {
@@ -19622,6 +19646,10 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
+        },
+        Animator = {
+            defaultAnim = "Jump_Generic",
+            startsEnabled = "true"
         }
     },
     Armature005 = {
@@ -19663,6 +19691,10 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Generic.mesh",
+        },
+        Animator = {
+            defaultAnim = "Jump_Generic",
+            startsEnabled = "true"
         }
     },
     OilArmature = {
@@ -19767,6 +19799,6 @@ Map_Level_0_entities = {"Settings", "MainLight","Coconut" ,"Coconut_1" ,"Coconut
 "Cube1299" ,"Cube1300" ,"Cube1301" ,"Cube1303" ,"Cube1304" ,"Cube1305" ,"Cube1306" ,"Cube1307" ,"Cube1308" ,"Cube1309" ,"Cube1310" ,
 "Cube1311" ,"Cube1348" ,"Cube1349" ,"Cube1350" ,"Cube1354" ,"Cube1355" ,"Cube1356" ,"Cube1357" ,"Cube1358" ,"Cube1359" ,"Cube1360" ,
 "Cube1361" ,"Cube1362" ,"Cube1398" ,"Cube1399" ,"Cube1405" ,"Cube1406" ,"Cube1407" ,"Cube1408" ,"Cube1409" ,"Cube1410" ,"Cube1411" ,
-"Cube1412" ,"Cube1413" ,"Cube1448" ,"Cube1449" ,"Cube1461" ,"Cube1462" ,"Cube1463" ,"Cube1499" ,"MapBack" ,"PedroArmature" ,"Cube1018" ,
-"Cube1795" ,"Cube1799" ,"ArmatureDario001" ,"Armature" ,"Armature001" ,"Armature002" ,"Armature003" ,"Armature004" ,"Armature005" ,"OilArmature" }
+"Cube1412" ,"Cube1413" ,"Cube1448" ,"Cube1449" ,"Cube1461" ,"Cube1462" ,"Cube1463" ,"Cube1499" ,"MapBack" ,"Cube1018" ,
+"Cube1795" ,"Cube1799" ,"PedroArmature" ,"ArmatureDario001" ,"Armature" ,"Armature001" ,"Armature002" ,"Armature003" ,"Armature004" ,"Armature005" ,"OilArmature" }
 
