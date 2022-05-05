@@ -128,9 +128,10 @@ namespace K_Engine {
 				actionProcessed = true;
 				lastState = Jumping;
 				//Checking it is in a certain interval
-				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1) {
+				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1 && lastTimeJumped <= 0) {
 					//anim->playAnim("Jump" + mesh_name, false);
 					rigby->addForceImpulse({ 0, jumpForce, 0 });
+					lastTimeJumped = jumpTimer;
 				}
 			}
 
@@ -162,6 +163,8 @@ namespace K_Engine {
 				}
 			}
 		}
+
+		lastTimeJumped--;
 	}
 
 	void Controller::throwGrenade()

@@ -70,6 +70,10 @@ namespace K_Engine {
 		//VerticalMovement
 		float jumpForce = 150;
 
+		//To avoid double jump (iterations)
+		float jumpTimer = 40.0f;
+		float lastTimeJumped = 0.0f;
+
 		//HeightCreation for the grenade
 		float grenadeHeightCreation = 15;
 		float kickHeightCreation = 10;
