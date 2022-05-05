@@ -60,7 +60,7 @@ namespace K_Engine {
 		if (mesh_name == "_Generic_")
 			mesh_name = "_Generic";
 
-		//anim = entity->getComponent<Animator>();
+		anim = entity->getComponent<Animator>();
 		trans = entity->getComponent<Transform>();
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({ 0,0,0 });
@@ -74,7 +74,7 @@ namespace K_Engine {
 		jump = false;
 		distance = rigby->getMass() * distanceMultiplier;
 
-		//anim->playAnim("Idle" + mesh_name);
+		anim->playAnim("Idle" + mesh_name);
 	}
 
 	void Controller::onEnable() {
@@ -94,7 +94,6 @@ namespace K_Engine {
 			InputManager* input = InputManager::GetInstance();
 
 			bool actionProcessed = false;
-
 			//Left
 			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A)) {
 				actionProcessed = true;
@@ -103,7 +102,7 @@ namespace K_Engine {
 				trans->setRotation(0, -90, 0);
 				lookingRight_ = false;
 				if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
-					//anim->playAnim("Walk" + mesh_name);
+					anim->playAnim("Walk" + mesh_name);
 				}
 
 				lastState = Action::Moving;
@@ -113,10 +112,10 @@ namespace K_Engine {
 				actionProcessed = true;
 				Vector3 currentSpeed = rigby->getVelocity();
 				lastSpeed = Vector3(distance, currentSpeed.y, currentSpeed.z);
-				trans->setRotation(0, 90, 0);
+					trans->setRotation(0, 90, 0);
 				lookingRight_ = true;
 				if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
-					//anim->playAnim("Walk" + mesh_name);
+					anim->playAnim("Walk" + mesh_name);
 				}
 				lastState = Action::Moving;
 			}
@@ -129,7 +128,7 @@ namespace K_Engine {
 				lastState = Jumping;
 				//Checking it is in a certain interval
 				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1 && lastTimeJumped <= 0) {
-					//anim->playAnim("Jump" + mesh_name, false);
+					anim->playAnim("Jump" + mesh_name, false);
 					rigby->addForceImpulse({ 0, jumpForce, 0 });
 					lastTimeJumped = jumpTimer;
 				}
@@ -139,7 +138,7 @@ namespace K_Engine {
 			if (input->getLeftMouseButtonPressed()) {
 				actionProcessed = true;
 				lastState = Kicking;
-				//anim->playAnim("Kick" + mesh_name, false);
+				anim->playAnim("Kick" + mesh_name, false);
 				gMInstance->stopTurnTimer(entity);
 				throwKick();
 			}
@@ -148,7 +147,7 @@ namespace K_Engine {
 			if (input->getRightMouseButtonPressed()) {
 				actionProcessed = true;
 				lastState = Granading;
-				//anim->playAnim("Granade" + mesh_name, false);
+				anim->playAnim("Granade" + mesh_name, false);
 				gMInstance->stopTurnTimer(entity);
 				throwGrenade();
 			}
@@ -161,6 +160,14 @@ namespace K_Engine {
 					}
 
 				}
+			}
+			if (lastSpeed == Vector3(0, 0, 0)) {
+				if (anim->getCurrAnimName() == "Jump" + mesh_name) {
+					if (anim->animHasEnded())
+						anim->playAnim("Idle" + mesh_name);
+				}
+				else if(anim->getCurrAnimName() != "Idle" + mesh_name)
+					anim->playAnim("Idle" + mesh_name);
 			}
 		}
 
@@ -225,7 +232,7 @@ namespace K_Engine {
 		//Leg Transform
 		K_Engine::Transform* t = kick->addComponent<K_Engine::Transform>(); t->setScale(1.0f);
 		Transform* thisTransform = entity->getComponent<Transform>();
-		//Monkey´s position
+		//Monkeyï¿½s position
 		Vector3 thisPosition = thisTransform->getPosition();
 
 		//Direction that the monkey is looking at
