@@ -164,14 +164,6 @@ namespace K_Engine {
 						lastState = Nothing;
 						lastSpeed = Vector3(0, 0, 0);
 					}
-					/*if (((anim->getCurrAnimName() != "Kick" + mesh_name && anim->getCurrAnimName() != "Granade" + mesh_name) || anim->animHasEnded())) {
-						std::cout << rigby->getVelocity().x << ", " << rigby->getVelocity().y << ", " << rigby->getVelocity().z << "\n";
-						if (rigby->getVelocity().getMagnitude() < 0.005 && rigby->getVelocity().getMagnitude() > -0.005) {
-							lastState = Nothing;
-							anim->playAnim("Idle" + mesh_name);
-						}
-
-					}*/
 
 				}
 			}

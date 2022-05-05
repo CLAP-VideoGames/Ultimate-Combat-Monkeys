@@ -122,13 +122,11 @@ namespace K_Engine {
 				//Comprobación del siguiente jugador
 				nextPlayer();
 			}
-			std::cout << "\nTurno de Equipo: " << turn.team << " ;Jugador: " << turn.player << "\n";
 
 			//Avanza una ronda si ha llegado al primer player del equipo que empezo
 			if (turn.player == p->getOrder()[0] && turn.team == teamStarting) {
 				round++;
 				GameManager::GetInstance()->endRound();
-				std::cout << "INICIA RONDA: " << round << "\n";
 			}
 
 			setFocusOnPlayer();
@@ -159,7 +157,6 @@ namespace K_Engine {
 			player2->eraseFromTeam(e);
 
 		isEnded();
-		std::cout << "Acuestate, Mono: "<<turn.player<<" del equipo "<< turn.team<< "\n" ;
 		if(turn.team == t && turn.player == o && !hasEnded())
 			endTurn();
 	}
@@ -167,38 +164,29 @@ namespace K_Engine {
 	void TurnSystem::nextPlayer()
 	{
 		//Player1
-		std::cout << "\nAyuda1 " << player1Turn << "\n";
 		std::vector<int>vectorOrder = player1->getOrder();
-		std::cout << "\nTamano equipo 1: " << vectorOrder.size() << "\n";
 		if (vectorOrder.size() > 1) {
 			player1Turn++;
 			if (player1Turn >= initTeamSize) player1Turn = 0;
 			searchMonkey(player1, vectorOrder);
 		}
 		else {
-			std::cout << "\n Yo no entiendo nada bro";
 			player1Turn = vectorOrder[0];
 		}
-
-		std::cout << "\nAyudame1 " << player1Turn << "\n\n";
 		turn.player = player1Turn;
 
 		//Player2
-		std::cout << "\nAyuda2 " << player2Turn << "\n";
 		vectorOrder = player2->getOrder();
-		std::cout << "\nTamano equipo 2: " << vectorOrder.size() << "\n";
 		if (vectorOrder.size() > 1) {
 			player2Turn++;
 			if (player2Turn >= initTeamSize) player2Turn = 0;
 			searchMonkey(player2, vectorOrder);
 		}
 		else {
-			std::cout << "\n Yo no entiendo nada bro";
 			player2Turn = vectorOrder[0];
 		}
 
 		turn.player = player2Turn;
-		std::cout << "\nAyudame2 " << player2Turn << "\n\n";
 
 	}
 
@@ -218,7 +206,6 @@ namespace K_Engine {
 			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y, 150);
 			Indicator* ind = e->addComponent<Indicator>();
 			ind->create(24);
-			std::cout << "\n Entendi bro fino";
 		}
 	}
 
@@ -227,16 +214,21 @@ namespace K_Engine {
 		int pTurn = (p == player1) ? player1Turn : player2Turn;
 		int i = 0;
 		while (i < vectorOrder.size() && pTurn != vectorOrder[i]) i++;
-		if (i < vectorOrder.size())
-			p->getTeamPlayer(vectorOrder[i]);
-		else {
-			pTurn++;
-			if (pTurn >= initTeamSize) pTurn = 0;
-
+		if (i < vectorOrder.size()) {
 			if (p == player1)
-				player1Turn = pTurn;
+				player1Turn = vectorOrder[i];
 			else
-				player2Turn = pTurn;
+				player2Turn = vectorOrder[i];
+		}
+		else {
+			if (p == player1) {
+				player1Turn++;
+				if (player1Turn >= initTeamSize) player1Turn = 0;
+			}
+			else {
+				player2Turn++;
+				if (player2Turn >= initTeamSize) player2Turn = 0;
+			}
 
 			searchMonkey(p, vectorOrder);
 		}
