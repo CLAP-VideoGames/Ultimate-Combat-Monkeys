@@ -604,7 +604,7 @@ material OilFrying/Base {
     receive_shadows on
     technique {
         pass {
-            diffuse 0.077818 0.057993 0.013569 1.0
+            diffuse 0.08 0.30 0.55 1.00
             specular 0.483113 0.48232 0.480543 1.0 64.0
             alpha_to_coverage off
             colour_write on

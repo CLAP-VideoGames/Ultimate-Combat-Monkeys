@@ -18,7 +18,7 @@ namespace K_Engine {
 
 	class TurnSystem: public Component {
 	public:
-		TurnSystem(Entity* e, bool firstStarts = true, float countDownTime = 1.0f);
+		TurnSystem(Entity* e, bool firstStarts = true, float countDownTime = 30.0f);
 		TurnSystem();
 		~TurnSystem();
 
@@ -39,6 +39,7 @@ namespace K_Engine {
 
 		//Turnos
 		void endTurn();
+		void endTurnByWeapon();
 		int getRound();
 
 		//Gestor de players
@@ -50,6 +51,7 @@ namespace K_Engine {
 		GameManager* gMInstance;
 		float startingZAxis;
 		bool firsTurn = true;
+		bool end = false;
 
 		//Equipos de player
 		Player* player1;
@@ -68,6 +70,10 @@ namespace K_Engine {
 		void lostFocusOnPlayer();
 		void setFocusOnPlayer();
 		void checkNextPlayer(Player* p);
+
+		void isEnded();
+
+		bool hasEnded();
 	};
 }
 #endif TurnSystem_H

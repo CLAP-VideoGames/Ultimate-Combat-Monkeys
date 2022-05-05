@@ -26,6 +26,8 @@ namespace K_Engine {
 
 		virtual void awake();
 
+		virtual void init(K_Map* information);
+
 		/// <summary>
 		/// It's called at the beginning of the execution.
 		/// </summary>

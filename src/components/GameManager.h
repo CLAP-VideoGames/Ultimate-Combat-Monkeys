@@ -9,6 +9,7 @@ namespace K_Engine {
 	class Player;
 	class TurnSystem;
 	class FryingOil;
+	class SceneManager;
 
 	class GameManager : public Component 
 	{
@@ -46,8 +47,13 @@ namespace K_Engine {
 		void RegisterCamera(Entity* e);
 		void RegisterOil(FryingOil* e);
 
+		//TurnSystem
+		void endTurn();
 		void killPlayer(Entity* e);
 		void endRound();
+		void endTurnByWeapon();
+		void stopTurnTimer(Entity* e);
+		void gameHasEnded(int teamWin);
 
 		Camera* getRenderCamera();
 		Entity* getCamera();
@@ -59,7 +65,7 @@ namespace K_Engine {
 
 		static GameManager* instance;
 
-		TurnSystem* turnSys_;
+		TurnSystem* turnSys_ = nullptr;
 
 		FryingOil* oil;
 	};

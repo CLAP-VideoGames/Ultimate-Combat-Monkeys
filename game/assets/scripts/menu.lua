@@ -64,6 +64,24 @@ menu = {
             onClick = "exitGame"
         }
     },
+    titleText = {
+        Enabled = "true",
+        Transform = {
+            position = "0.5, 0.025, 4",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Text = {
+            overlayName = "titleText",
+            x = "0.35",
+            y = "0.35",
+            width = "0.5",
+            height = "0.25",
+            text = "ucm",
+            fontName = "UCM/TitleFont",
+            textColor = "0.8, 0.4, 0.1"
+        }
+    },
     gameSceneButtonText = {
         Enabled = "true",
         Transform = {
@@ -118,11 +136,20 @@ menu = {
             textColor = "0.0, 0.0, 0.0"
         }
     },
+    menu_music = {
+        AudioSource = {
+            path = "./assets/sounds/menu_music.ogg",
+            type = "1",
+            volume = "0.5",
+            loopable = "true",
+            playOnStart = "true"
+        }
+    },
 }
 
 function changeScene()
     local sceneMan = SceneManager.getSceneMan();
-    sceneMan:changeScene("testZone");
+    sceneMan:changeScene("Map_Level_0");
 end
 
 function goToOptions()
@@ -140,5 +167,5 @@ function fullScreen()
     renderMan:fullScreen();
 end
 
-menu_entities = { "backgroundImage", "gameSceneButton", "optionsButton", "exitButton", 
-                    "gameSceneButtonText", "optionsButtonText", "exitButtonText" }
+menu_entities = { "backgroundImage", "gameSceneButton", "optionsButton", "exitButton", "titleText",
+                    "gameSceneButtonText", "optionsButtonText", "exitButtonText", "menu_music" }

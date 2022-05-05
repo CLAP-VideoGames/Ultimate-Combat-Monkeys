@@ -30,12 +30,10 @@
     <ClCompile Include="..\..\src\components\Indicator.cpp" />
     <ClCompile Include="..\..\src\components\Kick.cpp" />
     <ClCompile Include="..\..\src\components\PlayerInfo.cpp" />
-    <ClCompile Include="..\..\src\components\SoundManager.cpp" />
     <ClCompile Include="..\..\src\components\TurnSystem.cpp" />
     <ClCompile Include="..\..\src\components\WeaponStack.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\objects\Player.cpp" />
-    <ClCompile Include="..\..\src\scenes\ExampleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\components\Aeroplane.h" />
@@ -60,12 +58,10 @@
     <ClInclude Include="..\..\src\components\Indicator.h" />
     <ClInclude Include="..\..\src\components\Kick.h" />
     <ClInclude Include="..\..\src\components\PlayerInfo.h" />
-    <ClInclude Include="..\..\src\components\SoundManager.h" />
     <ClInclude Include="..\..\src\components\TurnSystem.h" />
     <ClInclude Include="..\..\src\components\WeaponStack.h" />
     <ClInclude Include="..\..\src\GameComponentRegistry.h" />
     <ClInclude Include="..\..\src\objects\Player.h" />
-    <ClInclude Include="..\..\src\scenes\ExampleScene.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -5,7 +5,9 @@
 #include <scene_prj/SceneManager.h>
 
 #include <GameComponentRegistry.h>
-#include <scenes/ExampleScene.h>
+
+//DELETE
+#include <scene_prj/Scene.h>
 
 extern "C" {
 	__declspec(dllexport) std::string gameName() { return "UCM"; }
@@ -31,9 +33,9 @@ extern "C" {
 	}
 	
 	__declspec(dllexport) K_Engine::Scene* startScene() {
-		auto scene = new K_Engine::ExampleScene("Map_Level_0");
-		scene->init();
-		return scene;
+		/*auto scene = new K_Engine::ExampleScene("Map_Level_0");
+		scene->init();*/
+		return new K_Engine::Scene();
 	}
 
 	__declspec(dllexport) std::string startUpScene() {

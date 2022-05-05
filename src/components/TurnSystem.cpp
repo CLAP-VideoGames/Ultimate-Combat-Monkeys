@@ -39,8 +39,11 @@ namespace K_Engine {
 
 	void TurnSystem::init(K_Map* information)
 	{
-		firstTeamStarts = information->valueToBool("firsTeamStarts");
+		firstTeamStarts = information->valueToBool("firstTeamStarts");
 		timeLimit = information->valueToNumber("timeLimit");
+
+		player1 = new Player(0);
+		player2 = new Player(1);
 	}
 
 	void TurnSystem::start()
@@ -59,17 +62,26 @@ namespace K_Engine {
 
 	void TurnSystem::update(int deltaTime)
 	{
-		if (firsTurn) {
-			std::cout << "INICIA RONDA: " << round << "\n";
-			setFocusOnPlayer();
-			firsTurn = false;
-		}
-		
-		if (!timeStop) {
-			countDown -= (float)(deltaTime / 1000.0f);
+		if (!hasEnded()) {
+			if (firsTurn) {
+				std::cout << "INICIA RONDA: " << round << "\n";
+				setFocusOnPlayer();
+				firsTurn = false;
+			}
 
-			if (countDown <= 0.0f)
-				endTurn();
+			if (!timeStop) {
+				countDown -= (float)(deltaTime / 1000.0f);
+
+				if (countDown <= 0.0f)
+					endTurn();
+			}
+
+		}
+		else {
+			if(player1->getTeamSize() == 0)
+				gMInstance->gameHasEnded(0);
+			else
+				gMInstance->gameHasEnded(1);
 		}
 	}
 
@@ -98,27 +110,38 @@ namespace K_Engine {
 
 	void TurnSystem::endTurn()
 	{
+		if (!end) {
 		lostFocusOnPlayer();
-		Player* p;
-		turn.team = (turn.team + 1) % 2;
-		p = (!turn.team) ? player1 : player2;	//Si es falso = 0 -> primer equipo
 
-		////Siguiente jugador del equipo que corresponda
-		if (turn.team == teamStarting)
-			nextPlayer();
-		//Comprobación del siguiente jugador
-		checkNextPlayer(p);
+			Player* p;
+			turn.team = (turn.team + 1) % 2;
+			p = (!turn.team) ? player1 : player2;	//Si es falso = 0 -> primer equipo
 
-		//Avanza una ronda si ha llegado al primer player del equipo que empezo
-		if (turn.player == p->getOrder()[0] && turn.team == teamStarting) {
-			std::cout << "INICIA RONDA: " << round << "\n";
-			round++;
-			GameManager::GetInstance()->endRound();
+			////Siguiente jugador del equipo que corresponda
+			if (turn.team == teamStarting) {
+				nextPlayer();
+			}
+			//Comprobación del siguiente jugador
+			//checkNextPlayer(p);
+			std::cout << "\nTurno de Equipo: " << turn.team << " ;Jugador: " << turn.player << "\n";
+
+			//Avanza una ronda si ha llegado al primer player del equipo que empezo
+			if (turn.player == p->getOrder()[0] && turn.team == teamStarting) {
+				//std::cout << "INICIA RONDA: " << round << "\n";
+				round++;
+				GameManager::GetInstance()->endRound();
+			}
+
+			setFocusOnPlayer();
+
+			resetCountdown();
 		}
+	}
 
-		setFocusOnPlayer();
-
-		resetCountdown();
+	void TurnSystem::endTurnByWeapon()
+	{
+		countDown = 2.0f;
+		resumeCountdown();
 	}
 
 	int TurnSystem::getRound()
@@ -131,20 +154,46 @@ namespace K_Engine {
 		int t = e->getComponent<PlayerInfo>()->getTeam();
 		int o = e->getComponent<PlayerInfo>()->getOrder();
 
-		if (turn.team == t && turn.player == o)
-			endTurn();
-
 		if (t == 0)
-			player1->eraseFromTeam(o);
+			player1->eraseFromTeam(e);
 		else
-			player2->eraseFromTeam(o);
+			player2->eraseFromTeam(e);
 
+		isEnded();
+		std::cout << "Acuestate, Mono: "<<turn.player<<" del equipo "<< turn.team<< "\n" ;
+		if(turn.team == t && turn.player == o && !hasEnded())
+			endTurn();
 	}
 
 	void TurnSystem::nextPlayer()
 	{
-		player1Turn = (player1Turn + 1) % player1->getTeamSize();
-		player2Turn = (player2Turn + 1) % player2->getTeamSize();
+		//Player1
+		std::cout << "\nAyuda1 " << player1Turn << "\n";
+		if (player1->getTeamPlayer(player1Turn) != nullptr)
+			player1Turn = (player1->getTeamPlayer(player1Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
+		while (player1->getTeamPlayer(player1Turn) == nullptr) {
+			player1Turn = (player1Turn + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
+			if (player1->getTeamPlayer(player1Turn) != nullptr)
+			player1Turn = (player1->getTeamPlayer(player1Turn)->getComponent<PlayerInfo>()->getOrder());
+		}
+
+
+		turn.player = player1Turn;
+		std::cout << "Ayudame1 " << player1Turn << "\n\n";
+
+		//Player2
+		std::cout << "\nAyuda2 " << player2Turn << "\n";
+		if (player2->getTeamPlayer(player2Turn) != nullptr)
+			player2Turn = (player2->getTeamPlayer(player2Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player2->getOrder()[player2->getTeamSize() - 1] + 1);
+		while (player2->getTeamPlayer(player2Turn) == nullptr) {
+			player2Turn = (player2Turn + 1) % (player2->getOrder()[player2->getTeamSize() - 1] + 1);
+			if (player2->getTeamPlayer(player1Turn) != nullptr)
+			player2Turn = (player2->getTeamPlayer(player2Turn)->getComponent<PlayerInfo>()->getOrder());
+		}
+
+		turn.player = player2Turn;
+		std::cout << "Ayudame2 " << player2Turn << "\n\n";
+
 	}
 
 	void TurnSystem::setFocusOnPlayer()
@@ -160,11 +209,13 @@ namespace K_Engine {
 			e->getComponent<Controller>()->enable = true;
 			//Posicion de la camara
 			Vector3 pos = e->getComponent<Transform>()->getPosition();
-			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y, startingZAxis/2);
+			gMInstance->getCamera()->getComponent<CameraMovement>()->setLerpPosition(pos.x, pos.y, 150);
 			Indicator* ind = e->addComponent<Indicator>();
 			ind->create(24);
+			std::cout << "\n Entendi bro fino";
 		}
-
+		else
+			std::cout << "\n Yo no entiendo nada bro";
 	}
 	
 	void TurnSystem::lostFocusOnPlayer()
@@ -187,13 +238,32 @@ namespace K_Engine {
 		int i = 0;
 		while (i < p->getOrder().size() && playerTurn != p->getOrder()[i])++ i;
 		if (i >= p->getOrder().size()){//No se encontro el orden dentro del equipo
-			if ((p == player1))
-				player1Turn = (player1Turn + 1) % player1->getTeamSize();
-			else
-				player2Turn = (player2Turn + 1) % player2->getTeamSize();
+			if ((p == player1)) {
+				while (player1->getTeamPlayer(player1Turn) != nullptr)
+					player1Turn = (player1->getTeamPlayer(player1Turn + 1)->getComponent<PlayerInfo>()->getOrder() + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
+
+				player1Turn = (player1->getTeamPlayer(player1Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
+			}
+			else {
+				while (player2->getTeamPlayer(player2Turn) != nullptr)
+					player2Turn = (player1->getTeamPlayer(player2Turn + 1)->getComponent<PlayerInfo>()->getOrder() + 1) % (player2->getOrder()[player1->getTeamSize() - 1] + 1);
+
+				player2Turn = (player1->getTeamPlayer(player2Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player2->getOrder()[player1->getTeamSize() - 1] + 1);
+			}
 			checkNextPlayer(p);	//Pasa al siguiente player valido del mismo equipo
 		}
 		turn.player = playerTurn;
+	}
+
+	void TurnSystem::isEnded()
+	{
+		if (player1->getTeamSize() <= 0 || player2->getTeamSize() <= 0)
+			end = true;
+	}
+
+	bool TurnSystem::hasEnded()
+	{
+		return end;
 	}
 
 }

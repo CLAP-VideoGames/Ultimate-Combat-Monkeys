@@ -5,6 +5,8 @@
 #include <components/Destructible.h>
 #include <components/Health.h>
 #include <utils_prj/Vector3.h>
+#include <components/FryingOil.h>
+
 #include <iostream>
 
 namespace K_Engine {
@@ -40,15 +42,12 @@ namespace K_Engine {
 			collision->getComponent<Health>()->AddLife(-20);
 			collision->getComponent<RigidBody>()->addForce(Vector3(0, 100, 0));
 		}
-		else {
+		else if(!collision->hasComponent<FryingOil>()) {
 			collision->destroy();
 		}
+
 		
 		entity->destroy();
-
-		//if (collision->hasComponent<K_Engine::Destructible>()) {
-		//	collision->destroy();
-		//}
 	}
 
 }

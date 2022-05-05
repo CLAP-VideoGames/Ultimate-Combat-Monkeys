@@ -1,12 +1,18 @@
 #include "GameManager.h"
 
+#include <physics_prj/PhysicsManager.h>
+
 #include <components/TurnSystem.h>
 #include <components/FryingOil.h>
 #include <objects/Player.h>
+#include <components/Controller.h>
 
 #include <ecs_prj/Entity.h>
 #include <render_prj/Camera.h>
 #include <render_prj/RenderManager.h>
+#include <scene_prj/SceneManager.h>
+
+#include <utils_prj/Vector3.h>
 
 #include <iostream>
 
@@ -49,6 +55,13 @@ namespace K_Engine {
 	}
 
 	void GameManager::start() {
+		PhysicsManager::GetInstance()->setGravity(Vector3(0, -450, 0));
+
+		turnSys_ = entity->getComponent<TurnSystem>();
+
+		Camera* cam = RenderManager::GetInstance()->getCamera();
+		cam->setCameraPos(0, 60, 90);
+		cam->setBackgroundColor(0.5568, 0.886274, 1.0, 1);
 	}
 
 	void GameManager::update(int frameTime) {
@@ -70,6 +83,11 @@ namespace K_Engine {
 		oil = e;
 	}
 
+	void GameManager::endTurn()
+	{
+		turnSys_->endTurn();
+	}
+
 	void GameManager::killPlayer(Entity* e)
 	{
 		if (turnSys_)
@@ -80,6 +98,31 @@ namespace K_Engine {
 	void GameManager::endRound()
 	{
 		oil->Rise(turnSys_->getRound());
+	}
+
+	void GameManager::endTurnByWeapon()
+	{
+		if (turnSys_)
+			turnSys_->endTurnByWeapon();
+		else std::cout << "FALSE\n\n";
+	}
+
+	void GameManager::stopTurnTimer(Entity* e)
+	{
+		if (e->hasComponent<Controller>())
+			e->getComponent<Controller>()->enable = false;
+
+		if (turnSys_)
+			turnSys_->stopCountdown();
+		else std::cout << "FALSE\n\n";
+	}
+
+	void GameManager::gameHasEnded(int teamWin)
+	{
+		if(teamWin == 0)
+			SceneManager::GetInstance()->pushSceneStr("twoWins");
+		else
+			SceneManager::GetInstance()->pushSceneStr("twoWins");
 	}
 
 	Camera* GameManager::getRenderCamera()

@@ -1,9 +1,9 @@
-font MyFont
+font UCM/TitleFont
 {
     type         truetype
-    source       batang.ttf
-    size         26
-    resolution   72
+    source       Monkeyboy.ttf
+    size         40
+    resolution   144
 }
 
 font UCM/MenuFont

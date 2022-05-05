@@ -57,10 +57,10 @@ namespace K_Engine {
 			alive = false;
 			anim->playAnim("Death" + mesh_name, false);
 		}
-		else if (!alive && anim->animHasEnded())
+		else if (!alive /*&& anim->animHasEnded()*/)
 		{
-			// "Kill the entity"
 			gMInstance->killPlayer(entity);
+			// "Kill the entity"
 		}
 	}
 

@@ -19,12 +19,6 @@
     <Filter Include="Source Files\Components">
       <UniqueIdentifier>{6af83fc8-20c0-470d-9c16-fbde2929d9e4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Scenes">
-      <UniqueIdentifier>{9a8eb98c-09cc-4c65-8862-c3367c4f42b3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Scenes">
-      <UniqueIdentifier>{e5787573-ec38-4dde-883d-7a070c9930f6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Objects">
       <UniqueIdentifier>{76703e43-0c98-42d9-9309-7115afebea72}</UniqueIdentifier>
     </Filter>
@@ -50,9 +44,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\components\WeaponStack.cpp">
       <Filter>Source Files\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\scenes\ExampleScene.cpp">
-      <Filter>Source Files\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\components\CameraMovement.cpp">
       <Filter>Source Files\Components</Filter>
@@ -84,9 +75,6 @@
     <ClCompile Include="..\..\src\components\Aeroplane.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\components\SoundManager.cpp">
-      <Filter>Source Files\Components</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\components\Indicator.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
@@ -109,9 +97,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\components\WeaponStack.h">
       <Filter>Header Files\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\scenes\ExampleScene.h">
-      <Filter>Header Files\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\components\CameraMovement.h">
       <Filter>Header Files\Components</Filter>
@@ -141,9 +126,6 @@
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\components\FryingOil.h">
-      <Filter>Header Files\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\components\SoundManager.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\components\Indicator.h">

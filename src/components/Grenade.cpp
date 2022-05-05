@@ -8,6 +8,7 @@
 #include <physics_prj/CollisionLayers.h>
 #include <log_prj/LogManager.h>
 #include <sound_prj/AudioManager.h>
+#include <components/GameManager.h>
 
 #include <components_prj/AudioSource.h>
 #include <components_prj/RigidBody.h>
@@ -71,18 +72,21 @@ namespace K_Engine {
 		BodyType bodyType = BodyType::BT_DYNAMIC;
 		float mass = 1.0f;
 
-		//explosion->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/nuke_explosion.wav", 20, 3, false, true);
+		explosion->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/nuke_explosion.wav", 20, 3, false, true);
 
 		RigidBody* r = explosion->addComponent<RigidBody>(boxType, bodyType, mass,
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") ||
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("monos"));
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") |
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("monos") |
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("oil"));
 
 		r->setTrigger(true);
 		r->setDimensions(radioExplosion);
 
 		explosion->addComponent<DestroyOnCollision>();
 
+		gMInstance = GameManager::GetInstance();
+		gMInstance->endTurnByWeapon();
 		entity->destroy();
 	}
 

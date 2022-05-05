@@ -36,7 +36,7 @@ namespace K_Engine {
 
 	void Indicator::create(float offsetY)
 	{
-		std::cout << offsetY << "\n";
+		//std::cout << offsetY << "\n";
 		offset = offsetY;
 		entMan = entity->getMan();
 		indicator = entMan->addEntity(true);

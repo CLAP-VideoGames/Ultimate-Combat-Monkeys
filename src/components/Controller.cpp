@@ -14,8 +14,8 @@
 #include <components_prj/RigidBody.h>
 #include <components_prj/Animator.h>
 #include <components_prj/Transform.h>
-#include <components_prj/Transform.h>
 #include <components_prj/MeshRenderer.h>
+#include <components/PlayerInfo.h>
 #include <components/Grenade.h>
 #include <components/Kick.h>
 #include <components/DestroyOnCollision.h>
@@ -35,6 +35,7 @@ namespace K_Engine {
 	void Controller::awake()
 	{
 		enable = enableOnStart;
+		lastSpeed = Vector3(0, 0, 0);
 	}
 
 	Controller::Controller(Entity* e, bool enableStart) : Component(e), enableOnStart(enableStart) {
@@ -59,18 +60,21 @@ namespace K_Engine {
 		if (mesh_name == "_Generic_")
 			mesh_name = "_Generic";
 
+		//anim = entity->getComponent<Animator>();
+		trans = entity->getComponent<Transform>();
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({ 0,0,0 });
 		rigby->setPosConstraints({ 1,1,0 });
-		//anim = entity->getComponent<Animator>();
-		trans = entity->getComponent<Transform>();
 		life = entity->getComponent<Health>();
+		infoPlayer = entity->getComponent<PlayerInfo>();
+
+		lookingRight_ = !infoPlayer->getTeam();
+
 		entMan = entity->getMan();
 		jump = false;
 		distance = rigby->getMass() * distanceMultiplier;
 
 		//anim->playAnim("Idle" + mesh_name);
-
 	}
 
 	void Controller::onEnable() {
@@ -94,32 +98,36 @@ namespace K_Engine {
 			//Left
 			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_A)) {
 				actionProcessed = true;
-				if (rigby->getVelocity().x > -limitSpeed) {
-
+				Vector3 currentSpeed = rigby->getVelocity();
+				lastSpeed = Vector3(-distance, currentSpeed.y, currentSpeed.z);
+				if (infoPlayer->getTeam() == 1)
+					trans->setRotation(0, 0, 0);
+				else
 					trans->setRotation(0, 180, 0);
-					rigby->addForce({ -distance * 100, 0, 0 });
-					if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
-						//anim->playAnim("Walk" + mesh_name);
-					}
-
-					lastState = Action::Moving;
+				lookingRight_ = false;
+				if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
+					//anim->playAnim("Walk" + mesh_name);
 				}
-			}
-			else {
-				//Right
-				if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) {
-					actionProcessed = true;
-					if (rigby->getVelocity().x < limitSpeed) {
-						trans->setRotation(0, 0, 0);
-						rigby->addForce({ distance * 100, 0, 0 });
-						if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
-							//anim->playAnim("Walk" + mesh_name);
-						}
-						lastState = Action::Moving;
-					}
-				}
-			}
 
+				lastState = Action::Moving;
+			}
+			//Right
+			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_D)) {
+				actionProcessed = true;
+				Vector3 currentSpeed = rigby->getVelocity();
+				lastSpeed = Vector3(distance, currentSpeed.y, currentSpeed.z);
+				if (infoPlayer->getTeam() == 1)
+					trans->setRotation(0, 180, 0);
+				else
+					trans->setRotation(0, 0, 0);
+				lookingRight_ = true;
+				if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
+					//anim->playAnim("Walk" + mesh_name);
+				}
+				lastState = Action::Moving;
+			}
+			rigby->setVelocity({ lastSpeed.x, rigby->getVelocity().y, rigby->getVelocity().z });
+			
 
 			//Jump
 			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) {
@@ -137,6 +145,7 @@ namespace K_Engine {
 				actionProcessed = true;
 				lastState = Kicking;
 				//anim->playAnim("Kick" + mesh_name, false);
+				gMInstance->stopTurnTimer(entity);
 				throwKick();
 			}
 
@@ -145,11 +154,16 @@ namespace K_Engine {
 				actionProcessed = true;
 				lastState = Granading;
 				//anim->playAnim("Granade" + mesh_name, false);
+				gMInstance->stopTurnTimer(entity);
 				throwGrenade();
 			}
 
 			if (!actionProcessed) {
 				if (lastState != Action::Nothing) {
+					if (input->isKeyUp(K_Engine_Scancode::SCANCODE_A) && input->isKeyUp(K_Engine_Scancode::SCANCODE_D)) {
+						lastState = Nothing;
+						lastSpeed = Vector3(0, 0, 0);
+					}
 					/*if (((anim->getCurrAnimName() != "Kick" + mesh_name && anim->getCurrAnimName() != "Granade" + mesh_name) || anim->animHasEnded())) {
 						std::cout << rigby->getVelocity().x << ", " << rigby->getVelocity().y << ", " << rigby->getVelocity().z << "\n";
 						if (rigby->getVelocity().getMagnitude() < 0.005 && rigby->getVelocity().getMagnitude() > -0.005) {
@@ -165,7 +179,8 @@ namespace K_Engine {
 	}
 
 	void Controller::throwGrenade()
-	{	//Creation of entity
+	{	
+		
 		Entity* grnd = entMan->addEntity(true);
 
 		//Transform Componnet
@@ -187,11 +202,11 @@ namespace K_Engine {
 
 		//RigidBody
 		RigidBody* r = grnd->addComponent<RigidBody>(boxType, bodyType, mass,
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"));
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo"));
 
-		std::cout << "Grupo granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("armas") << "\n";
-		std::cout << "Mask granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") << "\n";
+		//std::cout << "Grupo granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("armas") << "\n";
+		//std::cout << "Mask granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") << "\n";
 
 		//Grenade Component
 		grnd->addComponent<Grenade>(10.0f);
@@ -199,7 +214,7 @@ namespace K_Engine {
 		//Monkeys transform
 		Transform* origin = entity->getComponent<Transform>();
 
-		grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_throw.wav", 20, 1, false, false);
+		grnd->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_throw.wav", 20, 1, false, true);
 
 		//Direction that the monkey is looking at
 		float direction = origin->getRotation().y;
@@ -236,7 +251,8 @@ namespace K_Engine {
 		r->setDimensions(10.0f);
 		r->setTrigger(true);
 
-		kick->addComponent<Kick>();
+		
+		kick->addComponent<Kick>(infoPlayer->getOrder() + infoPlayer->getTeam()*5, lookingRight_);
 		kick->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_kick.wav", 20, 2, false, true);
 
 	}
