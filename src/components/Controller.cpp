@@ -70,7 +70,6 @@ namespace K_Engine {
 		distance = rigby->getMass() * distanceMultiplier;
 
 		//anim->playAnim("Idle" + mesh_name);
-
 	}
 
 	void Controller::onEnable() {
@@ -96,7 +95,7 @@ namespace K_Engine {
 				actionProcessed = true;
 				if (rigby->getVelocity().x > -limitSpeed) {
 
-					trans->setRotation(0, 180, 0);
+					trans->setRotation(0, -180, 0);
 					rigby->addForce({ -distance * 100, 0, 0 });
 					if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
 						//anim->playAnim("Walk" + mesh_name);
