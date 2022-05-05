@@ -19440,8 +19440,8 @@ Map_Level_0 = {
             scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         Animator = {
-            defaultAnim = "None",
-             startsEnabled = "false"
+            defaultAnim = "Idle",
+            startsEnabled = "true"
         },
         WeaponStack = {
             
@@ -19533,7 +19533,7 @@ Map_Level_0 = {
             EnableOnStart = "false"
         },
         RigidBody = {
-            Type = "Dynamic" ,
+            Type = "Static" ,
             Collider = "Box" ,
             Mass = "1.0" ,
             Dimensions = "8,  16,  8",
@@ -19722,7 +19722,7 @@ Map_Level_0 = {
     },
     OilArmature = {
         Transform = {
-            position = " 0.000000 ,0.000000 ,-200.000000 ",
+            position = " 0.000000 ,0.000000 ,-0.000000 ",
             rotation = " 0 ,0 ,0 ",
             scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
