@@ -7,6 +7,7 @@
 #include <physics_prj/PhysicsManager.h>
 #include <physics_prj/CollisionLayers.h>
 #include <log_prj/LogManager.h>
+#include <components/GameManager.h>
 
 
 #include <components/Health.h>
@@ -43,7 +44,6 @@ namespace K_Engine {
 
 	void Kick::start()
 	{
-		
 	}
 
 	void Kick::onCollisionEnter(Entity* collision) {
@@ -60,6 +60,8 @@ namespace K_Engine {
 	void Kick::update(int frameTime)
 	{
 		if (kickdeath <= 0) {
+			gMInstance = GameManager::GetInstance();
+			gMInstance->endTurnByWeapon();
 			entity->destroy();
 		}
 		else kickdeath -= frameTime;

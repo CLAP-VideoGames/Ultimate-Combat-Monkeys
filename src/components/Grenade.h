@@ -9,6 +9,7 @@ namespace K_Engine {
 
 	class RigidBody;
 	class EntityManager;
+	class GameManager;
 
 	class __declspec(dllexport) Grenade : public Component
 	{
@@ -48,6 +49,8 @@ namespace K_Engine {
 		float radioExplosion;
 
 		bool debug = true;
+
+		GameManager* gMInstance;
 	};
 }
 

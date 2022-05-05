@@ -50,6 +50,8 @@ namespace K_Engine {
 		void endTurn();
 		void killPlayer(Entity* e);
 		void endRound();
+		void endTurnByWeapon();
+		void stopTurnTimer(Entity* e);
 
 		Camera* getRenderCamera();
 		Entity* getCamera();

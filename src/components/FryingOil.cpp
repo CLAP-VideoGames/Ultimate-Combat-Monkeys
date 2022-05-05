@@ -35,10 +35,8 @@ namespace K_Engine {
 	}
 	void FryingOil::onCollisionEnter(Entity* collision)
 	{
-		//std::cout << "Oil colisionaaaaaa \n";
 		if (collision->hasComponent<Health>()) {
 			collision->getComponent<Health>()->AddLife(-1000);
-			//std::cout << "La piscina destruye mono ua ua ua ua \n";
 		}
 	}
 	void FryingOil::Rise(int round)

@@ -9,6 +9,7 @@ namespace K_Engine {
 
 	class RigidBody;
 	class EntityManager;
+	class GameManager;
 
 	class __declspec(dllexport) Kick : public Component 
 	{
@@ -52,6 +53,8 @@ namespace K_Engine {
 
 		int orderMonkey;
 		bool lookingRight_;
+
+		GameManager* gMInstance;
 	};
 }
 

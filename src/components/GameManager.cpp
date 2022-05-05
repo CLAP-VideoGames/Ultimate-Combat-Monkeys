@@ -3,6 +3,7 @@
 #include <components/TurnSystem.h>
 #include <components/FryingOil.h>
 #include <objects/Player.h>
+#include <components/Controller.h>
 
 #include <ecs_prj/Entity.h>
 #include <render_prj/Camera.h>
@@ -85,6 +86,23 @@ namespace K_Engine {
 	void GameManager::endRound()
 	{
 		oil->Rise(turnSys_->getRound());
+	}
+
+	void GameManager::endTurnByWeapon()
+	{
+		if (turnSys_)
+			turnSys_->endTurnByWeapon();
+		else std::cout << "FALSE\n\n";
+	}
+
+	void GameManager::stopTurnTimer(Entity* e)
+	{
+		if (e->hasComponent<Controller>())
+			e->getComponent<Controller>()->enable = false;
+
+		if (turnSys_)
+			turnSys_->stopCountdown();
+		else std::cout << "FALSE\n\n";
 	}
 
 	Camera* GameManager::getRenderCamera()

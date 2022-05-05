@@ -30,7 +30,7 @@ namespace K_Engine {
 		/// <summary>
 		/// Echa y destruye la entidad del vector en la posicion n
 		/// </summary>
-		void eraseFromTeam(int n);
+		void eraseFromTeam(Entity* e);
 		/// <summary>
 		/// Devuelve la entidad n del team
 		/// </summary>

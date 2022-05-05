@@ -39,6 +39,7 @@ namespace K_Engine {
 
 		//Turnos
 		void endTurn();
+		void endTurnByWeapon();
 		int getRound();
 
 		//Gestor de players

@@ -60,11 +60,11 @@ namespace K_Engine {
 		if (mesh_name == "_Generic_")
 			mesh_name = "_Generic";
 
+		//anim = entity->getComponent<Animator>();
+		trans = entity->getComponent<Transform>();
 		rigby = entity->getComponent<RigidBody>();
 		rigby->setRotConstraints({ 0,0,0 });
 		rigby->setPosConstraints({ 1,1,0 });
-		//anim = entity->getComponent<Animator>();
-		trans = entity->getComponent<Transform>();
 		life = entity->getComponent<Health>();
 		infoPlayer = entity->getComponent<PlayerInfo>();
 
@@ -145,8 +145,8 @@ namespace K_Engine {
 				actionProcessed = true;
 				lastState = Kicking;
 				//anim->playAnim("Kick" + mesh_name, false);
+				gMInstance->stopTurnTimer(entity);
 				throwKick();
-				gMInstance->endTurn();
 			}
 
 			//Granade
@@ -154,8 +154,8 @@ namespace K_Engine {
 				actionProcessed = true;
 				lastState = Granading;
 				//anim->playAnim("Granade" + mesh_name, false);
+				gMInstance->stopTurnTimer(entity);
 				throwGrenade();
-				gMInstance->endTurn();
 			}
 
 			if (!actionProcessed) {

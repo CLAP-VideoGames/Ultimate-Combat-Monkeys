@@ -59,17 +59,20 @@ namespace K_Engine {
 
 	void TurnSystem::update(int deltaTime)
 	{
-		if (firsTurn) {
-			//std::cout << "INICIA RONDA: " << round << "\n";
-			setFocusOnPlayer();
-			firsTurn = false;
-		}
-		
-		if (!timeStop) {
-			countDown -= (float)(deltaTime / 1000.0f);
+		if (player1->getTeamSize() > 0 || player2->getTeamSize() > 0) {
+			if (firsTurn) {
+				std::cout << "INICIA RONDA: " << round << "\n";
+				setFocusOnPlayer();
+				firsTurn = false;
+			}
 
-			if (countDown <= 0.0f)
-				endTurn();
+			if (!timeStop) {
+				countDown -= (float)(deltaTime / 1000.0f);
+
+				if (countDown <= 0.0f)
+					endTurn();
+			}
+
 		}
 	}
 
@@ -108,6 +111,7 @@ namespace K_Engine {
 			nextPlayer();
 		//Comprobación del siguiente jugador
 		checkNextPlayer(p);
+		std::cout << "\nTurno de Equipo: " << turn.team <<" ;Jugador: " << turn.player <<"\n";
 
 		//Avanza una ronda si ha llegado al primer player del equipo que empezo
 		if (turn.player == p->getOrder()[0] && turn.team == teamStarting) {
@@ -121,6 +125,12 @@ namespace K_Engine {
 		resetCountdown();
 	}
 
+	void TurnSystem::endTurnByWeapon()
+	{
+		countDown = 2.0f;
+		resumeCountdown();
+	}
+
 	int TurnSystem::getRound()
 	{
 		return round;
@@ -132,10 +142,12 @@ namespace K_Engine {
 		int o = e->getComponent<PlayerInfo>()->getOrder();
 
 		if (t == 0)
-			player1->eraseFromTeam(o);
+			player1->eraseFromTeam(e);
 		else
-			player2->eraseFromTeam(o);
+			player2->eraseFromTeam(e);
 
+		std::cout << "Acuestate, Mono: "<<turn.player<<" del equipo "<< turn.team<< "\n" ;
+		if(turn.team == t && turn.player == o)endTurn();
 	}
 
 	void TurnSystem::nextPlayer()
