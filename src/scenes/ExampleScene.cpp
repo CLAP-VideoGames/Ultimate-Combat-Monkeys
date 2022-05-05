@@ -37,13 +37,13 @@
 namespace K_Engine {
 
 	void ExampleScene::init() {
-		K_Engine::Entity* gM = entMan->addEntity();
+		/*K_Engine::Entity* gM = entMan->addEntity();
 		gM->addComponent<GameManager>();
-		gM->addComponent<TurnSystem>();
+		gM->addComponent<TurnSystem>();*/
 
 
 		loadScene(name);
-
+			
 		// example scene (pending of development)
 		std::string playerLayer = "Player";
 		std::string nothingLayer = "Nothing";
@@ -58,6 +58,17 @@ namespace K_Engine {
 
 		K_Engine::Entity* cameraManager = entMan->addEntity();
 		cameraManager->addComponent<CameraMovement>(0.08);
+
+		//K_Engine::Entity* monkey = entMan->addEntity();
+		//Animator* anim = monkey->addComponent<Animator>();{
+		//	K_Engine::Transform* t = monkey->addComponent<K_Engine::Transform>();
+		//	K_Engine::MeshRenderer* m = monkey->addComponent<K_Engine::MeshRenderer>();
+		//	m->setMesh("Pedri.mesh");
+		//	m->debug();
+		//	RigidBody* r = monkey->addComponent<RigidBody>(ColliderType::CT_BOX, BodyType::BT_STATIC, 0.0f, 1, 1);
+		//	r->setDimensions({ 10, 10, 10 });
+		//}
+
 
 		////PedroPablo
 		//K_Engine::Entity* monkey = entMan->addEntity();
@@ -193,7 +204,5 @@ namespace K_Engine {
 		entMan->awake();
 		entMan->onEnable();
 		entMan->start();
-
-		//anim->playAnim("Idle");
 	}
 }

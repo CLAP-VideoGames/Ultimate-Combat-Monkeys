@@ -19277,6 +19277,47 @@ Map_Level_0 = {
             MeshFile = "MapBack.mesh",
         }
     },
+    PedroArmature = {
+        Transform = {
+            position = " -154.532349 ,180.557999 ,0.000024 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Animator = {
+            defaultAnim = "None",
+             startsEnabled = "false"
+        },
+        WeaponStack = {
+            
+        },
+        Enabled = "true",
+        Controller = {
+            EnableOnStart = "false"
+        },
+        RigidBody = {
+            Type = "Dynamic" ,
+            Collider = "Box" ,
+            Mass = "1.0" ,
+            Dimensions = "7.12,  1,  16.5",
+             friction = "0.8",
+             restitution = "0.0",
+            group = "monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0" ,
+             isTrigger = "false" ,
+            isEnabled = "true"
+        },
+        Health = {
+            
+        },
+        PlayerInfo = {
+            Team = "0",
+             Order = "0"
+        },
+        MeshRenderer = {
+            MeshFile = "Pedro.mesh",
+        }
+    },
     Cube1018 = {
         Transform = {
             position = " -218.026398 ,147.960739 ,-29.147245 ",
@@ -19310,53 +19351,16 @@ Map_Level_0 = {
             MeshFile = "cubeMapFront_Middle.mesh",
         }
     },
-    ArmaturePedro = {
+    ArmatureDario001 = {
         Transform = {
-            position = " -143.364471 ,180.064926 ,-8.331726 ",
+            position = " 174.252304 ,181.564285 ,0.000024 ",
             rotation = " 0 ,0 ,0 ",
             scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
-        RigidBody = {
-            Type = "Dynamic" ,
-            Collider = "Box" ,
-            Mass = "1.0" ,
-            Dimensions = "20.1,  10.,  17.7",
-             friction = "0.8",
-             restitution = "0.0",
-            group = "monos",
-              mask = " suelo, armas, explosion",
-            offsetCenter = "0, 9, 0" ,
-             isTrigger = "false" ,
-            isEnabled = "true"
-        },
-        Enabled = "true",
-        WeaponStack = {
-            
-        },
-        Controller = {
-            EnableOnStart = "false"
-        },
-        Health = {
-            
-        },
-        PlayerInfo = {
-            Team = "0",
-             Order = "0"
         },
         Animator = {
             defaultAnim = "None",
              startsEnabled = "false"
         },
-        MeshRenderer = {
-            MeshFile = "Pedro.mesh",
-        }
-    },
-    ArmatureDario = {
-        Transform = {
-            position = " 178.656967 ,180.399033 ,0.000024 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
         WeaponStack = {
             
         },
@@ -19364,18 +19368,11 @@ Map_Level_0 = {
         Controller = {
             EnableOnStart = "false"
         },
-        Health = {
-            
-        },
-        PlayerInfo = {
-            Team = "1",
-             Order = "0"
-        },
         RigidBody = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "20.1,  1,  21",
+            Dimensions = "7,  1,  18",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -19384,61 +19381,27 @@ Map_Level_0 = {
             isTrigger = "false" ,
             isEnabled = "true"
         },
-        Animator = {
-            defaultAnim = "None",
-             startsEnabled = "false"
+        Health = {
+            
+        },
+        PlayerInfo = {
+            Team = "1",
+             Order = "0"
         },
         MeshRenderer = {
             MeshFile = "Dario.mesh",
         }
     },
-    ArmatureGeneric = {
+    Armature = {
         Transform = {
-            position = " -146.959396 ,100.272629 ,-0.000000 ",
+            position = " -147.764664 ,100.264107 ,0.000013 ",
             rotation = " 0 ,0 ,0 ",
             scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
-        WeaponStack = {
-            
-        },
-        Enabled = "true",
-        Controller = {
-            EnableOnStart = "false"
-        },
-        Health = {
-            
-        },
-        PlayerInfo = {
-            Team = "0",
-             Order = "2"
-        },
-        RigidBody = {
-            Type = "Dynamic" ,
-            Collider = "Box" ,
-            Mass = "1.0" ,
-            Dimensions = "20,  10.,  18",
-            friction = "0.8",
-             restitution = "0.0",
-            group = "monos",
-              mask = " suelo, armas, explosion",
-            offsetCenter = "0, 9, 0" ,
-            isTrigger = "false" ,
-            isEnabled = "true"
         },
         Animator = {
             defaultAnim = "None",
              startsEnabled = "false"
         },
-        MeshRenderer = {
-            MeshFile = "Generic.mesh",
-        }
-    },
-    ArmatureGeneric001 = {
-        Transform = {
-            position = " 175.130905 ,100.408569 ,0.000001 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
         WeaponStack = {
             
         },
@@ -19446,18 +19409,11 @@ Map_Level_0 = {
         Controller = {
             EnableOnStart = "false"
         },
-        Health = {
-            
-        },
-        PlayerInfo = {
-            Team = "1",
-             Order = "1"
-        },
         RigidBody = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "20,  10.,  18",
+            Dimensions = "7,  12.,  18",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -19465,68 +19421,6 @@ Map_Level_0 = {
             offsetCenter = "0, 9, 0",
             isTrigger = "false" ,
             isEnabled = "true"
-        },
-        Animator = {
-            defaultAnim = "None",
-             startsEnabled = "false"
-        },
-        MeshRenderer = {
-            MeshFile = "Generic_.mesh",
-        }
-    },
-    ArmatureGeneric002 = {
-        Transform = {
-            position = " -126.287231 ,50.390556 ,-0.000007 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
-        WeaponStack = {
-            
-        },
-        Enabled = "true",
-        Controller = {
-            EnableOnStart = "false"
-        },
-        Health = {
-            
-        },
-        PlayerInfo = {
-            Team = "0",
-             Order = "3"
-        },
-        RigidBody = {
-            Type = "Dynamic" ,
-            Collider = "Box" ,
-            Mass = "1.0" ,
-            Dimensions = "20,  10.,  18",
-            friction = "0.8",
-            restitution = "0.0",
-            group = "monos",
-            mask = "suelo,armas,explosion",
-            offsetCenter = "0, 9, 0",
-            isTrigger = "false" ,
-            isEnabled = "true"
-        },
-        Animator = {
-            defaultAnim = "None",
-             startsEnabled = "false"
-        },
-        MeshRenderer = {
-            MeshFile = "Generic.mesh",
-        }
-    },
-    ArmatureGeneric003 = {
-        Transform = {
-            position = " -69.478760 ,110.560150 ,0.000001 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
-        },
-        WeaponStack = {
-            
-        },
-        Enabled = "true",
-        Controller = {
-            EnableOnStart = "false"
         },
         Health = {
             
@@ -19535,11 +19429,32 @@ Map_Level_0 = {
             Team = "0",
              Order = "1"
         },
+        MeshRenderer = {
+            MeshFile = "Generic.mesh",
+        }
+    },
+    Armature001 = {
+        Transform = {
+            position = " 171.718582 ,100.814651 ,0.000014 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Animator = {
+            defaultAnim = "None",
+             startsEnabled = "false"
+        },
+        WeaponStack = {
+            
+        },
+        Enabled = "true",
+        Controller = {
+            EnableOnStart = "false"
+        },
         RigidBody = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "20,  10.,  18",
+            Dimensions = "7,  10.,  17",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -19548,19 +19463,26 @@ Map_Level_0 = {
             isTrigger = "false" ,
             isEnabled = "true"
         },
+        Health = {
+            
+        },
+        PlayerInfo = {
+            Team = "1",
+             Order = "1"
+        },
+        MeshRenderer = {
+            MeshFile = "Generic_.mesh",
+        }
+    },
+    Armature002 = {
+        Transform = {
+            position = " 64.009254 ,52.118889 ,0.000007 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
         Animator = {
             defaultAnim = "None",
              startsEnabled = "false"
-        },
-        MeshRenderer = {
-            MeshFile = "Generic.mesh",
-        }
-    },
-    ArmatureGeneric004 = {
-        Transform = {
-            position = " 109.405434 ,110.398483 ,0.000002 ",
-            rotation = " 0 ,0 ,0 ",
-            scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         WeaponStack = {
             
@@ -19568,6 +19490,19 @@ Map_Level_0 = {
         Enabled = "true",
         Controller = {
             EnableOnStart = "false"
+        },
+        RigidBody = {
+            Type = "Dynamic" ,
+            Collider = "Box" ,
+            Mass = "1.0" ,
+            Dimensions = "7,  10.,  17",
+            friction = "0.8",
+             restitution = "0.0",
+            group = "monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
+            isTrigger = "false" ,
+            isEnabled = "true"
         },
         Health = {
             
@@ -19576,32 +19511,19 @@ Map_Level_0 = {
             Team = "1",
              Order = "2"
         },
-        RigidBody = {
-            Type = "Dynamic" ,
-            Collider = "Box" ,
-            Mass = "1.0" ,
-            Dimensions = "20,  10.,  18",
-            friction = "0.8",
-             restitution = "0.0",
-            group = "monos",
-              mask = "suelo, armas, explosion",
-            offsetCenter = "0, 9, 0",
-            isTrigger = "false" ,
-            isEnabled = "true"
-        },
-        Animator = {
-            defaultAnim = "None",
-             startsEnabled = "false"
-        },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
         }
     },
-    ArmatureGeneric005 = {
+    Armature003 = {
         Transform = {
-            position = " 65.623611 ,50.554886 ,-0.000006 ",
+            position = " 64.009254 ,52.118889 ,0.000007 ",
             rotation = " 0 ,0 ,0 ",
             scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Animator = {
+            defaultAnim = "None",
+             startsEnabled = "false"
         },
         WeaponStack = {
             
@@ -19610,6 +19532,19 @@ Map_Level_0 = {
         Controller = {
             EnableOnStart = "false"
         },
+        RigidBody = {
+            Type = "Dynamic" ,
+            Collider = "Box" ,
+            Mass = "1.0" ,
+            Dimensions = "7,  10.,  17",
+            friction = "0.8",
+             restitution = "0.0",
+            group = "monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
+            isTrigger = "false" ,
+            isEnabled = "true"
+        },
         Health = {
             
         },
@@ -19617,22 +19552,128 @@ Map_Level_0 = {
             Team = "1",
              Order = "3"
         },
-        RigidBody = {
-            Type = "Dynamic" ,
-            Collider = "Box" ,
-            Mass = "1.0" ,
-            Dimensions = "20,  10.,  18",
-            friction = "0.8",
-             restitution = "0.0",
-            group = "monos",
-              mask = "suelo,armas,explosion",
-            offsetCenter = "0, 9, 0",
-            isTrigger = "false" ,
-            isEnabled = "true"
+        MeshRenderer = {
+            MeshFile = "Generic_.mesh",
+        }
+    },
+    Armature004 = {
+        Transform = {
+            position = " -79.880348 ,110.198395 ,0.000015 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         Animator = {
             defaultAnim = "None",
              startsEnabled = "false"
+        },
+        WeaponStack = {
+            
+        },
+        Enabled = "true",
+        Controller = {
+            EnableOnStart = "false"
+        },
+        RigidBody = {
+            Type = "Dynamic" ,
+            Collider = "Box" ,
+            Mass = "1.0" ,
+            Dimensions = "7,  12.,  18",
+            friction = "0.8",
+             restitution = "0.0",
+            group = "monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
+            isTrigger = "false" ,
+            isEnabled = "true"
+        },
+        Health = {
+            
+        },
+        PlayerInfo = {
+            Team = "0",
+             Order = "2"
+        },
+        MeshRenderer = {
+            MeshFile = "Generic.mesh",
+        }
+    },
+    Armature005 = {
+        Transform = {
+            position = " -84.847488 ,40.148918 ,0.000005 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Animator = {
+            defaultAnim = "None",
+             startsEnabled = "false"
+        },
+        WeaponStack = {
+            
+        },
+        Enabled = "true",
+        Controller = {
+            EnableOnStart = "false"
+        },
+        RigidBody = {
+            Type = "Dynamic" ,
+            Collider = "Box" ,
+            Mass = "1.0" ,
+            Dimensions = "7,  12.,  18",
+            friction = "0.8",
+             restitution = "0.0",
+            group = "monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
+            isTrigger = "false" ,
+            isEnabled = "true"
+        },
+        Health = {
+            
+        },
+        PlayerInfo = {
+            Team = "0",
+             Order = "3"
+        },
+        MeshRenderer = {
+            MeshFile = "Generic.mesh",
+        }
+    },
+    Armature006 = {
+        Transform = {
+            position = " 113.182671 ,110.748940 ,0.000015 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Animator = {
+            defaultAnim = "None",
+             startsEnabled = "false"
+        },
+        WeaponStack = {
+            
+        },
+        Enabled = "true",
+        Controller = {
+            EnableOnStart = "false"
+        },
+        RigidBody = {
+            Type = "Dynamic" ,
+            Collider = "Box" ,
+            Mass = "1.0" ,
+            Dimensions = "7,  10.,  17",
+            friction = "0.8",
+             restitution = "0.0",
+            group = "monos",
+              mask = " suelo, armas, explosion",
+            offsetCenter = "0, 9, 0",
+            isTrigger = "false" ,
+            isEnabled = "true"
+        },
+        Health = {
+            
+        },
+        PlayerInfo = {
+            Team = "1",
+             Order = "2"
         },
         MeshRenderer = {
             MeshFile = "Generic_.mesh",
@@ -19653,19 +19694,6 @@ Map_Level_0 = {
         },
         MeshRenderer = {
             MeshFile = "Oil.mesh",
-        },
-        RigidBody = {
-            Type = "Static" ,
-            Collider = "Box" ,
-            Mass = "1.0" ,
-            Dimensions = "200,  870.,  25",
-            friction = "0.8",
-             restitution = "0.0",
-            group = "oil",
-              mask = "monos",
-            offsetCenter = "0, -435, 0",
-            isTrigger = "true" ,
-            isEnabled = "true"
         }
     },
 }
@@ -19740,6 +19768,6 @@ Map_Level_0_entities = {"Coconut" ,"Coconut_1" ,"Coconut002" ,"Coconut003" ,"Coc
 "Cube1299" ,"Cube1300" ,"Cube1301" ,"Cube1303" ,"Cube1304" ,"Cube1305" ,"Cube1306" ,"Cube1307" ,"Cube1308" ,"Cube1309" ,"Cube1310" ,
 "Cube1311" ,"Cube1348" ,"Cube1349" ,"Cube1350" ,"Cube1354" ,"Cube1355" ,"Cube1356" ,"Cube1357" ,"Cube1358" ,"Cube1359" ,"Cube1360" ,
 "Cube1361" ,"Cube1362" ,"Cube1398" ,"Cube1399" ,"Cube1405" ,"Cube1406" ,"Cube1407" ,"Cube1408" ,"Cube1409" ,"Cube1410" ,"Cube1411" ,
-"Cube1412" ,"Cube1413" ,"Cube1448" ,"Cube1449" ,"Cube1461" ,"Cube1462" ,"Cube1463" ,"Cube1499" ,"MapBack" ,"Cube1018" ,"Cube1795" ,
-"Cube1799" ,"ArmaturePedro" ,"ArmatureDario" ,"ArmatureGeneric" ,"ArmatureGeneric001" ,"ArmatureGeneric002" ,"ArmatureGeneric003" ,"ArmatureGeneric004" ,"ArmatureGeneric005" ,"OilArmature" }
+"Cube1412" ,"Cube1413" ,"Cube1448" ,"Cube1449" ,"Cube1461" ,"Cube1462" ,"Cube1463" ,"Cube1499" ,"MapBack" ,"PedroArmature" ,"Cube1018" ,
+"Cube1795" ,"Cube1799" ,"ArmatureDario001" ,"Armature" ,"Armature001" ,"Armature002" ,"Armature003" ,"Armature004" ,"Armature005" ,"Armature006" ,"OilArmature" }
 
