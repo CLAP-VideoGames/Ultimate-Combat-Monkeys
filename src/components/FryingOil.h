@@ -6,6 +6,7 @@
 
 namespace K_Engine {
 	class Transform;
+	class RigidBody;
 	class FryingOil : public Component 
 	{
 	public:
@@ -43,6 +44,7 @@ namespace K_Engine {
 		float risingSun = 10.0f;
 
 		Transform* tr;
+		RigidBody* rb;
 	};
 }
 #endif FryingOil_H
