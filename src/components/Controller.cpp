@@ -100,10 +100,7 @@ namespace K_Engine {
 				actionProcessed = true;
 				Vector3 currentSpeed = rigby->getVelocity();
 				lastSpeed = Vector3(-distance, currentSpeed.y, currentSpeed.z);
-				if (infoPlayer->getTeam() == 1)
-					trans->setRotation(0, 0, 0);
-				else
-					trans->setRotation(0, 180, 0);
+					trans->setRotation(0, -90, 0);
 				lookingRight_ = false;
 				if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
 					//anim->playAnim("Walk" + mesh_name);
@@ -116,10 +113,7 @@ namespace K_Engine {
 				actionProcessed = true;
 				Vector3 currentSpeed = rigby->getVelocity();
 				lastSpeed = Vector3(distance, currentSpeed.y, currentSpeed.z);
-				if (infoPlayer->getTeam() == 1)
-					trans->setRotation(0, 180, 0);
-				else
-					trans->setRotation(0, 0, 0);
+					trans->setRotation(0, 90, 0);
 				lookingRight_ = true;
 				if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
 					//anim->playAnim("Walk" + mesh_name);
