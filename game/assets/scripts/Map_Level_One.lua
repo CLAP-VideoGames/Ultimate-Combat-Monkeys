@@ -1,4 +1,4 @@
-Map_Level_1 = {
+Map_Level_One = {
     Settings = {
         Enabled = "true",
         GameManager = {
@@ -25,6 +25,99 @@ Map_Level_1 = {
              lookAt = "0,0,0",
              diffuse = "1,1,1"
         },
+    },
+    time = {
+        Transform = {
+            position = "0.5, 0.05, 10",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        Text = {
+            overlayName = "time",
+            x = "0.5",
+            y = "0.05",
+            width = "0.3",
+            height = "0.07",
+            text = "10",
+            fontName = "UCM/Batang",
+            textColor = "0.96078, 0.3764705, 0.08627"
+        },
+        UIRegister = {
+            type = "text"
+        }
+    },
+
+    health = {
+        Transform = {
+            position = "0.6, -0.03, 10",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        ProgressBar = {
+            overlayName = "HealthProgress",
+            imageName = "UCM/SliderProgressBarGreen",
+            orgWidth = "0.4",
+            orgHeight = "0.2",
+            progress = "100",
+            maxProgress = "100"
+        },
+        UIRegister = {
+            type = "bar"
+        }
+    },
+
+    backgroundHealth = {
+        Transform = {
+            position = "0.6, 0.00, 5",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        Image = {
+            overlayName = "Background",
+            imageName = "UCM/SliderBackground",
+            width = "0.4",
+            height = "0.15"
+        }
+    },
+
+    mainMenuTextGame = {
+        Enabled = "true",
+        Transform = {
+            position = "0.1, 0.03, 12",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Text = {
+            overlayName = "MainMenuTextGame",
+            x = "0.15",
+            y = "0.03",
+            width = "0.3",
+            height = "0.04",
+            text = "main menu",
+            fontName = "UCM/MenuFont",
+            textColor = "0.0, 0.0, 0.0"
+        }
+    },
+
+    mainMenuButton = {
+        Transform = {
+            position = "0.0, 0.0, 10",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        Button = {
+            overlayName = "MainMenuReturn",
+            imageName = "UCM/GameMenuButton",
+            hoverImageName = "UCM/GameMenuButtonHover",
+            pressedImageName = "UCM/GameMenuButtonPressed",
+            width = "0.2",
+            height = "0.1",
+            onClick = "popSceneGame"
+        }
     },
     Cube = {
         Transform = {
@@ -18640,7 +18733,7 @@ Map_Level_1 = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "8,  8,  16",
+            Dimensions = "8,  16,  8",
             friction = "0.8",
             restitution = "0.0",
             group = "monos",
@@ -18678,7 +18771,7 @@ Map_Level_1 = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "8,  8,  16",
+            Dimensions = "8,  16,  8",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -18716,7 +18809,7 @@ Map_Level_1 = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "8,  8,  16",
+            Dimensions = "8,  16,  8",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -18754,7 +18847,7 @@ Map_Level_1 = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "8,  8,  16",
+            Dimensions = "8,  16,  8",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -18792,7 +18885,7 @@ Map_Level_1 = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "8,  8,  16",
+            Dimensions = "8,  16,  8",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -18830,7 +18923,7 @@ Map_Level_1 = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "8,  8,  16",
+            Dimensions = "8,  16,  8",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -18868,7 +18961,7 @@ Map_Level_1 = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "8,  8,  16",
+            Dimensions = "8,  16,  8",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -18906,7 +18999,7 @@ Map_Level_1 = {
             Type = "Dynamic" ,
             Collider = "Box" ,
             Mass = "1.0" ,
-            Dimensions = "8,  8,  16",
+            Dimensions = "8,  16,  8",
             friction = "0.8",
              restitution = "0.0",
             group = "monos",
@@ -18929,13 +19022,26 @@ Map_Level_1 = {
     },
     OilArmature = {
         Transform = {
-            position = " 0.000000 ,0.000000 ,-200.000000 ",
+            position = " 0.000000 ,0.000000 ,-0.000000 ",
             rotation = " 0 ,0 ,0 ",
             scale = " 1.000000 ,1.000000 ,1.000000 ",
         },
         Animator = {
             defaultAnim = "Wave",
              startsEnabled = "true"
+        },
+        RigidBody = {
+            Type = "Static" ,
+            Collider = "Box" ,
+            Mass = "1.0" ,
+            Dimensions = "1000,  870,  1000",
+            friction = "0.8",
+             restitution = "0.0",
+            group = "oil",
+              mask = "monos, armas",
+            offsetCenter = "0, -435, 0",
+            isTrigger = "true" ,
+            isEnabled = "true"
         },
         FryingOil = {
             
@@ -18946,7 +19052,13 @@ Map_Level_1 = {
     },
 }
 
-Map_Level_1_entities = {"Settings" ,"MainLight" ,"Cube" ,"Cube001" ,"Cube002" ,"Cube003" ,"Cube004" ,"Cube005" ,"Cube006" ,"Cube007" ,"Cube008" ,
+function popSceneGame()
+    local sceneMan = SceneManager.getSceneMan();
+    sceneMan:popScene("menu");
+end
+
+Map_Level_One_entities = {"Settings" ,"MainLight", "time", "health", "backgroundHealth", "mainMenuTextGame", "mainMenuButton"
+ ,"Cube" ,"Cube001" ,"Cube002" ,"Cube003" ,"Cube004" ,"Cube005" ,"Cube006" ,"Cube007" ,"Cube008" ,
 "Cube009" ,"Cube010" ,"Cube011" ,"Cube012" ,"Cube013" ,"Cube014" ,"Cube015" ,"Cube016" ,"Cube017" ,"Cube018" ,"Cube019" ,
 "Cube020" ,"Cube021" ,"Cube022" ,"Cube023" ,"Cube024" ,"Cube025" ,"Cube026" ,"Cube027" ,"Cube028" ,"Cube029" ,"Cube030" ,
 "Cube031" ,"Cube032" ,"Cube033" ,"Cube034" ,"Cube035" ,"Cube036" ,"Cube037" ,"Cube038" ,"Cube039" ,"Cube040" ,"Cube041" ,
