@@ -65,8 +65,9 @@ namespace K_Engine {
 
 		t->setPosition(pos.x, pos.y, pos.z);
 
-		/*MeshRenderer* m = grnd->addComponent<MeshRenderer>();
-		m->setMesh("sphere.mesh");*/
+		MeshRenderer* m = explosion->addComponent<MeshRenderer>();
+		m->setMesh("Explosion.mesh");
+		
 
 		ColliderType boxType = ColliderType::CT_SPHERE;
 		BodyType bodyType = BodyType::BT_DYNAMIC;
@@ -87,6 +88,7 @@ namespace K_Engine {
 
 		gMInstance = GameManager::GetInstance();
 		gMInstance->endTurnByWeapon();
+
 		entity->destroy();
 	}
 

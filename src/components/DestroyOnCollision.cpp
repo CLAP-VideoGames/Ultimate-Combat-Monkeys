@@ -36,6 +36,14 @@ namespace K_Engine {
 		rb = entity->getComponent<RigidBody>();
 	}
 
+	void DestroyOnCollision::update(int frameTime)
+	{
+		if (toDestroy) {
+			if (timeToDestroy >= 0) timeToDestroy -= frameTime;
+			else entity->destroy();
+		}
+	}
+
 	void DestroyOnCollision::onCollisionEnter(Entity* collision)
 	{
 		if (collision->hasComponent<Health>()) {
@@ -46,8 +54,9 @@ namespace K_Engine {
 			collision->destroy();
 		}
 
-		
-		entity->destroy();
+		toDestroy = true;
+		entity->getComponent<RigidBody>()->addForceImpulse({ 0,10,0 });
+		//entity->destroy();
 	}
 
 }

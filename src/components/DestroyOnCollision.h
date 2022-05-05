@@ -28,12 +28,18 @@ namespace K_Engine {
 		/// </summary>
 		virtual void start();
 
+		virtual void update(int frameTime);
+
 		virtual void onCollisionEnter(Entity* collision);
 
 
 	private:
 		//Required
 		static std::string name;
+
+		bool toDestroy = false;
+		int timeToDestroy = 100;
+
 		RigidBody* rb;
 	};
 }
