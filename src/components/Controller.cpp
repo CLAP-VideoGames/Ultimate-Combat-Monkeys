@@ -219,11 +219,20 @@ namespace K_Engine {
 	void Controller::throwKick() {
 		Entity* kick = entMan->addEntity(true);
 
+		//Leg Transform
 		K_Engine::Transform* t = kick->addComponent<K_Engine::Transform>(); t->setScale(1.0f);
 		Transform* thisTransform = entity->getComponent<Transform>();
+		//Monkey´s position
 		Vector3 thisPosition = thisTransform->getPosition();
 
-		t->setPosition(thisPosition.x + 5, thisPosition.y + kickHeightCreation, thisPosition.z);
+		//Direction that the monkey is looking at
+		float direction = thisTransform->getRotation().y;
+
+		//If the monkey is looking left, we dont want force to be 0
+		if (direction >= 0) direction = 1;
+		else direction = -1;
+
+		t->setPosition(thisPosition.x + (5 * direction), thisPosition.y + kickHeightCreation, thisPosition.z);
 
 
 		ColliderType boxType = ColliderType::CT_BOX;
@@ -240,7 +249,8 @@ namespace K_Engine {
 
 		
 		kick->addComponent<Kick>(infoPlayer->getOrder() + infoPlayer->getTeam()*5, lookingRight_);
-		kick->addComponent<AudioSource>(AudioType::SOUND_EFFECT, "./assets/sounds/monkey_kick.wav", 20, 2, false, true);
+		kick->addComponent<AudioSource>(AudioType::SOUND_EFFECT,
+			"./assets/sounds/monkey_kick.wav", 0.5, 2, false, true);
 
 	}
 }
