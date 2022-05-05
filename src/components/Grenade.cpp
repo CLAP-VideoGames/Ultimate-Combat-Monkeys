@@ -75,7 +75,7 @@ namespace K_Engine {
 
 		RigidBody* r = explosion->addComponent<RigidBody>(boxType, bodyType, mass,
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("armas"),
-			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") ||
+			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") |
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("monos"));
 
 		r->setTrigger(true);
