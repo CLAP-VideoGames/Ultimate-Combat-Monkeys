@@ -26,6 +26,61 @@ Map_Level_0 = {
             diffuse = "1,1,1"
         }
     },
+
+    time = {
+        Transform = {
+            position = "0.5, 0.1, 10",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        Text = {
+            overlayName = "time",
+            x = "0.5",
+            y = "0.1",
+            width = "0.3",
+            height = "0.1",
+            text = "10",
+            fontName = "UCM/Batang",
+            textColor = "0.96078, 0.3764705, 0.08627"
+        }
+    },
+
+    health = {
+        Transform = {
+            position = "0.6, 0.0, 10",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        ProgressBar = {
+            overlayName = "HealthProgress",
+            imageName = "UCM/SliderProgressBar",
+            orgWidth = "0.4",
+            orgHeight = "0.2",
+            progress = "100",
+            maxProgress = "100"
+        }
+    },
+
+    mainMenuButton = {
+        Transform = {
+            position = "0.0, 0.1, 10",
+            rotation = "0, 0, 0",
+            scale = "1.0, 1.0, 1.0",
+        },
+        Enabled = "true",
+        Button = {
+            overlayName = "MainMenuReturn",
+            imageName = "UCM/GameMenuButton",
+            hoverImageName = "UCM/GameMenuButtonHover",
+            pressedImageName = "UCM/GameMenuButtonPressed",
+            width = "0.3",
+            height = "0.2",
+            onClick = "popSceneGame"
+        }
+    },
+
     Coconut = {
         Transform = {
             position = " 80.627968 ,121.952469 ,0.748893 ",
@@ -19697,7 +19752,12 @@ Map_Level_0 = {
     },
 }
 
-Map_Level_0_entities = {"Settings", "MainLight","Coconut" ,"Coconut_1" ,"Coconut002" ,"Coconut003" ,"Coconut004" ,"Coconut005" ,"Coconut006" ,"Coconut007" ,"Coconut008" ,"Coconut009" ,"Coconut010" ,
+function popSceneGame()
+    local sceneMan = SceneManager.getSceneMan();
+    sceneMan:popScene("menu");
+end
+
+Map_Level_0_entities = {"Settings", "MainLight", "time", "health", "mainMenuButton", "Coconut" ,"Coconut_1" ,"Coconut002" ,"Coconut003" ,"Coconut004" ,"Coconut005" ,"Coconut006" ,"Coconut007" ,"Coconut008" ,"Coconut009" ,"Coconut010" ,
 "Coconut011" ,"Coconut012" ,"Coconut013" ,"Fence" ,"Fence001" ,"Fence002" ,"Fence003" ,"Fence004" ,"Fence005" ,"Rock_2" ,"Rock_3" ,
 "Rock_4" ,"Rock_2001" ,"Rock_2002" ,"Rock_2003" ,"Rock_2004" ,"Rock_2005" ,"Rock_2006" ,"Rock_2007" ,"Rock_2008" ,"Rock_2009" ,"Rock_2010" ,
 "Rock_2011" ,"Rock_3001" ,"Rock_3002" ,"Rock_3003" ,"Rock_3004" ,"Rock_3005" ,"Rock_3006" ,"Rock_3007" ,"Rock_3008" ,"Rock_4001" ,"Rock_4002" ,
