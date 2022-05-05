@@ -41,8 +41,9 @@ namespace K_Engine {
 	
 	}
 
-	GameManager::~GameManager() = default;
-
+	GameManager::~GameManager() {
+		instance = nullptr;
+	};
 
 	void GameManager::awake(){
 		if (instance == nullptr) {

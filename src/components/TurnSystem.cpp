@@ -23,14 +23,14 @@ namespace K_Engine {
 		return name;
 	}
 
-	TurnSystem::TurnSystem() : Component() {};
+	TurnSystem::TurnSystem() : Component() {
+		player1 = new Player(0);
+		player2 = new Player(1);
+	};
 
 	TurnSystem::TurnSystem(Entity* e, bool firstStarts, float countDownTime): Component(e),
 		firstTeamStarts(firstStarts), timeLimit(countDownTime)
-	{
-		player1 = new Player(0);
-		player2 = new Player(1);
-	}
+	{ }
 
 	TurnSystem::~TurnSystem()
 	{
