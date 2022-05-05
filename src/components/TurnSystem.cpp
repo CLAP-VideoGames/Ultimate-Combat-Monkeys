@@ -168,13 +168,6 @@ namespace K_Engine {
 	{
 		//Player1
 		std::cout << "\nAyuda1 " << player1Turn << "\n";
-		/*if (player1->getTeamPlayer(player1Turn) != nullptr)
-			player1Turn = (player1->getTeamPlayer(player1Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
-		while (player1->getTeamPlayer(player1Turn) == nullptr) {
-			player1Turn = (player1Turn + 1) % (player1->getOrder()[player1->getTeamSize() - 1] + 1);
-			if (player1->getTeamPlayer(player1Turn) != nullptr)
-			player1Turn = (player1->getTeamPlayer(player1Turn)->getComponent<PlayerInfo>()->getOrder());
-		}*/
 		std::vector<int>vectorOrder = player1->getOrder();
 		std::cout << "\nTamano equipo 1: " << vectorOrder.size() << "\n";
 		if (vectorOrder.size() > 1) {
@@ -192,13 +185,6 @@ namespace K_Engine {
 
 		//Player2
 		std::cout << "\nAyuda2 " << player2Turn << "\n";
-		/*if (player2->getTeamPlayer(player2Turn) != nullptr)
-			player2Turn = (player2->getTeamPlayer(player2Turn)->getComponent<PlayerInfo>()->getOrder() + 1) % (player2->getOrder()[player2->getTeamSize() - 1] + 1);
-		while (player2->getTeamPlayer(player2Turn) == nullptr) {
-			player2Turn = (player2Turn + 1) % (player2->getOrder()[player2->getTeamSize() - 1] + 1);
-			if (player2->getTeamPlayer(player1Turn) != nullptr)
-			player2Turn = (player2->getTeamPlayer(player2Turn)->getComponent<PlayerInfo>()->getOrder());
-		}*/
 		vectorOrder = player2->getOrder();
 		std::cout << "\nTamano equipo 2: " << vectorOrder.size() << "\n";
 		if (vectorOrder.size() > 1) {
