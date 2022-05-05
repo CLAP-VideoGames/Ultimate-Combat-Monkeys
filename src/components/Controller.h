@@ -11,6 +11,7 @@ namespace K_Engine {
 	class Animator;
 	class EntityManager;
 	class Transform;
+	class PlayerInfo;
 	class Health;
 	class GameManager;
 	class CameraMovement;
@@ -65,14 +66,13 @@ namespace K_Engine {
 
 		//Horizontal movement
 		float distance;
-		float distanceMultiplier = 50;
+		float distanceMultiplier = 80;
 		//VerticalMovement
 		float jumpForce = 150;
 
 		//HeightCreation for the grenade
 		float grenadeHeightCreation = 15;
 		float kickHeightCreation = 10;
-		float limitSpeed = 50;
 
 		float grenadeForce = 9000;
 		float grenadeVerticalForce = 2000;
@@ -83,12 +83,15 @@ namespace K_Engine {
 		RigidBody* rigby;
 		EntityManager* entMan;
 		Transform* trans;
+		PlayerInfo* infoPlayer;
 
 		Health* life;
 
 		GameManager* gMInstance;
 
 		Action lastState;
+		Vector3 lastSpeed;
+		bool lookingRight_;
 	};
 }
 #endif CONTROLLER_H

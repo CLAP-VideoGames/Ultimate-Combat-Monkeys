@@ -17,7 +17,7 @@ namespace K_Engine {
 		/// Required to be initialized properly in the Component Manager
 		/// </summary>
 		/// <param name="e">Entity to be attached to</param>
-		Kick(Entity* e);
+		Kick(Entity* e, int monkeyOrder, bool lookingRight);
 
 		Kick();
 
@@ -49,6 +49,9 @@ namespace K_Engine {
 		bool debug = true;
 
 		int kickdeath = 100;
+
+		int orderMonkey;
+		bool lookingRight_;
 	};
 }
 
