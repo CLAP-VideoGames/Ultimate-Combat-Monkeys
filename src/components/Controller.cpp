@@ -158,14 +158,14 @@ namespace K_Engine {
 						lastState = Nothing;
 						lastSpeed = Vector3(0, 0, 0);
 					}
-				}
-				if (rigby->getVelocity().x < 0.3 && rigby->getVelocity().x < -0.3 && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y < -0.3) {
-					if (anim->getCurrAnimName() == "Jump" + mesh_name && anim->animHasEnded())
+					if (rigby->getVelocity().x < 0.3 && rigby->getVelocity().x < -0.3 && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y < -0.3) {
+						if (anim->getCurrAnimName() == "Jump" + mesh_name && anim->animHasEnded())
 							anim->playAnim("Idle" + mesh_name);
 
-					else if(anim->getCurrAnimName() != "Kick" + mesh_name || anim->getCurrAnimName() != "Granade" + mesh_name)
+						else if (anim->getCurrAnimName() != "Kick" + mesh_name || anim->getCurrAnimName() != "Granade" + mesh_name)
 							anim->playAnim("Idle" + mesh_name);
-			}
+					}
+				}
 			}
 		}
 
