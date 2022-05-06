@@ -173,16 +173,10 @@ namespace K_Engine {
 		//Player1
 		std::vector<int>vectorOrder = player1->getOrder();
 		std::sort(vectorOrder.begin(), vectorOrder.end());
-		std::cout << "\nPlayer1Order: " << player1Turn << "\n";
-		for (auto o : vectorOrder)
-			std::cout << " " << o;
-
 		if (vectorOrder.size() > 1) {
-			std::cout << "\nPlayer1Turn: " << player1Turn << "\n";
 			player1Turn++;
 			if (player1Turn > vectorOrder[vectorOrder.size() - 1]) player1Turn = vectorOrder[0];
 			searchMonkey(player1, vectorOrder);
-			std::cout << "\nPlayer1Turn: " << player1Turn << "\n";
 		}
 		else {
 			player1Turn = vectorOrder[0];
@@ -192,16 +186,10 @@ namespace K_Engine {
 		vectorOrder = player2->getOrder();
 		std::sort(vectorOrder.begin(), vectorOrder.end());
 
-		std::cout << "\nPlayer1Order: " << player1Turn << "\n";
-		for (auto o : vectorOrder)
-			std::cout << " " << o;
-
 		if (vectorOrder.size() > 1) {
-			std::cout << "\nPlayer2Turn: " << player2Turn << "\n";
 			player2Turn++;
 			if (player2Turn > vectorOrder[vectorOrder.size() - 1]) player2Turn = vectorOrder[0];
 			searchMonkey(player2, vectorOrder);
-			std::cout << "\nPlayer2Turn: " << player2Turn << "\n";
 		}
 		else {
 			player2Turn = vectorOrder[0];

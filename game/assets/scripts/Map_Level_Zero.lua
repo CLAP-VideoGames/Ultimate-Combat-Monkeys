@@ -19790,6 +19790,21 @@ Map_Level_Zero = {
             MeshFile = "Oil.mesh",
         }
     },
+    Avion = {
+        Transform = {
+            position = " 0.000000 ,50.000000 ,-0.000000 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 3.000000 ,3.000000 ,3.000000 ",
+        },
+        MeshRenderer = {
+            MeshFile = "Banana.mesh"
+        },
+        Animator = {
+            defaultAnim = "Rotate",
+             startsEnabled = "true"
+        },
+        Aeroplane = {}
+    }
 }
 
 function popSceneGame()
@@ -19868,4 +19883,4 @@ Map_Level_Zero_entities = {"Settings", "MainLight", "time", "health", "backgroun
 "Cube1311" ,"Cube1348" ,"Cube1349" ,"Cube1350" ,"Cube1354" ,"Cube1355" ,"Cube1356" ,"Cube1357" ,"Cube1358" ,"Cube1359" ,"Cube1360" ,
 "Cube1361" ,"Cube1362" ,"Cube1398" ,"Cube1399" ,"Cube1405" ,"Cube1406" ,"Cube1407" ,"Cube1408" ,"Cube1409" ,"Cube1410" ,"Cube1411" ,
 "Cube1412" ,"Cube1413" ,"Cube1448" ,"Cube1449" ,"Cube1461" ,"Cube1462" ,"Cube1463" ,"Cube1499" ,"MapBack" ,"PedroArmature" ,"Cube1018" ,
-"Cube1795" ,"Cube1799" ,"ArmatureDario001" ,"Armature" ,"Armature001" ,"Armature002" ,"Armature003" ,"Armature004" ,"Armature005" ,"OilArmature" }
+"Cube1795" ,"Cube1799" ,"ArmatureDario001" ,"Armature" ,"Armature001" ,"Armature002" ,"Armature003" ,"Armature004" ,"Armature005" ,"OilArmature", "Avion" }

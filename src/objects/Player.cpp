@@ -24,7 +24,6 @@ namespace K_Engine {
 
 	void Player::eraseFromTeam(Entity* e)
 	{
-		std::cout << "Destruye mono: " << e->getComponent<PlayerInfo>()->getOrder() << "\n";
 		auto it = players.begin();
 		while (it != players.end() && *it != e) ++it;
 		if(it != players.end())
@@ -47,7 +46,6 @@ namespace K_Engine {
 				return players[i];
 		}
 		else {
-			std::cout << "jugador no encontrado\n";
 			return nullptr;
 		}
 	}
@@ -69,7 +67,6 @@ namespace K_Engine {
 
 	void Player::addToTeam(Entity* e, int order)
 	{
-		//std::cout << players.size();
 		if (order >= players.size())
 			players.resize(order + 1);
 
