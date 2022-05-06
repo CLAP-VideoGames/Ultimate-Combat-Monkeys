@@ -202,9 +202,6 @@ namespace K_Engine {
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo")|
 			K_Engine::PhysicsManager::GetInstance()->getLayerID("oil"));
 
-		//std::cout << "Grupo granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("armas") << "\n";
-		//std::cout << "Mask granada: " << K_Engine::PhysicsManager::GetInstance()->getLayerID("suelo") << "\n";
-
 		//Grenade Component
 		grnd->addComponent<Grenade>(10.0f);
 
