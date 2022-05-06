@@ -19064,6 +19064,16 @@ Map_Level_One = {
              startsEnabled = "true"
         },
         Aeroplane = {}
+    },
+    
+    game_music = {
+        AudioSource = {
+            path = "./assets/sounds/game_music.ogg",
+            type = "1",
+            volume = "0.5",
+            loopable = "true",
+            playOnStart = "true"
+        }
     }
 }
 
@@ -19139,5 +19149,5 @@ Map_Level_One_entities = {"Settings" ,"MainLight", "time", "health", "background
 "Cube1411" ,"Cube1412" ,"Cube1413" ,"Cube1448" ,"Cube1449" ,"Cube1461" ,"Cube1462" ,"Cube1463" ,"Cube1499" ,"Cube119" ,"Cube120" ,
 "Cube121" ,"Cube122" ,"Cube123" ,"Cube126" ,"Cube127" ,"Cube128" ,"Cube168" ,"Cube169" ,"Cube170" ,"Cube124" ,"Cube125" ,
 "Cube171" ,"Cube1018" ,"Cube1795" ,"Cube1799" ,"PedroArmature" ,"ArmatureDario" ,"Armature" ,"Armature002" ,"Armature003" ,"Armature001" ,"Armature004" ,
-"Armature005" ,"OilArmature", "Avion" }
+"Armature005" ,"OilArmature", "Avion", "game_music" }
 

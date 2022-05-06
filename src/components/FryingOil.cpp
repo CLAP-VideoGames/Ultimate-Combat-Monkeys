@@ -4,6 +4,7 @@
 #include <components_prj/Transform.h>
 #include <components_prj/RigidBody.h>
 #include <components/Health.h>
+#include <components_prj/Animator.h>
 #include <iostream>
 
 namespace K_Engine {
@@ -28,6 +29,7 @@ namespace K_Engine {
 		tr = entity->getComponent<Transform>();
 		rb = entity->getComponent<RigidBody>();
 		GameManager::GetInstance()->RegisterOil(this);
+		entity->getComponent<Animator>()->playAnim("Wave");
 	}
 
 	void FryingOil::update(int frameTime) {
