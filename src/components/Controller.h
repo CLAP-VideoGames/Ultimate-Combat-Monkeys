@@ -71,8 +71,8 @@ namespace K_Engine {
 		float jumpForce = 150;
 
 		//To avoid double jump (iterations)
-		float jumpTimer = 40.0f;
-		float lastTimeJumped = 0.0f;
+		float timeStill;
+		float timeStillMax = 10; //Time that takes to jump again
 
 		//HeightCreation for the grenade
 		float grenadeHeightCreation = 15;

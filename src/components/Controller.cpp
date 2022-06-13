@@ -126,11 +126,12 @@ namespace K_Engine {
 			if (input->isKeyDown(K_Engine_Scancode::SCANCODE_SPACE)) {
 				actionProcessed = true;
 				lastState = Jumping;
+				std::cout << timeStill;
 				//Checking it is in a certain interval
-				if (rigby->getVelocity().y > -0.1 && rigby->getVelocity().y < 0.1 && lastTimeJumped <= 0) {
+				if (rigby->getVelocity().y <= 0.1 && rigby->getVelocity().y >= -0.1 && timeStill > timeStillMax) {
 					anim->playAnim("Jump" + mesh_name, false);
 					rigby->addForceImpulse({ 0, jumpForce, 0 });
-					lastTimeJumped = jumpTimer;
+					timeStill = 0.0f;
 				}
 			}
 
@@ -169,7 +170,7 @@ namespace K_Engine {
 			}
 		}
 
-		lastTimeJumped--;
+		if (timeStill <= timeStillMax && rigby->getVelocity().y <= 0.1 && rigby->getVelocity().y >= -0.1) timeStill++;
 	}
 
 	void Controller::throwGrenade()
