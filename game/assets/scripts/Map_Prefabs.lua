@@ -135,6 +135,17 @@ Map_Prefabs_prefabs = {
         },
         Aeroplane = {}
     },
+    Palm = {
+        Transform = {
+            position = " -210.223083 ,120.866249 ,-12.065444 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        Enabled = "true",
+        MeshRenderer = {
+            MeshFile = "Palm_2.mesh",
+        }
+    },
     Cube = {
         Transform = {
             position = " 0.000000 ,0.000000 ,0.000000 ",
@@ -159,6 +170,32 @@ Map_Prefabs_prefabs = {
         Enabled = "true",
         MeshRenderer = {
             MeshFile = "cubeMapFront_Middle.mesh",
+        }
+    },
+    Grass = {
+        Transform = {
+            position = " 10.000000 ,15.066925 ,-0.000000 ",
+            rotation = " 0 ,0 ,0 ",
+            scale = " 1.000000 ,1.000000 ,1.000000 ",
+        },
+        RigidBody = {
+            Type = "Static" ,
+            Collider = "Box" ,
+            Mass = "0.0" ,
+            Dimensions = "10,  10,  10",
+            isTrigger = "false" ,
+            friction = "0.5",
+             restitution = "0.8",
+            group = "suelo",
+              mask = " monos, armas, explosion",
+             isEnabled = "true"
+        },
+        Destructible = {
+            
+        },
+        Enabled = "true",
+        MeshRenderer = {
+            MeshFile = "cubeMapFront_Up.mesh",
         }
     },
     ArmatureDario001 = {
@@ -578,6 +615,13 @@ local file = io.open("assets\\maps\\testMapPrefabs.txt", "rb")
                 index = index + 1
             elseif val2 == "X" then
                 Map_Prefabs_entities[index] = "Cube "..coorX.." "..coorY.." 0"
+                index = index + 1
+            elseif val2 == "Y" then
+                Map_Prefabs_entities[index] = "Grass "..coorX.." "..coorY.." 0"
+                index = index + 1
+            elseif val2 == "P" then
+                auxY = coorY-500
+                Map_Prefabs_entities[index] = "Palm "..coorX.." "..auxY.." 0"
                 index = index + 1
             end
             coorX = coorX + 1000
