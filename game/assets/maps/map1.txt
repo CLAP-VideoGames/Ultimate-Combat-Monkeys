@@ -1,0 +1,15 @@
+o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+o o 1 P o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+o o Y Y o o Y o o o o o o o o o o o o o o o 6 Y o o o o o o Y 5 P o o
+o o X X Y Y X Y 2 o Y Y o o o o o o o o o o Y X Y Y o o o Y X Y Y Y Y
+o o o X X X X X Y Y X o o o o o o o o o P o X X X o o 7 o X X X X X o
+o o o X X X X X X X o o o o o o o o o o Y Y X X X o o Y Y X X X X X o
+o P o o X X X o o o o o o o o o o o o 8 X X X X X o Y X X X X X X X X
+o Y Y o X X o o o o o o P 4 Y o o o o Y X X X X X Y X X X X X X X X X
+Y X X Y X X o 3 Y Y o o Y Y X Y o o o X X X X X X X X X X X X X X X X
+X X X X X X Y Y X X Y Y X X X o o o Y X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X o o o o X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X o o o o o o X X X X X X X X X X X X X X X

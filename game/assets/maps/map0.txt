@@ -1,0 +1,12 @@
+o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+o o o 1 o o o o o 3 o o o o 4 o o o P o o o o o 7 o o o o o P 5 o o o
+o o o Y Y o o o Y Y o o o Y Y Y Y Y Y Y o o o Y Y o o o o o Y Y o o o
+o o o X X o o o X X o o o X X X X X X X o o o X X Y 6 o o Y X X o o o
+o o o X X o o o X X o o o X X o o o o o o o o X X X Y o Y X X X o o o
+o o o X X o o o X X o o o X X o o o o o o o o X X o X Y X o X X o o o
+o o o X X o o o X X o o o X X o o o o o o o o X X o o X o o X X o o o
+o o o X X P 2 o X X o o o X X o P o 8 o o o o X X o o o o o X X o o o
+o o o X X Y Y Y X X o o o X X Y Y Y Y Y o o o X X o o o o o X X o o o
+o o o X X X X X X X o o o X X X X X X X o o o X X o o o o o X X o o o

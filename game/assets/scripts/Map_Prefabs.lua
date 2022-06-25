@@ -568,13 +568,18 @@ Map_Prefabs_entities = {}
 
 Map_Prefabs_entities = {"Settings 0 0 0", "MainLight 0 2000 2000", "time 50 5 1000", "health 60 -3 1000","backgroundHealth 60 0 5", "mainMenuTextGame 10 3 1200",
 "mainMenuButton 0 0 100","Avion 0 5000 0","Avion 0 5000 0","Avion 0 5000 0","Avion 0 5000 0","Avion 0 5000 0"}
+math.randomseed(os.time() + 20)
+local r = math.random(1,3)
 
-local file = io.open("assets\\maps\\testMapPrefabs.txt", "rb")
+maps = {"assets\\maps\\testMapPrefabs.txt","assets\\maps\\map0.txt","assets\\maps\\map1.txt"}
+
+file = io.open(maps[r], "rb")
 
     if not file then return nil end
     
+    
     local lines = {}
-    for line in io.lines("assets\\maps\\testMapPrefabs.txt") do
+    for line in io.lines(maps[r]) do
         local nums = {}
         for n in line:gmatch("%w+") do
             table.insert(nums,n)
