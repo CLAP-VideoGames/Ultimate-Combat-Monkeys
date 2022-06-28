@@ -102,7 +102,7 @@ namespace K_Engine {
 				trans->setRotation(0, -90, 0);
 				lookingRight_ = false;
 				if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
-					anim->playAnim("Walk" + mesh_name);
+					anim->playAnim("Walk" + mesh_name, false);
 				}
 
 				lastState = Action::Moving;
@@ -115,7 +115,7 @@ namespace K_Engine {
 					trans->setRotation(0, 90, 0);
 				lookingRight_ = true;
 				if (lastState != Action::Moving && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
-					anim->playAnim("Walk" + mesh_name);
+					anim->playAnim("Walk" + mesh_name, false);
 				}
 				lastState = Action::Moving;
 			}
@@ -130,6 +130,7 @@ namespace K_Engine {
 				//Checking it is in a certain interval
 				if (rigby->getVelocity().y <= 0.1 && rigby->getVelocity().y >= -0.1 && timeStill > timeStillMax) {
 					anim->playAnim("Jump" + mesh_name, false);
+					
 					rigby->addForceImpulse({ 0, jumpForce, 0 });
 					timeStill = 0.0f;
 				}
@@ -159,13 +160,18 @@ namespace K_Engine {
 						lastState = Nothing;
 						lastSpeed = Vector3(0, 0, 0);
 					}
-					if (rigby->getVelocity().x < 0.3 && rigby->getVelocity().x < -0.3 && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y < -0.3) {
+					if (rigby->getVelocity().x < 0.3 && rigby->getVelocity().x > -0.3 && rigby->getVelocity().y < 0.3 && rigby->getVelocity().y > -0.3) {
 						if (anim->getCurrAnimName() == "Jump" + mesh_name && anim->animHasEnded())
 							anim->playAnim("Idle" + mesh_name);
 
 						else if (anim->getCurrAnimName() != "Kick" + mesh_name || anim->getCurrAnimName() != "Granade" + mesh_name)
 							anim->playAnim("Idle" + mesh_name);
+
 					}
+				}
+				else {
+					if(anim->getCurrAnimName() != "Jump" + mesh_name)
+						anim->playAnim("Idle" + mesh_name);
 				}
 			}
 		}
