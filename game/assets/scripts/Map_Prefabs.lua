@@ -571,7 +571,7 @@ Map_Prefabs_entities = {"Settings 0 0 0", "MainLight 0 2000 2000", "time 50 5 10
 math.randomseed(os.time() + 20)
 local r = math.random(1,3)
 
-maps = {"assets\\maps\\testMapPrefabs.txt","assets\\maps\\map0.txt","assets\\maps\\map1.txt"}
+maps = {"./assets/maps/testMapPrefabs.txt","./assets/maps/map0.txt","./assets/maps/map1.txt"}
 
 file = io.open(maps[r], "rb")
 

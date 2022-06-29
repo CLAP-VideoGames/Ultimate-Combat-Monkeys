@@ -147,17 +147,9 @@ menu = {
     },
 }
 
-selectMap = function(x)
-    math.randomseed(os.time())
-    local r = math.random(1,3)
-    return x[r]
-end
-
-maps = {"Map_Level_Zero","Map_Level_One", "Map_Prefabs"}
-
 function changeScene()
     local sceneMan = SceneManager.getSceneMan();
-    sceneMan:changeScene(selectMap(maps));
+    sceneMan:changeScene("intro");
 end
 
 function goToOptions()

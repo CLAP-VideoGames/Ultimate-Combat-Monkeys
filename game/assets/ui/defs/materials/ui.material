@@ -117,3 +117,16 @@ material UCM/PauseImage {
 		}
 	}
 }
+
+material UCM/Tutorial {
+	technique {
+		pass {
+			depth_check off
+			scene_blend alpha_blend
+			texture_unit {
+				texture tutorial.png
+				colour_op modulate
+			}
+		}
+	}
+}
