@@ -18789,7 +18789,7 @@ Map_Level_One = {
         },
         Enabled = "true",
         MeshRenderer = {
-            MeshFile = "Dario.001.mesh",
+            MeshFile = "Dario.mesh",
         }
     },
     Armature = {
