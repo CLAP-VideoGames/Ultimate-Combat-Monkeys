@@ -590,9 +590,9 @@ file = io.open(maps[r], "rb")
     file:close()
 
     -- Players from 1 to 4 are the first team and 5 to 8 second team
-    local coorY = 0
+    coorY = 0
     for x, val in ipairs(lines) do
-        local coorX = 0
+        coorX = 0
         for y, val2 in ipairs(lines[x]) do
             if val2 == "1" then
                 Map_Prefabs_entities[index] = "PedroArmature "..coorX.." "..coorY.." 0"
@@ -632,7 +632,9 @@ file = io.open(maps[r], "rb")
             coorX = coorX + 1000
         end
         coorY = coorY - 1000
+        
     end
-    Map_Prefabs_entities[index] = "OilArmature 0 "..coorY.." 0"
+    auxX = coorX/2
+    Map_Prefabs_entities[index] = "OilArmature "..auxX.." "..coorY.." 0"
 
 
